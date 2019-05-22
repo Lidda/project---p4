@@ -60,24 +60,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="OrderSystemUI.resx">
-      <DependentUpon>OrderSystemUI.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OrderSystemDAL1\OrderSystemDAL.csproj">
-      <Project>{f46a00a1-25b1-48eb-ae07-044ff303810e}</Project>
-      <Name>OrderSystemDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderSystemLogic1\OrderSystemLogic.csproj">
-      <Project>{517de079-6634-4b1b-b6c6-d5d7f80b2b8e}</Project>
-      <Name>OrderSystemLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OrderSystemModel1\OrderSystemModel.csproj">
-      <Project>{d9e62290-60f6-4e8e-ad25-b1c9746ef891}</Project>
-      <Name>OrderSystemModel</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
