@@ -32,9 +32,9 @@ namespace OrderSystemDAL {
                 command.Parameters.AddRange(sqlParameters);
                 adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
-            } catch (Exception e) {
-                //Print.ErrorLog(e);
-                throw;
+            } catch {
+
+                throw new Exception("Oops! Something went wrong");
             }
         }
 
@@ -48,9 +48,8 @@ namespace OrderSystemDAL {
                 command.Parameters.AddRange(sqlParameters);
                 adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
-            } catch (SqlException e) {
-                // Print.ErrorLog(e);
-                throw;
+            } catch{
+                throw new Exception("Oops! Something went wrong");
             } finally {
                 CloseConnection();
             }
@@ -72,10 +71,8 @@ namespace OrderSystemDAL {
                 adapter.SelectCommand = command;
                 adapter.Fill(dataSet);
                 dataTable = dataSet.Tables[0];
-            } catch (SqlException e) {
-                // Print.ErrorLog(e);
-                return null;
-                throw;
+            } catch {
+                throw new Exception("Oops! Something went wrong");
             } finally {
                 CloseConnection();
             }

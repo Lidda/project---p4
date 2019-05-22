@@ -12,7 +12,8 @@ namespace OrderSystemLogic
     {
         EmployeeDAL employee_db = new EmployeeDAL();
 
-        public void AddEmployee(Employee employee) {
+        public void AddEmployee(Employee employee)
+        {
             try
             {
                 employee_db.AddEmployee(employee);
@@ -21,6 +22,18 @@ namespace OrderSystemLogic
             {
                 throw new Exception("Yikes, dat is niet best");
             }
+        }
+
+        public List<Employee> GetAllEmployees()
+        {           
+            try
+            {
+                return employee_db.Db_Get_All_Employees();
+            }
+            catch
+            {
+                throw new Exception("Yikes, dat is ook niet best");
+            }            
         }
     }
 }

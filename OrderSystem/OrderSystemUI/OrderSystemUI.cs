@@ -17,6 +17,34 @@ namespace OrderSystemUI
         public OrderSystemUI()
         {
             InitializeComponent();
+            UI_Load();
+        }
+
+        private void UI_Load()
+        {
+            ShowPanel("PNL_EditEmployee");
+        }
+
+        private void ShowPanel(string panelName)
+        {
+            if (panelName == "PNL_EditEmployee")
+            {
+                PNL_EditEmployee.Show();
+
+                EmployeeLogic employeeLogic = new EmployeeLogic();
+                List<Employee> employeeListView = employeeLogic.GetAllEmployees();
+
+                ListView_Employees.Items.Clear();
+
+                foreach (OrderSystemModel.Employee employee in employeeListView)
+                {
+                    ListViewItem li = new ListViewItem(employee.name);
+                    li.SubItems.Add(employee.username);
+                    li.SubItems.Add(employee.password);
+                    li.SubItems.Add(employee.type.ToString());
+                    ListView_Employees.Items.Add(li);
+                }
+            }
         }
 
         private void BTN_AddEmployee_Click(object sender, EventArgs e)
@@ -29,5 +57,25 @@ namespace OrderSystemUI
             employee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_AddEmployeeType.SelectedItem.ToString());
             employeeLogic.AddEmployee(employee);
         }
+
+        private void BTN_EditEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_DeleteEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_EditEmployee");
+        }
+
+        private void addEmpoyeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_AddEmployee");
+        }      
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using OrderSystemModel;
+using System.Data;
 
 namespace OrderSystemDAL
 {
@@ -21,6 +22,31 @@ namespace OrderSystemDAL
                 new SqlParameter("@type", employee.type.ToString())
             };
             ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public List<Employee> Db_Get_All_Employees()
+        {
+            string query = "SELECT name, username, password, type FROM [EMPLOYEES]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadEmployees(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<Employee> ReadEmployees(DataTable dataTable)
+        {
+            List<Employee> employees = new List<Employee>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Employee employee = new Employee()
+                {
+                    name = (string)dr["name"],
+                    username = (string)(dr["username"].ToString()),
+                    password = (string)(dr["password"].ToString()),
+                    type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), dr["type"].ToString())
+                };
+                employees.Add(employee);
+            }
+            return employees;
         }
     }
 }
