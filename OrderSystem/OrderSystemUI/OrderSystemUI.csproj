@@ -48,21 +48,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderSystemUI.cs">
+    <Compile Include="MainUI\EditEployeesUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderSystemUI.Designer.cs">
-      <DependentUpon>OrderSystemUI.cs</DependentUpon>
+    <Compile Include="MainUI\EditEployeesUI.Designer.cs">
+      <DependentUpon>EditEployeesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainUI\TableOverviewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\TableOverviewUI.Designer.cs">
+      <DependentUpon>TableOverviewUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="OrderSystemUI.resx">
-      <DependentUpon>OrderSystemUI.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\EditEployeesUI.resx">
+      <DependentUpon>EditEployeesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\TableOverviewUI.resx">
+      <DependentUpon>TableOverviewUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

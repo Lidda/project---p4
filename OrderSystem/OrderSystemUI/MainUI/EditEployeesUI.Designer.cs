@@ -25,6 +25,14 @@
         private void InitializeComponent() {
             this.BTN_AddEmployee = new System.Windows.Forms.Button();
             this.PNL_EditEmployee = new System.Windows.Forms.Panel();
+            this.DB_AddEmployeeType = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TXTB_AddPassword = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TXTB_AddUsername = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TXTB_AddEmployeeName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.BTN_EditEmployee = new System.Windows.Forms.Button();
             this.BTN_DeleteEmployee = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,14 +45,6 @@
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmpoyeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DB_AddEmployeeType = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TXTB_AddPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TXTB_AddUsername = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TXTB_AddEmployeeName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.PNL_EditEmployee.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,104 +79,6 @@
             this.PNL_EditEmployee.Name = "PNL_EditEmployee";
             this.PNL_EditEmployee.Size = new System.Drawing.Size(506, 562);
             this.PNL_EditEmployee.TabIndex = 16;
-            // 
-            // BTN_EditEmployee
-            // 
-            this.BTN_EditEmployee.Location = new System.Drawing.Point(329, 458);
-            this.BTN_EditEmployee.Name = "BTN_EditEmployee";
-            this.BTN_EditEmployee.Size = new System.Drawing.Size(162, 33);
-            this.BTN_EditEmployee.TabIndex = 17;
-            this.BTN_EditEmployee.Text = "Edit employee";
-            this.BTN_EditEmployee.UseVisualStyleBackColor = true;
-            this.BTN_EditEmployee.Click += new System.EventHandler(this.BTN_EditEmployee_Click);
-            // 
-            // BTN_DeleteEmployee
-            // 
-            this.BTN_DeleteEmployee.Location = new System.Drawing.Point(329, 497);
-            this.BTN_DeleteEmployee.Name = "BTN_DeleteEmployee";
-            this.BTN_DeleteEmployee.Size = new System.Drawing.Size(162, 31);
-            this.BTN_DeleteEmployee.TabIndex = 16;
-            this.BTN_DeleteEmployee.Text = "Delete employee";
-            this.BTN_DeleteEmployee.UseVisualStyleBackColor = true;
-            this.BTN_DeleteEmployee.Click += new System.EventHandler(this.BTN_DeleteEmployee_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 46);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Edit employees";
-            // 
-            // ListView_Employees
-            // 
-            this.ListView_Employees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.name,
-            this.Username,
-            this.Password,
-            this.Type});
-            this.ListView_Employees.FullRowSelect = true;
-            this.ListView_Employees.Location = new System.Drawing.Point(3, 93);
-            this.ListView_Employees.Name = "ListView_Employees";
-            this.ListView_Employees.Size = new System.Drawing.Size(500, 310);
-            this.ListView_Employees.TabIndex = 0;
-            this.ListView_Employees.UseCompatibleStateImageBehavior = false;
-            this.ListView_Employees.View = System.Windows.Forms.View.Details;
-            // 
-            // name
-            // 
-            this.name.Text = "Name";
-            this.name.Width = 140;
-            // 
-            // Username
-            // 
-            this.Username.Text = "Username";
-            this.Username.Width = 146;
-            // 
-            // Password
-            // 
-            this.Password.Text = "Password";
-            this.Password.Width = 134;
-            // 
-            // Type
-            // 
-            this.Type.Text = "Type";
-            this.Type.Width = 75;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(530, 24);
-            this.menuStrip1.TabIndex = 17;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // employeesToolStripMenuItem
-            // 
-            this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editEmployeesToolStripMenuItem,
-            this.addEmpoyeeToolStripMenuItem});
-            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.employeesToolStripMenuItem.Text = "Employees";
-            // 
-            // editEmployeesToolStripMenuItem
-            // 
-            this.editEmployeesToolStripMenuItem.Name = "editEmployeesToolStripMenuItem";
-            this.editEmployeesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.editEmployeesToolStripMenuItem.Text = "Edit employee";
-            this.editEmployeesToolStripMenuItem.Click += new System.EventHandler(this.editEmployeesToolStripMenuItem_Click);
-            // 
-            // addEmpoyeeToolStripMenuItem
-            // 
-            this.addEmpoyeeToolStripMenuItem.Name = "addEmpoyeeToolStripMenuItem";
-            this.addEmpoyeeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.addEmpoyeeToolStripMenuItem.Text = "Add employee";
-            this.addEmpoyeeToolStripMenuItem.Click += new System.EventHandler(this.addEmpoyeeToolStripMenuItem_Click);
             // 
             // DB_AddEmployeeType
             // 
@@ -252,11 +154,109 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Name:";
             // 
+            // BTN_EditEmployee
+            // 
+            this.BTN_EditEmployee.Location = new System.Drawing.Point(329, 458);
+            this.BTN_EditEmployee.Name = "BTN_EditEmployee";
+            this.BTN_EditEmployee.Size = new System.Drawing.Size(162, 33);
+            this.BTN_EditEmployee.TabIndex = 17;
+            this.BTN_EditEmployee.Text = "Edit employee";
+            this.BTN_EditEmployee.UseVisualStyleBackColor = true;
+            this.BTN_EditEmployee.Click += new System.EventHandler(this.BTN_EditEmployee_Click);
+            // 
+            // BTN_DeleteEmployee
+            // 
+            this.BTN_DeleteEmployee.Location = new System.Drawing.Point(329, 497);
+            this.BTN_DeleteEmployee.Name = "BTN_DeleteEmployee";
+            this.BTN_DeleteEmployee.Size = new System.Drawing.Size(162, 31);
+            this.BTN_DeleteEmployee.TabIndex = 16;
+            this.BTN_DeleteEmployee.Text = "Delete employee";
+            this.BTN_DeleteEmployee.UseVisualStyleBackColor = true;
+            this.BTN_DeleteEmployee.Click += new System.EventHandler(this.BTN_DeleteEmployee_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(293, 46);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Edit employees";
+            // 
+            // ListView_Employees
+            // 
+            this.ListView_Employees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name,
+            this.Username,
+            this.Password,
+            this.Type});
+            this.ListView_Employees.FullRowSelect = true;
+            this.ListView_Employees.Location = new System.Drawing.Point(3, 93);
+            this.ListView_Employees.Name = "ListView_Employees";
+            this.ListView_Employees.Size = new System.Drawing.Size(500, 310);
+            this.ListView_Employees.TabIndex = 0;
+            this.ListView_Employees.UseCompatibleStateImageBehavior = false;
+            this.ListView_Employees.View = System.Windows.Forms.View.Details;
+            // 
+            // name
+            // 
+            this.name.Text = "Name";
+            this.name.Width = 140;
+            // 
+            // Username
+            // 
+            this.Username.Text = "Username";
+            this.Username.Width = 146;
+            // 
+            // Password
+            // 
+            this.Password.Text = "Password";
+            this.Password.Width = 134;
+            // 
+            // Type
+            // 
+            this.Type.Text = "Type";
+            this.Type.Width = 75;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(547, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editEmployeesToolStripMenuItem,
+            this.addEmpoyeeToolStripMenuItem});
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            // 
+            // editEmployeesToolStripMenuItem
+            // 
+            this.editEmployeesToolStripMenuItem.Name = "editEmployeesToolStripMenuItem";
+            this.editEmployeesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.editEmployeesToolStripMenuItem.Text = "Edit employee";
+            this.editEmployeesToolStripMenuItem.Click += new System.EventHandler(this.editEmployeesToolStripMenuItem_Click);
+            // 
+            // addEmpoyeeToolStripMenuItem
+            // 
+            this.addEmpoyeeToolStripMenuItem.Name = "addEmpoyeeToolStripMenuItem";
+            this.addEmpoyeeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.addEmpoyeeToolStripMenuItem.Text = "Add employee";
+            this.addEmpoyeeToolStripMenuItem.Click += new System.EventHandler(this.addEmpoyeeToolStripMenuItem_Click);
+            // 
             // OrderSystemUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 643);
+            this.ClientSize = new System.Drawing.Size(547, 681);
             this.Controls.Add(this.PNL_EditEmployee);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
