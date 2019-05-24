@@ -1,5 +1,4 @@
 ﻿using OrderSystemModel;
-using OrderSystemUI.MainUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,12 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrderSystemUI {
-    public partial class TableOverviewUI : Form {
+namespace OrderSystemUI.MainUI {
+    public partial class BarUI : Form {
         Employee employee;
-
-        public TableOverviewUI(Employee employee) {
-
+        public BarUI(Employee employee) {
             this.employee = employee;
             InitializeComponent();
         }

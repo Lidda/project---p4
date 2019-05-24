@@ -48,17 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainUI\BarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\BarUI.Designer.cs">
+      <DependentUpon>BarUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\EditEployeesUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainUI\EditEployeesUI.Designer.cs">
       <DependentUpon>EditEployeesUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainUI\KitchenUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\KitchenUI.Designer.cs">
+      <DependentUpon>KitchenUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainUI\LoginUI.Designer.cs">
       <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI\ManagerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\ManagerUI.Designer.cs">
+      <DependentUpon>ManagerUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,11 +96,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MainUI\BarUI.resx">
+      <DependentUpon>BarUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainUI\EditEployeesUI.resx">
       <DependentUpon>EditEployeesUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\KitchenUI.resx">
+      <DependentUpon>KitchenUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainUI\LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\ManagerUI.resx">
+      <DependentUpon>ManagerUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\TableOverviewUI.resx">
       <DependentUpon>TableOverviewUI.cs</DependentUpon>

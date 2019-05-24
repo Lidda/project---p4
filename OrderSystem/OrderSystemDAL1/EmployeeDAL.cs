@@ -37,13 +37,12 @@ namespace OrderSystemDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Employee employee = new Employee()
-                {
+                Employee employee = new Employee() {
                     name = (string)dr["name"],
                     username = (string)(dr["username"].ToString()),
                     password = (string)(dr["password"].ToString()),
-                    type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), dr["type"].ToString())
-                };
+                    type = (OrderSystemModel.Type)dr["type"]
+            };
                 employees.Add(employee);
             }
             return employees;

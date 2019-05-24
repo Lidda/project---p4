@@ -36,10 +36,30 @@ namespace OrderSystemUI.MainUI {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-            employee.name = usernameInput.Text;
+            employee.username = usernameInput.Text;
             employee.password = passwordInput.Text;
 
-            logic.CheckForUser(employee);
+            if (logic.CheckForUser(employee)) {
+                this.Hide();
+
+                //opens th form corresponding with user
+                if (employee.type == OrderSystemModel.Type.Bartender) {
+                    BarUI barUI = new BarUI(employee);
+                    barUI.ShowDialog();
+                } else if (employee.type == OrderSystemModel.Type.Waiter) {
+                    TableOverviewUI waiterUI = new TableOverviewUI(employee);
+                    waiterUI.ShowDialog();
+                } else if (employee.type == OrderSystemModel.Type.Cook) {
+                    KitchenUI kitchenUI = new KitchenUI(employee);
+                    kitchenUI.ShowDialog();
+                } else if (employee.type == OrderSystemModel.Type.Manager) {
+                    ManagerUI managerUI = new ManagerUI(employee);
+                    managerUI.ShowDialog();
+                }
+                this.Close();
+            } else {
+                throw new Exception("Wrong username or password."); //FIX ME (add error screen)
+            }
         }
     }
 }
