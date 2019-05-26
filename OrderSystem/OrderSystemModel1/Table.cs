@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderSystemModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel1 {
     public class Table {
-        public int ID { get; set; }
-        public int Status { get; set; }
+        public enum Availability { Unavailable, Available, Reserved };
 
-        public Table(int ID) {
-            this.ID = ID;
-        }
+        public Availability Status { get; set; }
+        public int ID { get; set; }
+        public int EmployeeID { get; set; }
+        public int Capacity { get; set; }
     }
 }

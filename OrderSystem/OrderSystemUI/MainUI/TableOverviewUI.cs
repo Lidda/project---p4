@@ -28,7 +28,7 @@ namespace OrderSystemUI {
         //makes list of table objects
         private void initTables() {
             for (int i = 0; i < 10; i++) {
-                Table table = new Table(i + 1);
+                Table table = new Table();
                 tables.Add(table);
             }
         }
@@ -42,42 +42,52 @@ namespace OrderSystemUI {
 
         private void btnTable1_Click(object sender, EventArgs e) {
             makeOrderUI(tables[0]);
+            tables[0].EmployeeID = employee.ID;
         }
 
         private void btnTable2_Click(object sender, EventArgs e) {
             makeOrderUI(tables[1]);
+            tables[1].EmployeeID = employee.ID;
         }
 
         private void btnTable3_Click(object sender, EventArgs e) {
             makeOrderUI(tables[2]);
+            tables[2].EmployeeID = employee.ID;
         }
 
         private void btnTable4_Click(object sender, EventArgs e) {
             makeOrderUI(tables[3]);
+            tables[3].EmployeeID = employee.ID;
         }
 
         private void btnTable5_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[4]);
+            tables[4].EmployeeID = employee.ID;
         }
 
         private void btnTable6_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[5]);
+            tables[5].EmployeeID = employee.ID;
         }
 
         private void btnTable7_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[6]);
+            tables[6].EmployeeID = employee.ID;
         }
 
         private void btnTable8_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[7]);
+            tables[7].EmployeeID = employee.ID;
         }
 
         private void btnTable9_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[8]);
+            tables[8].EmployeeID = employee.ID;
         }
 
         private void btnTable10_Click_1(object sender, EventArgs e) {
             makeOrderUI(tables[9]);
+            tables[9].EmployeeID = employee.ID;
         }
 
         private void mark1_Click_1(object sender, EventArgs e) {
@@ -122,7 +132,7 @@ namespace OrderSystemUI {
 
         private void makeOrderUI(Table table) {
             this.Hide();
-            OrderUI orderUI = new OrderUI();
+            OrderMenuUI orderUI = new OrderMenuUI(employee);
             orderUI.ShowDialog();
             this.Close();
         }

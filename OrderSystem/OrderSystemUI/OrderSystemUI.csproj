@@ -78,11 +78,11 @@
     <Compile Include="MainUI\ManagerUI.Designer.cs">
       <DependentUpon>ManagerUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\OrderUI.cs">
+    <Compile Include="MainUI\OrderMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\OrderUI.Designer.cs">
-      <DependentUpon>OrderUI.cs</DependentUpon>
+    <Compile Include="MainUI\OrderMenuUI.Designer.cs">
+      <DependentUpon>OrderMenuUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="MainUI\ManagerUI.resx">
       <DependentUpon>ManagerUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\OrderUI.resx">
-      <DependentUpon>OrderUI.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\OrderMenuUI.resx">
+      <DependentUpon>OrderMenuUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\TableOverviewUI.resx">
       <DependentUpon>TableOverviewUI.cs</DependentUpon>
