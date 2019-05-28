@@ -11,28 +11,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static OrderSystemModel1.Table;
 
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {
+        List<Button> buttons = new List<Button>();
         Employee employee;
-        List<Table> tables = new List<Table>();
+        List<Table> tables;
         TableLogic logic;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
             logic = new TableLogic();
-            initTables();
             InitializeComponent();
+
+            buttons.Add(btnTable1);
+            buttons.Add(btnTable2);
+            buttons.Add(btnTable3);
+            buttons.Add(btnTable4);
+            buttons.Add(btnTable5);
+            buttons.Add(btnTable6);
+            buttons.Add(btnTable7);
+            buttons.Add(btnTable8);
+            buttons.Add(btnTable9);
+            buttons.Add(btnTable10);
+
+            //initialize tables by getting them from the database
+            tables = logic.GetAllTables();
+            SetTableColors();       
         }
 
-        //makes list of table objects
-        private void initTables() {
-            for (int i = 0; i < 10; i++) {
-                Table table = new Table();
-                tables.Add(table);
+        private void SetTableColors() {
+            for (int i = 0; i < tables.Count; i++) {
+                if (tables[i].Status == Availability.Available) {
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
+                } else if (tables[i].Status == Availability.Reserved) {
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.SandyBrown);
+                } else {
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.Crimson);
+                }
             }
         }
-  
+
         private void btnLogout_Click(object sender, EventArgs e) {
             this.Hide();
             LoginUI loginUI = new LoginUI();
@@ -132,9 +152,8 @@ namespace OrderSystemUI {
 
         private void makeOrderUI(Table table) {
             this.Hide();
-            OrderMenuUI orderUI = new OrderMenuUI(employee);
+            OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);
             orderUI.ShowDialog();
-            this.Close();
         }
 
     }

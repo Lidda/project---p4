@@ -1,4 +1,5 @@
 ﻿using OrderSystemDAL;
+using OrderSystemModel;
 using OrderSystemModel1;
 using System;
 using System.Collections.Generic;
@@ -13,30 +14,53 @@ namespace OrderSystemDAL1 {
     public class TableDAL : Base {
         List<Table> tables = new List<Table>();
 
-        public List<Table> Db_Get_All_Tables(List<Table> tables) {
-            this.tables = tables;
-
-            string query = "SELECT tableID, availability, employeeID, capacity FROM [TABLES]";
+        public List<Table> Db_Get_All_Tables() {
+            string query = "SELECT tableID, availability, employeeID, capacity FROM [TABLES] ORDER BY [tableID]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAllTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //FIX ME probably create a seperate method for updating the status etc. 
         private List<Table> ReadAllTables(DataTable dataTable) {
+            foreach (DataRow dr in dataTable.Rows) {
+                Table table = new Table() {
+                    ID = (int)dr["tableID"],
+                    EmployeeID = (int)dr["employeeID"],
+                    Capacity = (int)dr["capacity"],
+                    Status = (Availability)dr["availability"]
+                };
+                tables.Add(table);
+            }
+            return tables;
+        }
+
+        public List<Table> Db_Update_All_Tables(List<Table> tables) {
+            string query = "SELECT availability, employeeID FROM [TABLES]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return UpdateAllTables(ExecuteSelectQuery(query, sqlParameters), tables);
+        }
+
+        private List<Table> UpdateAllTables(DataTable dataTable, List<Table> tables) {
             List<Table> employees = new List<Table>();
 
             for (int i = 0; i < dataTable.Rows.Count; i++) {
                 DataRow dr = dataTable.Rows[i];
                 tables[i].ID = (int)dr["tableID"];
-                tables[i].Status = (Availability)dr["status"];
+                tables[i].Status = (Availability)dr["availability"];
                 tables[i].Capacity = (int)dr["capacity"];
             }
             return tables;
         }
 
-        public void UpdateAvailability(Availability status, int ID) {
+        public void DbUpdateEmployeeID(int employeeID, int tableID) {
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            string query = String.Format("UPDATE [TABLES] SET availability = {0} WHERE tableID = {1}", Convert.ToInt32(status), ID);
+            string query = String.Format("UPDATE [TABLES] SET employeeID = {0} WHERE tableID = {1}", employeeID, tableID);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void UpdateAvailability(Availability status, int tableID) {
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = String.Format("UPDATE [TABLES] SET availability = {0} WHERE tableID = {1}", Convert.ToInt32(status), tableID);
 
             ExecuteEditQuery(query, sqlParameters);
         }
