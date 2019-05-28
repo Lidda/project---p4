@@ -34,7 +34,7 @@ namespace OrderSystemDAL1 {
         }
 
         public List<Table> Db_Update_All_Tables(List<Table> tables) {
-            string query = "SELECT availability, employeeID FROM [TABLES]";
+            string query = "SELECT availability, employeeID, tableID FROM [TABLES]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return UpdateAllTables(ExecuteSelectQuery(query, sqlParameters), tables);
         }
@@ -46,7 +46,7 @@ namespace OrderSystemDAL1 {
                 DataRow dr = dataTable.Rows[i];
                 tables[i].ID = (int)dr["tableID"];
                 tables[i].Status = (Availability)dr["availability"];
-                tables[i].Capacity = (int)dr["capacity"];
+                tables[i].EmployeeID = (int)dr["employeeID"];
             }
             return tables;
         }
@@ -58,7 +58,7 @@ namespace OrderSystemDAL1 {
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void UpdateAvailability(Availability status, int tableID) {
+        public void AlterAvailability(Availability status, int tableID) {
             SqlParameter[] sqlParameters = new SqlParameter[0];
             string query = String.Format("UPDATE [TABLES] SET availability = {0} WHERE tableID = {1}", Convert.ToInt32(status), tableID);
 

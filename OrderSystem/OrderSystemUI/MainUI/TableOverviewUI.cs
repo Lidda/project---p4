@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OrderSystemModel1.Table;
+using System.Timers;
 
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {
@@ -19,6 +20,7 @@ namespace OrderSystemUI {
         Employee employee;
         List<Table> tables;
         TableLogic logic;
+        private static System.Timers.Timer timer;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
@@ -38,17 +40,18 @@ namespace OrderSystemUI {
 
             //initialize tables by getting them from the database
             tables = logic.GetAllTables();
-            SetTableColors();       
+            SetTableColors();
+            TablesTimer();
         }
 
         private void SetTableColors() {
             for (int i = 0; i < tables.Count; i++) {
                 if (tables[i].Status == Availability.Available) {
-                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.AppWorkspace);
                 } else if (tables[i].Status == Availability.Reserved) {
                     buttons[i].BackColor = Color.FromKnownColor(KnownColor.SandyBrown);
                 } else {
-                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.Crimson);
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
                 }
             }
         }
@@ -154,6 +157,21 @@ namespace OrderSystemUI {
             this.Hide();
             OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);
             orderUI.ShowDialog();
+        }
+
+        private void TablesTimer() {
+            timer = new System.Timers.Timer();
+            timer.Interval = 5000;
+
+            timer.Elapsed += OnTimedEvent;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
+
+        private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
+            //update table statusses etc.
+            tables = logic.UpdateTables(tables);
+            SetTableColors();
         }
 
     }

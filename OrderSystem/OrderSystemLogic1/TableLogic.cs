@@ -12,18 +12,26 @@ namespace OrderSystemLogic1 {
         TableDAL table_db = new TableDAL();
 
         public List<Table> GetAllTables() {
-            //try {
-                return table_db.Db_Get_All_Tables();
-           // } catch {
-             //   throw new Exception("Something went wrong when loading in tables.");
-           // }
+            try {
+            return table_db.Db_Get_All_Tables();
+            } catch {
+                throw new Exception("Something went wrong when loading in tables.");
+            }
         }
 
-        public void UpdateTableStatus(Availability status, Table table) {
-            try {
-                table_db.UpdateAvailability(status, table.ID);
+        public List<Table> UpdateTables(List<Table> tables) {
+           try {
+                return table_db.Db_Update_All_Tables(tables);
             } catch {
-                throw new Exception("Something went wrong when updating the table status.");
+            throw new Exception("Something went wrong when updating the tables");
+            }
+        }
+
+        public void AlterTableStatus(Availability status, Table table) {
+            try {
+                table_db.AlterAvailability(status, table.ID);
+            } catch {
+                throw new Exception("Something went wrong when altering the table status.");
             }
         }
 

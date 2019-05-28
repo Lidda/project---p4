@@ -8,6 +8,7 @@ using OrderSystemModel;
 
 namespace OrderSystemLogic
 {
+    //FIX ME: maybe make a singleton?
     public class EmployeeLogic
     {
         EmployeeDAL employee_db = new EmployeeDAL();
