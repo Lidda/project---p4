@@ -17,6 +17,7 @@ namespace OrderSystemModel
         public int stock { get; set; }
         public string course { get; set; }
         public string description { get; set; }
+
         public string comment
         {
             get

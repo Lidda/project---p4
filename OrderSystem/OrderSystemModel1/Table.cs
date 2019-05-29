@@ -1,11 +1,10 @@
-﻿using OrderSystemModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderSystemModel1 {
+namespace OrderSystemModel {
     public class Table {
         public enum Availability { Unavailable, Available, Reserved };
 

@@ -1,6 +1,5 @@
 ﻿using OrderSystemDAL;
 using OrderSystemModel;
-using OrderSystemModel1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,9 +7,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static OrderSystemModel1.Table;
+using static OrderSystemModel.Table;
 
-namespace OrderSystemDAL1 {
+namespace OrderSystemDAL {
     public class TableDAL : Base {
         List<Table> tables = new List<Table>();
 

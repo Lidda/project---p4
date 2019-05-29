@@ -28,8 +28,8 @@ namespace OrderSystemModel
                 }
             }
         }
-        public int employeeID { get; set; }
-        public int tableID { get; set; }
+        public Employee Employee { get; set; }
+        public Table Table { get; set; }
 
         //list of ordered items
         public List<Item> items { get; set; }

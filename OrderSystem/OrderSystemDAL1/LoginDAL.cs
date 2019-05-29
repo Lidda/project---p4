@@ -8,7 +8,7 @@ using OrderSystemModel;
 using System.Data;
 using OrderSystemDAL;
 
-namespace OrderSystemDAL1 {
+namespace OrderSystemDAL {
     public class LoginDAL : Base {
 
         public Employee Db_Find_User(Employee employee) {

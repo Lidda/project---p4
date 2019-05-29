@@ -7,8 +7,8 @@
     <ProjectGuid>{D9E62290-60F6-4E8E-AD25-B1C9746EF891}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OrderSystemModel1</RootNamespace>
-    <AssemblyName>OrderSystemModel1</AssemblyName>
+    <RootNamespace>OrderSystemModel</RootNamespace>
+    <AssemblyName>OrderSystemModel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
