@@ -10,14 +10,26 @@ namespace OrderSystemLogic
 {
     public class TakeOrderLogic
     {
-        TakeOrderDAL takeOrderDAL = new TakeOrderDAL();
+        TakeOrderDAL takeOrder_db = new TakeOrderDAL();
 
         //Get all items
         public List<Item> GetAllItems()
         {
             try
             {
-                return takeOrderDAL.DB_Get_All_Items();
+                return takeOrder_db.DB_Get_All_Items();
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
+
+        public void AddItemsToOrder(List<Item> items, Order order)
+        {
+            try
+            {
+                takeOrder_db.DB_AddItemsToOrder(items, order);
             }
             catch
             {

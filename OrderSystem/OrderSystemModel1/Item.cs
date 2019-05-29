@@ -8,6 +8,7 @@ namespace OrderSystemModel
 {
     public class Item
     {
+        public int itemID { get; set; }
         public string name { get; set; }
         public float price { get; set; }
         public double tax { get; set; }
