@@ -76,6 +76,16 @@ namespace OrderSystemDAL
             }
             return orders;
         }
+        //set order(s) to paid
+        public void SetOrderToPaid(int tableID, List<Order> orders)
+        {
+            //set to paid
+            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID in (SELECT orderID FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0)", tableID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+            //save total amount in DB
+            
+        }
     }
 }
 

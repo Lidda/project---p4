@@ -11,7 +11,7 @@ namespace OrderSystemModel
         public int itemID { get; set; }
         public string name { get; set; }
         public float price { get; set; }
-        public double tax { get; set; }
+        public int tax { get; set; }
         public string foodtype { get; set; }
         public int amount { get; set; }
         public int stock { get; set; }

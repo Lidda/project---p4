@@ -24,6 +24,18 @@ namespace OrderSystemLogic
                 throw new Exception("Couldn't connect to the database");
             }
         }
+        //set order(s) to paid
+        public void SetToPaid(int tableID)
+        {
+            try
+            {
+                checkout_db.SetOrderToPaid(tableID);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
     }
 }
 
