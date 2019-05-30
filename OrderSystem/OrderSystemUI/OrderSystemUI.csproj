@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainUI\CheckoutOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\CheckoutOverview.Designer.cs">
+      <DependentUpon>CheckoutOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\BarUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MainUI\BarUI.resx">
       <DependentUpon>BarUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\CheckoutOverview.resx">
+      <DependentUpon>CheckoutOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\EditEployeesUI.resx">
       <DependentUpon>EditEployeesUI.cs</DependentUpon>

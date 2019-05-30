@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static OrderSystemModel.Table;
 
-namespace OrderSystemLogic1 {
+namespace OrderSystemLogic {
     public class TableLogic {
         TableDAL table_db = new TableDAL();
 
