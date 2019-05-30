@@ -47,8 +47,8 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
                 new SqlParameter("@comment", order.comment),
-                new SqlParameter("@employeeID", order.employeeID),
-                new SqlParameter("@tableID", order.tableID),
+                new SqlParameter("@employeeID", order.Employee.ID),
+                new SqlParameter("@tableID", order.Table.ID),
             };
             ExecuteSelectQuery(query, sqlParameters);
         }

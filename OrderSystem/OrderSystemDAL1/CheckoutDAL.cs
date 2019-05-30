@@ -11,34 +11,28 @@ namespace OrderSystemDAL
 {
     public class CheckoutDAL : Base
     {
-        //get complete order (all items of all orders of a table)
-        public List<Order> DB_Get_All_Orders(int tableID)
+        public Order DB_Get_Order(Table table, Employee employee)
         {
-            List<Order> orders = Db_Get_All_Orders_Private(tableID);
+            Order order = new Order();
 
-            foreach (Order order in orders)
-            {
-                //get all ordered items of this table
-                order.items = DB_Get_All_Items_Private(order.orderID);
-            }
+            string queryOrder = string.Format("SELECT orderID, comment FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0 AND DateTimeOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)", table.ID);
 
-            return orders;
-        }
-        //get items of order
-        private List<Item> DB_Get_All_Items_Private(int orderID)
-        {
-            string query = "SELECT I.name, I.price, O.amount,I.TAX, O.comment, I.foodtype FROM ITEMS AS I JOIN ORDER_CONTAINS AS O ON I.itemID = O.itemID WHERE orderID = " + orderID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadItems(ExecuteSelectQuery(query, sqlParameters));
+
+            string queryItems = string.Format("SELECT I.itemID, I.name, I.price, O.amount, I.TAX, I.stock, O.comment, I.course, I.description, I.foodtype FROM ITEMS AS I JOIN ORDER_CONTAINS AS O ON I.itemID = O.itemID JOIN ORDERS AS D on D.orderID = O.orderID WHERE D.orderID = {0}", order.orderID);
+
+            //order ID + comment
+            order = ReadOrder(ExecuteSelectQuery(queryOrder, sqlParameters));
+            //ordered items
+            order.items = ReadItems(ExecuteSelectQuery(queryItems, sqlParameters));
+            //add table
+            order.Table = table;
+            //add employee
+            order.Employee = employee;
+
+            return order;
         }
-        //get orders from table
-        private List<Order> Db_Get_All_Orders_Private(int tableID)
-        {
-            string query = "SELECT orderID, comment, employeeID, tableID FROM ORDERS WHERE tableID = " + tableID;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
-        //
+
         private List<Item> ReadItems(DataTable dataTable)
         {
             List<Item> items = new List<Item>();
@@ -47,10 +41,14 @@ namespace OrderSystemDAL
             {
                 Item item = new Item()
                 {
+                    itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
-                    price = (float)dr["price"],
+                    price = (float)(double)dr["price"],
                     amount = (int)dr["amount"],
                     tax = (int)dr["TAX"],
+                    stock = (int)dr["stock"],
+                    course = (string)dr["course"],
+                    description = (string)dr["description"],
                     comment = (string)dr["comment"],
                     foodtype = (string)dr["foodtype"]
                 };
@@ -59,32 +57,45 @@ namespace OrderSystemDAL
             return items;
         }
         //
-        private List<Order> ReadOrders(DataTable dataTable)
+        private Order ReadOrder(DataTable dataTable)
         {
-            List<Order> orders = new List<Order>();
-
+            Order order = new Order();
             foreach (DataRow dr in dataTable.Rows)
             {
-                Order order = new Order()
-                {
-                    orderID = (int)dr["orderID"],
-                    comment = (string)dr["comment"],
-                    employeeID = (int)dr["employeeID"],
-                    tableID = (int)dr["tableID"]
-                };
-                orders.Add(order);
+                order.orderID = (int)dr["orderID"];
+                order.comment = (string)dr["comment"];
             }
-            return orders;
+            return order;
         }
-        //set order(s) to paid
-        public void SetOrderToPaid(int tableID, List<Order> orders)
+        //set order to paid
+        public void SetOrderToPaid(Order order, float Tip)
         {
             //set to paid
-            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID in (SELECT orderID FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0)", tableID);
+            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0} AND PaymentStatus = 0", order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
+
+            //update db with total paid amount
+            SetTotalPaidAmount(order, Tip);
+        }
+        private void SetTotalPaidAmount(Order order, float Tip)
+        {
             //save total amount in DB
-            
+            float amount = Tip;
+            foreach (Item item in order.items)
+            {
+                amount = amount + item.price;
+            }
+            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", (double)amount, order.orderID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(queryTotalAmount, sqlParameters);
+        }
+        // Add comment to order
+        public void AddCommentToOrder(Order order)
+        {
+            string query = string.Format("UPDATE ORDERS SET comment = '{0}' WHERE orderID = {1}", order.comment, order.orderID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
     }
 }

@@ -9,8 +9,6 @@ namespace OrderSystemModel
     public class Order
     {
         public int orderID { get; set; } //e.g. 1
-        public int tableID { get; set; }
-        public int employeeID { get; set; }
         public string comment
         {
             get

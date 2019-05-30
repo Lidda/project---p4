@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OrderSystemDAL;
+
 using OrderSystemModel;
 
 namespace OrderSystemLogic
@@ -13,23 +14,36 @@ namespace OrderSystemLogic
         CheckoutDAL checkout_db = new CheckoutDAL();
 
         //get all orders (+ ordered items)
-        public List<Order> GetAllOrders(int tableID)
+        public Order GetOrder(Table table, Employee employee)
         {
             try
             {
-                return checkout_db.DB_Get_All_Orders(tableID);
+                return checkout_db.DB_Get_Order(table, employee);
             }
             catch
             {
                 throw new Exception("Couldn't connect to the database");
             }
         }
-        //set order(s) to paid
-        public void SetToPaid(int tableID, List<Order> orders)
+
+        //add comment
+        public void AddComment(Order order)
         {
             try
             {
-                checkout_db.SetOrderToPaid(tableID, orders);
+                checkout_db.AddCommentToOrder(order);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
+        //set order to paid
+        public void SetToPaid(Order order, float Tip)
+        {
+            try
+            {
+                checkout_db.SetOrderToPaid(order, Tip);
             }
             catch
             {
