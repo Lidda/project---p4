@@ -84,7 +84,7 @@ namespace OrderSystemDAL
             float amount = Tip;
             foreach (Item item in order.items)
             {
-                amount = amount + item.price;
+                amount = amount + item.price * item.amount;
             }
             string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", (double)amount, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
