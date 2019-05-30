@@ -1,6 +1,5 @@
 ﻿using OrderSystemLogic1;
 using OrderSystemModel;
-using OrderSystemModel1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static OrderSystemModel1.Table;
+using static OrderSystemModel.Table;
 
 namespace OrderSystemUI.MainUI {
     public partial class OrderMenuUI : Form {

@@ -1,6 +1,5 @@
-﻿using OrderSystemLogic1;
+﻿using OrderSystemLogic;
 using OrderSystemModel;
-using OrderSystemModel1;
 using OrderSystemUI.MainUI;
 using System;
 using System.Collections.Generic;
@@ -11,8 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static OrderSystemModel1.Table;
+using static OrderSystemModel.Table;
 using System.Timers;
+using OrderSystemLogic1;
 
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {

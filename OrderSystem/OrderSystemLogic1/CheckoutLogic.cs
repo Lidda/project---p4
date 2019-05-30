@@ -25,11 +25,11 @@ namespace OrderSystemLogic
             }
         }
         //set order(s) to paid
-        public void SetToPaid(int tableID)
+        public void SetToPaid(int tableID, List<Order> orders)
         {
             try
             {
-                checkout_db.SetOrderToPaid(tableID);
+                checkout_db.SetOrderToPaid(tableID, orders);
             }
             catch
             {
