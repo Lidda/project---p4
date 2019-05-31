@@ -54,7 +54,7 @@ namespace OrderSystemDAL
         }
 
         //Adds items to orders
-        public void AddItemsToOrder(Order order, List<OrderItem> orderItems)
+        public void AddItemsToOrder(OrderModel order, List<OrderItem> orderItems)
         {
             foreach (OrderItem orderItem in orderItems)
             {

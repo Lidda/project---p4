@@ -10,7 +10,7 @@ namespace OrderSystemModel
     {
         public int orderID { get; set; }
         public int amount { get; set; }
-        public Item item { get; set; }
+        public ItemModel item { get; set; }
         public string comment
         {
             get
