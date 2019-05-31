@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarKitchenLogic.cs" />
     <Compile Include="CheckoutLogic.cs" />
     <Compile Include="EmployeeLogic.cs" />
     <Compile Include="LoginLogic.cs" />
