@@ -32,11 +32,11 @@ namespace OrderSystemUI
                 PNL_EditEmployee.Show();
 
                 EmployeeLogic employeeLogic = new EmployeeLogic();
-                List<Employee> employeeListView = employeeLogic.GetAllEmployees();
+                List<EmployeeModel> employeeListView = employeeLogic.GetAllEmployees();
 
                 ListView_Employees.Items.Clear();
 
-                foreach (OrderSystemModel.Employee employee in employeeListView)
+                foreach (OrderSystemModel.EmployeeModel employee in employeeListView)
                 {
                     ListViewItem li = new ListViewItem(employee.name);
                     li.SubItems.Add(employee.username);
@@ -50,7 +50,7 @@ namespace OrderSystemUI
         private void BTN_AddEmployee_Click(object sender, EventArgs e)
         {
             EmployeeLogic employeeLogic = new EmployeeLogic();
-            Employee employee = new Employee();
+            EmployeeModel employee = new EmployeeModel();
             employee.name = TXTB_AddEmployeeName.Text;
             employee.username = TXTB_AddUsername.Text;
             employee.password = TXTB_AddPassword.Text;

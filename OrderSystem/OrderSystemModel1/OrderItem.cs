@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel
 {
-    public class Item
+    public class OrderItem
     {
-        public int itemID { get; set; }
-        public string name { get; set; }
-        public float price { get; set; }
-        public int tax { get; set; }
-        public string foodtype { get; set; }
+        public int orderID { get; set; }
         public int amount { get; set; }
-        public int stock { get; set; }
-        public string course { get; set; }
-        public string description { get; set; }
-
+        public ItemModel item { get; set; }
         public string comment
         {
             get
@@ -37,6 +30,6 @@ namespace OrderSystemModel
                 }
             }
         }
+        public int status { get; set; }
     }
 }
-

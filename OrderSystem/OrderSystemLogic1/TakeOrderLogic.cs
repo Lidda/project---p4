@@ -13,7 +13,7 @@ namespace OrderSystemLogic
         TakeOrderDAL takeOrder_db = new TakeOrderDAL();
 
         //Get all items
-        public List<Item> GetAllItems()
+        public List<ItemModel> GetAllItems()
         {
             try
             {
@@ -25,11 +25,23 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<Item> items, Order order)
+        public void AddItemsToOrder(List<OrderItem> orderItems, OrderModel order)
         {
             try
             {
-                takeOrder_db.DB_AddItemsToOrder(items, order);
+                takeOrder_db.AddItemsToOrder(order, orderItems);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
+
+        public void AddNewOrder(OrderModel order)
+        {
+            try
+            {
+                takeOrder_db.AddNewOrder(order);
             }
             catch
             {

@@ -14,7 +14,7 @@ namespace OrderSystemLogic
         CheckoutDAL checkout_db = new CheckoutDAL();
 
         //get all orders (+ ordered items)
-        public Order GetOrder(Table table, Employee employee)
+        public OrderModel GetOrder(TableModel table, EmployeeModel employee)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace OrderSystemLogic
         }
 
         //add comment
-        public void AddComment(Order order)
+        public void AddComment(OrderModel order)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace OrderSystemLogic
             }
         }
         //set order to paid
-        public void SetToPaid(Order order, float Tip)
+        public void SetToPaid(OrderModel order, float Tip)
         {
             try
             {

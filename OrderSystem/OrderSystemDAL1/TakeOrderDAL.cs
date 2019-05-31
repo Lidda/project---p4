@@ -11,20 +11,20 @@ namespace OrderSystemDAL
 {
     public class TakeOrderDAL : Base
     {
-        public List<Item> DB_Get_All_Items()
+        public List<ItemModel> DB_Get_All_Items()
         {
             string query = "SELECT * FROM ITEMS";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<Item> GetItems(DataTable dataTable)
+        private List<ItemModel> GetItems(DataTable dataTable)
         {
-            List<Item> items = new List<Item>();
+            List<ItemModel> items = new List<ItemModel>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Item item = new Item()
+                ItemModel item = new ItemModel()
                 {
                     itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
@@ -41,7 +41,7 @@ namespace OrderSystemDAL
         }
 
         //Adds new order to ORDERS table
-        public void AddNewOrder(Order order)
+        public void AddNewOrder(OrderModel order)
         {
             string query = "INSERT INTO [ORDERS] (orderID, comment, employeeID, tableID) VALUES ((SELECT COALESCE(MAX(orderID)+1, 0) FROM [ORDERS]), @comment, @employeeID, @tableID)";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -54,17 +54,17 @@ namespace OrderSystemDAL
         }
 
         //Adds items to orders
-        public void DB_AddItemsToOrder(List<Item> items, Order order)
+        public void AddItemsToOrder(OrderModel order, List<OrderItem> orderItems)
         {
-            foreach (Item item in items)
+            foreach (OrderItem orderItem in orderItems)
             {
                 string query = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, status) VALUES (@orderID, @itemID, @amount, @comment, Not ready)";
                 SqlParameter[] sqlParameters = new SqlParameter[]
                 {
                     new SqlParameter("@orderID", order.orderID),
-                    new SqlParameter("@itemID", item.itemID),
-                    new SqlParameter("@amount", item.amount),
-                    new SqlParameter("@comment", item.comment),
+                    new SqlParameter("@itemID", orderItem.item.itemID),
+                    new SqlParameter("@amount", orderItem.amount),
+                    new SqlParameter("@comment", orderItem.comment),
                 };
                 ExecuteSelectQuery(query, sqlParameters);
             }

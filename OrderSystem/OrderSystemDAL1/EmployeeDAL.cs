@@ -9,10 +9,8 @@ using System.Data;
 
 namespace OrderSystemDAL
 {
-    public class EmployeeDAL : Base
-    {
-        public void AddEmployee(Employee employee)
-        {
+    public class EmployeeDAL : Base {
+        public void AddEmployee(EmployeeModel employee) {
             string query = "INSERT INTO [EMPLOYEES] (employeeID, name, username, password, type) VALUES ((SELECT COALESCE(MAX(employeeID)+1, 0) FROM [EMPLOYEES]), @name, @username, @password, @type)";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -24,25 +22,38 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public List<Employee> Db_Get_All_Employees()
-        {
+        //get a list with all employees
+        public List<EmployeeModel> Db_Get_All_Employees() {
             string query = "SELECT name, username, password, type FROM [EMPLOYEES]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadEmployees(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<Employee> ReadEmployees(DataTable dataTable)
-        {
-            List<Employee> employees = new List<Employee>();
+        //get a single employee by ID
+        public EmployeeModel Db_Get_Employee(int employeeID) {
+            string query = string.Format("SELECT name, username, password, type FROM [EMPLOYEES] WHERE employeeID = {0}", employeeID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
 
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Employee employee = new Employee() {
+            List<EmployeeModel> list = ReadEmployees(ExecuteSelectQuery(query, sqlParameters));
+
+            //checks if it got only ONE employee
+            if (list.Count == 1) {
+                return list[0];
+            } else {
+                return null;
+            }
+        }
+
+        private List<EmployeeModel> ReadEmployees(DataTable dataTable) {
+            List<EmployeeModel> employees = new List<EmployeeModel>();
+
+            foreach (DataRow dr in dataTable.Rows) {
+                EmployeeModel employee = new EmployeeModel() {
                     name = (string)dr["name"],
                     username = (string)(dr["username"].ToString()),
                     password = (string)(dr["password"].ToString()),
                     type = (OrderSystemModel.Type)dr["type"]
-            };
+                };
                 employees.Add(employee);
             }
             return employees;
