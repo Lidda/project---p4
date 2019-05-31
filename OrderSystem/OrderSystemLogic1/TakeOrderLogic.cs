@@ -29,7 +29,7 @@ namespace OrderSystemLogic
         {
             try
             {
-                takeOrder_db.AddItemsToOrder(order, orderItems);
+                takeOrder_db.AddItemsToOrder(orderItems);
             }
             catch
             {
