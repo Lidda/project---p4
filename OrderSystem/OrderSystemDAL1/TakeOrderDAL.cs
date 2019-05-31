@@ -18,6 +18,7 @@ namespace OrderSystemDAL
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //Get a list of all items
         private List<ItemModel> GetItems(DataTable dataTable)
         {
             List<ItemModel> items = new List<ItemModel>();
@@ -53,15 +54,15 @@ namespace OrderSystemDAL
             ExecuteSelectQuery(query, sqlParameters);
         }
 
-        //Adds items to orders
-        public void AddItemsToOrder(OrderModel order, List<OrderItem> orderItems)
+        //Adds items to ORDER_CONTAINS table
+        public void AddItemsToOrder(List<OrderItemModel> orderItems)
         {
-            foreach (OrderItem orderItem in orderItems)
+            foreach (OrderItemModel orderItem in orderItems)
             {
                 string query = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, status) VALUES (@orderID, @itemID, @amount, @comment, Not ready)";
                 SqlParameter[] sqlParameters = new SqlParameter[]
                 {
-                    new SqlParameter("@orderID", order.orderID),
+                    new SqlParameter("@orderID", orderItem.orderID),
                     new SqlParameter("@itemID", orderItem.item.itemID),
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@comment", orderItem.comment),

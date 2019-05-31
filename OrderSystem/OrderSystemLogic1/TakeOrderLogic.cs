@@ -25,11 +25,12 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<OrderItem> orderItems, OrderModel order)
+        //Sends information
+        public void AddItemsToOrder(List<OrderItemModel> orderItems)
         {
             try
             {
-                takeOrder_db.AddItemsToOrder(order, orderItems);
+                takeOrder_db.AddItemsToOrder(orderItems);
             }
             catch
             {
