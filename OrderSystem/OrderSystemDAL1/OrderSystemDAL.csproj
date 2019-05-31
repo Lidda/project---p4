@@ -46,6 +46,7 @@
     <Compile Include="Base.cs" />
     <Compile Include="CheckoutDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
+    <Compile Include="FinancesDAL.cs" />
     <Compile Include="ItemDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
