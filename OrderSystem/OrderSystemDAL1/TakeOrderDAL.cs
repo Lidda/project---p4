@@ -54,17 +54,17 @@ namespace OrderSystemDAL
         }
 
         //Adds items to orders
-        public void DB_AddItemsToOrder(List<Item> items, Order order)
+        public void AddItemsToOrder(Order order, List<OrderItem> orderItems)
         {
-            foreach (Item item in items)
+            foreach (OrderItem orderItem in orderItems)
             {
                 string query = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, status) VALUES (@orderID, @itemID, @amount, @comment, Not ready)";
                 SqlParameter[] sqlParameters = new SqlParameter[]
                 {
                     new SqlParameter("@orderID", order.orderID),
-                    new SqlParameter("@itemID", item.itemID),
-                    new SqlParameter("@amount", item.amount),
-                    new SqlParameter("@comment", item.comment),
+                    new SqlParameter("@itemID", orderItem.item.itemID),
+                    new SqlParameter("@amount", orderItem.amount),
+                    new SqlParameter("@comment", orderItem.comment),
                 };
                 ExecuteSelectQuery(query, sqlParameters);
             }
