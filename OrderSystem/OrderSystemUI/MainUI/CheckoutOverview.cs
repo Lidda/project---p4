@@ -16,7 +16,7 @@ namespace OrderSystemUI
     {
         private CheckoutLogic logic = new CheckoutLogic();
         private Order order;
-        private float tip = 0; //tip amount - default no tip
+        private double tip = 0; //tip amount - default no tip
 
         public CheckoutOverview(Table table, Employee employee)
         {
@@ -48,7 +48,7 @@ namespace OrderSystemUI
                 lblCheckoutOverviewHeader.Text = string.Format("Order overview table {0}", order.Table.ID);
 
                 //calculate prices
-                float pricewithoutTAX, totalPrice, totalTax;
+                double pricewithoutTAX, totalPrice, totalTax;
                 pricewithoutTAX = totalPrice = totalTax = 0;
 
                 pricewithoutTAX = GetPrice("noTax");
@@ -70,26 +70,26 @@ namespace OrderSystemUI
                 }
             }
         }
-        private float GetPrice(string priceType)
+        private double GetPrice(string priceType)
         {
             //calculate prices
-            float pricewithoutTAX, totalPrice, totalTax;
+            double pricewithoutTAX, totalPrice, totalTax;
             pricewithoutTAX = totalPrice = totalTax = 0;
 
             foreach (Item item in order.items)
             {
                 //calculate total amount
-                float totalPriceItem = 0;
+                double totalPriceItem = 0;
                 totalPriceItem = item.price * item.amount;
                 totalPrice = totalPrice + totalPriceItem;
 
                 //calculate prices without taxes
-                float taxfreeprice = 0;
+                double taxfreeprice = 0;
                 taxfreeprice = totalPriceItem / (1 + item.tax / 100);
                 pricewithoutTAX = pricewithoutTAX + taxfreeprice;
 
                 //calculate taxes
-                float tax = totalPriceItem - taxfreeprice;
+                double tax = totalPriceItem - taxfreeprice;
                 totalTax = totalTax + tax;
             }
 

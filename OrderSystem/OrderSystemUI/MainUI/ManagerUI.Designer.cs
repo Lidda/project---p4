@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BTN_Stats = new System.Windows.Forms.Button();
+            this.BTN_ManageProducts = new System.Windows.Forms.Button();
+            this.BTN_ManageEmployees = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -44,48 +44,49 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnLogin
+            // BTN_Stats
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLogin.Location = new System.Drawing.Point(12, 79);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(440, 141);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Buisiness statistics";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.BTN_Stats.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BTN_Stats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Stats.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Stats.ForeColor = System.Drawing.SystemColors.Window;
+            this.BTN_Stats.Location = new System.Drawing.Point(12, 79);
+            this.BTN_Stats.Name = "BTN_Stats";
+            this.BTN_Stats.Size = new System.Drawing.Size(440, 141);
+            this.BTN_Stats.TabIndex = 4;
+            this.BTN_Stats.Text = "Buisiness statistics";
+            this.BTN_Stats.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BTN_ManageProducts
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(12, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(440, 141);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Manage products";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BTN_ManageProducts.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BTN_ManageProducts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_ManageProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_ManageProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ManageProducts.ForeColor = System.Drawing.SystemColors.Window;
+            this.BTN_ManageProducts.Location = new System.Drawing.Point(12, 275);
+            this.BTN_ManageProducts.Name = "BTN_ManageProducts";
+            this.BTN_ManageProducts.Size = new System.Drawing.Size(440, 141);
+            this.BTN_ManageProducts.TabIndex = 5;
+            this.BTN_ManageProducts.Text = "Manage products";
+            this.BTN_ManageProducts.UseVisualStyleBackColor = false;
+            this.BTN_ManageProducts.Click += new System.EventHandler(this.BTN_ManageProducts_Click);
             // 
-            // button2
+            // BTN_ManageEmployees
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(12, 473);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(440, 141);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Manage employees";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BTN_ManageEmployees.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BTN_ManageEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_ManageEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_ManageEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ManageEmployees.ForeColor = System.Drawing.SystemColors.Window;
+            this.BTN_ManageEmployees.Location = new System.Drawing.Point(12, 473);
+            this.BTN_ManageEmployees.Name = "BTN_ManageEmployees";
+            this.BTN_ManageEmployees.Size = new System.Drawing.Size(440, 141);
+            this.BTN_ManageEmployees.TabIndex = 6;
+            this.BTN_ManageEmployees.Text = "Manage employees";
+            this.BTN_ManageEmployees.UseVisualStyleBackColor = false;
+            this.BTN_ManageEmployees.Click += new System.EventHandler(this.BTN_ManageEmployees_Click);
             // 
             // ManagerUI
             // 
@@ -93,9 +94,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.BTN_ManageEmployees);
+            this.Controls.Add(this.BTN_ManageProducts);
+            this.Controls.Add(this.BTN_Stats);
             this.Controls.Add(this.btnLogout);
             this.Name = "ManagerUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -107,8 +108,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BTN_Stats;
+        private System.Windows.Forms.Button BTN_ManageProducts;
+        private System.Windows.Forms.Button BTN_ManageEmployees;
     }
 }

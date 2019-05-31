@@ -63,8 +63,7 @@ namespace OrderSystemUI
         }
 
         private void BTN_AddEmployee_Click(object sender, EventArgs e)
-        {
-            
+        {          
             Employee employee = new Employee();
             employee.name = TXTB_AddEmployeeName.Text;
             employee.username = TXTB_AddEmployeeUsername.Text;

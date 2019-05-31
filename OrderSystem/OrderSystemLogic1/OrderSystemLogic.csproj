@@ -44,6 +44,7 @@
     <Compile Include="BarKitchenLogic.cs" />
     <Compile Include="CheckoutLogic.cs" />
     <Compile Include="EmployeeLogic.cs" />
+    <Compile Include="ItemLogic.cs" />
     <Compile Include="LoginLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableLogic.cs" />

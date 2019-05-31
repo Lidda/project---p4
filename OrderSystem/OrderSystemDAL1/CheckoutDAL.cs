@@ -81,7 +81,7 @@ namespace OrderSystemDAL
         private void SetTotalPaidAmount(Order order, float Tip)
         {
             //save total amount in DB
-            float amount = Tip;
+            double amount = Tip;
             foreach (Item item in order.items)
             {
                 amount = amount + item.price * item.amount;
