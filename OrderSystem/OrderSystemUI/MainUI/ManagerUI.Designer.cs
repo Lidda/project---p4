@@ -57,6 +57,7 @@
             this.BTN_Stats.TabIndex = 4;
             this.BTN_Stats.Text = "Buisiness statistics";
             this.BTN_Stats.UseVisualStyleBackColor = false;
+            this.BTN_Stats.Click += new System.EventHandler(this.BTN_Stats_Click);
             // 
             // BTN_ManageProducts
             // 

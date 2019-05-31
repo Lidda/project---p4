@@ -41,5 +41,12 @@ namespace OrderSystemUI.MainUI {
             EditStockUI editStockUI = new EditStockUI();
             editStockUI.ShowDialog();
         }
+
+        private void BTN_Stats_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FinancesUI financesUI = new FinancesUI();
+            financesUI.ShowDialog();
+        }
     }
 }

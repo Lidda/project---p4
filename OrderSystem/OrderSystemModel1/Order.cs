@@ -10,6 +10,8 @@ namespace OrderSystemModel
     {
         public int orderID { get; set; } //e.g. 1
         public int employeeID { get; set; }
+        public double totalAmount;
+        public DateTime orderDate { get; set; }
         public string comment
         {
             get
