@@ -25,7 +25,7 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
+        public void AddItemsToOrder(List<OrderItem> orderItems)
         {
             try
             {
