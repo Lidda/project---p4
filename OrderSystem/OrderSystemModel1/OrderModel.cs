@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel
 {
-    public class Order
+    public class OrderModel
     {
         public int orderID { get; set; } //e.g. 1
         public string comment
@@ -28,15 +28,15 @@ namespace OrderSystemModel
                 }
             }
         }
-        public Employee Employee { get; set; }
-        public Table Table { get; set; }
+        public EmployeeModel Employee { get; set; }
+        public TableModel Table { get; set; }
 
         //list of ordered items
-        public List<Item> items { get; set; }
+        public List<ItemModel> items { get; set; }
 
-        public Order()
+        public OrderModel()
         {
-            items = new List<Item>();
+            items = new List<ItemModel>();
         }
     }
 }

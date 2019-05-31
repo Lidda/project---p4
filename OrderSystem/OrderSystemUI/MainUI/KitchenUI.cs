@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace OrderSystemUI.MainUI {
     public partial class KitchenUI : Form {
-        Employee employee;
+        EmployeeModel employee;
 
-        public KitchenUI(Employee employee) {
+        public KitchenUI(EmployeeModel employee) {
             this.employee = employee;
             InitializeComponent();
         }
