@@ -13,7 +13,7 @@ namespace OrderSystemLogic
         TakeOrderDAL takeOrder_db = new TakeOrderDAL();
 
         //Get all items
-        public List<Item> GetAllItems()
+        public List<ItemModel> GetAllItems()
         {
             try
             {

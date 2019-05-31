@@ -9,16 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static OrderSystemModel.Table;
+using static OrderSystemModel.TableModel;
 
 namespace OrderSystemUI.MainUI {
     public partial class OrderMenuUI : Form {
-        Employee employee;
-        Table table;
+        EmployeeModel employee;
+        TableModel table;
         TableOverviewUI tableUI;
         TableLogic tableLogic = new TableLogic();
 
-        public OrderMenuUI(Employee employee, Table table, TableOverviewUI tableUI) {
+        public OrderMenuUI(EmployeeModel employee, TableModel table, TableOverviewUI tableUI) {
             InitializeComponent();
 
             this.tableUI = tableUI;
@@ -26,6 +26,7 @@ namespace OrderSystemUI.MainUI {
             this.table = table;
 
             InitTableStatusColors();
+            tableLogic.AssignEmployeeToTable(employee, table);
             tableUI.Hide();
         }
 
@@ -39,21 +40,21 @@ namespace OrderSystemUI.MainUI {
             UpdateColors(Availability.Unavailable);
 
             //writes the status off to database
-            tableLogic.AlterTableStatus(Availability.Unavailable, table);
+            tableLogic.UpdateTableStatus(Availability.Unavailable, table);
         }
 
         private void btnFree_Click(object sender, EventArgs e) {
             UpdateColors(Availability.Available);
 
             //writes the status off to database
-            tableLogic.AlterTableStatus(Availability.Available, table);
+            tableLogic.UpdateTableStatus(Availability.Available, table);
         }
 
         private void btnReserved_Click_1(object sender, EventArgs e) {
             UpdateColors(Availability.Reserved);
 
             //writes the status off to database
-            tableLogic.AlterTableStatus(Availability.Reserved, table);
+            tableLogic.UpdateTableStatus(Availability.Reserved, table);
         }
 
         private void InitTableStatusColors() {

@@ -10,18 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static OrderSystemModel.Table;
+using static OrderSystemModel.TableModel;
 using System.Timers;
 
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {
         List<Button> buttons = new List<Button>();
-        Employee employee;
-        List<Table> tables;
+        EmployeeModel employee;
+        List<TableModel> tables;
         TableLogic logic;
         private static System.Timers.Timer timer;
 
-        public TableOverviewUI(Employee employee) {
+        public TableOverviewUI(EmployeeModel employee) {
             this.employee = employee;
             logic = new TableLogic();
             InitializeComponent();
@@ -142,9 +142,9 @@ namespace OrderSystemUI {
             mark10.Hide();
         }
 
-        private void InitOrderUI(Table table) {
+        private void InitOrderUI(TableModel table) {
             this.Hide();
-            table.EmployeeID = employee.ID;
+            table.Employee = employee;
             OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);          
             orderUI.ShowDialog();
         }
@@ -159,7 +159,7 @@ namespace OrderSystemUI {
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
             //update table statusses etc.
-            tables = logic.UpdateTables(tables);
+            tables = logic.GetAllTables();
             SetTableColors();
         }
 

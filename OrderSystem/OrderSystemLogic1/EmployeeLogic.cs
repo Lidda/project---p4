@@ -13,7 +13,7 @@ namespace OrderSystemLogic
     {
         EmployeeDAL employee_db = new EmployeeDAL();
 
-        public void AddEmployee(Employee employee)
+        public void AddEmployee(EmployeeModel employee)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace OrderSystemLogic
             }
         }
 
-        public List<Employee> GetAllEmployees()
+        public List<EmployeeModel> GetAllEmployees()
         {           
             try
             {
