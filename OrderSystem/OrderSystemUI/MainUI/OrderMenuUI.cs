@@ -9,16 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static OrderSystemModel.TableModel;
+using static OrderSystemModel.Table;
 
 namespace OrderSystemUI.MainUI {
     public partial class OrderMenuUI : Form {
-        EmployeeModel employee;
-        TableModel table;
+        Employee employee;
+        Table table;
         TableOverviewUI tableUI;
         TableLogic tableLogic = new TableLogic();
 
-        public OrderMenuUI(EmployeeModel employee, TableModel table, TableOverviewUI tableUI) {
+        public OrderMenuUI(Employee employee, Table table, TableOverviewUI tableUI) {
             InitializeComponent();
 
             this.tableUI = tableUI;

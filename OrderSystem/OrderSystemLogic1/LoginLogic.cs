@@ -10,7 +10,7 @@ namespace OrderSystemLogic {
     public class LoginLogic {
         LoginDAL Login_db = new LoginDAL();
 
-        public bool CheckForUser(EmployeeModel employee) {
+        public bool CheckForUser(Employee employee) {
            try {
                 employee = Login_db.Db_Find_User(employee);
 

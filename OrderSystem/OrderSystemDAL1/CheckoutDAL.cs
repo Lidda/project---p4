@@ -11,9 +11,9 @@ namespace OrderSystemDAL
 {
     public class CheckoutDAL : Base
     {
-        public OrderModel DB_Get_Order(TableModel table, EmployeeModel employee)
+        public Order DB_Get_Order(Table table, Employee employee)
         {
-            OrderModel order = new OrderModel();
+            Order order = new Order();
 
             string queryOrder = string.Format("SELECT orderID, comment FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0 AND DateTimeOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)", table.ID);
 
@@ -33,13 +33,13 @@ namespace OrderSystemDAL
             return order;
         }
 
-        private List<ItemModel> ReadItems(DataTable dataTable)
+        private List<Item> ReadItems(DataTable dataTable)
         {
-            List<ItemModel> items = new List<ItemModel>();
+            List<Item> items = new List<Item>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                ItemModel item = new ItemModel()
+                Item item = new Item()
                 {
                     itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
@@ -57,9 +57,9 @@ namespace OrderSystemDAL
             return items;
         }
         //
-        private OrderModel ReadOrder(DataTable dataTable)
+        private Order ReadOrder(DataTable dataTable)
         {
-            OrderModel order = new OrderModel();
+            Order order = new Order();
             foreach (DataRow dr in dataTable.Rows)
             {
                 order.orderID = (int)dr["orderID"];
@@ -68,7 +68,7 @@ namespace OrderSystemDAL
             return order;
         }
         //set order to paid
-        public void SetOrderToPaid(OrderModel order, float Tip)
+        public void SetOrderToPaid(Order order, float Tip)
         {
             //set to paid
             string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0} AND PaymentStatus = 0", order.orderID);
@@ -78,11 +78,11 @@ namespace OrderSystemDAL
             //update db with total paid amount
             SetTotalPaidAmount(order, Tip);
         }
-        private void SetTotalPaidAmount(OrderModel order, float Tip)
+        private void SetTotalPaidAmount(Order order, float Tip)
         {
             //save total amount in DB
             float amount = Tip;
-            foreach (ItemModel item in order.items)
+            foreach (Item item in order.items)
             {
                 amount = amount + item.price * item.amount;
             }
@@ -91,7 +91,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(queryTotalAmount, sqlParameters);
         }
         // Add comment to order
-        public void AddCommentToOrder(OrderModel order)
+        public void AddCommentToOrder(Order order)
         {
             string query = string.Format("UPDATE ORDERS SET comment = '{0}' WHERE orderID = {1}", order.comment, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];

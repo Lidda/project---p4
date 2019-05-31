@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OrderSystemUI.MainUI {
     public partial class LoginUI : Form {
-        EmployeeModel employee = new EmployeeModel();
+        Employee employee = new Employee();
         LoginLogic logic = new LoginLogic();
 
         public LoginUI() {

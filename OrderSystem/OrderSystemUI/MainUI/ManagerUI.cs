@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace OrderSystemUI.MainUI {
     public partial class ManagerUI : Form {
-        EmployeeModel employee;
+        Employee employee;
 
-        public ManagerUI(EmployeeModel employee) {
+        public ManagerUI(Employee employee) {
             this.employee = employee;
             InitializeComponent();
         }
@@ -23,6 +23,13 @@ namespace OrderSystemUI.MainUI {
             LoginUI loginUI = new LoginUI();
             loginUI.ShowDialog();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditEmployeesUI editEmployeesUI = new EditEmployeesUI();
+            editEmployeesUI.ShowDialog();
         }
     }
 }
