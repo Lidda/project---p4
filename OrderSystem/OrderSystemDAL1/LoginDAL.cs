@@ -11,7 +11,7 @@ using OrderSystemDAL;
 namespace OrderSystemDAL {
     public class LoginDAL : Base {
 
-        public EmployeeModel Db_Find_User(EmployeeModel employee) {
+        public Employee Db_Find_User(Employee employee) {
 
             string query = string.Format("SELECT employeeID, name, username, password, type FROM [EMPLOYEES] " +
                 "WHERE username = '{0}' AND password = '{1}'", employee.username, employee.password);
@@ -20,7 +20,7 @@ namespace OrderSystemDAL {
             return ReadEmployee(ExecuteSelectQuery(query, sqlParameters), employee);
         }
        
-        private EmployeeModel ReadEmployee(DataTable dataTable, EmployeeModel employee) {
+        private Employee ReadEmployee(DataTable dataTable, Employee employee) {
 
             // if the query returned an employee it means the username and password matched, and it gets the one employee.
             if (dataTable.Rows.Count > 0) {

@@ -11,20 +11,20 @@ namespace OrderSystemDAL
 {
     public class TakeOrderDAL : Base
     {
-        public List<ItemModel> DB_Get_All_Items()
+        public List<Item> DB_Get_All_Items()
         {
             string query = "SELECT * FROM ITEMS";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<ItemModel> GetItems(DataTable dataTable)
+        private List<Item> GetItems(DataTable dataTable)
         {
-            List<ItemModel> items = new List<ItemModel>();
+            List<Item> items = new List<Item>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                ItemModel item = new ItemModel()
+                Item item = new Item()
                 {
                     itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
@@ -41,7 +41,7 @@ namespace OrderSystemDAL
         }
 
         //Adds new order to ORDERS table
-        public void AddNewOrder(OrderModel order)
+        public void AddNewOrder(Order order)
         {
             string query = "INSERT INTO [ORDERS] (orderID, comment, employeeID, tableID) VALUES ((SELECT COALESCE(MAX(orderID)+1, 0) FROM [ORDERS]), @comment, @employeeID, @tableID)";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -54,7 +54,7 @@ namespace OrderSystemDAL
         }
 
         //Adds items to orders
-        public void AddItemsToOrder(OrderModel order, List<OrderItem> orderItems)
+        public void AddItemsToOrder(Order order, List<OrderItem> orderItems)
         {
             foreach (OrderItem orderItem in orderItems)
             {

@@ -7,22 +7,22 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static OrderSystemModel.TableModel;
+using static OrderSystemModel.Table;
 
 namespace OrderSystemDAL {
     public class TableDAL : Base {    
         EmployeeDAL employeeDAL = new EmployeeDAL();
 
-        public List<TableModel> Db_Get_All_Tables() {
+        public List<Table> Db_Get_All_Tables() {
             string query = "SELECT tableID, availability, employeeID, capacity FROM [TABLES] ORDER BY [tableID]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAllTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<TableModel> ReadAllTables(DataTable dataTable) {
-            List<TableModel> tables = new List<TableModel>();
+        private List<Table> ReadAllTables(DataTable dataTable) {
+            List<Table> tables = new List<Table>();
             foreach (DataRow dr in dataTable.Rows) {
-                TableModel table = new TableModel() {
+                Table table = new Table() {
                     ID = (int)dr["tableID"],                  
                     Capacity = (int)dr["capacity"],
                     Status = (Availability)dr["availability"],
@@ -34,7 +34,7 @@ namespace OrderSystemDAL {
             return tables;
         }
 
-        public void DbAssignEmployee(EmployeeModel employee, TableModel table) {
+        public void DbAssignEmployee(Employee employee, Table table) {
             SqlParameter[] sqlParameters = new SqlParameter[0];
             string query = String.Format("UPDATE [TABLES] SET employeeID = {0} WHERE tableID = {1}", employee.ID, table.ID);
 

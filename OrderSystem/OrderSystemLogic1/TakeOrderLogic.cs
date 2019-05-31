@@ -13,7 +13,7 @@ namespace OrderSystemLogic
         TakeOrderDAL takeOrder_db = new TakeOrderDAL();
 
         //Get all items
-        public List<ItemModel> GetAllItems()
+        public List<Item> GetAllItems()
         {
             try
             {
@@ -25,7 +25,7 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<OrderItem> orderItems, OrderModel order)
+        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddNewOrder(OrderModel order)
+        public void AddNewOrder(Order order)
         {
             try
             {

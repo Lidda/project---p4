@@ -15,10 +15,10 @@ namespace OrderSystemUI
     public partial class CheckoutOverview : Form
     {
         private CheckoutLogic logic = new CheckoutLogic();
-        private OrderModel order;
+        private Order order;
         private float tip = 0; //tip amount - default no tip
 
-        public CheckoutOverview(TableModel table, EmployeeModel employee)
+        public CheckoutOverview(Table table, Employee employee)
         {
             InitializeComponent();
             order = logic.GetOrder(table, employee);
@@ -76,7 +76,7 @@ namespace OrderSystemUI
             float pricewithoutTAX, totalPrice, totalTax;
             pricewithoutTAX = totalPrice = totalTax = 0;
 
-            foreach (ItemModel item in order.items)
+            foreach (Item item in order.items)
             {
                 //calculate total amount
                 float totalPriceItem = 0;

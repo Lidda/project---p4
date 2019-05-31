@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace OrderSystemUI.MainUI {
     public partial class BarUI : Form {
-        EmployeeModel employee;
-        public BarUI(EmployeeModel employee) {
+        Employee employee;
+        public BarUI(Employee employee) {
             this.employee = employee;
             InitializeComponent();
         }
