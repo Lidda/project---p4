@@ -36,5 +36,29 @@ namespace OrderSystemLogic
                 throw new Exception("Yikes, dat is ook niet best");
             }            
         }
+
+        public void EditEmployee(Employee employee)
+        {
+            try
+            {
+                employee_db.EditEmployee(employee);
+            }
+            catch
+            {
+                throw new Exception("Yikes, dat is  al helemaal niet best");
+            }
+        }
+
+        public void DeleteEmployee(Employee employee)
+        {
+            try
+            {
+                employee_db.DeleteEmployee(employee);
+            }
+            catch
+            {
+                throw new Exception("Yikes, dat is  al helemaaaaaal niet best");
+            }
+        }
     }
 }

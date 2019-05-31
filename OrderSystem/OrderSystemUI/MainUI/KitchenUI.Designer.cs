@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(501, 741);
+            this.ClientSize = new System.Drawing.Size(496, 741);
             this.Controls.Add(this.btn_markReady6);
             this.Controls.Add(this.btn_markReady5);
             this.Controls.Add(this.btn_markReady4);
@@ -237,6 +237,7 @@
             this.Controls.Add(this.txt_sortOldest);
             this.Controls.Add(this.btnLogout);
             this.Name = "KitchenUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenUI";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -36,10 +36,9 @@
             this.btnFree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFree.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFree.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFree.Location = new System.Drawing.Point(104, 88);
-            this.btnFree.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnFree.Location = new System.Drawing.Point(52, 46);
             this.btnFree.Name = "btnFree";
-            this.btnFree.Size = new System.Drawing.Size(228, 67);
+            this.btnFree.Size = new System.Drawing.Size(114, 35);
             this.btnFree.TabIndex = 0;
             this.btnFree.Text = "Free";
             this.btnFree.UseVisualStyleBackColor = false;
@@ -52,10 +51,9 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(24, 1215);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnBack.Location = new System.Drawing.Point(12, 632);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(190, 71);
+            this.btnBack.Size = new System.Drawing.Size(95, 37);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -68,10 +66,9 @@
             this.btnTaken.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaken.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaken.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTaken.Location = new System.Drawing.Point(344, 88);
-            this.btnTaken.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTaken.Location = new System.Drawing.Point(172, 46);
             this.btnTaken.Name = "btnTaken";
-            this.btnTaken.Size = new System.Drawing.Size(228, 67);
+            this.btnTaken.Size = new System.Drawing.Size(114, 35);
             this.btnTaken.TabIndex = 4;
             this.btnTaken.Text = "Taken";
             this.btnTaken.UseVisualStyleBackColor = false;
@@ -84,10 +81,9 @@
             this.btnReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserved.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReserved.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReserved.Location = new System.Drawing.Point(584, 88);
-            this.btnReserved.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReserved.Location = new System.Drawing.Point(292, 46);
             this.btnReserved.Name = "btnReserved";
-            this.btnReserved.Size = new System.Drawing.Size(228, 67);
+            this.btnReserved.Size = new System.Drawing.Size(114, 35);
             this.btnReserved.TabIndex = 5;
             this.btnReserved.Text = "Reserved";
             this.btnReserved.UseVisualStyleBackColor = false;
@@ -95,15 +91,15 @@
             // 
             // OrderMenuUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 1310);
+            this.ClientSize = new System.Drawing.Size(464, 681);
             this.Controls.Add(this.btnReserved);
             this.Controls.Add(this.btnTaken);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFree);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "OrderMenuUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderUI";
             this.ResumeLayout(false);
 

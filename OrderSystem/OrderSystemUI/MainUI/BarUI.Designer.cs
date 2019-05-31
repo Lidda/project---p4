@@ -31,12 +31,11 @@
             this.btnLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(19, 18);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btnLogout.Location = new System.Drawing.Point(6, 6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(190, 66);
+            this.btnLogout.Size = new System.Drawing.Size(60, 23);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -44,13 +43,13 @@
             // 
             // BarUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1469, 1938);
+            this.ClientSize = new System.Drawing.Size(464, 681);
             this.Controls.Add(this.btnLogout);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "BarUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BarUI";
             this.ResumeLayout(false);
 
