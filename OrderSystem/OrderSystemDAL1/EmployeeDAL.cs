@@ -19,7 +19,7 @@ namespace OrderSystemDAL
                 new SqlParameter("@name", employee.name),
                 new SqlParameter("@username", employee.username),
                 new SqlParameter("@password", employee.password),
-                new SqlParameter("@type", employee.type.ToString())
+                new SqlParameter("@type", employee.type)
             };
             ExecuteEditQuery(query, sqlParameters);
         }

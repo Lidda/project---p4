@@ -24,5 +24,12 @@ namespace OrderSystemUI.MainUI {
             loginUI.ShowDialog();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditEmployeesUI editEmployeesUI = new EditEmployeesUI();
+            editEmployeesUI.ShowDialog();
+        }
     }
 }
