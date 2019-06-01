@@ -122,9 +122,17 @@ namespace OrderSystemUI.MainUI
                 //filling listview
                 foreach(OrderItem item in order.items)
                 {
-                    ListViewItem li = new ListViewItem(item.item.name);
+                    ListViewItem li;
+                    if (item.item.comment == "")
+                    {
+                        li = new ListViewItem(item.item.name);
+                    }
+                    else
+                    {
+                        li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.item.comment));
+                    }
                     li.SubItems.Add(item.item.amount.ToString());
-                    li.SubItems.Add(item.item.price.ToString("0.00"));
+                    li.SubItems.Add(item.item.GetAmount("Total").ToString("0.00"));
                     listViewOrderItems.Items.Add(li);
                 }
             }
@@ -154,6 +162,17 @@ namespace OrderSystemUI.MainUI
         {
             //go back
             ShowPanel("Back");
+        }
+
+        private void listViewOrderItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //view comment
+            if (listViewOrderItems.SelectedItems.Count >= 1)
+            {
+               string comment = listViewOrderItems.SelectedItems[0].ToString();
+                MessageBox.Show(comment);
+            }
+            
         }
     }
 }

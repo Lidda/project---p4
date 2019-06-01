@@ -39,6 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listViewOrderItems = new System.Windows.Forms.ListView();
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAddTip = new System.Windows.Forms.Button();
             this.btnAddComment = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.pnlError = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlError.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,6 +157,22 @@
             this.listViewOrderItems.TabIndex = 58;
             this.listViewOrderItems.UseCompatibleStateImageBehavior = false;
             this.listViewOrderItems.View = System.Windows.Forms.View.Details;
+            this.listViewOrderItems.SelectedIndexChanged += new System.EventHandler(this.listViewOrderItems_SelectedIndexChanged);
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            this.Item.Width = 275;
+            // 
+            // amount
+            // 
+            this.amount.Text = "X";
+            this.amount.Width = 75;
+            // 
+            // Price
+            // 
+            this.Price.Text = "€";
+            this.Price.Width = 75;
             // 
             // btnAddTip
             // 
@@ -253,21 +269,6 @@
             this.label5.Size = new System.Drawing.Size(296, 46);
             this.label5.TabIndex = 0;
             this.label5.Text = "No open orders";
-            // 
-            // Item
-            // 
-            this.Item.Text = "Item";
-            this.Item.Width = 275;
-            // 
-            // amount
-            // 
-            this.amount.Text = "X";
-            this.amount.Width = 75;
-            // 
-            // Price
-            // 
-            this.Price.Text = "€";
-            this.Price.Width = 75;
             // 
             // CheckoutOverviewOrder
             // 
