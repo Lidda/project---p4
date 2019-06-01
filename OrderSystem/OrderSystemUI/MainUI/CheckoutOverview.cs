@@ -20,9 +20,16 @@ namespace OrderSystemUI
         public CheckoutOverview(Table table, Employee employee)
         {
             InitializeComponent();
-            order = logic.GetOrder(table, employee);
-
-            ShowPanel("Overview");
+            try
+            {
+                order = logic.GetOrder(table, employee);
+                ShowPanel("Overview");
+            }
+            catch
+            {
+                ShowPanel("error");
+            }
+            
         }
         private void ShowPanel(string panelName)
         {
@@ -34,11 +41,17 @@ namespace OrderSystemUI
                 //hide
                 pnlOverview.Hide();
                 pnlAddComment.Hide();
+                pnlNoOrdersFound.Hide();
                 //set text
                 lblTipHeader.Text = string.Format("Add tip table {0}", order.Table.ID);
                 lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
                 lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
                 lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            }
+            else if (panelName == "error")
+            {
+                pnlNoOrdersFound.Show();
+                pnlNoOrdersFound.BringToFront();
             }
             else if (panelName == "Comment")
             {
@@ -46,6 +59,8 @@ namespace OrderSystemUI
                 pnlAddComment.Show();
                 pnlAddComment.BringToFront();
                 //hide other panels
+                pnlNoOrdersFound.Hide();
+                pnlTip.Hide();
                 pnlOverview.Hide();
                 //set title header
                 lblCommentHeader.Text = string.Format("Table {0} Order {1}: comment", order.Table.ID, order.orderID);
@@ -73,6 +88,8 @@ namespace OrderSystemUI
                 pnlAddComment.Hide();
                 lblTip.Hide();
                 lblTipAmount.Hide();
+                pnlNoOrdersFound.Hide();
+                pnlTip.Hide();
 
                 //set title of header
                 lblCheckoutOverviewHeader.Text = string.Format("Order overview table {0}", order.Table.ID);
