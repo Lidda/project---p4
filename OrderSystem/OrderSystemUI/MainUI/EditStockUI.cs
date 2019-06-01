@@ -118,7 +118,7 @@ namespace OrderSystemUI.MainUI
             if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 itemLogic.DeleteItem(item);
-                MessageBox.Show("Item succesfully deleted");
+                MessageBox.Show("Item was succesfully deleted");
                 ShowPanel("PNL_ManageStock");
             }          
         }
