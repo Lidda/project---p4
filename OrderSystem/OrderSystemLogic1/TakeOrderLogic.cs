@@ -25,11 +25,11 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<OrderItem> orderItems)
+        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
         {
             try
             {
-                takeOrder_db.AddItemsToOrder(orderItems);
+                takeOrder_db.AddItemsToOrder(orderItems, order);
             }
             catch
             {

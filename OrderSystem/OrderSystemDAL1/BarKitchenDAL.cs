@@ -11,8 +11,10 @@ using static OrderSystemModel.OrderItem;
 namespace OrderSystemDAL
 {
     public class BarKitchenDAL : Base {
+        TableDAL tableDAL = new TableDAL();
+
         public List<OrderItem> Db_Get_All_Orders() {
-            string query = "Select o.orderID, o.tableid, i.amount, i.itemID, i.status FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID ORDER BY o.tableID";
+            string query = "Select o.orderID, o.tableID, i.amount, i.itemID, i.status FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID ORDER BY o.tableID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -29,18 +31,17 @@ namespace OrderSystemDAL
 
             foreach (DataRow dr in dataTable.Rows) {
                 OrderItem orderItem = new OrderItem() {
-                    order = (Order)dr["orderID"],
-                    table = (int)dr["tableID"],
                     amount = (int)dr["amount"],
                     item = (Item)dr["itemID"],
                     status = (Status)dr["status"],
-                    comment = (string)dr["comment"]
-
+                    comment = (string)dr["comment"],                   
                 };
                 orders.Add(orderItem);
             }
             return orders;
         }
+
+
 
     }
 }

@@ -55,7 +55,7 @@ namespace OrderSystemDAL
         }
 
         //Adds items to orders
-        public void AddItemsToOrder(List<OrderItem> orderItems)
+        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
         {
             foreach (OrderItem orderItem in orderItems)
             {
@@ -63,7 +63,7 @@ namespace OrderSystemDAL
                 string queryAddToOrder = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, status) VALUES (@orderID, @itemID, @amount, @comment, Not ready)";
                 SqlParameter[] sqlParametersAdd = new SqlParameter[]
                 {
-                    new SqlParameter("@orderID", orderItem.order.orderID),
+                    new SqlParameter("@orderID", order.orderID),
                     new SqlParameter("@itemID", orderItem.item.itemID),
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@comment", orderItem.comment),
@@ -82,7 +82,7 @@ namespace OrderSystemDAL
         }
 
         //Remove item(s) from an order
-        public void RemoveItemsFromOrder(List<OrderItem> orderItems)
+        public void RemoveItemsFromOrder(List<OrderItem> orderItems, Order order)
         {
             foreach (OrderItem orderItem in orderItems)
             {
@@ -92,7 +92,7 @@ namespace OrderSystemDAL
                 {
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@itemID", orderItem.item.itemID),
-                    new SqlParameter("@orderID", orderItem.order.orderID),
+                    new SqlParameter("@orderID", order.orderID),
                 };
                 ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
 

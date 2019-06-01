@@ -22,7 +22,7 @@ namespace OrderSystemDAL
             //order ID + comment
             order = ReadOrder(ExecuteSelectQuery(queryOrder, sqlParameters));
             //ordered items
-            string queryItems = string.Format("SELECT I.itemID, I.name, I.price, O.amount, I.TAX, I.stock, O.comment, I.course, I.description, I.foodtype FROM ITEMS AS I JOIN ORDER_CONTAINS AS O ON I.itemID = O.itemID JOIN ORDERS AS D on D.orderID = O.orderID WHERE D.orderID = {0}", order.orderID);
+            string queryItems = string.Format("SELECT I.itemID, I.name, I.price, O.amount, I.TAX, I.stock, O.comment, I.course, I.description, I.foodtype, O.status FROM ITEMS AS I JOIN ORDER_CONTAINS AS O ON I.itemID = O.itemID JOIN ORDERS AS D on D.orderID = O.orderID WHERE D.orderID = {0}", order.orderID);
             order.items = ReadItems(ExecuteSelectQuery(queryItems, sqlParameters));
             //add table
             order.Table = table;
@@ -32,19 +32,17 @@ namespace OrderSystemDAL
             return order;
         }
 
-        private List<Item> ReadItems(DataTable dataTable)
+        private List<OrderItem> ReadItems(DataTable dataTable)
         {
-            List<Item> items = new List<Item>();
-            Item item = new Item();
+            List<OrderItem> orderItems = new List<OrderItem>();
             foreach (DataRow dr in dataTable.Rows)
             {
-
-                item = new Item();
+                OrderItem orderItem = new OrderItem();
+                Item item = new Item();
 
                 item.itemID = (int)dr["itemID"];
                 item.name = (string)dr["name"];
                 item.price = (float)(double)dr["price"];
-                item.amount = (int)dr["amount"];
                 item.tax = (int)dr["TAX"];
                 item.stock = (int)dr["stock"];
                 item.course = (string)dr["course"];
@@ -59,9 +57,14 @@ namespace OrderSystemDAL
                     item.comment = (string)dr["comment"];
                 }
                 item.foodtype = (string)dr["foodtype"];
-                items.Add(item);
+
+                orderItem.amount = (int)dr["amount"];
+                orderItem.status = (OrderItem.Status)dr["status"];
+                orderItem.item = item;
+
+                orderItems.Add(orderItem);
             }
-            return items;
+            return orderItems;
         }
 
         //
@@ -99,8 +102,8 @@ namespace OrderSystemDAL
         private void SetTotalPaidAmount(Order order) {
             //save total amount in DB
             double amount = order.tip;
-            foreach (Item item in order.items) {
-                amount = amount + item.price * item.amount;
+            foreach (OrderItem i in order.items) {
+                amount = amount + i.item.price * i.item.amount;
             }
             string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", (double)amount, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -108,7 +111,7 @@ namespace OrderSystemDAL
         }
 
         // Add comment to order
-        public void EdditCommentToOrder(Order order)
+        public void AddCommentToOrder(Order order)
         {
             string query = string.Format("UPDATE ORDERS SET comment = '{0}' WHERE orderID = {1}", order.comment, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];

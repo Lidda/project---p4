@@ -166,7 +166,7 @@ namespace OrderSystemUI {
             SetTableColors();
         }
 
-        //FIX ME not called yet
+        /*FIX ME not called yet
         private void showOrderMarks(List<OrderItem> orderItems) {
             foreach (OrderItem o in orderItems) {
                 switch (o.order.Table.ID) {
@@ -204,6 +204,7 @@ namespace OrderSystemUI {
             }
 
         }
+        */
 
     }
 }

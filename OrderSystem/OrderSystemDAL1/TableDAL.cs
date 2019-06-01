@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using static OrderSystemModel.Table;
 
 namespace OrderSystemDAL {
-    public class TableDAL : Base {    
+    public class TableDAL : Base {
         EmployeeDAL employeeDAL = new EmployeeDAL();
 
         public List<Table> Db_Get_All_Tables() {
@@ -23,7 +23,7 @@ namespace OrderSystemDAL {
             List<Table> tables = new List<Table>();
             foreach (DataRow dr in dataTable.Rows) {
                 Table table = new Table() {
-                    ID = (int)dr["tableID"],                  
+                    ID = (int)dr["tableID"],
                     Capacity = (int)dr["capacity"],
                     Status = (Availability)dr["availability"],
                     //Gets a single employee object from the method through the read employeeID
@@ -46,6 +46,21 @@ namespace OrderSystemDAL {
             string query = String.Format("UPDATE [TABLES] SET availability = {0} WHERE tableID = {1}", Convert.ToInt32(status), tableID);
 
             ExecuteEditQuery(query, sqlParameters);
+        }
+
+        //gets a single table by ID
+        public Table DbGetTableByID(int tableID) {
+            string query = string.Format("SELECT tableID, availability, employeeID, capacity FROM [TABLES] WHERE tableID = {0}", tableID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            List<Table> list = ReadAllTables(ExecuteSelectQuery(query, sqlParameters));
+
+            //checks if it got only ONE employee
+            if (list.Count == 1) {
+                return list[0];
+            } else {
+                return null;
+            }
         }
 
     }

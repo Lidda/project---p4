@@ -45,7 +45,7 @@ namespace OrderSystemUI.MainUI
         {
             //add comment/alter comment
             order.comment = txtComment.Text;
-            logic.EdditComment(order);
+            logic.EditComment(order);
         }
 
         private void btnDeleteComment_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace OrderSystemUI.MainUI
             {
                 //delete comment
                 order.comment = "";
-                logic.EdditComment(order);
+                logic.EditComment(order);
             }
         }
 

@@ -9,7 +9,6 @@ namespace OrderSystemModel
     public class Order
     {
         public int orderID { get; set; } //e.g. 1
-        public int employeeID { get; set; }
         public double tip = 0;
         public double totalAmount;
         public DateTime orderDate { get; set; }
@@ -18,19 +17,20 @@ namespace OrderSystemModel
         public Table Table { get; set; }
 
         //list of ordered items
-        public List<Item> items { get; set; }
+        public List<OrderItem> items { get; set; }
 
         public Order()
         {
-            items = new List<Item>();
+            items = new List<OrderItem>();
         }
+
         public double GetTotalAmount(string priceType)
         {
             //get total amount,total taxes, prices without tax 
             double total = 0;
-            foreach(Item item in items)
+            foreach(OrderItem i in items)
             {
-                total = total + item.GetAmount(priceType);
+                total = total + i.item.GetAmount(priceType);
             }
             if (priceType == "Total" && tip > 0)
             {
