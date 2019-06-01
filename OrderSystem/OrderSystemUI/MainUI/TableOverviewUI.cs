@@ -18,12 +18,13 @@ namespace OrderSystemUI {
         List<Button> buttons = new List<Button>();
         Employee employee;
         List<Table> tables;
-        TableLogic logic;
+        TableLogic tableLogic;
+        BarKitchenLogic orderItemLogic;
         private static System.Timers.Timer timer;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
-            logic = new TableLogic();
+            tableLogic = new TableLogic();
             InitializeComponent();
 
             buttons.Add(btnTable1);
@@ -38,7 +39,7 @@ namespace OrderSystemUI {
             buttons.Add(btnTable10);
 
             //initialize tables by getting them from the database
-            tables = logic.GetAllTables();
+            tables = tableLogic.GetAllTables();
             SetTableColors();
             TablesTimer();
         }
@@ -104,6 +105,7 @@ namespace OrderSystemUI {
 
         private void mark1_Click_1(object sender, EventArgs e) {
             mark1.Hide();
+            //FIX ME: Call method that changes the orderItem status to 'delivered' 
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
@@ -145,13 +147,13 @@ namespace OrderSystemUI {
         private void InitOrderUI(Table table) {
             this.Hide();
             table.Employee = employee;
-            OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);          
+            OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);
             orderUI.ShowDialog();
         }
 
         private void TablesTimer() {
             timer = new System.Timers.Timer();
-            timer.Interval = 5000;     
+            timer.Interval = 5000;
             timer.Elapsed += OnTimedEvent;
             timer.AutoReset = true;
             timer.Enabled = true;
@@ -159,8 +161,48 @@ namespace OrderSystemUI {
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
             //update table statusses etc.
-            tables = logic.GetAllTables();
+            tables = tableLogic.GetAllTables();
+            //FIX ME: orderItems = orderItemLogic.getOrders();
             SetTableColors();
+        }
+
+        //FIX ME not called yet
+        private void showOrderMarks(List<OrderItem> orderItems) {
+            foreach (OrderItem o in orderItems) {
+                switch (o.order.Table.ID) {
+                    case 1:
+                        mark1.Visible = true;
+                        break;
+                    case 2:
+                        mark2.Visible = true;
+                        break;
+                    case 3:
+                        mark3.Visible = true;
+                        break;
+                    case 4:
+                        mark4.Visible = true;
+                        break;
+                    case 5:
+                        mark5.Visible = true;
+                        break;
+                    case 6:
+                        mark6.Visible = true;
+                        break;
+                    case 7:
+                        mark7.Visible = true;
+                        break;
+                    case 8:
+                        mark8.Visible = true;
+                        break;
+                    case 9:
+                        mark9.Visible = true;
+                        break;
+                    case 10:
+                        mark10.Visible = true;
+                        break;
+                }
+            }
+
         }
 
     }

@@ -17,7 +17,6 @@ namespace OrderSystemLogic
         {
             try
             {
-
                 List<Order> OrderList = barkitchen_db.Db_Get_All_Orders();
 
                 return OrderList;
@@ -31,9 +30,9 @@ namespace OrderSystemLogic
         }
 
 
-        public void OrderStatus(int statusChange)
+        public void OrderStatus(Order order, OrderItem.Status statusChange)
         {
-            barkitchen_db.OrderStatus(statusChange);
+            barkitchen_db.OrderStatus(order, statusChange);
         }
 
 

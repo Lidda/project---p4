@@ -33,14 +33,11 @@ namespace OrderSystemDAL
             return order;
         }
 
-        private List<Item> ReadItems(DataTable dataTable)
-        {
+        private List<Item> ReadItems(DataTable dataTable) {
             List<Item> items = new List<Item>();
 
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Item item = new Item()
-                {
+            foreach (DataRow dr in dataTable.Rows) {
+                Item item = new Item() {
                     itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
                     price = (float)(double)dr["price"],
@@ -56,20 +53,19 @@ namespace OrderSystemDAL
             }
             return items;
         }
+
         //
-        private Order ReadOrder(DataTable dataTable)
-        {
+        private Order ReadOrder(DataTable dataTable) {
             Order order = new Order();
-            foreach (DataRow dr in dataTable.Rows)
-            {
+            foreach (DataRow dr in dataTable.Rows) {
                 order.orderID = (int)dr["orderID"];
                 order.comment = (string)dr["comment"];
             }
             return order;
         }
+
         //set order to paid
-        public void SetOrderToPaid(Order order, float Tip)
-        {
+        public void SetOrderToPaid(Order order, float Tip) {
             //set to paid
             string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0} AND PaymentStatus = 0", order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -78,18 +74,18 @@ namespace OrderSystemDAL
             //update db with total paid amount
             SetTotalPaidAmount(order, Tip);
         }
-        private void SetTotalPaidAmount(Order order, float Tip)
-        {
+
+        private void SetTotalPaidAmount(Order order, float Tip) {
             //save total amount in DB
             double amount = Tip;
-            foreach (Item item in order.items)
-            {
+            foreach (Item item in order.items) {
                 amount = amount + item.price * item.amount;
             }
             string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", (double)amount, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(queryTotalAmount, sqlParameters);
         }
+
         // Add comment to order
         public void AddCommentToOrder(Order order)
         {
