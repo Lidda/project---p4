@@ -43,7 +43,7 @@ namespace OrderSystemLogic
         {
             try
             {
-                checkout_db.SetOrderToPaid(order, Tip);
+                checkout_db.SetOrderToPaid(order);
             }
             catch
             {

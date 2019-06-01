@@ -118,33 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAK1JREFUaEPt
-        2DEKwkAUBNA9jo1NTiiazpumEMED6HziQIpvFXX/LPNgIKSagRCWbWZmZj90Qub1UU+Uf75zjRdKtuWZ
-        MyIhK78gB6S8rPwNkS5/RMpz+V6GK39HpMtPSHku30tW/oHIlv9XdutZPrKb/IAg/QlRNkLmD0QeUcXQ
-        IyQOc5SNkDlOk0dU8WmExI0EZSNk7oRo2BEyV4u0HSF3uUsx4rI+mpmZfVtrLzDiCL+HceJvAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="btnDeleteComment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADOSURBVGhD7dHBCQJBEAXRSULBbA1FUxAMSW/GoD0Hb3Vw8deiSxe8m/Qf2dF1XbeZjuX5ofnb
-        n2rJ499W/xP0CFM8GjHFoxFTPBoxdZuNPneSHo0m6dFokh6NJunRaJIejSbp0WiSHo0m6dFokh6NJunR
-        aJIejSbp0WiSHo0m6dFokh6NJunRaJIejSbp0WiSHo0m6dFokh6NJunRaJIejSbp3QoNJ8zbeqdC4wnn
-        orcv90IP+Ma8uSurdCjX8ij0mCXmjUuZN7uu6/6qMV5eEh2Nswjl8wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAK1JREFUaEPt
-        2DEKwkAUBNA9jo1NTiiazpumEMED6HziQIpvFXX/LPNgIKSagRCWbWZmZj90Qub1UU+Uf75zjRdKtuWZ
-        MyIhK78gB6S8rPwNkS5/RMpz+V6GK39HpMtPSHku30tW/oHIlv9XdutZPrKb/IAg/QlRNkLmD0QeUcXQ
-        IyQOc5SNkDlOk0dU8WmExI0EZSNk7oRo2BEyV4u0HSF3uUsx4rI+mpmZfVtrLzDiCL+HceJvAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
   <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAK1JREFUaEPt
@@ -161,6 +134,33 @@
         0ge0PKEKRWupQl2LKzQKtZtaqlDXku4OvaAK7AepdlOLKzQKtZtaNlNIPf5fVLupxRWK1lJ3qGtRw3QU
         aje1qOEZWtTwDC1qeIYWNRwtP/YtKhDtCVpUIMo75G/QV1SQr/zV+CxzgauSqgxJVYakKkNSlSk2QGsL
         bCw3tFFxAUsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAK1JREFUaEPt
+        2DEKwkAUBNA9jo1NTiiazpumEMED6HziQIpvFXX/LPNgIKSagRCWbWZmZj90Qub1UU+Uf75zjRdKtuWZ
+        MyIhK78gB6S8rPwNkS5/RMpz+V6GK39HpMtPSHku30tW/oHIlv9XdutZPrKb/IAg/QlRNkLmD0QeUcXQ
+        IyQOc5SNkDlOk0dU8WmExI0EZSNk7oRo2BEyV4u0HSF3uUsx4rI+mpmZfVtrLzDiCL+HceJvAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="btnDeleteComment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAM5JREFUaEPt
+        0cEJAkEQBdFJQsFsDUVTEAxJb8agPQdvdXDx16JLF7yb9B/Z0XVdt5mO5fmh+dufasnj31b/E/QIUzwa
+        McWjEVM8GjF1m40+d5IejSbp0WiSHo0m6dFokh6NJunRaJIejSbp0WiSHo0m6dFokh6NJunRaJIejSbp
+        0WiSHo0m6dFokh6NJunRaJIejSbp0WiSHo0m6dFokh6NJundCg0nzNt6p0LjCeeity/3Qg/4xry5K6t0
+        KNfyKPSYJeaNS5k3u67r/qoxXl4SHY2zCOXzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAK1JREFUaEPt
+        2DEKwkAUBNA9jo1NTiiazpumEMED6HziQIpvFXX/LPNgIKSagRCWbWZmZj90Qub1UU+Uf75zjRdKtuWZ
+        MyIhK78gB6S8rPwNkS5/RMpz+V6GK39HpMtPSHku30tW/oHIlv9XdutZPrKb/IAg/QlRNkLmD0QeUcXQ
+        IyQOc5SNkDlOk0dU8WmExI0EZSNk7oRo2BEyV4u0HSF3uUsx4rI+mpmZfVtrLzDiCL+HceJvAAAAAElF
+        TkSuQmCC
 </value>
   </data>
 </root>

@@ -65,7 +65,7 @@ namespace OrderSystemDAL
         }
 
         //set order to paid
-        public void SetOrderToPaid(Order order, float Tip) {
+        public void SetOrderToPaid(Order order) {
             //set to paid
             string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0} AND PaymentStatus = 0", order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];

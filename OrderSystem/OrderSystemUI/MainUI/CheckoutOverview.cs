@@ -16,7 +16,6 @@ namespace OrderSystemUI
     {
         private CheckoutLogic logic = new CheckoutLogic();
         private Order order;
-        private double tip = 0; //tip amount - default no tip
 
         public CheckoutOverview(Table table, Employee employee)
         {
@@ -25,17 +24,13 @@ namespace OrderSystemUI
 
             ShowPanel("Overview");
         }
-        private void RefereshOrder()
-        {
-            //refresh order overview after comment/tip has been added
-            order = logic.GetOrder(order.Table, order.Employee);
-        }
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
             {
                 //show panel
                 pnlTip.Show();
+                pnlTip.BringToFront();
                 //hide
                 pnlOverview.Hide();
                 pnlAddComment.Hide();
@@ -49,6 +44,7 @@ namespace OrderSystemUI
             {
                 //show panel
                 pnlAddComment.Show();
+                pnlAddComment.BringToFront();
                 //hide other panels
                 pnlOverview.Hide();
                 //set title header
@@ -69,12 +65,10 @@ namespace OrderSystemUI
             }
             else if (panelName == "Overview")
             {
-                //refresh order
-                RefereshOrder();
 
                 //show panels
                 pnlOverview.Show();
-
+                pnlOverview.BringToFront();
                 //hide
                 pnlAddComment.Hide();
                 lblTip.Hide();
@@ -90,11 +84,11 @@ namespace OrderSystemUI
 
                 //check if there's given a tip
                 //if yes, show labels
-                if (tip > 0)
+                if (order.tip > 0)
                 {
                     lblTip.Show();
                     lblTipAmount.Show();
-                    lblTipAmount.Text = string.Format("€ {0:0.00}", tip);
+                    lblTipAmount.Text = string.Format("€ {0:0.00}", order.tip);
                 }
             }
         }
@@ -164,7 +158,7 @@ namespace OrderSystemUI
 
         private void lblTipGrandTotal_Click(object sender, EventArgs e)
         {
-
+            //do nothing
         }
 
         private void button3_Click(object sender, EventArgs e)
