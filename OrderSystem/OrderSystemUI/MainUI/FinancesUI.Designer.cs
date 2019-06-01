@@ -117,6 +117,7 @@
             this.BTN_Daily.TabIndex = 5;
             this.BTN_Daily.Text = "Daily";
             this.BTN_Daily.UseVisualStyleBackColor = false;
+            this.BTN_Daily.Click += new System.EventHandler(this.BTN_Daily_Click);
             // 
             // FinancesUI
             // 

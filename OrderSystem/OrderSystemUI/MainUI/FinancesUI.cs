@@ -73,5 +73,10 @@ namespace OrderSystemUI.MainUI
         {
             LoadYearlyProfit();
         }
+
+        private void BTN_Daily_Click(object sender, EventArgs e)
+        {
+            LoadDailyProfit();
+        }
     }
 }
