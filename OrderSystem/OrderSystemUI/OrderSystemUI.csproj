@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainUI\CheckoutComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\CheckoutComments.Designer.cs">
+      <DependentUpon>CheckoutComments.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\CheckoutOverview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     </Compile>
     <Compile Include="MainUI\BarUI.Designer.cs">
       <DependentUpon>BarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI\CheckoutTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\CheckoutTip.Designer.cs">
+      <DependentUpon>CheckoutTip.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\EditEmployeesUI.cs">
       <SubType>Form</SubType>
@@ -123,8 +135,14 @@
     <EmbeddedResource Include="MainUI\BarUI.resx">
       <DependentUpon>BarUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\CheckoutComments.resx">
+      <DependentUpon>CheckoutComments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainUI\CheckoutOverview.resx">
       <DependentUpon>CheckoutOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\CheckoutTip.resx">
+      <DependentUpon>CheckoutTip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\EditEmployeesUI.resx">
       <DependentUpon>EditEmployeesUI.cs</DependentUpon>

@@ -27,7 +27,7 @@ namespace OrderSystemLogic
         }
 
         //add comment
-        public void AddComment(Order order)
+        public void EdditComment(Order order)
         {
             try
             {

@@ -108,7 +108,7 @@ namespace OrderSystemDAL
         }
 
         // Add comment to order
-        public void AddCommentToOrder(Order order)
+        public void EdditCommentToOrder(Order order)
         {
             string query = string.Format("UPDATE ORDERS SET comment = '{0}' WHERE orderID = {1}", order.comment, order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];

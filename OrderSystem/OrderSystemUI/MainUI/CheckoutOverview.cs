@@ -9,6 +9,7 @@ using OrderSystemLogic;
 using OrderSystemModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OrderSystemUI.MainUI;
 
 namespace OrderSystemUI
 {
@@ -31,22 +32,19 @@ namespace OrderSystemUI
             }
             
         }
+        public CheckoutOverview(Order order)
+        {
+            InitializeComponent();
+            this.order = order;
+            ShowPanel("Overview");
+        }
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
             {
-                //show panel
-                pnlTip.Show();
-                pnlTip.BringToFront();
-                //hide
-                pnlOverview.Hide();
-                pnlAddComment.Hide();
-                pnlNoOrdersFound.Hide();
-                //set text
-                lblTipHeader.Text = string.Format("Add tip table {0}", order.Table.ID);
-                lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
-                lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
-                lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+                this.Hide();
+                CheckoutTip checkoutTipUI = new CheckoutTip(order);
+                checkoutTipUI.ShowDialog();
             }
             else if (panelName == "error")
             {
@@ -55,28 +53,9 @@ namespace OrderSystemUI
             }
             else if (panelName == "Comment")
             {
-                //show panel
-                pnlAddComment.Show();
-                pnlAddComment.BringToFront();
-                //hide other panels
-                pnlNoOrdersFound.Hide();
-                pnlTip.Hide();
-                pnlOverview.Hide();
-                //set title header
-                lblCommentHeader.Text = string.Format("Table {0} Order {1}: comment", order.Table.ID, order.orderID);
-                //empty textbox
-                txtComment.Text = "";
-                //set current comment
-                if (order.comment == "")
-                {
-                    lblCurrentComment.Text = "there's no current comment yet!";
-                    btnAddCommentToOrder.Text = "Add comment";
-                }
-                else
-                {
-                    lblCurrentComment.Text = order.comment;
-                    btnAddCommentToOrder.Text = "Alter comment";
-                }
+                this.Hide();
+                CheckoutComments checkoutCommentsUI = new CheckoutComments(order);
+                checkoutCommentsUI.ShowDialog();
             }
             else if (panelName == "Overview")
             {
@@ -85,11 +64,9 @@ namespace OrderSystemUI
                 pnlOverview.Show();
                 pnlOverview.BringToFront();
                 //hide
-                pnlAddComment.Hide();
                 lblTip.Hide();
                 lblTipAmount.Hide();
                 pnlNoOrdersFound.Hide();
-                pnlTip.Hide();
 
                 //set title of header
                 lblCheckoutOverviewHeader.Text = string.Format("Order overview table {0}", order.Table.ID);
@@ -112,89 +89,82 @@ namespace OrderSystemUI
         
         private void lblTotalAmount_Click(object sender, EventArgs e)
         {
-
+            //ignore
         }
-        
+
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //go to 'previous' page
+            //ignore
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            //go to 'pay' screen
+            //ignore
         }
 
         private void btnAddComment_Click(object sender, EventArgs e)
         {
-            //go to 'add comment' screen
-            ShowPanel("Comment");
+            //ignore
         }
 
         private void btnAddTip_Click(object sender, EventArgs e)
         {
-            //go to 'add tip' screen
-            ShowPanel("Tip");
+            //ignore
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //back buttom of add comment panel
-            ShowPanel("Overview");
+            //ignore
         }
 
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
         {
-            order.comment = txtComment.Text;
-            logic.AddComment(order);
-
-            MessageBox.Show("Comment added!");
-            ShowPanel("Comment");
+            //ignore
         }
 
         private void btnDeleteComment_Click(object sender, EventArgs e)
         {
-            //delete current comment
-            var confirmResult = MessageBox.Show("Are you sure to delete this comment?",
-                                     "Confirm Delete!!",
-                                     MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
-            {
-                order.comment = "";
-                logic.AddComment(order);
-            }
-            ShowPanel("Comment");
+            //ignore
         }
 
         private void btnAddTipToOrder_Click(object sender, EventArgs e)
         {
-            //save tip in order.tip
-            order.tip = double.Parse(txtTip.Text);
-            ShowPanel("Tip");
+            //ignore
         }
 
         private void lblTipGrandTotal_Click(object sender, EventArgs e)
         {
-            //do nothing
+            //ignore
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //cancel adding tip
-            order.tip = 0;
-            ShowPanel("Tip");
+            //ignore
         }
 
         private void btnConfirmTip_Click(object sender, EventArgs e)
         {
-            //confirm and go back to overview > tip has been saved in order.tip
-            ShowPanel("Overview");
+            //ignore
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //back button on tip panel
-            ShowPanel("Overview");
+            //ignore
+        }
+
+        private void btnAddTip_Click_1(object sender, EventArgs e)
+        {
+            ShowPanel("Tip");
+        }
+
+        private void btnAddComment_Click_1(object sender, EventArgs e)
+        {
+            ShowPanel("Comment");
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
+        {
+            //to-do pay screen
         }
     }
 }
