@@ -44,7 +44,7 @@ namespace OrderSystemUI.MainUI {
             {
 
                 ListViewItem li = new ListViewItem(o.tableID.ToString());
-                li.SubItems.Add(o.foodname);
+                li.SubItems.Add(o.name);
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.foodtype);
                 li.SubItems.Add(o.comment);

@@ -12,8 +12,6 @@ namespace OrderSystemDAL
 {
     public class BarKitchenDAL : Base
     {
-        TableDAL tableDAL = new TableDAL();
-
         public List<OrderItem> Db_Get_All_Orders()
         {
             string query = "Select o.tableID, i.amount, p.name, p.foodtype, i.status, i.comment FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID JOIN ITEMS AS P ON p.itemid = i.itemid ORDER BY o.tableID";
@@ -36,15 +34,13 @@ namespace OrderSystemDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 OrderItem orderItem = new OrderItem();
-                Item item = new Item();
-                Order order = new Order();
                 {
-                    order.tableID = (int)dr["tableID"];
+                    orderItem.tableID = (int)dr["tableID"];
                     orderItem.amount = (int)dr["amount"];
-                    item.name = (string)dr["name"];
-                    item.foodtype = (string)dr["foodtype"];
+                    orderItem.name = (string)dr["name"];
+                    orderItem.foodtype = (string)dr["foodtype"];
                     orderItem.status = (Status)dr["status"];
-                    orderItem.comment = (string)dr["comment"];                
+                    orderItem.comment = (string)dr["comment"];
                 };
                 orders.Add(orderItem);
             }
