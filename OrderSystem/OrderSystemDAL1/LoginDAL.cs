@@ -13,8 +13,9 @@ namespace OrderSystemDAL {
 
         public Employee Db_Find_User(Employee employee) {
 
+            //the query only gets the employee with matching username and password
             string query = string.Format("SELECT employeeID, name, username, password, type FROM [EMPLOYEES] " +
-                "WHERE username = '{0}' AND password = '{1}'", employee.username, employee.password);
+                "WHERE (username = '{0}' OR employeeID = {1}) AND password = '{2}'", employee.username, employee.ID, employee.password);
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadEmployee(ExecuteSelectQuery(query, sqlParameters), employee);

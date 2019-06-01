@@ -20,7 +20,14 @@ namespace OrderSystemUI.MainUI {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-            employee.username = usernameInput.Text;
+            int employeeID;
+
+            //tries to turn the received input into an it; if it's successful it sets the employee ID; if it is not successful it sets the username.
+            if (int.TryParse(usernameInput.Text, out employeeID)) {
+                employee.ID = employeeID;
+            } else {
+                employee.username = usernameInput.Text;
+            }
             employee.password = passwordInput.Text;
 
             if (logic.CheckForUser(employee)) {
@@ -42,7 +49,9 @@ namespace OrderSystemUI.MainUI {
                 }
                 this.Close();
             } else {
-                MessageBox.Show("Invalid username or password");
+                MessageBox.Show("Invalid username or password.");
+                usernameInput.Clear();
+                passwordInput.Clear();
             }
         }
     }
