@@ -40,6 +40,12 @@
             this.ItemPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ItemTAX = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PNL_AddItem = new System.Windows.Forms.Panel();
+            this.TXTB_AddDescription = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.DB_AddTAX = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DB_AddType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.DB_AddCourse = new System.Windows.Forms.ComboBox();
             this.BTN_AddItem = new System.Windows.Forms.Button();
@@ -50,12 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TXTB_AddStock = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DB_AddType = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DB_AddTAX = new System.Windows.Forms.ComboBox();
-            this.TXTB_AddDescription = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.PNL_EditItem = new System.Windows.Forms.Panel();
             this.TXTB_EditDescription = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,6 +73,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.TXTB_EditStock = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.LBL_itemID = new System.Windows.Forms.Label();
             this.PNL_ManageStock.SuspendLayout();
             this.PNL_AddItem.SuspendLayout();
             this.PNL_EditItem.SuspendLayout();
@@ -117,6 +119,7 @@
             this.EditItem.TabIndex = 3;
             this.EditItem.Text = "Edit";
             this.EditItem.UseVisualStyleBackColor = false;
+            this.EditItem.Click += new System.EventHandler(this.EditItem_Click);
             // 
             // DeleteItem
             // 
@@ -131,6 +134,7 @@
             this.DeleteItem.TabIndex = 2;
             this.DeleteItem.Text = "Delete";
             this.DeleteItem.UseVisualStyleBackColor = false;
+            this.DeleteItem.Click += new System.EventHandler(this.DeleteItem_Click);
             // 
             // AddItem
             // 
@@ -163,6 +167,7 @@
             this.ListView_Stock.TabIndex = 0;
             this.ListView_Stock.UseCompatibleStateImageBehavior = false;
             this.ListView_Stock.View = System.Windows.Forms.View.Details;
+            this.ListView_Stock.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.ListView_Stock_ItemSelectionChanged);
             // 
             // ItemID
             // 
@@ -212,6 +217,81 @@
             this.PNL_AddItem.Size = new System.Drawing.Size(465, 681);
             this.PNL_AddItem.TabIndex = 18;
             // 
+            // TXTB_AddDescription
+            // 
+            this.TXTB_AddDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTB_AddDescription.Location = new System.Drawing.Point(41, 382);
+            this.TXTB_AddDescription.Multiline = true;
+            this.TXTB_AddDescription.Name = "TXTB_AddDescription";
+            this.TXTB_AddDescription.Size = new System.Drawing.Size(386, 122);
+            this.TXTB_AddDescription.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(36, 350);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(141, 29);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Description:";
+            // 
+            // DB_AddTAX
+            // 
+            this.DB_AddTAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DB_AddTAX.FormattingEnabled = true;
+            this.DB_AddTAX.Items.AddRange(new object[] {
+            "0%",
+            "6%",
+            "9%",
+            "19%",
+            "21%"});
+            this.DB_AddTAX.Location = new System.Drawing.Point(139, 201);
+            this.DB_AddTAX.Name = "DB_AddTAX";
+            this.DB_AddTAX.Size = new System.Drawing.Size(288, 37);
+            this.DB_AddTAX.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(36, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 29);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "TAX:";
+            // 
+            // DB_AddType
+            // 
+            this.DB_AddType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DB_AddType.FormattingEnabled = true;
+            this.DB_AddType.Items.AddRange(new object[] {
+            "Beer",
+            "Tea",
+            "Coffee",
+            "Liquor",
+            "Lunch",
+            "Softdrink",
+            "Wine",
+            "Dinner"});
+            this.DB_AddType.Location = new System.Drawing.Point(139, 288);
+            this.DB_AddType.Name = "DB_AddType";
+            this.DB_AddType.Size = new System.Drawing.Size(288, 37);
+            this.DB_AddType.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(36, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 29);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Type:";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -254,6 +334,7 @@
             this.BTN_AddItem.TabIndex = 12;
             this.BTN_AddItem.Text = "Add";
             this.BTN_AddItem.UseVisualStyleBackColor = false;
+            this.BTN_AddItem.Click += new System.EventHandler(this.BTN_AddItem_Click);
             // 
             // label4
             // 
@@ -323,83 +404,10 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Stock:";
             // 
-            // DB_AddType
-            // 
-            this.DB_AddType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DB_AddType.FormattingEnabled = true;
-            this.DB_AddType.Items.AddRange(new object[] {
-            "Beer",
-            "Tea",
-            "Coffee",
-            "Liquor",
-            "Lunch",
-            "Softdrink",
-            "Wine",
-            "Dinner"});
-            this.DB_AddType.Location = new System.Drawing.Point(139, 288);
-            this.DB_AddType.Name = "DB_AddType";
-            this.DB_AddType.Size = new System.Drawing.Size(288, 37);
-            this.DB_AddType.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(36, 291);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 29);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Type:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(36, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 29);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "TAX:";
-            // 
-            // DB_AddTAX
-            // 
-            this.DB_AddTAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DB_AddTAX.FormattingEnabled = true;
-            this.DB_AddTAX.Items.AddRange(new object[] {
-            "0%",
-            "6%",
-            "9%",
-            "19%",
-            "21%"});
-            this.DB_AddTAX.Location = new System.Drawing.Point(139, 201);
-            this.DB_AddTAX.Name = "DB_AddTAX";
-            this.DB_AddTAX.Size = new System.Drawing.Size(288, 37);
-            this.DB_AddTAX.TabIndex = 20;
-            // 
-            // TXTB_AddDescription
-            // 
-            this.TXTB_AddDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_AddDescription.Location = new System.Drawing.Point(41, 382);
-            this.TXTB_AddDescription.Multiline = true;
-            this.TXTB_AddDescription.Name = "TXTB_AddDescription";
-            this.TXTB_AddDescription.Size = new System.Drawing.Size(386, 122);
-            this.TXTB_AddDescription.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(36, 350);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 29);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Description:";
-            // 
             // PNL_EditItem
             // 
+            this.PNL_EditItem.Controls.Add(this.LBL_itemID);
+            this.PNL_EditItem.Controls.Add(this.label15);
             this.PNL_EditItem.Controls.Add(this.TXTB_EditDescription);
             this.PNL_EditItem.Controls.Add(this.label5);
             this.PNL_EditItem.Controls.Add(this.DB_EditTAX);
@@ -538,6 +546,7 @@
             this.BTN_EditItem.TabIndex = 12;
             this.BTN_EditItem.Text = "Edit";
             this.BTN_EditItem.UseVisualStyleBackColor = false;
+            this.BTN_EditItem.Click += new System.EventHandler(this.BTN_EditItem_Click);
             // 
             // label11
             // 
@@ -607,14 +616,35 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Stock:";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(36, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 29);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "ItemID:";
+            // 
+            // LBL_itemID
+            // 
+            this.LBL_itemID.AutoSize = true;
+            this.LBL_itemID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_itemID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_itemID.Location = new System.Drawing.Point(134, 27);
+            this.LBL_itemID.Name = "LBL_itemID";
+            this.LBL_itemID.Size = new System.Drawing.Size(0, 29);
+            this.LBL_itemID.TabIndex = 24;
+            // 
             // EditStockUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_AddItem);
-            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_ManageStock);
+            this.Controls.Add(this.PNL_EditItem);
+            this.Controls.Add(this.PNL_AddItem);
             this.Name = "EditStockUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditStock";
@@ -674,5 +704,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TXTB_EditStock;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label LBL_itemID;
+        private System.Windows.Forms.Label label15;
     }
 }

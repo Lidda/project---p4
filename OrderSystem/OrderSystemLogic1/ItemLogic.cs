@@ -22,5 +22,41 @@ namespace OrderSystemLogic
                 throw new Exception("Could not get items from database");
             }
         }
+
+        public void Additem(Item item)
+        {
+            try
+            {
+                itemDAL.AddItem(item);
+            }
+            catch
+            {
+                throw new Exception("Could not insert item into database");
+            }
+        }
+
+        public void EditItem(Item item)
+        {
+            try
+            {
+                itemDAL.EditItem(item);
+            }
+            catch
+            {
+                throw new Exception("Could not insert item into database");
+            }
+        }
+
+        public void DeleteItem(Item item)
+        {
+            try
+            {
+                itemDAL.DeleteItem(item);
+            }
+            catch
+            {
+                throw new Exception("Could not delete item from database");
+            }
+        }
     }
 }

@@ -39,5 +39,48 @@ namespace OrderSystemDAL
             }
             return items;
         }
+
+        public void AddItem(Item item)
+        {
+            string query = "INSERT INTO [ITEMS] (itemID, name, stock, price, TAX, course, foodtype, description) VALUES ((SELECT COALESCE(MAX(itemID)+1, 0) FROM [ITEMS]), @name, @stock, @price, @TAX, @course, @foodtype, @description)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@name", item.name),
+                new SqlParameter("@stock", item.stock),
+                new SqlParameter("@price", item.price),
+                new SqlParameter("@TAX", item.tax),
+                new SqlParameter("@course", item.course),
+                new SqlParameter("@foodtype", item.foodtype),
+                new SqlParameter("@description", item.description)
+            };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void EditItem(Item item)
+        {
+            string query = "UPDATE [ITEMS] SET name = @name, stock = @stock, price = @price, TAX = @TAX, course = @course, foodtype = @foodtype, description = @description WHERE itemID = @itemID";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@itemID", item.itemID),
+                new SqlParameter("@name", item.name),
+                new SqlParameter("@stock", item.stock),
+                new SqlParameter("@price", item.price),
+                new SqlParameter("@TAX", item.tax),
+                new SqlParameter("@course", item.course),
+                new SqlParameter("@foodtype", item.foodtype),
+                new SqlParameter("@description", item.description)
+            };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void DeleteItem(Item item)
+        {
+            string query = "DELETE FROM [ITEMS] WHERE itemID = @itemID";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@itemID", item.itemID)
+            };
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }
