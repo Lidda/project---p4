@@ -39,7 +39,7 @@ namespace OrderSystemLogic
             }
         }
         //set order to paid
-        public void SetToPaid(Order order, float Tip)
+        public void SetToPaid(Order order)
         {
             try
             {

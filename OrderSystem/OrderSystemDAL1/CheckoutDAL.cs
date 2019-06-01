@@ -72,12 +72,12 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
 
             //update db with total paid amount
-            SetTotalPaidAmount(order, Tip);
+            SetTotalPaidAmount(order);
         }
 
-        private void SetTotalPaidAmount(Order order, float Tip) {
+        private void SetTotalPaidAmount(Order order) {
             //save total amount in DB
-            double amount = Tip;
+            double amount = order.tip;
             foreach (Item item in order.items) {
                 amount = amount + item.price * item.amount;
             }

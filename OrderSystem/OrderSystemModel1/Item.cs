@@ -37,6 +37,29 @@ namespace OrderSystemModel
                 }
             }
         }
+
+        public double GetAmount(string priceType)
+        {
+            if (priceType == "Total")
+            {
+                //get total price * amount
+                return price * amount;
+            }
+            else if (priceType == "Tax")
+            {
+                //get tax only
+                return (price * amount) / (1 + tax / 100) * (tax / 100);
+            }
+            else if (priceType == "withoutTax")
+            {
+                return (price * amount) / (1 + tax / 100);
+            }
+            else
+            {
+                //if not matches > return 0
+                return 0;
+            }
+        }
     }
 }
 

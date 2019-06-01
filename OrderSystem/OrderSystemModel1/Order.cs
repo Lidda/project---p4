@@ -10,6 +10,7 @@ namespace OrderSystemModel
     {
         public int orderID { get; set; } //e.g. 1
         public int employeeID { get; set; }
+        public double tip = 0;
         public double totalAmount;
         public DateTime orderDate { get; set; }
         public string comment
@@ -40,6 +41,20 @@ namespace OrderSystemModel
         public Order()
         {
             items = new List<Item>();
+        }
+        public double GetTotalAmount(string priceType)
+        {
+            //get total amount,total taxes, prices without tax 
+            double total = 0;
+            foreach(Item item in items)
+            {
+                total = total + item.GetAmount(priceType);
+            }
+            if (priceType == "Total" && tip > 0)
+            {
+                total = total + tip;
+            }
+            return total;
         }
     }
 }
