@@ -30,11 +30,11 @@ namespace OrderSystemModel
             else if (priceType == "Tax")
             {
                 //get tax only
-                return (price * amount) / (1 + tax / 100) * (tax / 100);
+                return (price * amount) / (1 + (double)tax / 100) * ((double)tax / 100);
             }
             else if (priceType == "withoutTax")
             {
-                return (price * amount) / (1 + tax / 100);
+                return price * amount / ((double)tax / 100 + 1);
             }
             else
             {
