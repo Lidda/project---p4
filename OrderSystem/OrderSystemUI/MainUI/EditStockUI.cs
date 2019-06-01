@@ -114,9 +114,13 @@ namespace OrderSystemUI.MainUI
             {
                 itemID = int.Parse(LBL_itemID.Text)
             };
-            itemLogic.DeleteItem(item);
-            MessageBox.Show("Item was succesfully deleted");
-            ShowPanel("PNL_ManageStock");
+            
+            if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                itemLogic.DeleteItem(item);
+                MessageBox.Show("Item succesfully deleted");
+                ShowPanel("PNL_ManageStock");
+            }          
         }
 
         private void ListView_Stock_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
