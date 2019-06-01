@@ -32,7 +32,42 @@ namespace OrderSystemUI
         }
         private void ShowPanel(string panelName)
         {
-            if (panelName == "Overview")
+            if (panelName == "Tip")
+            {
+                //show panel
+                pnlTip.Show();
+                //hide
+                pnlOverview.Hide();
+                pnlAddComment.Hide();
+                //set text
+                lblTipHeader.Text = string.Format("Add tip table {0}", order.Table.ID);
+                lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
+                lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
+                lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            }
+            else if (panelName == "Comment")
+            {
+                //show panel
+                pnlAddComment.Show();
+                //hide other panels
+                pnlOverview.Hide();
+                //set title header
+                lblCommentHeader.Text = string.Format("Table {0} Order {1}: comment", order.Table.ID, order.orderID);
+                //empty textbox
+                txtComment.Text = "";
+                //set current comment
+                if (order.comment == "")
+                {
+                    lblCurrentComment.Text = "there's no current comment yet!";
+                    btnAddCommentToOrder.Text = "Add comment";
+                }
+                else
+                {
+                    lblCurrentComment.Text = order.comment;
+                    btnAddCommentToOrder.Text = "Alter comment";
+                }
+            }
+            else if (panelName == "Overview")
             {
                 //refresh order
                 RefereshOrder();
@@ -40,7 +75,8 @@ namespace OrderSystemUI
                 //show panels
                 pnlOverview.Show();
 
-                //hide labels
+                //hide
+                pnlAddComment.Hide();
                 lblTip.Hide();
                 lblTipAmount.Hide();
 
@@ -81,11 +117,73 @@ namespace OrderSystemUI
         private void btnAddComment_Click(object sender, EventArgs e)
         {
             //go to 'add comment' screen
+            ShowPanel("Comment");
         }
 
         private void btnAddTip_Click(object sender, EventArgs e)
         {
             //go to 'add tip' screen
+            ShowPanel("Tip");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //back buttom of add comment panel
+            ShowPanel("Overview");
+        }
+
+        private void btnAddCommentToOrder_Click(object sender, EventArgs e)
+        {
+            order.comment = txtComment.Text;
+            logic.AddComment(order);
+
+            MessageBox.Show("Comment added!");
+            ShowPanel("Comment");
+        }
+
+        private void btnDeleteComment_Click(object sender, EventArgs e)
+        {
+            //delete current comment
+            var confirmResult = MessageBox.Show("Are you sure to delete this comment?",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                order.comment = "";
+                logic.AddComment(order);
+            }
+            ShowPanel("Comment");
+        }
+
+        private void btnAddTipToOrder_Click(object sender, EventArgs e)
+        {
+            //save tip in order.tip
+            order.tip = double.Parse(txtTip.Text);
+            ShowPanel("Tip");
+        }
+
+        private void lblTipGrandTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //cancel adding tip
+            order.tip = 0;
+            ShowPanel("Tip");
+        }
+
+        private void btnConfirmTip_Click(object sender, EventArgs e)
+        {
+            //confirm and go back to overview > tip has been saved in order.tip
+            ShowPanel("Overview");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //back button on tip panel
+            ShowPanel("Overview");
         }
     }
 }
