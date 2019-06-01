@@ -44,5 +44,10 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
+
+        private void AddItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
