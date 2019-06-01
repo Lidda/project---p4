@@ -19,6 +19,7 @@ namespace OrderSystemUI
         EmployeeLogic employeeLogic = new EmployeeLogic();
         Employee loggedInEmployee;
 
+
         public EditEmployeesUI(Employee loggedInEmployee)
         {
             this.loggedInEmployee = loggedInEmployee;
