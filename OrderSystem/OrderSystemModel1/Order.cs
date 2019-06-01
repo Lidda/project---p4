@@ -13,25 +13,7 @@ namespace OrderSystemModel
         public double tip = 0;
         public double totalAmount;
         public DateTime orderDate { get; set; }
-        public string comment
-        {
-            get
-            {
-                return comment;
-            }
-            set
-            {
-                //check if value is not null before assigning it
-                if (value != null)
-                {
-                    comment = value;
-                }
-                else
-                {
-                    comment = "";
-                }
-            }
-        }
+        public string comment { get; set; }
         public Employee Employee { get; set; }
         public Table Table { get; set; }
 

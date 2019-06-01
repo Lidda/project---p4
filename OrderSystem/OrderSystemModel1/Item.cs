@@ -18,25 +18,7 @@ namespace OrderSystemModel
         public string course { get; set; }
         public string description { get; set; }
 
-        public string comment
-        {
-            get
-            {
-                return comment;
-            }
-            set
-            {
-                //check if value is not null before assigning it
-                if (value != null)
-                {
-                    comment = value;
-                }
-                else
-                {
-                    comment = "";
-                }
-            }
-        }
+        public string comment { get; set; }
 
         public double GetAmount(string priceType)
         {
