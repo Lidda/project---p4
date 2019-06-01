@@ -14,7 +14,7 @@ namespace OrderSystemDAL
         TableDAL tableDAL = new TableDAL();
 
         public List<OrderItem> Db_Get_All_Orders() {
-            string query = "Select o.orderID, o.tableID, i.amount, i.itemID, i.status FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID ORDER BY o.tableID";
+            string query = "Select o.tableID, i.amount, p.name, p.foodtype, i.status, i.comment FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID JOIN ITEMS AS P ON p.itemid = i.itemid ORDER BY o.tableID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,8 +31,10 @@ namespace OrderSystemDAL
 
             foreach (DataRow dr in dataTable.Rows) {
                 OrderItem orderItem = new OrderItem() {
+                    tableID = (int)dr["tableID"],
                     amount = (int)dr["amount"],
-                    item = (Item)dr["itemID"],
+                    foodname = (string)dr["name"],
+                    foodtype = (string)dr["foodtype"],
                     status = (Status)dr["status"],
                     comment = (string)dr["comment"],                   
                 };

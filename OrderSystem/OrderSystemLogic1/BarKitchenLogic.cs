@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,21 +13,21 @@ namespace OrderSystemLogic
         BarKitchenDAL barkitchen_db = new BarKitchenDAL();
 
 
-        //public List<Order> GetOrders()
-        //{
-        //    try
-        //    {
-        //        List<Order> OrderList = barkitchen_db.Db_Get_All_Orders();
+        public List<OrderItem> GetOrders()
+        {
+            try
+            {
+                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Orders();
 
-        //        return OrderList;
-        //    }
-        //    catch (Exception)
-        //    {
+                return OrderList;
+            }
+            catch (Exception)
+           {
 
-        //        throw new Exception("Something went wrong");
-        //    }
+                throw new Exception("Something went wrong");
+            }
 
-        //}
+        }
 
 
         public void OrderStatus(Order order, OrderItem.Status statusChange)
