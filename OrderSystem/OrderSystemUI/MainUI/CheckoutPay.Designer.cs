@@ -73,9 +73,9 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(135, 547);
+            this.button3.Location = new System.Drawing.Point(135, 501);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(338, 89);
+            this.button3.Size = new System.Drawing.Size(338, 131);
             this.button3.TabIndex = 3;
             this.button3.Text = "Debitcard";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -89,9 +89,9 @@
             this.btnCreditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCreditCard.Image = ((System.Drawing.Image)(resources.GetObject("btnCreditCard.Image")));
             this.btnCreditCard.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCreditCard.Location = new System.Drawing.Point(135, 327);
+            this.btnCreditCard.Location = new System.Drawing.Point(135, 319);
             this.btnCreditCard.Name = "btnCreditCard";
-            this.btnCreditCard.Size = new System.Drawing.Size(338, 89);
+            this.btnCreditCard.Size = new System.Drawing.Size(338, 131);
             this.btnCreditCard.TabIndex = 2;
             this.btnCreditCard.Text = "Creditcard";
             this.btnCreditCard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -107,7 +107,7 @@
             this.btnCash.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCash.Location = new System.Drawing.Point(135, 128);
             this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(338, 89);
+            this.btnCash.Size = new System.Drawing.Size(338, 131);
             this.btnCash.TabIndex = 1;
             this.btnCash.Text = "Cash";
             this.btnCash.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

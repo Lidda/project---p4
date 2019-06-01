@@ -116,6 +116,17 @@ namespace OrderSystemUI.MainUI
                     lblTipAmount.Show();
                     lblTipAmount.Text = string.Format("€ {0:0.00}", order.tip);
                 }
+
+                //empty listview before filling it
+                listViewOrderItems.Items.Clear();
+                //filling listview
+                foreach(OrderItem item in order.items)
+                {
+                    ListViewItem li = new ListViewItem(item.item.name);
+                    li.SubItems.Add(item.item.amount.ToString());
+                    li.SubItems.Add(item.item.price.ToString("0.00"));
+                    listViewOrderItems.Items.Add(li);
+                }
             }
         }
 
@@ -143,7 +154,6 @@ namespace OrderSystemUI.MainUI
         {
             //go back
             ShowPanel("Back");
-
         }
     }
 }

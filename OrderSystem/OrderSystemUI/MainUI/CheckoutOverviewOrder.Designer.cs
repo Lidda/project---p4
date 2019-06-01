@@ -45,8 +45,11 @@
             this.lblCheckoutOverviewHeader = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlError = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlError.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,12 +144,19 @@
             // 
             // listViewOrderItems
             // 
+            this.listViewOrderItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Item,
+            this.amount,
+            this.Price});
+            this.listViewOrderItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.listViewOrderItems.GridLines = true;
             this.listViewOrderItems.Location = new System.Drawing.Point(29, 54);
             this.listViewOrderItems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewOrderItems.Name = "listViewOrderItems";
             this.listViewOrderItems.Size = new System.Drawing.Size(559, 390);
             this.listViewOrderItems.TabIndex = 58;
             this.listViewOrderItems.UseCompatibleStateImageBehavior = false;
+            this.listViewOrderItems.View = System.Windows.Forms.View.Details;
             // 
             // btnAddTip
             // 
@@ -221,17 +231,6 @@
             this.pnlError.Size = new System.Drawing.Size(617, 837);
             this.pnlError.TabIndex = 69;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(169, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 46);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "No open orders";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -243,6 +242,32 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(169, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(296, 46);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "No open orders";
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            this.Item.Width = 275;
+            // 
+            // amount
+            // 
+            this.amount.Text = "X";
+            this.amount.Width = 75;
+            // 
+            // Price
+            // 
+            this.Price.Text = "€";
+            this.Price.Width = 75;
             // 
             // CheckoutOverviewOrder
             // 
@@ -295,5 +320,8 @@
         private System.Windows.Forms.Panel pnlError;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColumnHeader Item;
+        private System.Windows.Forms.ColumnHeader amount;
+        private System.Windows.Forms.ColumnHeader Price;
     }
 }
