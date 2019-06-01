@@ -66,6 +66,12 @@
     <Compile Include="MainUI\BarUI.Designer.cs">
       <DependentUpon>BarUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainUI\CheckoutPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\CheckoutPay.Designer.cs">
+      <DependentUpon>CheckoutPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\CheckoutTip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\CheckoutOverview.resx">
       <DependentUpon>CheckoutOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\CheckoutPay.resx">
+      <DependentUpon>CheckoutPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\CheckoutTip.resx">
       <DependentUpon>CheckoutTip.cs</DependentUpon>
