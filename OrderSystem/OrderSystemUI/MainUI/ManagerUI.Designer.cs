@@ -55,7 +55,7 @@
             this.BTN_Stats.Name = "BTN_Stats";
             this.BTN_Stats.Size = new System.Drawing.Size(440, 141);
             this.BTN_Stats.TabIndex = 4;
-            this.BTN_Stats.Text = "Buisiness statistics";
+            this.BTN_Stats.Text = "Business statistics";
             this.BTN_Stats.UseVisualStyleBackColor = false;
             this.BTN_Stats.Click += new System.EventHandler(this.BTN_Stats_Click);
             // 
