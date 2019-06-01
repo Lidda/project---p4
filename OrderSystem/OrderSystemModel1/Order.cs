@@ -9,6 +9,7 @@ namespace OrderSystemModel
     public class Order
     {
         public int orderID { get; set; } //e.g. 1
+        public int tableID { get; set; }
         public double tip = 0;
         public double totalAmount;
         public DateTime orderDate { get; set; }
