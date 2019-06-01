@@ -15,11 +15,13 @@ namespace OrderSystemUI.MainUI
     public partial class EditStockUI : Form
     {
         ItemLogic itemLogic = new ItemLogic();
+        Employee loggedInEmployee;
 
-        public EditStockUI()
+        public EditStockUI(Employee loggedInEmployee)
         {
             InitializeComponent();
             ShowPanel("PNL_ManageStock");
+            this.loggedInEmployee = loggedInEmployee;
         }
 
         private void ShowPanel(string panelName)
@@ -127,6 +129,23 @@ namespace OrderSystemUI.MainUI
             DB_EditCourse.Text =  e.Item.SubItems[5].Text;
             DB_EditType.Text = e.Item.SubItems[6].Text;
             TXTB_EditDescription.Text = e.Item.SubItems[7].Text;
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerUI managerUI = new ManagerUI(loggedInEmployee);
+            managerUI.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_ManageStock");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_ManageStock");
         }
     }
 }

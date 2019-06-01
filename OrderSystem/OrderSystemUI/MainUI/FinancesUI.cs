@@ -15,11 +15,13 @@ namespace OrderSystemUI.MainUI
     public partial class FinancesUI : Form
     {
         FinancesLogic financesLogic = new FinancesLogic();
+        Employee loggedInEmployee;
 
-        public FinancesUI()
+        public FinancesUI(Employee loggedInEmployee)
         {
+            this.loggedInEmployee = loggedInEmployee;
             InitializeComponent();
-            LoadDailyProfit();
+            LoadDailyProfit();           
         }
 
         private void LoadDailyProfit()
@@ -77,6 +79,13 @@ namespace OrderSystemUI.MainUI
         private void BTN_Daily_Click(object sender, EventArgs e)
         {
             LoadDailyProfit();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerUI managerUI = new ManagerUI(loggedInEmployee);
+            managerUI.ShowDialog();
         }
     }
 }

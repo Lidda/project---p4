@@ -99,12 +99,13 @@
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.BackButton.Location = new System.Drawing.Point(12, 586);
+            this.BackButton.Location = new System.Drawing.Point(12, 625);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(93, 44);
             this.BackButton.TabIndex = 4;
             this.BackButton.Text = "<";
             this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // EditItem
             // 
@@ -113,7 +114,7 @@
             this.EditItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.EditItem.Location = new System.Drawing.Point(162, 478);
+            this.EditItem.Location = new System.Drawing.Point(162, 532);
             this.EditItem.Name = "EditItem";
             this.EditItem.Size = new System.Drawing.Size(135, 69);
             this.EditItem.TabIndex = 3;
@@ -128,7 +129,7 @@
             this.DeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.DeleteItem.Location = new System.Drawing.Point(311, 478);
+            this.DeleteItem.Location = new System.Drawing.Point(311, 532);
             this.DeleteItem.Name = "DeleteItem";
             this.DeleteItem.Size = new System.Drawing.Size(135, 69);
             this.DeleteItem.TabIndex = 2;
@@ -143,7 +144,7 @@
             this.AddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.AddItem.Location = new System.Drawing.Point(12, 478);
+            this.AddItem.Location = new System.Drawing.Point(12, 532);
             this.AddItem.Name = "AddItem";
             this.AddItem.Size = new System.Drawing.Size(135, 69);
             this.AddItem.TabIndex = 1;
@@ -163,7 +164,7 @@
             this.ListView_Stock.GridLines = true;
             this.ListView_Stock.Location = new System.Drawing.Point(12, 10);
             this.ListView_Stock.Name = "ListView_Stock";
-            this.ListView_Stock.Size = new System.Drawing.Size(437, 446);
+            this.ListView_Stock.Size = new System.Drawing.Size(437, 494);
             this.ListView_Stock.TabIndex = 0;
             this.ListView_Stock.UseCompatibleStateImageBehavior = false;
             this.ListView_Stock.View = System.Windows.Forms.View.Details;
@@ -305,6 +306,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "<";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // DB_AddCourse
             // 
@@ -517,6 +519,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DB_EditCourse
             // 
@@ -642,9 +645,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_ManageStock);
-            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_AddItem);
+            this.Controls.Add(this.PNL_EditItem);
+            this.Controls.Add(this.PNL_ManageStock);
             this.Name = "EditStockUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditStock";

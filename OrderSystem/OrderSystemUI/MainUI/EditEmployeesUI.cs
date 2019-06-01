@@ -9,17 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderSystemModel;
 using OrderSystemLogic;
+using OrderSystemUI.MainUI;
+
 
 namespace OrderSystemUI
 {
     public partial class EditEmployeesUI : Form
     {
         EmployeeLogic employeeLogic = new EmployeeLogic();
+        Employee loggedInEmployee;
 
-        public EditEmployeesUI()
+        public EditEmployeesUI(Employee loggedInEmployee)
         {
+            this.loggedInEmployee = loggedInEmployee;
             InitializeComponent();
-            UI_Load();
+            UI_Load();          
         }
 
         private void UI_Load()
@@ -118,6 +122,23 @@ namespace OrderSystemUI
                 MessageBox.Show("Employee succesfully deleted");
                 ShowPanel("PNL_ManageEmployees");
             }
-        }     
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerUI managerUI = new ManagerUI(loggedInEmployee);
+            managerUI.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_ManageEmployees");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowPanel("PNL_ManageEmployees");
+        }
     }
 }

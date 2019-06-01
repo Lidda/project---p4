@@ -73,6 +73,7 @@
             this.BackButton.TabIndex = 8;
             this.BackButton.Text = "<";
             this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // BTN_Monthly
             // 

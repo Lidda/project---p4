@@ -31,21 +31,21 @@ namespace OrderSystemUI.MainUI {
         private void BTN_ManageEmployees_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditEmployeesUI editEmployeesUI = new EditEmployeesUI();
+            EditEmployeesUI editEmployeesUI = new EditEmployeesUI(employee);
             editEmployeesUI.ShowDialog();
         }
 
         private void BTN_ManageProducts_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditStockUI editStockUI = new EditStockUI();
+            EditStockUI editStockUI = new EditStockUI(employee);
             editStockUI.ShowDialog();
         }
 
         private void BTN_Stats_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FinancesUI financesUI = new FinancesUI();
+            FinancesUI financesUI = new FinancesUI(employee);
             financesUI.ShowDialog();
         }
     }
