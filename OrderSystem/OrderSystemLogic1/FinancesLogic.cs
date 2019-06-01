@@ -12,7 +12,7 @@ namespace OrderSystemLogic
     {
         FinancesDAL financesDAL = new FinancesDAL();
 
-        public List<DailyProfit> GetAllFinances()
+        public List<Profit> GetAllFinances()
         {
             try
             {
@@ -21,6 +21,30 @@ namespace OrderSystemLogic
             catch
             {
                 throw new Exception("Could not get orders from database");
+            }
+        }
+
+        public List<Profit> MonthlyProfit()
+        {
+            try
+            {
+                return financesDAL.GetMonthlyProfits();
+            }
+            catch
+            {
+                throw new Exception("Could not get monthly profit from database");
+            }
+        }
+
+        public List<Profit> YearlyProfit()
+        {
+            try
+            {
+                return financesDAL.GetYearlyProfits();
+            }
+            catch
+            {
+                throw new Exception("Could not get yearly profit from database");
             }
         }
     }

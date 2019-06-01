@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel
 {
-    public class DailyProfit
+    public class Profit
     {
         public DateTime date;
         public double DayIncome;
