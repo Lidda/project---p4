@@ -47,18 +47,10 @@ namespace OrderSystemUI
                 //set title of header
                 lblCheckoutOverviewHeader.Text = string.Format("Order overview table {0}", order.Table.ID);
 
-                //calculate prices
-                double pricewithoutTAX, totalPrice, totalTax;
-                pricewithoutTAX = totalPrice = totalTax = 0;
-
-                pricewithoutTAX = GetPrice("noTax");
-                totalTax = GetPrice("Tax");
-                totalPrice = GetPrice("Total");
-
                 //set labels
-                lblOrderPriceWithoutTax.Text = string.Format("€ {0:0.00}", pricewithoutTAX);
-                lblTaxAmount.Text = string.Format("€ {0:0.00}", totalTax);
-                lblTotalAmount.Text = string.Format("€ {0:0.00}", totalPrice);
+                lblOrderPriceWithoutTax.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("withoutTax"));
+                lblTaxAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Tax"));
+                lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
 
                 //check if there's given a tip
                 //if yes, show labels
@@ -70,51 +62,7 @@ namespace OrderSystemUI
                 }
             }
         }
-        private double GetPrice(string priceType)
-        {
-            //calculate prices
-            double pricewithoutTAX, totalPrice, totalTax;
-            pricewithoutTAX = totalPrice = totalTax = 0;
-
-            foreach (Item item in order.items)
-            {
-                //calculate total amount
-                double totalPriceItem = 0;
-                totalPriceItem = item.price * item.amount;
-                totalPrice = totalPrice + totalPriceItem;
-
-                //calculate prices without taxes
-                double taxfreeprice = 0;
-                taxfreeprice = totalPriceItem / (1 + item.tax / 100);
-                pricewithoutTAX = pricewithoutTAX + taxfreeprice;
-
-                //calculate taxes
-                double tax = totalPriceItem - taxfreeprice;
-                totalTax = totalTax + tax;
-            }
-
-            //check if there's given a tip
-            //if yes, add tip to total
-            if (tip > 0)
-                totalPrice = totalPrice + tip;
-
-            //return amounts
-            if (priceType == "noTax")
-            {
-                return pricewithoutTAX;
-            }
-            else if (priceType == "Tax")
-            {
-                return totalTax;
-            }
-            else if (priceType == "Total")
-            {
-                return totalPrice;
-            }
-
-            //if there are no matches with 'priceSort' return 0
-            return 0;
-        }
+        
         private void lblTotalAmount_Click(object sender, EventArgs e)
         {
 
