@@ -54,17 +54,23 @@
     <Compile Include="MainUI\CheckoutComments.Designer.cs">
       <DependentUpon>CheckoutComments.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutOverview.cs">
+    <Compile Include="MainUI\CheckoutConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutOverview.Designer.cs">
-      <DependentUpon>CheckoutOverview.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutConfirmation.Designer.cs">
+      <DependentUpon>CheckoutConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\BarUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainUI\BarUI.Designer.cs">
       <DependentUpon>BarUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI\CheckoutOverviewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\CheckoutOverviewOrder.Designer.cs">
+      <DependentUpon>CheckoutOverviewOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\CheckoutPay.cs">
       <SubType>Form</SubType>
@@ -144,8 +150,11 @@
     <EmbeddedResource Include="MainUI\CheckoutComments.resx">
       <DependentUpon>CheckoutComments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutOverview.resx">
-      <DependentUpon>CheckoutOverview.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutConfirmation.resx">
+      <DependentUpon>CheckoutConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\CheckoutOverviewOrder.resx">
+      <DependentUpon>CheckoutOverviewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\CheckoutPay.resx">
       <DependentUpon>CheckoutPay.cs</DependentUpon>

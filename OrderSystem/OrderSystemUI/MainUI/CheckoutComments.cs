@@ -21,6 +21,10 @@ namespace OrderSystemUI.MainUI
             InitializeComponent();
             this.order = order;
 
+            InitComments();
+        }
+        private void InitComments()
+        {
             //show panel
             pnlAddComment.Show();
             pnlAddComment.BringToFront();
@@ -40,12 +44,12 @@ namespace OrderSystemUI.MainUI
                 btnAddCommentToOrder.Text = "Alter comment";
             }
         }
-
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
         {
             //add comment/alter comment
             order.comment = txtComment.Text;
             logic.EditComment(order);
+            InitComments();
         }
 
         private void btnDeleteComment_Click(object sender, EventArgs e)
@@ -59,13 +63,14 @@ namespace OrderSystemUI.MainUI
                 order.comment = "";
                 logic.EditComment(order);
             }
+            InitComments();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //back
             this.Hide();
-            CheckoutOverview coUI = new CheckoutOverview(order.Table, order.Employee);
+            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
         }
     }

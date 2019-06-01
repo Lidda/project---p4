@@ -15,7 +15,7 @@ namespace OrderSystemDAL
         {
             Order order = new Order();
 
-            string queryOrder = string.Format("SELECT orderID, comment FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0 AND DateTimeOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)", table.ID);
+            string queryOrder = string.Format("SELECT orderID, comment FROM ORDERS WHERE TableID = {0} AND PaymentStatus = 0 AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)", table.ID);
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
@@ -42,7 +42,7 @@ namespace OrderSystemDAL
 
                 item.itemID = (int)dr["itemID"];
                 item.name = (string)dr["name"];
-                item.price = (float)(double)dr["price"];
+                item.price = (double)dr["price"];
                 item.tax = (int)dr["TAX"];
                 item.stock = (int)dr["stock"];
                 item.course = (string)dr["course"];
@@ -58,7 +58,7 @@ namespace OrderSystemDAL
                 }
                 item.foodtype = (string)dr["foodtype"];
 
-                orderItem.amount = (int)dr["amount"];
+                item.amount = (int)dr["amount"];
                 orderItem.status = (OrderItem.Status)dr["status"];
                 orderItem.item = item;
 
@@ -77,7 +77,6 @@ namespace OrderSystemDAL
                 if (dr["comment"] == DBNull.Value)
                 {
                     order.comment = "";
-
                 }
                 else
                 {
@@ -91,25 +90,21 @@ namespace OrderSystemDAL
         //set order to paid
         public void SetOrderToPaid(Order order) {
             //set to paid
-            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0} AND PaymentStatus = 0", order.orderID);
+            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0}", order.orderID);
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
 
             //update db with total paid amount
-            SetTotalPaidAmount(order);
-        }
-
-        private void SetTotalPaidAmount(Order order) {
             //save total amount in DB
             double amount = order.tip;
-            foreach (OrderItem i in order.items) {
+            foreach (OrderItem i in order.items)
+            {
                 amount = amount + i.item.price * i.item.amount;
             }
-            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", (double)amount, order.orderID);
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", order.GetTotalAmount("Total"), order.orderID);
+            
             ExecuteEditQuery(queryTotalAmount, sqlParameters);
         }
-
         // Add comment to order
         public void AddCommentToOrder(Order order)
         {

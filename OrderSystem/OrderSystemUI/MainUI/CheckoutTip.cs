@@ -42,7 +42,7 @@ namespace OrderSystemUI.MainUI
             order.tip = 0;
 
             this.Hide();
-            CheckoutOverview coUI = new CheckoutOverview(order.Table, order.Employee);
+            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order.Table, order.Employee);
             coUI.ShowDialog();
         }
 
@@ -50,14 +50,14 @@ namespace OrderSystemUI.MainUI
         {
             //just a back button
             this.Hide();
-            CheckoutOverview coUI = new CheckoutOverview(order.Table, order.Employee);
+            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order.Table, order.Employee);
             coUI.ShowDialog();
         }
 
         private void btnConfirmTip_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverview coUI = new CheckoutOverview(order);
+            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
         }
     }

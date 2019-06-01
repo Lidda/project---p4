@@ -109,8 +109,9 @@
             // lblCurrentComment
             // 
             this.lblCurrentComment.AutoSize = true;
-            this.lblCurrentComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblCurrentComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Italic);
             this.lblCurrentComment.Location = new System.Drawing.Point(28, 110);
+            this.lblCurrentComment.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblCurrentComment.Name = "lblCurrentComment";
             this.lblCurrentComment.Size = new System.Drawing.Size(210, 31);
             this.lblCurrentComment.TabIndex = 25;
@@ -130,7 +131,7 @@
             // 
             this.lblCommentHeader.AutoSize = true;
             this.lblCommentHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblCommentHeader.Location = new System.Drawing.Point(160, 7);
+            this.lblCommentHeader.Location = new System.Drawing.Point(96, 7);
             this.lblCommentHeader.Name = "lblCommentHeader";
             this.lblCommentHeader.Size = new System.Drawing.Size(303, 39);
             this.lblCommentHeader.TabIndex = 23;

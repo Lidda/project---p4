@@ -16,14 +16,14 @@ namespace OrderSystemUI.MainUI
     {
         private Order order;
         private CheckoutLogic logic = new CheckoutLogic();
-        public CheckoutPay()
+        public CheckoutPay(Order order)
         {
             InitializeComponent();
+
+            this.order = order;
             //show payment methods
             pnlChoosePayOption.Show();
             pnlChoosePayOption.BringToFront();
-            //hide conf dialog
-            pnlConfirmation.Hide();
         }
 
         private void btnCash_Click(object sender, EventArgs e)
@@ -43,23 +43,41 @@ namespace OrderSystemUI.MainUI
         private void Pay()
         {
             logic.SetToPaid(order);
-            //show conf dialog
-            pnlConfirmation.Show();
-            pnlConfirmation.BringToFront();
-            //hide methods
-            pnlChoosePayOption.Hide();
+            CheckoutConfirmation checkoutconfUI = new CheckoutConfirmation(order);
+            this.Hide();
+            checkoutconfUI.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverview coUI = new CheckoutOverview(order);
+            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //go back to overview
+            //ignore
+        }
+
+        private void pnlConfirmation_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlChoosePayOption_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
