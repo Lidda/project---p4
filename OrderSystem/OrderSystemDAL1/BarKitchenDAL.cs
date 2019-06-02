@@ -14,10 +14,11 @@ namespace OrderSystemDAL
     {
         public List<OrderItem> Db_Get_All_Orders()
         {
-            string query = "Select o.tableID, i.amount, p.name, p.foodtype, i.status, i.comment FROM ORDERS AS O JOIN ORDER_CONTAINS AS I ON o.orderID = i.orderID JOIN ITEMS AS P ON p.itemid = i.itemid ORDER BY o.tableID";
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID ORDER BY tableID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
+
 
         //Updates the status order by order.orderID
         public void OrderStatus(Order order, OrderItem.Status statusChange)
@@ -29,22 +30,25 @@ namespace OrderSystemDAL
 
         private List<OrderItem> ReadOrders(DataTable dataTable)
         {
-            List<OrderItem> orders = new List<OrderItem>();
+            List<OrderItem> orderItems = new List<OrderItem>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                OrderItem orderItem = new OrderItem();
+                OrderItem orderItem = new OrderItem()
                 {
-                    orderItem.tableID = (int)dr["tableID"];
-                    orderItem.amount = (int)dr["amount"];
-                    orderItem.name = (string)dr["name"];
-                    orderItem.foodtype = (string)dr["foodtype"];
-                    orderItem.status = (Status)dr["status"];
-                    orderItem.comment = (string)dr["comment"];
+                   
+                    tableID = (int)dr["tableID"],
+                    orderID = (int)dr["orderID"],
+                    itemID = (int)dr["itemID"],
+                    name = (string)dr["name"],
+                    foodtype = (string)dr["foodtype"],
+                    amount = (int)dr["amount"],
+                    status = (Status)dr["status"]
+
                 };
-                orders.Add(orderItem);
+                orderItems.Add(orderItem);
             }
-            return orders;
+            return orderItems;
         }
 
 
