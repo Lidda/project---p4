@@ -23,7 +23,7 @@ namespace OrderSystemUI.MainUI {
         public void order1()
         {
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderList = kitchenLogic.GetOrders();
+            List<OrderItem> OrderList = kitchenLogic.GetFoods();
 
             // clear the listview before filling it again
             listView1.Clear();

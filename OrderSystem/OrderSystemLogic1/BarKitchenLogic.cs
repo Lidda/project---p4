@@ -28,6 +28,36 @@ namespace OrderSystemLogic
             }
 
         }
+        public List<OrderItem> GetFoods()
+        {
+            try
+            {
+                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Foods();
+
+                return OrderList;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Something went wrong");
+            }
+
+        }
+        public List<OrderItem> GetDrinks()
+        {
+            try
+            {
+                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Drinks();
+
+                return OrderList;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Something went wrong");
+            }
+
+        }
 
 
         public void OrderStatus(Order order, OrderItem.Status statusChange)
