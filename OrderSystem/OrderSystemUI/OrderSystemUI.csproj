@@ -102,6 +102,12 @@
     <Compile Include="MainUI\FinancesUI.Designer.cs">
       <DependentUpon>FinancesUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainUI\OrderLunchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\OrderLunchUI.Designer.cs">
+      <DependentUpon>OrderLunchUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\KitchenUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\ManagerUI.resx">
       <DependentUpon>ManagerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\OrderLunchUI.resx">
+      <DependentUpon>OrderLunchUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\OrderMenuUI.resx">
       <DependentUpon>OrderMenuUI.cs</DependentUpon>

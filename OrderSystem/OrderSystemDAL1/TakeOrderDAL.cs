@@ -12,13 +12,31 @@ namespace OrderSystemDAL
     public class TakeOrderDAL : Base
 
     {
-        public List<Item> DB_Get_All_Items()
+        //Get all drinks from ITEMS
+        public List<Item> DB_Get_All_Beverages()
         {
-            string query = "SELECT * FROM ITEMS";
+            string query = "SELECT * FROM ITEMS WHERE course = 'Beverage'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //Get all dinner items from ITEMS
+        public List<Item> DB_Get_All_DinnerItems()
+        {
+            string query = "SELECT * FROM ITEMS WHERE foodtype = 'Dinner'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        //Get all Lucnh items from ITEMS
+        public List<Item> DB_Get_All_LunchItems()
+        {
+            string query = "SELECT * FROM ITEMS WHERE foodtype = 'Lunch'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        //Gets all items of requisted type
         private List<Item> GetItems(DataTable dataTable)
         {
             List<Item> items = new List<Item>();
