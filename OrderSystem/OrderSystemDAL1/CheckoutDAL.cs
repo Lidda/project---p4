@@ -94,14 +94,7 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
 
-            //update db with total paid amount
-            //save total amount in DB
-            double amount = order.tip;
-            foreach (OrderItem i in order.items)
-            {
-                amount = amount + i.item.price * i.item.amount;
-            }
-            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", order.GetTotalAmount("Total"), order.orderID);
+            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", order.GetTotalAmount("Total").ToString().Replace(',', '.'), order.orderID);
             
             ExecuteEditQuery(queryTotalAmount, sqlParameters);
         }
