@@ -10,21 +10,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrderSystemUI.MainUI {
-    public partial class KitchenUI : Form {
+namespace OrderSystemUI.MainUI
+{
+    public partial class KitchenUI : Form
+    {
         Employee employee;
 
-        public KitchenUI(Employee employee) {
+        public KitchenUI(Employee employee)
+        {
             this.employee = employee;
             InitializeComponent();
             order1();
         }
-         
+
         public void order1()
         {
-            int itemID = 1;
+            int tableID = 4;
+
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderList = kitchenLogic.GetFoods(itemID);
+            List<OrderItem> OrderList = kitchenLogic.GetFoods(tableID);
+
 
             // clear the listview before filling it again
             listView1.Clear();
@@ -39,7 +44,7 @@ namespace OrderSystemUI.MainUI {
             listView1.Columns[3].Width = 70;
             listView1.Columns.Add("Status");
             listView1.Columns[4].Width = 70;
-           
+
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
 
@@ -51,14 +56,16 @@ namespace OrderSystemUI.MainUI {
 
                 listView1.Items.Add(li);
             }
-        
+
+            
 
     }
-        private void btnLogout_Click(object sender, EventArgs e) {
-            this.Hide();
-            LoginUI loginUI = new LoginUI();
-            loginUI.ShowDialog();
-            this.Close();
-        }
+    private void btnLogout_Click(object sender, EventArgs e)
+    {
+        this.Hide();
+        LoginUI loginUI = new LoginUI();
+        loginUI.ShowDialog();
+        this.Close();
     }
+}
 }
