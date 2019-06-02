@@ -22,8 +22,9 @@ namespace OrderSystemUI.MainUI {
          
         public void order1()
         {
+            int itemID = 1;
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderList = kitchenLogic.GetFoods();
+            List<OrderItem> OrderList = kitchenLogic.GetFoods(itemID);
 
             // clear the listview before filling it again
             listView1.Clear();

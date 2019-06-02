@@ -28,11 +28,11 @@ namespace OrderSystemLogic
             }
 
         }
-        public List<OrderItem> GetFoods()
+        public List<OrderItem> GetFoods(int tableID)
         {
             try
             {
-                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Foods();
+                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Foods(tableID);
 
                 return OrderList;
             }
@@ -43,11 +43,11 @@ namespace OrderSystemLogic
             }
 
         }
-        public List<OrderItem> GetDrinks()
+        public List<OrderItem> GetDrinks(int tableID)
         {
             try
             {
-                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Drinks();
+                List<OrderItem> OrderList = barkitchen_db.Db_Get_All_Drinks(tableID);
 
                 return OrderList;
             }

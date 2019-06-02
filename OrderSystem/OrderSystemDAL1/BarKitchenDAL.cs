@@ -19,16 +19,16 @@ namespace OrderSystemDAL
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<OrderItem> Db_Get_All_Foods()
+        public List<OrderItem> Db_Get_All_Foods(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE status = 0 foodtype LIKE '%Lunch' OR foodtype LIKE '%Dinner' ORDER BY tableID";
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE status = 0 AND tableID = ('" + tableID + "') foodtype LIKE '%Lunch' OR foodtype LIKE '%Dinner' ORDER BY tableID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<OrderItem> Db_Get_All_Drinks()
+        public List<OrderItem> Db_Get_All_Drinks(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE status = 0 AND foodtype LIKE '%Liquor' OR foodtype LIKE '%Drinks' ORDER BY tableID";
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE status = 0 AND tableID = ('" + tableID + "') AND foodtype LIKE '%Liquor' OR foodtype LIKE '%Drinks' ORDER BY tableID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
