@@ -46,6 +46,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -76,7 +86,7 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.Tomato;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 127);
+            this.listView1.Location = new System.Drawing.Point(12, 112);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(330, 197);
             this.listView1.TabIndex = 6;
@@ -88,7 +98,7 @@
             // 
             this.listView2.BackColor = System.Drawing.Color.Tomato;
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(441, 127);
+            this.listView2.Location = new System.Drawing.Point(441, 112);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(330, 197);
             this.listView2.TabIndex = 7;
@@ -99,7 +109,7 @@
             // 
             this.listView3.BackColor = System.Drawing.Color.Tomato;
             this.listView3.GridLines = true;
-            this.listView3.Location = new System.Drawing.Point(859, 127);
+            this.listView3.Location = new System.Drawing.Point(874, 112);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(330, 197);
             this.listView3.TabIndex = 8;
@@ -110,7 +120,7 @@
             // 
             this.listView4.BackColor = System.Drawing.Color.Tomato;
             this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(1264, 127);
+            this.listView4.Location = new System.Drawing.Point(1264, 112);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(330, 197);
             this.listView4.TabIndex = 9;
@@ -155,7 +165,7 @@
             // 
             // btn_markReady1
             // 
-            this.btn_markReady1.Location = new System.Drawing.Point(125, 343);
+            this.btn_markReady1.Location = new System.Drawing.Point(125, 326);
             this.btn_markReady1.Name = "btn_markReady1";
             this.btn_markReady1.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady1.TabIndex = 13;
@@ -164,7 +174,7 @@
             // 
             // btn_markReady2
             // 
-            this.btn_markReady2.Location = new System.Drawing.Point(567, 343);
+            this.btn_markReady2.Location = new System.Drawing.Point(558, 326);
             this.btn_markReady2.Name = "btn_markReady2";
             this.btn_markReady2.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady2.TabIndex = 14;
@@ -173,7 +183,7 @@
             // 
             // btn_markReady3
             // 
-            this.btn_markReady3.Location = new System.Drawing.Point(985, 343);
+            this.btn_markReady3.Location = new System.Drawing.Point(997, 326);
             this.btn_markReady3.Name = "btn_markReady3";
             this.btn_markReady3.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady3.TabIndex = 15;
@@ -182,7 +192,7 @@
             // 
             // btn_markReady4
             // 
-            this.btn_markReady4.Location = new System.Drawing.Point(1365, 343);
+            this.btn_markReady4.Location = new System.Drawing.Point(1376, 326);
             this.btn_markReady4.Name = "btn_markReady4";
             this.btn_markReady4.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady4.TabIndex = 16;
@@ -211,7 +221,7 @@
             // 
             this.listView7.BackColor = System.Drawing.Color.Tomato;
             this.listView7.GridLines = true;
-            this.listView7.Location = new System.Drawing.Point(859, 395);
+            this.listView7.Location = new System.Drawing.Point(883, 404);
             this.listView7.Name = "listView7";
             this.listView7.Size = new System.Drawing.Size(330, 197);
             this.listView7.TabIndex = 19;
@@ -222,7 +232,7 @@
             // 
             this.listView8.BackColor = System.Drawing.Color.Tomato;
             this.listView8.GridLines = true;
-            this.listView8.Location = new System.Drawing.Point(1264, 395);
+            this.listView8.Location = new System.Drawing.Point(1264, 404);
             this.listView8.Name = "listView8";
             this.listView8.Size = new System.Drawing.Size(330, 197);
             this.listView8.TabIndex = 20;
@@ -233,7 +243,7 @@
             // 
             this.listView9.BackColor = System.Drawing.Color.Tomato;
             this.listView9.GridLines = true;
-            this.listView9.Location = new System.Drawing.Point(12, 666);
+            this.listView9.Location = new System.Drawing.Point(12, 710);
             this.listView9.Name = "listView9";
             this.listView9.Size = new System.Drawing.Size(330, 197);
             this.listView9.TabIndex = 21;
@@ -244,7 +254,7 @@
             // 
             this.listView10.BackColor = System.Drawing.Color.Tomato;
             this.listView10.GridLines = true;
-            this.listView10.Location = new System.Drawing.Point(441, 666);
+            this.listView10.Location = new System.Drawing.Point(441, 710);
             this.listView10.Name = "listView10";
             this.listView10.Size = new System.Drawing.Size(330, 197);
             this.listView10.TabIndex = 22;
@@ -271,7 +281,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(125, 900);
+            this.button3.Location = new System.Drawing.Point(125, 960);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 23);
             this.button3.TabIndex = 25;
@@ -280,12 +290,102 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(567, 900);
+            this.button4.Location = new System.Drawing.Point(567, 960);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 23);
             this.button4.TabIndex = 26;
             this.button4.Text = "Mark as ready";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(159, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Table 1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(596, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Table 2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1014, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Table 3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1407, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Table 4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(148, 379);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Table 5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(596, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Table 6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1014, 369);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Table 7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1407, 379);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Table 8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(148, 680);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Table 9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(590, 680);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Table 10";
             // 
             // KitchenUI
             // 
@@ -293,6 +393,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1631, 1061);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -350,5 +460,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
