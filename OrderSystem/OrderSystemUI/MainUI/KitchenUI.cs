@@ -424,7 +424,6 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-
         }
         public void order10()
         {
@@ -479,6 +478,11 @@ namespace OrderSystemUI.MainUI
         }
 
         private void KitchenUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_markReady1_Click(object sender, EventArgs e)
         {
 
         }

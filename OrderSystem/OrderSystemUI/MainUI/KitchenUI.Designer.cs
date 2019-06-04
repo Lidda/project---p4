@@ -171,6 +171,7 @@
             this.btn_markReady1.TabIndex = 13;
             this.btn_markReady1.Text = "Mark as ready";
             this.btn_markReady1.UseVisualStyleBackColor = true;
+            this.btn_markReady1.Click += new System.EventHandler(this.btn_markReady1_Click);
             // 
             // btn_markReady2
             // 
