@@ -62,6 +62,51 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-       
+
+        private void btn_AddUp_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+
+            if (lView_Starters.SelectedItems.Count > 0 && lView_Starters.SelectedItems[0] != null)
+            {
+                count = Convert.ToInt32(lView_Starters.SelectedItems[0].SubItems[1].Text) + 1;
+                lView_Starters.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+
+            if (lView_MainCourses.SelectedItems.Count > 0 && lView_MainCourses.SelectedItems[0] != null)
+            {
+                count = Convert.ToInt32(lView_MainCourses.SelectedItems[0].SubItems[1].Text) + 1;
+                lView_MainCourses.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+
+            if (lView_Desserts.SelectedItems.Count > 0 && lView_Desserts.SelectedItems[0] != null)
+            {
+                count = Convert.ToInt32(lView_Desserts.SelectedItems[0].SubItems[1].Text) + 1;
+                lView_Desserts.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+        }
+
+        private void btn_Subtract_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+
+            if (lView_Starters.SelectedItems.Count > 0 && lView_Starters.SelectedItems[0] != null && Convert.ToInt32(lView_Starters.SelectedItems[0].SubItems[1].Text) >= 1)
+            {
+                count = Convert.ToInt32(lView_Starters.SelectedItems[0].SubItems[1].Text) - 1;
+                lView_Starters.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+
+            if (lView_MainCourses.SelectedItems.Count > 0 && lView_MainCourses.SelectedItems[0] != null && Convert.ToInt32(lView_MainCourses.SelectedItems[0].SubItems[1].Text) >= 1)
+            {  
+                count = Convert.ToInt32(lView_MainCourses.SelectedItems[0].SubItems[1].Text) - 1;
+                lView_MainCourses.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+
+            if (lView_Desserts.SelectedItems.Count > 0 && lView_Desserts.SelectedItems[0] != null && Convert.ToInt32(lView_Desserts.SelectedItems[0].SubItems[1].Text) >= 1)
+            {
+                count = Convert.ToInt32(lView_Desserts.SelectedItems[0].SubItems[1]) - 1;
+                lView_MainCourses.SelectedItems[0].SubItems[1].Text = count.ToString();
+            }
+        }
     }
 }

@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.btnBack = new System.Windows.Forms.Button();
             this.lbl_DessertHeader = new System.Windows.Forms.Label();
             this.lbl_MainCourseHeader = new System.Windows.Forms.Label();
             this.lbl_StartersHeader = new System.Windows.Forms.Label();
             this.btn_ConfirmOrder = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lView_Desserts = new System.Windows.Forms.ListView();
             this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,9 +42,9 @@
             this.lView_Starters = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_AddUp = new System.Windows.Forms.Button();
+            this.btn_AddComment = new System.Windows.Forms.Button();
+            this.btn_Subtract = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -123,12 +117,6 @@
             this.btn_ConfirmOrder.Text = "Confirm";
             this.btn_ConfirmOrder.UseVisualStyleBackColor = false;
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // lView_Desserts
             // 
             this.lView_Desserts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -166,10 +154,6 @@
             this.lView_MainCourses.GridLines = true;
             this.lView_MainCourses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lView_MainCourses.HideSelection = false;
-            this.lView_MainCourses.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
             this.lView_MainCourses.Location = new System.Drawing.Point(26, 248);
             this.lView_MainCourses.Name = "lView_MainCourses";
             this.lView_MainCourses.Size = new System.Drawing.Size(411, 103);
@@ -214,34 +198,36 @@
             this.columnHeader4.Text = "#";
             this.columnHeader4.Width = 30;
             // 
-            // button1
+            // btn_AddUp
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(131, 560);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AddUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddUp.Location = new System.Drawing.Point(131, 560);
+            this.btn_AddUp.Name = "btn_AddUp";
+            this.btn_AddUp.Size = new System.Drawing.Size(50, 50);
+            this.btn_AddUp.TabIndex = 54;
+            this.btn_AddUp.Text = "+";
+            this.btn_AddUp.UseVisualStyleBackColor = true;
+            this.btn_AddUp.Click += new System.EventHandler(this.btn_AddUp_Click);
             // 
-            // button2
+            // btn_AddComment
             // 
-            this.button2.Location = new System.Drawing.Point(201, 560);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "comment";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_AddComment.Location = new System.Drawing.Point(201, 560);
+            this.btn_AddComment.Name = "btn_AddComment";
+            this.btn_AddComment.Size = new System.Drawing.Size(50, 50);
+            this.btn_AddComment.TabIndex = 55;
+            this.btn_AddComment.Text = "comment";
+            this.btn_AddComment.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Subtract
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(271, 560);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Subtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Subtract.Location = new System.Drawing.Point(271, 560);
+            this.btn_Subtract.Name = "btn_Subtract";
+            this.btn_Subtract.Size = new System.Drawing.Size(50, 50);
+            this.btn_Subtract.TabIndex = 56;
+            this.btn_Subtract.Text = "-";
+            this.btn_Subtract.UseVisualStyleBackColor = true;
+            this.btn_Subtract.Click += new System.EventHandler(this.btn_Subtract_Click);
             // 
             // OrderLunchUI
             // 
@@ -249,9 +235,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Subtract);
+            this.Controls.Add(this.btn_AddComment);
+            this.Controls.Add(this.btn_AddUp);
             this.Controls.Add(this.lView_Starters);
             this.Controls.Add(this.lView_MainCourses);
             this.Controls.Add(this.lView_Desserts);
@@ -273,7 +259,6 @@
         private System.Windows.Forms.Label lbl_MainCourseHeader;
         private System.Windows.Forms.Label lbl_StartersHeader;
         private System.Windows.Forms.Button btn_ConfirmOrder;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListView lView_Desserts;
         private System.Windows.Forms.ColumnHeader ItemName;
         private System.Windows.Forms.ColumnHeader Quantity;
@@ -283,8 +268,8 @@
         private System.Windows.Forms.ListView lView_Starters;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_AddUp;
+        private System.Windows.Forms.Button btn_AddComment;
+        private System.Windows.Forms.Button btn_Subtract;
     }
 }
