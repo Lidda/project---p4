@@ -83,6 +83,11 @@ namespace OrderSystemUI.MainUI {
             }
         }
 
-        
+        private void btn_LunchMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderLunchUI lunchUI = new OrderLunchUI(employee, table, this);
+            lunchUI.ShowDialog();
+        }
     }
 }

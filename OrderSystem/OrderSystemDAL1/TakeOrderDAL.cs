@@ -28,10 +28,10 @@ namespace OrderSystemDAL
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //Get all Lucnh items from ITEMS
+        //Get all Lunch items from ITEMS
         public List<Item> DB_Get_All_LunchItems()
         {
-            string query = "SELECT * FROM ITEMS WHERE foodtype = 'Lunch'";
+            string query = "SELECT * FROM [ITEMS] WHERE foodtype = 'Lunch'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return GetItems(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -46,11 +46,11 @@ namespace OrderSystemDAL
                 Item item = new Item() {
                     itemID = (int)dr["itemID"],
                     name = (string)dr["name"],
-                    price = (float)dr["price"],
-                    stock = (int)dr["stock"],
+                    stock = (int)(dr["stock"]),
+                    price = (double)(dr["price"]),
                     course = (string)dr["course"],
                     description = (string)dr["description"],
-                    tax = (int)dr["TAX"],
+                    tax = (int)(dr["TAX"]),
                     foodtype = (string)dr["foodtype"]
                 };
                 items.Add(item);
@@ -78,13 +78,14 @@ namespace OrderSystemDAL
             foreach (OrderItem orderItem in orderItems)
             {
                 //Adds items to ORDER_CONTAINS
-                string queryAddToOrder = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, status) VALUES (@orderID, @itemID, @amount, @comment, Not ready)";
+                string queryAddToOrder = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, timeOfOrder) VALUES (@orderID, @itemID, @amount, @comment, @timeOfOrder)";
                 SqlParameter[] sqlParametersAdd = new SqlParameter[]
                 {
                     new SqlParameter("@orderID", order.orderID),
                     new SqlParameter("@itemID", orderItem.item.itemID),
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@comment", orderItem.comment),
+                    new SqlParameter("@timeOfOrder", orderItem.dateTime),
                 };
                 ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
 

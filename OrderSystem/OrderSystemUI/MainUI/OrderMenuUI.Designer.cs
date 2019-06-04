@@ -127,6 +127,7 @@
             this.btn_LunchMenu.Text = "Lunch";
             this.btn_LunchMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_LunchMenu.UseVisualStyleBackColor = true;
+            this.btn_LunchMenu.Click += new System.EventHandler(this.btn_LunchMenu_Click);
             // 
             // btn_DinnerMenu
             // 
