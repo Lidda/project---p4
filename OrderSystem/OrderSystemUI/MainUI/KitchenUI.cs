@@ -62,11 +62,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.foodtype);
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
+                if (li.SubItems.Count > 0)
+                {
+                    listView1.BackColor = Color.Tomato;
+                    listView1.Items.Add(li);
+                }
+                else
+                {
+                    listView1.BackColor = Color.Green;
+                }
 
-                listView1.Items.Add(li);
             }
-
-
 
         }
         public void order2()
@@ -100,10 +106,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView2.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView2.BackColor = Color.Tomato;
+                    listView2.Items.Add(li);
+                }
+                else
+                {
+                    listView2.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order3()
@@ -136,11 +149,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.foodtype);
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
+                if (li.SubItems.Count > 0)
+                {
+                    listView3.BackColor = Color.Tomato;
+                    listView3.Items.Add(li);
+                }
+                else
+                {
+                    listView3.BackColor = Color.Green;
+                }
 
-                listView3.Items.Add(li);
             }
-
-
 
         }
         public void order4()
@@ -174,11 +193,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView4.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView4.BackColor = Color.Tomato;
+                    listView4.Items.Add(li);
+                }
+                else
+                {
+                    listView4.BackColor = Color.Green;
+                }
+
             }
-
-
-
+            
         }
         public void order5()
         {
@@ -211,10 +237,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView5.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView5.BackColor = Color.Tomato;
+                    listView5.Items.Add(li);
+                }
+                else
+                {
+                    listView5.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order6()
@@ -248,10 +281,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView6.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView6.BackColor = Color.Tomato;
+                    listView6.Items.Add(li);
+                }
+                else
+                {
+                    listView6.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order7()
@@ -285,10 +325,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView7.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView7.BackColor = Color.Tomato;
+                    listView7.Items.Add(li);
+                }
+                else
+                {
+                    listView7.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order8()
@@ -312,7 +359,7 @@ namespace OrderSystemUI.MainUI
             listView8.Columns[3].Width = 70;
             listView8.Columns.Add("Status");
             listView8.Columns[4].Width = 70;
-        
+
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
 
@@ -322,10 +369,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView8.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView8.BackColor = Color.Tomato;
+                    listView8.Items.Add(li);
+                }
+                else
+                {
+                    listView8.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order9()
@@ -359,10 +413,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView9.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView9.BackColor = Color.Tomato;
+                    listView9.Items.Add(li);
+                }
+                else
+                {
+                    listView9.BackColor = Color.Green;
+                }
+
             }
-
-
 
         }
         public void order10()
@@ -396,21 +457,26 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                listView10.Items.Add(li);
+                if (li.SubItems.Count > 0)
+                {
+                    listView10.BackColor = Color.Tomato;
+                    listView10.Items.Add(li);
+                }
+                else
+                {
+                    listView10.BackColor = Color.Green;
+                }
+
             }
 
-
-
         }
-       
-
         private void btnLogout_Click(object sender, EventArgs e)
-    {
-        this.Hide();
-        LoginUI loginUI = new LoginUI();
-        loginUI.ShowDialog();
-        this.Close();
-    }
+        {
+            this.Hide();
+            LoginUI loginUI = new LoginUI();
+            loginUI.ShowDialog();
+            this.Close();
+        }
 
         private void KitchenUI_Load(object sender, EventArgs e)
         {
