@@ -200,5 +200,12 @@ namespace OrderSystemUI.MainUI
                 listView_Desserts.Items[2].SubItems[1].Text = count.ToString();
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            orderMenuUI.Show();
+            this.Close();
+        }
     }
 }
