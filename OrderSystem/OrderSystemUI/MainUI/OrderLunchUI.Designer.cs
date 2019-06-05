@@ -146,6 +146,7 @@
             this.listView_Starters.Location = new System.Drawing.Point(26, 72);
             this.listView_Starters.MultiSelect = false;
             this.listView_Starters.Name = "listView_Starters";
+            this.listView_Starters.Scrollable = false;
             this.listView_Starters.Size = new System.Drawing.Size(333, 103);
             this.listView_Starters.TabIndex = 53;
             this.listView_Starters.UseCompatibleStateImageBehavior = false;
@@ -172,7 +173,7 @@
             this.btn_AddStarter1.TabIndex = 57;
             this.btn_AddStarter1.Text = "+";
             this.btn_AddStarter1.UseVisualStyleBackColor = false;
-            this.btn_AddStarter1.Click += new System.EventHandler(this.btn_AddDessert1_Click);
+            this.btn_AddStarter1.Click += new System.EventHandler(this.btn_AddStarter1_Click);
             // 
             // btn_SubtractStarter1
             // 
@@ -330,6 +331,7 @@
             this.listView_MainCourses.Location = new System.Drawing.Point(26, 247);
             this.listView_MainCourses.MultiSelect = false;
             this.listView_MainCourses.Name = "listView_MainCourses";
+            this.listView_MainCourses.Scrollable = false;
             this.listView_MainCourses.Size = new System.Drawing.Size(333, 103);
             this.listView_MainCourses.TabIndex = 63;
             this.listView_MainCourses.UseCompatibleStateImageBehavior = false;
@@ -421,7 +423,7 @@
             this.btn_AddDessert1.TabIndex = 71;
             this.btn_AddDessert1.Text = "+";
             this.btn_AddDessert1.UseVisualStyleBackColor = false;
-            this.btn_AddDessert1.Click += new System.EventHandler(this.btn_AddDessert1_Click_1);
+            this.btn_AddDessert1.Click += new System.EventHandler(this.btn_AddDessert1_Click);
             // 
             // listView_Desserts
             // 
@@ -436,6 +438,7 @@
             this.listView_Desserts.Location = new System.Drawing.Point(26, 422);
             this.listView_Desserts.MultiSelect = false;
             this.listView_Desserts.Name = "listView_Desserts";
+            this.listView_Desserts.Scrollable = false;
             this.listView_Desserts.Size = new System.Drawing.Size(333, 103);
             this.listView_Desserts.TabIndex = 70;
             this.listView_Desserts.UseCompatibleStateImageBehavior = false;

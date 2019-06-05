@@ -63,142 +63,94 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-
-        
-
-        private void btn_AddDessert1_Click(object sender, EventArgs e)
+        private void btn_AddStarter1_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Starters.Items[0].SubItems[1].Text) + 1;
-            listView_Starters.Items[0].SubItems[1].Text = count.ToString();
+            AddStarter(0);
         }
 
         private void btn_AddStarter2_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) + 1;
-            listView_Starters.Items[1].SubItems[1].Text = count.ToString();
+            AddStarter(1);
         }
 
         private void btn_AddStarter3_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) + 1;
-            listView_Starters.Items[2].SubItems[1].Text = count.ToString();
+            AddStarter(2);
         }
 
         private void btn_SubtractStarter1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Starters.Items[0].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[0].Text) - 1;
-                listView_Starters.Items[0].SubItems[1].Text = count.ToString();
-            }
+            SubtractStarter(0);
         }
 
         private void btn_SubtractStarter2_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) >= 1)
-                {
-                int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) - 1;
-                listView_Starters.Items[1].SubItems[1].Text = count.ToString();
-            }
+            SubtractStarter(1);
         }
 
         private void btn_SubtractStarter3_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) - 1;
-                listView_Starters.Items[2].SubItems[1].Text = count.ToString();
-            }
+            SubtractStarter(2);
         }
 
         private void btn_AddMainCourse1_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) + 1;
-            listView_MainCourses.Items[0].SubItems[1].Text = count.ToString();
+            AddMainCourse(0);
         }
 
         private void btn_AddMainCourse2_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) + 1;
-            listView_MainCourses.Items[1].SubItems[1].Text = count.ToString();
+            AddMainCourse(1);
         }
 
         private void btn_AddMainCourse3_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) + 1;
-            listView_MainCourses.Items[2].SubItems[1].Text = count.ToString();
+            AddMainCourse(2);
         }
 
         private void btn_SubtractMainCourse1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) - 1;
-                listView_MainCourses.Items[0].SubItems[1].Text = count.ToString();
-            }
+            SubtractMainCourse(0);
         }
 
         private void btn_SubtractMainCourse2_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) - 1;
-                listView_MainCourses.Items[1].SubItems[1].Text = count.ToString();
-            }
+            SubtractMainCourse(1);
         }
 
         private void btn_SubtractMainCourse3_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) - 1;
-                listView_MainCourses.Items[2].SubItems[1].Text = count.ToString();
-            }
+            SubtractMainCourse(2);
         }
 
-        private void btn_AddDessert1_Click_1(object sender, EventArgs e)
+        private void btn_AddDessert1_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) + 1;
-            listView_Desserts.Items[0].SubItems[1].Text = count.ToString();
+            AddDessert(0);
         }
 
         private void btn_AddDessert2_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) + 1;
-            listView_Desserts.Items[1].SubItems[1].Text = count.ToString();
+            AddDessert(1);
         }
 
         private void btn_AddDessert3_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) + 1;
-            listView_Desserts.Items[2].SubItems[1].Text = count.ToString();
+            AddDessert(2);
         }
 
         private void btn_SubtractDessert1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) - 1;
-                listView_Desserts.Items[0].SubItems[1].Text = count.ToString();
-            }
+            SubtractDessert(0);
         }
 
         private void btn_SubtractDessert2_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) - 1;
-                listView_Desserts.Items[1].SubItems[1].Text = count.ToString();
-            }
+            SubtractDessert(1);
         }
 
         private void btn_SubtractDessert3_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) - 1;
-                listView_Desserts.Items[2].SubItems[1].Text = count.ToString();
-            }
+            SubtractDessert(2);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -207,5 +159,52 @@ namespace OrderSystemUI.MainUI
             orderMenuUI.Show();
             this.Close();
         }
+
+        private void AddStarter(int index)
+        {
+            int count = Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) + 1;
+            listView_Starters.Items[index].SubItems[1].Text = count.ToString();
+        }
+
+        private void SubtractStarter(int index)
+        {
+            if (Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) - 1;
+                listView_Starters.Items[index].SubItems[1].Text = count.ToString();
+            }
+        }
+
+        private void AddMainCourse(int index)
+        {
+            int count = Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) + 1;
+            listView_MainCourses.Items[index].SubItems[1].Text = count.ToString();
+        }
+
+        private void SubtractMainCourse(int index)
+        {
+            if (Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) - 1;
+                listView_MainCourses.Items[index].SubItems[1].Text = count.ToString();
+            }
+        }
+
+        private void AddDessert(int index)
+        {
+            int count = Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) + 1;
+            listView_Desserts.Items[index].SubItems[1].Text = count.ToString();
+        }
+
+        private void SubtractDessert(int index)
+        {
+            if (Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) - 1;
+                listView_Desserts.Items[index].SubItems[1].Text = count.ToString();
+            }
+        }
+
+        
     }
 }
