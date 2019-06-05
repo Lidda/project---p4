@@ -60,6 +60,16 @@
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
             this.TimeLabel = new System.Windows.Forms.Label();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
+            this.Time1 = new System.Windows.Forms.Label();
+            this.Time2 = new System.Windows.Forms.Label();
+            this.Time3 = new System.Windows.Forms.Label();
+            this.Time4 = new System.Windows.Forms.Label();
+            this.Time5 = new System.Windows.Forms.Label();
+            this.Time6 = new System.Windows.Forms.Label();
+            this.Time7 = new System.Windows.Forms.Label();
+            this.Time8 = new System.Windows.Forms.Label();
+            this.Time9 = new System.Windows.Forms.Label();
+            this.Time10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -424,12 +434,102 @@
             this.timerTime.Interval = 1000;
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
+            // Time1
+            // 
+            this.Time1.AutoSize = true;
+            this.Time1.Location = new System.Drawing.Point(25, 84);
+            this.Time1.Name = "Time1";
+            this.Time1.Size = new System.Drawing.Size(0, 13);
+            this.Time1.TabIndex = 38;
+            // 
+            // Time2
+            // 
+            this.Time2.AutoSize = true;
+            this.Time2.Location = new System.Drawing.Point(452, 84);
+            this.Time2.Name = "Time2";
+            this.Time2.Size = new System.Drawing.Size(0, 13);
+            this.Time2.TabIndex = 39;
+            // 
+            // Time3
+            // 
+            this.Time3.AutoSize = true;
+            this.Time3.Location = new System.Drawing.Point(880, 84);
+            this.Time3.Name = "Time3";
+            this.Time3.Size = new System.Drawing.Size(0, 13);
+            this.Time3.TabIndex = 40;
+            // 
+            // Time4
+            // 
+            this.Time4.AutoSize = true;
+            this.Time4.Location = new System.Drawing.Point(1279, 84);
+            this.Time4.Name = "Time4";
+            this.Time4.Size = new System.Drawing.Size(0, 13);
+            this.Time4.TabIndex = 41;
+            // 
+            // Time5
+            // 
+            this.Time5.AutoSize = true;
+            this.Time5.Location = new System.Drawing.Point(25, 369);
+            this.Time5.Name = "Time5";
+            this.Time5.Size = new System.Drawing.Size(0, 13);
+            this.Time5.TabIndex = 42;
+            // 
+            // Time6
+            // 
+            this.Time6.AutoSize = true;
+            this.Time6.Location = new System.Drawing.Point(452, 379);
+            this.Time6.Name = "Time6";
+            this.Time6.Size = new System.Drawing.Size(0, 13);
+            this.Time6.TabIndex = 43;
+            // 
+            // Time7
+            // 
+            this.Time7.AutoSize = true;
+            this.Time7.Location = new System.Drawing.Point(880, 369);
+            this.Time7.Name = "Time7";
+            this.Time7.Size = new System.Drawing.Size(0, 13);
+            this.Time7.TabIndex = 44;
+            // 
+            // Time8
+            // 
+            this.Time8.AutoSize = true;
+            this.Time8.Location = new System.Drawing.Point(1279, 379);
+            this.Time8.Name = "Time8";
+            this.Time8.Size = new System.Drawing.Size(0, 13);
+            this.Time8.TabIndex = 45;
+            // 
+            // Time9
+            // 
+            this.Time9.AutoSize = true;
+            this.Time9.Location = new System.Drawing.Point(25, 680);
+            this.Time9.Name = "Time9";
+            this.Time9.Size = new System.Drawing.Size(0, 13);
+            this.Time9.TabIndex = 46;
+            // 
+            // Time10
+            // 
+            this.Time10.AutoSize = true;
+            this.Time10.Location = new System.Drawing.Point(452, 680);
+            this.Time10.Name = "Time10";
+            this.Time10.Size = new System.Drawing.Size(0, 13);
+            this.Time10.TabIndex = 47;
+            // 
             // KitchenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1631, 1061);
+            this.Controls.Add(this.Time10);
+            this.Controls.Add(this.Time9);
+            this.Controls.Add(this.Time8);
+            this.Controls.Add(this.Time7);
+            this.Controls.Add(this.Time6);
+            this.Controls.Add(this.Time5);
+            this.Controls.Add(this.Time4);
+            this.Controls.Add(this.Time3);
+            this.Controls.Add(this.Time2);
+            this.Controls.Add(this.Time1);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -511,5 +611,15 @@
         private System.Windows.Forms.Timer timerRefresh;
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Timer timerTime;
+        private System.Windows.Forms.Label Time1;
+        private System.Windows.Forms.Label Time2;
+        private System.Windows.Forms.Label Time3;
+        private System.Windows.Forms.Label Time4;
+        private System.Windows.Forms.Label Time5;
+        private System.Windows.Forms.Label Time6;
+        private System.Windows.Forms.Label Time7;
+        private System.Windows.Forms.Label Time8;
+        private System.Windows.Forms.Label Time9;
+        private System.Windows.Forms.Label Time10;
     }
 }

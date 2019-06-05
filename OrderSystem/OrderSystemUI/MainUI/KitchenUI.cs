@@ -16,8 +16,8 @@ namespace OrderSystemUI.MainUI
     public partial class KitchenUI : Form
     {
         Employee employee;
-        
-        
+
+
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
@@ -37,7 +37,7 @@ namespace OrderSystemUI.MainUI
         public void order1()
         {
             int tableID = 1;
-            
+
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = kitchenLogic.GetFoods(tableID);
 
@@ -53,6 +53,8 @@ namespace OrderSystemUI.MainUI
             listView1.Columns[2].Width = 66;
             listView1.Columns.Add("Status");
             listView1.Columns[3].Width = 70;
+
+
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
@@ -73,6 +75,15 @@ namespace OrderSystemUI.MainUI
 
             }
 
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time1.Text = datestring;
+            }
+
         }
         public void order2()
         {
@@ -85,7 +96,7 @@ namespace OrderSystemUI.MainUI
             // clear the listview before filling it again
             listView2.Clear();
             //Make Collumns
-          
+
             listView2.Columns.Add("Foodname");
             listView2.Columns[0].Width = 120;
             listView2.Columns.Add("Type");
@@ -113,6 +124,14 @@ namespace OrderSystemUI.MainUI
                     listView2.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time2.Text = datestring;
             }
 
         }
@@ -153,6 +172,14 @@ namespace OrderSystemUI.MainUI
                     listView3.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time3.Text = datestring;
             }
 
         }
@@ -195,7 +222,15 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time4.Text = datestring;
+            }
+
         }
         public void order5()
         {
@@ -235,6 +270,14 @@ namespace OrderSystemUI.MainUI
                     listView5.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time5.Text = datestring;
             }
 
         }
@@ -277,6 +320,14 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time6.Text = datestring;
+            }
 
         }
         public void order7()
@@ -318,6 +369,14 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time7.Text = datestring;
+            }
 
         }
         public void order8()
@@ -326,7 +385,6 @@ namespace OrderSystemUI.MainUI
 
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = kitchenLogic.GetFoods(tableID);
-
 
             // clear the listview before filling it again
             listView8.Clear();
@@ -339,6 +397,7 @@ namespace OrderSystemUI.MainUI
             listView8.Columns[2].Width = 66;
             listView8.Columns.Add("Status");
             listView8.Columns[3].Width = 70;
+
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
@@ -358,8 +417,16 @@ namespace OrderSystemUI.MainUI
                     listView8.BackColor = Color.Green;
                 }
 
-            }
 
+            }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time8.Text = datestring;
+            }
         }
         public void order9()
         {
@@ -400,6 +467,14 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time9.Text = datestring;
+            }
         }
         public void order10()
         {
@@ -439,6 +514,14 @@ namespace OrderSystemUI.MainUI
                     listView10.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic kitchenTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = kitchenTimeLogic.GetTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time10.Text = datestring;
             }
 
         }

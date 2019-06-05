@@ -17,6 +17,8 @@ namespace OrderSystemUI.MainUI {
         Table table;
         TableOverviewUI tableUI;
         TableLogic tableLogic = new TableLogic();
+        TakeOrderLogic takeOrderLogic = new TakeOrderLogic();
+        Order order = new Order();
 
         public OrderMenuUI(Employee employee, Table table, TableOverviewUI tableUI) {
             InitializeComponent();
@@ -41,6 +43,9 @@ namespace OrderSystemUI.MainUI {
 
             //writes the status off to database
             tableLogic.UpdateTableStatus(Availability.Unavailable, table);
+
+            //Adds new order to database
+            takeOrderLogic.AddNewOrder(employee.ID, table.ID);
         }
 
         private void btnFree_Click(object sender, EventArgs e) {
@@ -83,11 +88,28 @@ namespace OrderSystemUI.MainUI {
             }
         }
 
+        private void MakeNewOrder(int orderID)
+        {
+            this.order.orderID = orderID++;
+            this.order.Employee = this.employee;
+            this.order.Table = this.table;
+            this.order.orderDate = DateTime.Now;
+        }
+
         private void btn_LunchMenu_Click(object sender, EventArgs e)
         {
+            int orderID = takeOrderLogic.GetLatestOrderID();
+
             this.Hide();
-            OrderLunchUI lunchUI = new OrderLunchUI(employee, table, this);
+            OrderLunchUI lunchUI = new OrderLunchUI(employee, table, orderID, this);
             lunchUI.ShowDialog();
+        }
+
+        private void btn_OrderOverview_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(table, employee);
+            orderOverview.ShowDialog();
         }
     }
 }
