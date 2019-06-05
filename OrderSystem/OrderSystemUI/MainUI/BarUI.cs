@@ -444,10 +444,7 @@ namespace OrderSystemUI.MainUI
             this.Close();
         }
 
-        private void KitchenUI_Load(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
