@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +16,8 @@ namespace OrderSystemUI.MainUI
     public partial class KitchenUI : Form
     {
         Employee employee;
-
+        
+        
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
@@ -35,7 +37,7 @@ namespace OrderSystemUI.MainUI
         public void order1()
         {
             int tableID = 1;
-
+            
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = kitchenLogic.GetFoods(tableID);
 
@@ -575,6 +577,11 @@ namespace OrderSystemUI.MainUI
             order8();
             order9();
             order10();
+        }
+
+        private void timerTime_Tick(object sender, EventArgs e)
+        {
+            this.TimeLabel.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
     }
 }
