@@ -22,34 +22,18 @@ namespace OrderSystemDAL
         //Query to get all food for kitchen
         public List<OrderItem> Db_Get_All_Foods(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.timeOfOrder, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
         //Query to get all drinks for Bar
         public List<OrderItem> Db_Get_All_Drinks(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Liquor' OR items.foodtype LIKE '%Beverages' AND status = 0 AND  tableID = " + tableID;
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.timeOfOrder, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Liquor' OR items.foodtype LIKE '%Beverages' AND status = 0 AND  tableID = " + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-        //query to get all times for foods
-        public List<OrderItem> DB_Get_Ordertime(int tableID)
-        {
-            string query = "SELECT ORDER_CONTAINS.timeOfOrder FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTime(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        //query to get all times for drinks
-        public List<OrderItem> DB_Get_Bartime(int tableID)
-        {
-            string query = "SELECT ORDER_CONTAINS.timeOfOrder FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Liquor' OR items.foodtype LIKE '%Beverages' AND status = 0 AND  tableID = " + tableID;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTime(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-
+      
         //Query to update status of order
         public void OrderStatus(int tableID, int statusChange)
         {
@@ -70,6 +54,7 @@ namespace OrderSystemDAL
                     tableID = (int)dr["tableID"],
                     orderID = (int)dr["orderID"],
                     itemID = (int)dr["itemID"],
+                    TimeOfOrder = (DateTime)dr["timeOfOrder"],
                     name = (string)dr["name"],
                     foodtype = (string)dr["foodtype"],
                     amount = (int)dr["amount"],

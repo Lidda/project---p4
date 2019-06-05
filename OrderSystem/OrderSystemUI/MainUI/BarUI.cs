@@ -58,6 +58,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time1.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -75,14 +77,7 @@ namespace OrderSystemUI.MainUI
 
             }
 
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time1.Text = datestring;
-            }
+            
 
         }
         public void order2()
@@ -108,6 +103,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time2.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -125,15 +122,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time2.Text = datestring;
-            }
+           
 
         }
         public void order3()
@@ -158,6 +147,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time3.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -174,14 +165,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time3.Text = datestring;
-            }
+           
 
         }
         public void order4()
@@ -206,6 +190,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time4.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -223,14 +209,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time4.Text = datestring;
-            }
+         
 
         }
         public void order5()
@@ -255,6 +234,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time5.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -272,14 +253,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time5.Text = datestring;
-            }
+            
 
         }
         public void order6()
@@ -304,6 +278,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time6.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -321,14 +297,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time6.Text = datestring;
-            }
+           
 
         }
         public void order7()
@@ -353,6 +322,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time7.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -370,14 +341,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time7.Text = datestring;
-            }
+           
 
         }
         public void order8()
@@ -402,6 +366,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time8.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -420,14 +386,9 @@ namespace OrderSystemUI.MainUI
 
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+            
 
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time8.Text = datestring;
-            }
+           
         }
         public void order9()
         {
@@ -451,6 +412,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time9.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -468,14 +431,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time9.Text = datestring;
-            }
+            
         }
         public void order10()
         {
@@ -499,6 +455,8 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time10.Text = datestring;
 
                 ListViewItem li = new ListViewItem(o.name);
                 li.SubItems.Add(o.foodtype);
@@ -516,14 +474,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
-            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
-
-            foreach (OrderSystemModel.OrderItem o in OrderLists)
-            {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time10.Text = datestring;
-            }
+           
 
         }
         private void btnLogout_Click(object sender, EventArgs e)
