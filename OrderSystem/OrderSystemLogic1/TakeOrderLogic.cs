@@ -51,11 +51,11 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddItemsToOrder(List<OrderItem> orderItems)
+        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
         {
             try
             {
-                takeOrder_db.AddItemsToOrder(orderItems);
+                takeOrder_db.AddItemsToOrder(orderItems, order);
             }
             catch
             {
@@ -63,11 +63,11 @@ namespace OrderSystemLogic
             }
         }
 
-        public void AddNewOrder(int employeeID, int tableID)
+        public void AddNewOrder(Order order)
         {
             try
             {
-                takeOrder_db.AddNewOrder(employeeID, tableID);
+                takeOrder_db.AddNewOrder(order);
             }
             catch
             {
@@ -83,31 +83,19 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Something went wrong while removing order");
+                throw new Exception("Something went wrong");
             }
         }
 
-        public void RemoveItemsFromOrder(List<OrderItem> orderItems)
+        public void RemoveItemsFromOrder(List<OrderItem> orderItems, Order order)
         {
             try
             {
-                takeOrder_db.RemoveItemsFromOrder(orderItems);
+                takeOrder_db.RemoveItemsFromOrder(orderItems, order);
             }
             catch
             {
-                throw new Exception("Something went wrong while removing items");
-            }
-        }
-
-        public int GetLatestOrderID()
-        {
-            try
-            {
-                return takeOrder_db.DB_Get_Latest_OrderID();
-            }
-            catch
-            {
-                throw new Exception("Something went wrong while retrieving orderID");
+                throw new Exception("Something went wrong");
             }
         }
     }

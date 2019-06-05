@@ -15,29 +15,26 @@ namespace OrderSystemUI.MainUI
     public partial class OrderLunchUI : Form
     {
         TakeOrderLogic takeOrderLogic = new TakeOrderLogic();
-        List<OrderItem> orderItems = new List<OrderItem>();
+        List<OrderItem> orderItem;
         List<Item> items;
-        Employee employee;
-        Table table;
 
         OrderMenuUI orderMenuUI;
-        int orderID;
+        Employee employee;
+        Table table;
             
-        public OrderLunchUI(Employee employee, Table table, int orderID, OrderMenuUI orderMenuUI)
+        public OrderLunchUI(Employee employee, Table table, OrderMenuUI orderMenuUI)
         {
             InitializeComponent();
 
-            this.orderID = orderID;
-            this.orderMenuUI = orderMenuUI;
-            this.table = table;
             this.employee = employee;
+            this.table = table;
+            this.orderMenuUI = orderMenuUI;
 
             AddItemsToListViews();
 
             orderMenuUI.Hide();
         }
 
-        //Fills the listviews with all lunch items
         private void AddItemsToListViews()
         {
             items = takeOrderLogic.GetLunchItems();
@@ -66,216 +63,142 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        private void btn_AddStarter1_Click(object sender, EventArgs e)
+
+        
+
+        private void btn_AddDessert1_Click(object sender, EventArgs e)
         {
-            AddStarter(0);
+            int count = Convert.ToInt32(listView_Starters.Items[0].SubItems[1].Text) + 1;
+            listView_Starters.Items[0].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddStarter2_Click(object sender, EventArgs e)
         {
-            AddStarter(1);
+            int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) + 1;
+            listView_Starters.Items[1].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddStarter3_Click(object sender, EventArgs e)
         {
-            AddStarter(2);
+            int count = Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) + 1;
+            listView_Starters.Items[2].SubItems[1].Text = count.ToString();
         }
 
         private void btn_SubtractStarter1_Click(object sender, EventArgs e)
         {
-            SubtractStarter(0);
+            if (Convert.ToInt32(listView_Starters.Items[0].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[0].Text) - 1;
+                listView_Starters.Items[0].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractStarter2_Click(object sender, EventArgs e)
         {
-            SubtractStarter(1);
+            if (Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) >= 1)
+                {
+                int count = Convert.ToInt32(listView_Starters.Items[1].SubItems[1].Text) - 1;
+                listView_Starters.Items[1].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractStarter3_Click(object sender, EventArgs e)
         {
-            SubtractStarter(2);
+            if (Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Starters.Items[2].SubItems[1].Text) - 1;
+                listView_Starters.Items[2].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_AddMainCourse1_Click(object sender, EventArgs e)
         {
-            AddMainCourse(0);
+            int count = Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) + 1;
+            listView_MainCourses.Items[0].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddMainCourse2_Click(object sender, EventArgs e)
         {
-            AddMainCourse(1);
+            int count = Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) + 1;
+            listView_MainCourses.Items[1].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddMainCourse3_Click(object sender, EventArgs e)
         {
-            AddMainCourse(2);
+            int count = Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) + 1;
+            listView_MainCourses.Items[2].SubItems[1].Text = count.ToString();
         }
 
         private void btn_SubtractMainCourse1_Click(object sender, EventArgs e)
         {
-            SubtractMainCourse(0);
+            if (Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_MainCourses.Items[0].SubItems[1].Text) - 1;
+                listView_MainCourses.Items[0].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractMainCourse2_Click(object sender, EventArgs e)
         {
-            SubtractMainCourse(1);
+            if (Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_MainCourses.Items[1].SubItems[1].Text) - 1;
+                listView_MainCourses.Items[1].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractMainCourse3_Click(object sender, EventArgs e)
         {
-            SubtractMainCourse(2);
+            if (Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_MainCourses.Items[2].SubItems[1].Text) - 1;
+                listView_MainCourses.Items[2].SubItems[1].Text = count.ToString();
+            }
         }
 
-        private void btn_AddDessert1_Click(object sender, EventArgs e)
+        private void btn_AddDessert1_Click_1(object sender, EventArgs e)
         {
-            AddDessert(0);
+            int count = Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) + 1;
+            listView_Desserts.Items[0].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddDessert2_Click(object sender, EventArgs e)
         {
-            AddDessert(1);
+            int count = Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) + 1;
+            listView_Desserts.Items[1].SubItems[1].Text = count.ToString();
         }
 
         private void btn_AddDessert3_Click(object sender, EventArgs e)
         {
-            AddDessert(2);
+            int count = Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) + 1;
+            listView_Desserts.Items[2].SubItems[1].Text = count.ToString();
         }
 
         private void btn_SubtractDessert1_Click(object sender, EventArgs e)
         {
-            SubtractDessert(0);
+            if (Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Desserts.Items[0].SubItems[1].Text) - 1;
+                listView_Desserts.Items[0].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractDessert2_Click(object sender, EventArgs e)
         {
-            SubtractDessert(1);
+            if (Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) >= 1)
+            {
+                int count = Convert.ToInt32(listView_Desserts.Items[1].SubItems[1].Text) - 1;
+                listView_Desserts.Items[1].SubItems[1].Text = count.ToString();
+            }
         }
 
         private void btn_SubtractDessert3_Click(object sender, EventArgs e)
         {
-            SubtractDessert(2);
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            orderMenuUI.Show();
-            this.Close();
-        }
-
-        //Adds starters
-        private void AddStarter(int index)
-        {
-            int count = Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) + 1;
-            listView_Starters.Items[index].SubItems[1].Text = count.ToString();
-        }
-
-        //Subtracts starters
-        private void SubtractStarter(int index)
-        {
-            if (Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) >= 1)
+            if (Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) >= 1)
             {
-                int count = Convert.ToInt32(listView_Starters.Items[index].SubItems[1].Text) - 1;
-                listView_Starters.Items[index].SubItems[1].Text = count.ToString();
+                int count = Convert.ToInt32(listView_Desserts.Items[2].SubItems[1].Text) - 1;
+                listView_Desserts.Items[2].SubItems[1].Text = count.ToString();
             }
-        }
-
-        //Adds main course
-        private void AddMainCourse(int index)
-        {
-            int count = Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) + 1;
-            listView_MainCourses.Items[index].SubItems[1].Text = count.ToString();
-        }
-
-        //Subtracts main course
-        private void SubtractMainCourse(int index)
-        {
-            if (Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_MainCourses.Items[index].SubItems[1].Text) - 1;
-                listView_MainCourses.Items[index].SubItems[1].Text = count.ToString();
-            }
-        }
-
-        //Adds dessert
-        private void AddDessert(int index)
-        {
-            int count = Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) + 1;
-            listView_Desserts.Items[index].SubItems[1].Text = count.ToString();
-        }
-
-        //Subtracts dessert
-        private void SubtractDessert(int index)
-        {
-            if (Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) >= 1)
-            {
-                int count = Convert.ToInt32(listView_Desserts.Items[index].SubItems[1].Text) - 1;
-                listView_Desserts.Items[index].SubItems[1].Text = count.ToString();
-            }
-        }
-
-        private void btn_AddItems_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                if (Convert.ToInt32(listView_Starters.Items[i].SubItems[1].Text) >= 1)
-                {
-                    int amount = Convert.ToInt32(listView_Starters.Items[i].SubItems[1].Text);
-                    Item item = items.Find(j => j.name == listView_Starters.Items[i].SubItems[0].Text);
-
-                    AddItemToOrder(amount, item);
-                }
-
-                if (Convert.ToInt32(listView_MainCourses.Items[i].SubItems[1].Text) >= 1)
-                {
-                    int amount = Convert.ToInt32(listView_MainCourses.Items[i].SubItems[1].Text);
-                    Item item = items.Find(j => j.name == listView_MainCourses.Items[i].SubItems[0].Text);
-
-                    AddItemToOrder(amount, item);
-                }
-
-                if (Convert.ToInt32(listView_Desserts.Items[i].SubItems[1].Text) >= 1)
-                {
-                    int amount = Convert.ToInt32(listView_Desserts.Items[i].SubItems[1].Text);
-                    Item item = items.Find(j => j.name == listView_Desserts.Items[i].SubItems[0].Text);
-
-                    AddItemToOrder(amount, item);
-                }
-            }
-
-            takeOrderLogic.AddItemsToOrder(orderItems);
-
-            ResetQuantity();
-        }
-
-        private void AddItemToOrder(int amount, Item item)
-        {
-            OrderItem orderItem = new OrderItem();
-
-            orderItem.orderID = this.orderID;
-            orderItem.item = item;
-            orderItem.amount = amount;
-            orderItem.comment = "";
-            orderItem.status = OrderItem.Status.ordered;
-
-            orderItems.Add(orderItem);
-        }
-
-        private void ResetQuantity()
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                listView_Starters.Items[i].SubItems[1].Text = "0";
-                listView_MainCourses.Items[i].SubItems[1].Text = "0";
-                listView_Desserts.Items[i].SubItems[1].Text = "0";
-            }
-        }
-
-        private void btn_ConfirmOrder_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(table, employee);
-            orderOverview.ShowDialog();
         }
     }
 }

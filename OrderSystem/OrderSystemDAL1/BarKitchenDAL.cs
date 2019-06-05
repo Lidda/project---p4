@@ -24,6 +24,8 @@ namespace OrderSystemDAL
             string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
+
+
         }
 
         public List<OrderItem> Db_Get_All_Drinks(int tableID)
@@ -33,13 +35,6 @@ namespace OrderSystemDAL
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<OrderItem> DB_Get_Ordertime(int tableID)
-        {
-            string query = "SELECT order_contains.timeOfOrder FROM ORDER_CONTAINS JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID WHERE tableid =" + tableID;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTime(ExecuteSelectQuery(query, sqlParameters));
-        }
-     
 
         //Updates the status order by order.orderID
         public void OrderStatus(int tableID, int statusChange)
@@ -49,6 +44,8 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
+
         private List<OrderItem> ReadOrders(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
@@ -57,6 +54,7 @@ namespace OrderSystemDAL
             {
                 OrderItem orderItem = new OrderItem()
                 {
+
                     tableID = (int)dr["tableID"],
                     orderID = (int)dr["orderID"],
                     itemID = (int)dr["itemID"],
@@ -68,20 +66,6 @@ namespace OrderSystemDAL
                 orderItems.Add(orderItem);
             }
             return orderItems;
-        }
-
-        private List<OrderItem> ReadTime(DataTable dataTable)
-        {
-            List<OrderItem> orderTimes = new List<OrderItem>();
-            foreach(DataRow dr in dataTable.Rows)
-            {
-                OrderItem orderTime = new OrderItem()
-                {
-                    TimeOfOrder = (DateTime)dr["timeOfOrder"]
-                };
-                orderTimes.Add(orderTime);
-            }
-            return orderTimes;
         }
 
 

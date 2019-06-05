@@ -58,48 +58,34 @@ namespace OrderSystemDAL
             return items;
         }
 
-        //Gets latest order from ORDERS
-        public int DB_Get_Latest_OrderID()
-        {
-            string query = "SELECT MAX(orderID) FROM ORDERS";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetOrderID(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        private int GetOrderID(DataTable dataTable)
-        {
-            int orderID = 0;
-            orderID = (int)dataTable.Rows[0][0];
-            
-            return orderID;
-        }
-
         //Adds new order to ORDERS table
-        public void AddNewOrder(int employeeID, int tableID)
+        public void AddNewOrder(Order order)
         {
-            string query= "INSERT INTO [ORDERS] (employeeID, tableID) VALUES (@employeeID, @tableID)";
+            string query= "INSERT INTO [ORDERS] (orderID, comment, employeeID, tableID) VALUES ((SELECT COALESCE(MAX(orderID)+1, 0) FROM [ORDERS]), @comment, @employeeID, @tableID)";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter("@employeeID", employeeID),
-                new SqlParameter("@tableID", tableID),
+                new SqlParameter("@comment", order.comment),
+                new SqlParameter("@employeeID", order.Employee.ID),
+                new SqlParameter("@tableID", order.Table.ID),
             };
             ExecuteEditQuery(query, sqlParameters);
             
         }
 
         //Adds items to orders
-        public void AddItemsToOrder(List<OrderItem> orderItems)
+        public void AddItemsToOrder(List<OrderItem> orderItems, Order order)
         {
             foreach (OrderItem orderItem in orderItems)
             {
                 //Adds items to ORDER_CONTAINS
-                string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
+                string queryAddToOrder = "INSERT INTO [ORDERS_CONTAINS] (orderID, itemID, amount, comment, timeOfOrder) VALUES (@orderID, @itemID, @amount, @comment, @timeOfOrder)";
                 SqlParameter[] sqlParametersAdd = new SqlParameter[]
                 {
-                    new SqlParameter("@orderID", orderItem.orderID),
+                    new SqlParameter("@orderID", order.orderID),
                     new SqlParameter("@itemID", orderItem.item.itemID),
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@comment", orderItem.comment),
+                    new SqlParameter("@timeOfOrder", orderItem.dateTime),
                 };
                 ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
 
@@ -115,7 +101,7 @@ namespace OrderSystemDAL
         }
 
         //Remove item(s) from an order
-        public void RemoveItemsFromOrder(List<OrderItem> orderItems)
+        public void RemoveItemsFromOrder(List<OrderItem> orderItems, Order order)
         {
             foreach (OrderItem orderItem in orderItems)
             {
@@ -125,7 +111,7 @@ namespace OrderSystemDAL
                 {
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@itemID", orderItem.item.itemID),
-                    new SqlParameter("@orderID", orderItem.orderID),
+                    new SqlParameter("@orderID", order.orderID),
                 };
                 ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
 
