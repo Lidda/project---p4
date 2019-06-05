@@ -60,7 +60,7 @@ namespace OrderSystemLogic
         }
 
 
-        public void OrderStatus(int tableID, OrderItem.Status statusChange)
+        public void OrderStatus(int tableID, int statusChange)
         {
             barkitchen_db.OrderStatus(tableID, statusChange);
         }

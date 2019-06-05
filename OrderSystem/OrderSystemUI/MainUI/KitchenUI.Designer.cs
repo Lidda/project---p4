@@ -42,10 +42,10 @@
             this.listView8 = new System.Windows.Forms.ListView();
             this.listView9 = new System.Windows.Forms.ListView();
             this.listView10 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_markReady7 = new System.Windows.Forms.Button();
+            this.btn_markReady8 = new System.Windows.Forms.Button();
+            this.btn_markReady9 = new System.Windows.Forms.Button();
+            this.btn_markReady10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -162,6 +162,7 @@
             this.Refresh_btn.TabIndex = 12;
             this.Refresh_btn.Text = "Refresh";
             this.Refresh_btn.UseVisualStyleBackColor = false;
+            this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
             // 
             // btn_markReady1
             // 
@@ -181,6 +182,7 @@
             this.btn_markReady2.TabIndex = 14;
             this.btn_markReady2.Text = "Mark as ready";
             this.btn_markReady2.UseVisualStyleBackColor = true;
+            this.btn_markReady2.Click += new System.EventHandler(this.btn_markReady2_Click);
             // 
             // btn_markReady3
             // 
@@ -190,6 +192,7 @@
             this.btn_markReady3.TabIndex = 15;
             this.btn_markReady3.Text = "Mark as ready";
             this.btn_markReady3.UseVisualStyleBackColor = true;
+            this.btn_markReady3.Click += new System.EventHandler(this.btn_markReady3_Click);
             // 
             // btn_markReady4
             // 
@@ -199,6 +202,7 @@
             this.btn_markReady4.TabIndex = 16;
             this.btn_markReady4.Text = "Mark as ready";
             this.btn_markReady4.UseVisualStyleBackColor = true;
+            this.btn_markReady4.Click += new System.EventHandler(this.btn_markReady4_Click);
             // 
             // btn_markReady5
             // 
@@ -208,6 +212,7 @@
             this.btn_markReady5.TabIndex = 17;
             this.btn_markReady5.Text = "Mark as ready";
             this.btn_markReady5.UseVisualStyleBackColor = true;
+            this.btn_markReady5.Click += new System.EventHandler(this.btn_markReady5_Click);
             // 
             // btn_markReady6
             // 
@@ -217,6 +222,7 @@
             this.btn_markReady6.TabIndex = 18;
             this.btn_markReady6.Text = "Mark as ready";
             this.btn_markReady6.UseVisualStyleBackColor = true;
+            this.btn_markReady6.Click += new System.EventHandler(this.btn_markReady6_Click);
             // 
             // listView7
             // 
@@ -262,41 +268,45 @@
             this.listView10.UseCompatibleStateImageBehavior = false;
             this.listView10.View = System.Windows.Forms.View.Details;
             // 
-            // button1
+            // btn_markReady7
             // 
-            this.button1.Location = new System.Drawing.Point(985, 625);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Mark as ready";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_markReady7.Location = new System.Drawing.Point(997, 625);
+            this.btn_markReady7.Name = "btn_markReady7";
+            this.btn_markReady7.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady7.TabIndex = 23;
+            this.btn_markReady7.Text = "Mark as ready";
+            this.btn_markReady7.UseVisualStyleBackColor = true;
+            this.btn_markReady7.Click += new System.EventHandler(this.btn_markReady7_Click);
             // 
-            // button2
+            // btn_markReady8
             // 
-            this.button2.Location = new System.Drawing.Point(1365, 625);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Mark as ready";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_markReady8.Location = new System.Drawing.Point(1365, 625);
+            this.btn_markReady8.Name = "btn_markReady8";
+            this.btn_markReady8.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady8.TabIndex = 24;
+            this.btn_markReady8.Text = "Mark as ready";
+            this.btn_markReady8.UseVisualStyleBackColor = true;
+            this.btn_markReady8.Click += new System.EventHandler(this.btn_markReady8_Click);
             // 
-            // button3
+            // btn_markReady9
             // 
-            this.button3.Location = new System.Drawing.Point(125, 960);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 23);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Mark as ready";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_markReady9.Location = new System.Drawing.Point(125, 960);
+            this.btn_markReady9.Name = "btn_markReady9";
+            this.btn_markReady9.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady9.TabIndex = 25;
+            this.btn_markReady9.Text = "Mark as ready";
+            this.btn_markReady9.UseVisualStyleBackColor = true;
+            this.btn_markReady9.Click += new System.EventHandler(this.btn_markReady9_Click);
             // 
-            // button4
+            // btn_markReady10
             // 
-            this.button4.Location = new System.Drawing.Point(567, 960);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 23);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Mark as ready";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_markReady10.Location = new System.Drawing.Point(567, 960);
+            this.btn_markReady10.Name = "btn_markReady10";
+            this.btn_markReady10.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady10.TabIndex = 26;
+            this.btn_markReady10.Text = "Mark as ready";
+            this.btn_markReady10.UseVisualStyleBackColor = true;
+            this.btn_markReady10.Click += new System.EventHandler(this.btn_markReady10_Click);
             // 
             // label1
             // 
@@ -404,10 +414,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_markReady10);
+            this.Controls.Add(this.btn_markReady9);
+            this.Controls.Add(this.btn_markReady8);
+            this.Controls.Add(this.btn_markReady7);
             this.Controls.Add(this.listView10);
             this.Controls.Add(this.listView9);
             this.Controls.Add(this.listView8);
@@ -457,10 +467,10 @@
         private System.Windows.Forms.ListView listView8;
         private System.Windows.Forms.ListView listView9;
         private System.Windows.Forms.ListView listView10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_markReady7;
+        private System.Windows.Forms.Button btn_markReady8;
+        private System.Windows.Forms.Button btn_markReady9;
+        private System.Windows.Forms.Button btn_markReady10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
