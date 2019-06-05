@@ -18,25 +18,6 @@ namespace OrderSystemModel
         public string name { get; set; }
         public int amount { get; set; }
         public Item item { get; set; }
-        public DateTime dateTime { get; set; }
-        public string comment
-        {
-            get
-            {
-                return comment;
-            }
-            set
-            {
-                //check if value is not null before assigning it
-                if (value != null)
-                {
-                    comment = value;
-                }
-                else
-                {
-                    comment = "";
-                }
-            }
-        }
+        public string comment{ get; set; }
     }
 }

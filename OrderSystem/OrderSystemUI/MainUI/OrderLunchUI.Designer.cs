@@ -32,7 +32,7 @@
             this.lbl_DessertHeader = new System.Windows.Forms.Label();
             this.lbl_MainCourseHeader = new System.Windows.Forms.Label();
             this.lbl_StartersHeader = new System.Windows.Forms.Label();
-            this.btn_ConfirmOrder = new System.Windows.Forms.Button();
+            this.btn_OrderOverview = new System.Windows.Forms.Button();
             this.listView_Starters = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,6 +60,7 @@
             this.listView_Desserts = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_AddItems = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -119,19 +120,20 @@
             this.lbl_StartersHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbl_StartersHeader.UseWaitCursor = true;
             // 
-            // btn_ConfirmOrder
+            // btn_OrderOverview
             // 
-            this.btn_ConfirmOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_ConfirmOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ConfirmOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConfirmOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConfirmOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ConfirmOrder.Location = new System.Drawing.Point(357, 632);
-            this.btn_ConfirmOrder.Name = "btn_ConfirmOrder";
-            this.btn_ConfirmOrder.Size = new System.Drawing.Size(95, 37);
-            this.btn_ConfirmOrder.TabIndex = 50;
-            this.btn_ConfirmOrder.Text = "Confirm";
-            this.btn_ConfirmOrder.UseVisualStyleBackColor = false;
+            this.btn_OrderOverview.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_OrderOverview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OrderOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OrderOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OrderOverview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_OrderOverview.Location = new System.Drawing.Point(357, 632);
+            this.btn_OrderOverview.Name = "btn_OrderOverview";
+            this.btn_OrderOverview.Size = new System.Drawing.Size(95, 37);
+            this.btn_OrderOverview.TabIndex = 50;
+            this.btn_OrderOverview.Text = "Order overview";
+            this.btn_OrderOverview.UseVisualStyleBackColor = false;
+            this.btn_OrderOverview.Click += new System.EventHandler(this.btn_ConfirmOrder_Click);
             // 
             // listView_Starters
             // 
@@ -454,12 +456,23 @@
             this.columnHeader6.Text = "#";
             this.columnHeader6.Width = 36;
             // 
+            // btn_AddItems
+            // 
+            this.btn_AddItems.Location = new System.Drawing.Point(129, 543);
+            this.btn_AddItems.Name = "btn_AddItems";
+            this.btn_AddItems.Size = new System.Drawing.Size(60, 60);
+            this.btn_AddItems.TabIndex = 77;
+            this.btn_AddItems.Text = "Add To Order";
+            this.btn_AddItems.UseVisualStyleBackColor = true;
+            this.btn_AddItems.Click += new System.EventHandler(this.btn_AddItems_Click);
+            // 
             // OrderLunchUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.btn_AddItems);
             this.Controls.Add(this.btn_SubtractDessert3);
             this.Controls.Add(this.btn_AddDessert3);
             this.Controls.Add(this.btn_SubtractDessert2);
@@ -481,7 +494,7 @@
             this.Controls.Add(this.btn_SubtractStarter1);
             this.Controls.Add(this.btn_AddStarter1);
             this.Controls.Add(this.listView_Starters);
-            this.Controls.Add(this.btn_ConfirmOrder);
+            this.Controls.Add(this.btn_OrderOverview);
             this.Controls.Add(this.lbl_StartersHeader);
             this.Controls.Add(this.lbl_MainCourseHeader);
             this.Controls.Add(this.lbl_DessertHeader);
@@ -498,7 +511,7 @@
         private System.Windows.Forms.Label lbl_DessertHeader;
         private System.Windows.Forms.Label lbl_MainCourseHeader;
         private System.Windows.Forms.Label lbl_StartersHeader;
-        private System.Windows.Forms.Button btn_ConfirmOrder;
+        private System.Windows.Forms.Button btn_OrderOverview;
         private System.Windows.Forms.ListView listView_Starters;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -526,5 +539,6 @@
         private System.Windows.Forms.ListView listView_Desserts;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btn_AddItems;
     }
 }

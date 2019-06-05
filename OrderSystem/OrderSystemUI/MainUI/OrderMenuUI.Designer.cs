@@ -116,6 +116,7 @@
             this.btn_OrderOverview.Text = "Order overview";
             this.btn_OrderOverview.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_OrderOverview.UseVisualStyleBackColor = true;
+            this.btn_OrderOverview.Click += new System.EventHandler(this.btn_OrderOverview_Click);
             // 
             // btn_LunchMenu
             // 
