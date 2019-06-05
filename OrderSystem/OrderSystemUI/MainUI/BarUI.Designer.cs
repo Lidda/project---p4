@@ -174,11 +174,13 @@
             // 
             this.timerRefresh.Enabled = true;
             this.timerRefresh.Interval = 60000;
+            this.timerRefresh.Tick += new System.EventHandler(this.Refresh_btn_Click);
             // 
             // timerTime
             // 
             this.timerTime.Enabled = true;
             this.timerTime.Interval = 1000;
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
             // Time10
             // 
@@ -255,7 +257,7 @@
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Location = new System.Drawing.Point(1375, 22);
+            this.TimeLabel.Location = new System.Drawing.Point(1354, 22);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(56, 13);
             this.TimeLabel.TabIndex = 81;
