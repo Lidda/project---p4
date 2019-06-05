@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +16,8 @@ namespace OrderSystemUI.MainUI
     public partial class KitchenUI : Form
     {
         Employee employee;
-
+        
+        
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
@@ -35,7 +37,7 @@ namespace OrderSystemUI.MainUI
         public void order1()
         {
             int tableID = 1;
-
+            
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = kitchenLogic.GetFoods(tableID);
 
@@ -48,7 +50,7 @@ namespace OrderSystemUI.MainUI
             listView1.Columns.Add("Type");
             listView1.Columns[1].Width = 70;
             listView1.Columns.Add("Amount");
-            listView1.Columns[2].Width = 70;
+            listView1.Columns[2].Width = 66;
             listView1.Columns.Add("Status");
             listView1.Columns[3].Width = 70;
 
@@ -89,7 +91,7 @@ namespace OrderSystemUI.MainUI
             listView2.Columns.Add("Type");
             listView2.Columns[1].Width = 70;
             listView2.Columns.Add("Amount");
-            listView2.Columns[2].Width = 70;
+            listView2.Columns[2].Width = 66;
             listView2.Columns.Add("Status");
             listView2.Columns[3].Width = 70;
 
@@ -130,7 +132,7 @@ namespace OrderSystemUI.MainUI
             listView3.Columns.Add("Type");
             listView3.Columns[1].Width = 70;
             listView3.Columns.Add("Amount");
-            listView3.Columns[2].Width = 70;
+            listView3.Columns[2].Width = 66;
             listView3.Columns.Add("Status");
             listView3.Columns[3].Width = 70;
 
@@ -170,7 +172,7 @@ namespace OrderSystemUI.MainUI
             listView4.Columns.Add("Type");
             listView4.Columns[1].Width = 70;
             listView4.Columns.Add("Amount");
-            listView4.Columns[2].Width = 70;
+            listView4.Columns[2].Width = 66;
             listView4.Columns.Add("Status");
             listView4.Columns[3].Width = 70;
 
@@ -211,7 +213,7 @@ namespace OrderSystemUI.MainUI
             listView5.Columns.Add("Type");
             listView5.Columns[1].Width = 70;
             listView5.Columns.Add("Amount");
-            listView5.Columns[2].Width = 70;
+            listView5.Columns[2].Width = 66;
             listView5.Columns.Add("Status");
             listView5.Columns[3].Width = 70;
 
@@ -252,7 +254,7 @@ namespace OrderSystemUI.MainUI
             listView6.Columns.Add("Type");
             listView6.Columns[1].Width = 70;
             listView6.Columns.Add("Amount");
-            listView6.Columns[2].Width = 70;
+            listView6.Columns[2].Width = 66;
             listView6.Columns.Add("Status");
             listView6.Columns[3].Width = 70;
 
@@ -293,7 +295,7 @@ namespace OrderSystemUI.MainUI
             listView7.Columns.Add("Type");
             listView7.Columns[1].Width = 70;
             listView7.Columns.Add("Amount");
-            listView7.Columns[2].Width = 70;
+            listView7.Columns[2].Width = 66;
             listView7.Columns.Add("Status");
             listView7.Columns[3].Width = 70;
 
@@ -334,7 +336,7 @@ namespace OrderSystemUI.MainUI
             listView8.Columns.Add("Type");
             listView8.Columns[1].Width = 70;
             listView8.Columns.Add("Amount");
-            listView8.Columns[2].Width = 70;
+            listView8.Columns[2].Width = 66;
             listView8.Columns.Add("Status");
             listView8.Columns[3].Width = 70;
 
@@ -375,7 +377,7 @@ namespace OrderSystemUI.MainUI
             listView9.Columns.Add("Type");
             listView9.Columns[1].Width = 70;
             listView9.Columns.Add("Amount");
-            listView9.Columns[2].Width = 70;
+            listView9.Columns[2].Width = 66;
             listView9.Columns.Add("Status");
             listView9.Columns[3].Width = 70;
 
@@ -415,7 +417,7 @@ namespace OrderSystemUI.MainUI
             listView10.Columns.Add("Type");
             listView10.Columns[1].Width = 70;
             listView10.Columns.Add("Amount");
-            listView10.Columns[2].Width = 70;
+            listView10.Columns[2].Width = 66;
             listView10.Columns.Add("Status");
             listView10.Columns[3].Width = 70;
 
@@ -575,6 +577,11 @@ namespace OrderSystemUI.MainUI
             order8();
             order9();
             order10();
+        }
+
+        private void timerTime_Tick(object sender, EventArgs e)
+        {
+            this.TimeLabel.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
     }
 }

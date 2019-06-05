@@ -21,16 +21,16 @@ namespace OrderSystemDAL
 
         public List<OrderItem> Db_Get_All_Foods(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID  + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
-           
-           
+
+
         }
 
         public List<OrderItem> Db_Get_All_Drinks(int tableID)
         {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE status = 0 AND orders.tableID = ('" + tableID + "') AND foodtype LIKE '%Liquor' OR foodtype LIKE '%Beverages' AND tableID = " + tableID;
+            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Liquor' OR items.foodtype LIKE '%Beverages' AND status = 0 AND  tableID = " + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -44,6 +44,8 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
+
         private List<OrderItem> ReadOrders(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
@@ -52,7 +54,7 @@ namespace OrderSystemDAL
             {
                 OrderItem orderItem = new OrderItem()
                 {
-                   
+
                     tableID = (int)dr["tableID"],
                     orderID = (int)dr["orderID"],
                     itemID = (int)dr["itemID"],
