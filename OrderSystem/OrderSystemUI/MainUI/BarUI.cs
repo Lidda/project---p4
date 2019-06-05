@@ -54,6 +54,8 @@ namespace OrderSystemUI.MainUI
             listView1.Columns.Add("Status");
             listView1.Columns[3].Width = 70;
 
+
+
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
 
@@ -71,6 +73,15 @@ namespace OrderSystemUI.MainUI
                     listView1.BackColor = Color.Green;
                 }
 
+            }
+
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time1.Text = datestring;
             }
 
         }
@@ -114,6 +125,15 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time2.Text = datestring;
+            }
 
         }
         public void order3()
@@ -154,6 +174,14 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time3.Text = datestring;
+            }
 
         }
         public void order4()
@@ -162,6 +190,7 @@ namespace OrderSystemUI.MainUI
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = barLogic.GetDrinks(tableID);
+
 
             // clear the listview before filling it again
             listView4.Clear();
@@ -193,6 +222,14 @@ namespace OrderSystemUI.MainUI
                     listView4.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time4.Text = datestring;
             }
 
         }
@@ -235,11 +272,20 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time5.Text = datestring;
+            }
 
         }
         public void order6()
         {
             int tableID = 6;
+
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = barLogic.GetDrinks(tableID);
 
@@ -275,11 +321,20 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time6.Text = datestring;
+            }
 
         }
         public void order7()
         {
             int tableID = 7;
+
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = barLogic.GetDrinks(tableID);
 
@@ -315,11 +370,20 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time7.Text = datestring;
+            }
 
         }
         public void order8()
         {
             int tableID = 8;
+
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = barLogic.GetDrinks(tableID);
 
@@ -334,6 +398,7 @@ namespace OrderSystemUI.MainUI
             listView8.Columns[2].Width = 66;
             listView8.Columns.Add("Status");
             listView8.Columns[3].Width = 70;
+
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
@@ -353,8 +418,16 @@ namespace OrderSystemUI.MainUI
                     listView8.BackColor = Color.Green;
                 }
 
-            }
 
+            }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time8.Text = datestring;
+            }
         }
         public void order9()
         {
@@ -362,6 +435,7 @@ namespace OrderSystemUI.MainUI
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
             List<OrderItem> OrderList = barLogic.GetDrinks(tableID);
+
 
             // clear the listview before filling it again
             listView9.Clear();
@@ -393,6 +467,14 @@ namespace OrderSystemUI.MainUI
                     listView9.BackColor = Color.Green;
                 }
 
+            }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time9.Text = datestring;
             }
         }
         public void order10()
@@ -434,6 +516,14 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
+            OrderSystemLogic.BarKitchenLogic barTimeLogic = new OrderSystemLogic.BarKitchenLogic();
+            List<OrderItem> OrderLists = barTimeLogic.BarTimes(tableID);
+
+            foreach (OrderSystemModel.OrderItem o in OrderLists)
+            {
+                string datestring = o.TimeOfOrder.ToString("HH:mm");
+                Time10.Text = datestring;
+            }
 
         }
         private void btnLogout_Click(object sender, EventArgs e)
@@ -444,15 +534,15 @@ namespace OrderSystemUI.MainUI
             this.Close();
         }
 
-    
+        
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
             int statusChange = 1;
             int tableID = 1;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order1();
             listView1.BackColor = Color.Green;
         }
@@ -462,8 +552,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 2;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order2();
             listView2.BackColor = Color.Green;
         }
@@ -472,8 +562,9 @@ namespace OrderSystemUI.MainUI
         {
             int statusChange = 1;
             int tableID = 3;
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order3();
             listView3.BackColor = Color.Green;
         }
@@ -483,8 +574,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 4;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order4();
             listView4.BackColor = Color.Green;
         }
@@ -494,8 +585,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 5;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order5();
             listView5.BackColor = Color.Green;
         }
@@ -505,8 +596,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 6;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order6();
             listView6.BackColor = Color.Green;
         }
@@ -516,8 +607,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 7;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order7();
             listView7.BackColor = Color.Green;
         }
@@ -527,8 +618,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 8;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order8();
             listView8.BackColor = Color.Green;
         }
@@ -538,8 +629,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 9;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order9();
             listView9.BackColor = Color.Green;
         }
@@ -549,8 +640,8 @@ namespace OrderSystemUI.MainUI
             int statusChange = 1;
             int tableID = 10;
 
-            OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
-            barLogic.OrderStatus(tableID, statusChange);
+            OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
+            kitchenLogic.OrderStatus(tableID, statusChange);
             order10();
             listView10.BackColor = Color.Green;
         }

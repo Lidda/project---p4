@@ -12,7 +12,7 @@ namespace OrderSystemLogic
     {
         BarKitchenDAL barkitchen_db = new BarKitchenDAL();
 
-
+        //get all orders
         public List<OrderItem> GetOrders()
         {
             try
@@ -28,6 +28,7 @@ namespace OrderSystemLogic
             }
 
         }
+        //get all foods
         public List<OrderItem> GetFoods(int tableID)
         {
             try
@@ -43,6 +44,7 @@ namespace OrderSystemLogic
             }
 
         }
+        //get all drinks
         public List<OrderItem> GetDrinks(int tableID)
         {
             try
@@ -58,7 +60,7 @@ namespace OrderSystemLogic
             }
 
         }
-
+        //get times for kitchen
         public List<OrderItem> GetTimes(int tableID)
         {
             try
@@ -75,8 +77,25 @@ namespace OrderSystemLogic
 
         }
 
+        //get times for bar
+        public List<OrderItem> BarTimes(int tableID)
+        {
+            try
+            {
+                List<OrderItem> OrderList = barkitchen_db.DB_Get_Bartime(tableID);
+
+                return OrderList;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Something went wrong");
+            }
+
+        }
 
 
+        //change status
         public void OrderStatus(int tableID, int statusChange)
         {
             barkitchen_db.OrderStatus(tableID, statusChange);
