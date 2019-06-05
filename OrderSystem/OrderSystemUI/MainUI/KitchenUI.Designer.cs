@@ -99,7 +99,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.Green;
+            this.listView1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(12, 112);
             this.listView1.Name = "listView1";
@@ -111,7 +111,7 @@
             // 
             // listView2
             // 
-            this.listView2.BackColor = System.Drawing.Color.Green;
+            this.listView2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(441, 112);
             this.listView2.Name = "listView2";
@@ -122,7 +122,7 @@
             // 
             // listView3
             // 
-            this.listView3.BackColor = System.Drawing.Color.Green;
+            this.listView3.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView3.GridLines = true;
             this.listView3.Location = new System.Drawing.Point(874, 112);
             this.listView3.Name = "listView3";
@@ -133,7 +133,7 @@
             // 
             // listView4
             // 
-            this.listView4.BackColor = System.Drawing.Color.Green;
+            this.listView4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView4.GridLines = true;
             this.listView4.Location = new System.Drawing.Point(1264, 112);
             this.listView4.Name = "listView4";
@@ -144,7 +144,7 @@
             // 
             // listView5
             // 
-            this.listView5.BackColor = System.Drawing.Color.Green;
+            this.listView5.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView5.GridLines = true;
             this.listView5.Location = new System.Drawing.Point(12, 404);
             this.listView5.Name = "listView5";
@@ -155,7 +155,7 @@
             // 
             // listView6
             // 
-            this.listView6.BackColor = System.Drawing.Color.Green;
+            this.listView6.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView6.GridLines = true;
             this.listView6.Location = new System.Drawing.Point(441, 404);
             this.listView6.Name = "listView6";
@@ -171,7 +171,7 @@
             this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Refresh_btn.Location = new System.Drawing.Point(1410, 33);
+            this.Refresh_btn.Location = new System.Drawing.Point(1559, 6);
             this.Refresh_btn.Name = "Refresh_btn";
             this.Refresh_btn.Size = new System.Drawing.Size(60, 23);
             this.Refresh_btn.TabIndex = 12;
@@ -231,7 +231,7 @@
             // 
             // btn_markReady6
             // 
-            this.btn_markReady6.Location = new System.Drawing.Point(567, 625);
+            this.btn_markReady6.Location = new System.Drawing.Point(558, 625);
             this.btn_markReady6.Name = "btn_markReady6";
             this.btn_markReady6.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady6.TabIndex = 18;
@@ -241,9 +241,9 @@
             // 
             // listView7
             // 
-            this.listView7.BackColor = System.Drawing.Color.Green;
+            this.listView7.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView7.GridLines = true;
-            this.listView7.Location = new System.Drawing.Point(883, 404);
+            this.listView7.Location = new System.Drawing.Point(874, 404);
             this.listView7.Name = "listView7";
             this.listView7.Size = new System.Drawing.Size(330, 197);
             this.listView7.TabIndex = 19;
@@ -252,7 +252,7 @@
             // 
             // listView8
             // 
-            this.listView8.BackColor = System.Drawing.Color.Green;
+            this.listView8.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView8.GridLines = true;
             this.listView8.Location = new System.Drawing.Point(1264, 404);
             this.listView8.Name = "listView8";
@@ -263,7 +263,7 @@
             // 
             // listView9
             // 
-            this.listView9.BackColor = System.Drawing.Color.Green;
+            this.listView9.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView9.GridLines = true;
             this.listView9.Location = new System.Drawing.Point(12, 710);
             this.listView9.Name = "listView9";
@@ -274,7 +274,7 @@
             // 
             // listView10
             // 
-            this.listView10.BackColor = System.Drawing.Color.Green;
+            this.listView10.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView10.GridLines = true;
             this.listView10.Location = new System.Drawing.Point(441, 710);
             this.listView10.Name = "listView10";
@@ -295,7 +295,7 @@
             // 
             // btn_markReady8
             // 
-            this.btn_markReady8.Location = new System.Drawing.Point(1365, 625);
+            this.btn_markReady8.Location = new System.Drawing.Point(1376, 625);
             this.btn_markReady8.Name = "btn_markReady8";
             this.btn_markReady8.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady8.TabIndex = 24;
@@ -422,7 +422,7 @@
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Location = new System.Drawing.Point(1171, 17);
+            this.TimeLabel.Location = new System.Drawing.Point(1407, 16);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(56, 13);
             this.TimeLabel.TabIndex = 37;

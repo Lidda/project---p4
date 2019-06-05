@@ -255,7 +255,7 @@
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Location = new System.Drawing.Point(1203, 41);
+            this.TimeLabel.Location = new System.Drawing.Point(1375, 22);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(56, 13);
             this.TimeLabel.TabIndex = 81;
@@ -269,6 +269,7 @@
             this.btn_markReady10.TabIndex = 70;
             this.btn_markReady10.Text = "Mark as ready";
             this.btn_markReady10.UseVisualStyleBackColor = true;
+            this.btn_markReady10.Click += new System.EventHandler(this.btn_markReady10_Click);
             // 
             // btn_markReady9
             // 
@@ -278,6 +279,7 @@
             this.btn_markReady9.TabIndex = 69;
             this.btn_markReady9.Text = "Mark as ready";
             this.btn_markReady9.UseVisualStyleBackColor = true;
+            this.btn_markReady9.Click += new System.EventHandler(this.btn_markReady9_Click);
             // 
             // btn_markReady8
             // 
@@ -287,6 +289,7 @@
             this.btn_markReady8.TabIndex = 68;
             this.btn_markReady8.Text = "Mark as ready";
             this.btn_markReady8.UseVisualStyleBackColor = true;
+            this.btn_markReady8.Click += new System.EventHandler(this.btn_markReady8_Click);
             // 
             // btn_markReady7
             // 
@@ -296,10 +299,11 @@
             this.btn_markReady7.TabIndex = 67;
             this.btn_markReady7.Text = "Mark as ready";
             this.btn_markReady7.UseVisualStyleBackColor = true;
+            this.btn_markReady7.Click += new System.EventHandler(this.btn_markReady7_Click);
             // 
             // listView10
             // 
-            this.listView10.BackColor = System.Drawing.Color.Green;
+            this.listView10.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView10.GridLines = true;
             this.listView10.Location = new System.Drawing.Point(473, 734);
             this.listView10.Name = "listView10";
@@ -310,7 +314,7 @@
             // 
             // listView9
             // 
-            this.listView9.BackColor = System.Drawing.Color.Green;
+            this.listView9.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView9.GridLines = true;
             this.listView9.Location = new System.Drawing.Point(44, 734);
             this.listView9.Name = "listView9";
@@ -321,7 +325,7 @@
             // 
             // listView8
             // 
-            this.listView8.BackColor = System.Drawing.Color.Green;
+            this.listView8.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView8.GridLines = true;
             this.listView8.Location = new System.Drawing.Point(1296, 428);
             this.listView8.Name = "listView8";
@@ -332,9 +336,9 @@
             // 
             // listView7
             // 
-            this.listView7.BackColor = System.Drawing.Color.Green;
+            this.listView7.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView7.GridLines = true;
-            this.listView7.Location = new System.Drawing.Point(915, 428);
+            this.listView7.Location = new System.Drawing.Point(906, 428);
             this.listView7.Name = "listView7";
             this.listView7.Size = new System.Drawing.Size(330, 197);
             this.listView7.TabIndex = 63;
@@ -349,6 +353,7 @@
             this.btn_markReady6.TabIndex = 62;
             this.btn_markReady6.Text = "Mark as ready";
             this.btn_markReady6.UseVisualStyleBackColor = true;
+            this.btn_markReady6.Click += new System.EventHandler(this.btn_markReady6_Click);
             // 
             // btn_markReady5
             // 
@@ -358,6 +363,7 @@
             this.btn_markReady5.TabIndex = 61;
             this.btn_markReady5.Text = "Mark as ready";
             this.btn_markReady5.UseVisualStyleBackColor = true;
+            this.btn_markReady5.Click += new System.EventHandler(this.btn_markReady5_Click);
             // 
             // btn_markReady4
             // 
@@ -367,6 +373,7 @@
             this.btn_markReady4.TabIndex = 60;
             this.btn_markReady4.Text = "Mark as ready";
             this.btn_markReady4.UseVisualStyleBackColor = true;
+            this.btn_markReady4.Click += new System.EventHandler(this.btn_markReady4_Click);
             // 
             // btn_markReady3
             // 
@@ -376,15 +383,17 @@
             this.btn_markReady3.TabIndex = 59;
             this.btn_markReady3.Text = "Mark as ready";
             this.btn_markReady3.UseVisualStyleBackColor = true;
+            this.btn_markReady3.Click += new System.EventHandler(this.btn_markReady3_Click);
             // 
             // btn_markReady2
             // 
-            this.btn_markReady2.Location = new System.Drawing.Point(590, 350);
+            this.btn_markReady2.Location = new System.Drawing.Point(599, 350);
             this.btn_markReady2.Name = "btn_markReady2";
             this.btn_markReady2.Size = new System.Drawing.Size(94, 23);
             this.btn_markReady2.TabIndex = 58;
             this.btn_markReady2.Text = "Mark as ready";
             this.btn_markReady2.UseVisualStyleBackColor = true;
+            this.btn_markReady2.Click += new System.EventHandler(this.btn_markReady2_Click);
             // 
             // btn_markReady1
             // 
@@ -394,6 +403,7 @@
             this.btn_markReady1.TabIndex = 57;
             this.btn_markReady1.Text = "Mark as ready";
             this.btn_markReady1.UseVisualStyleBackColor = true;
+            this.btn_markReady1.Click += new System.EventHandler(this.btn_markReady1_Click);
             // 
             // Refresh_btn
             // 
@@ -402,16 +412,17 @@
             this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Refresh_btn.Location = new System.Drawing.Point(1442, 57);
+            this.Refresh_btn.Location = new System.Drawing.Point(1592, 12);
             this.Refresh_btn.Name = "Refresh_btn";
             this.Refresh_btn.Size = new System.Drawing.Size(60, 23);
             this.Refresh_btn.TabIndex = 56;
             this.Refresh_btn.Text = "Refresh";
             this.Refresh_btn.UseVisualStyleBackColor = false;
+            this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
             // 
             // listView6
             // 
-            this.listView6.BackColor = System.Drawing.Color.Green;
+            this.listView6.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView6.GridLines = true;
             this.listView6.Location = new System.Drawing.Point(473, 428);
             this.listView6.Name = "listView6";
@@ -422,7 +433,7 @@
             // 
             // listView5
             // 
-            this.listView5.BackColor = System.Drawing.Color.Green;
+            this.listView5.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView5.GridLines = true;
             this.listView5.Location = new System.Drawing.Point(44, 428);
             this.listView5.Name = "listView5";
@@ -433,7 +444,7 @@
             // 
             // listView4
             // 
-            this.listView4.BackColor = System.Drawing.Color.Green;
+            this.listView4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView4.GridLines = true;
             this.listView4.Location = new System.Drawing.Point(1296, 136);
             this.listView4.Name = "listView4";
@@ -444,7 +455,7 @@
             // 
             // listView3
             // 
-            this.listView3.BackColor = System.Drawing.Color.Green;
+            this.listView3.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView3.GridLines = true;
             this.listView3.Location = new System.Drawing.Point(906, 136);
             this.listView3.Name = "listView3";
@@ -455,7 +466,7 @@
             // 
             // listView2
             // 
-            this.listView2.BackColor = System.Drawing.Color.Green;
+            this.listView2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(473, 136);
             this.listView2.Name = "listView2";
@@ -466,7 +477,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.Green;
+            this.listView1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(44, 136);
             this.listView1.Name = "listView1";
@@ -493,12 +504,13 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(38, 30);
+            this.btnLogout.Location = new System.Drawing.Point(12, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(60, 23);
             this.btnLogout.TabIndex = 48;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // BarUI
             // 

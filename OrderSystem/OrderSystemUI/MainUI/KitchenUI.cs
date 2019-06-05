@@ -70,7 +70,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView1.BackColor = Color.Green;
+                    listView1.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -121,7 +121,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView2.BackColor = Color.Green;
+                    listView2.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -169,7 +169,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView3.BackColor = Color.Green;
+                    listView3.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -218,7 +218,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView4.BackColor = Color.Green;
+                    listView4.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -267,7 +267,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView5.BackColor = Color.Green;
+                    listView5.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -316,7 +316,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView6.BackColor = Color.Green;
+                    listView6.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -365,7 +365,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView7.BackColor = Color.Green;
+                    listView7.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -414,7 +414,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView8.BackColor = Color.Green;
+                    listView8.BackColor = Color.MediumSeaGreen;
                 }
 
 
@@ -463,7 +463,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView9.BackColor = Color.Green;
+                    listView9.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -511,7 +511,7 @@ namespace OrderSystemUI.MainUI
                 }
                 else
                 {
-                    listView10.BackColor = Color.Green;
+                    listView10.BackColor = Color.MediumSeaGreen;
                 }
 
             }
@@ -546,7 +546,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order1();
-            listView1.BackColor = Color.Green;
+            listView1.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady2_Click(object sender, EventArgs e)
@@ -557,7 +557,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order2();
-            listView2.BackColor = Color.Green;
+            listView2.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady3_Click(object sender, EventArgs e)
@@ -568,7 +568,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order3();
-            listView3.BackColor = Color.Green;
+            listView3.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady4_Click(object sender, EventArgs e)
@@ -579,7 +579,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order4();
-            listView4.BackColor = Color.Green;
+            listView4.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady5_Click(object sender, EventArgs e)
@@ -590,7 +590,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order5();
-            listView5.BackColor = Color.Green;
+            listView5.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady6_Click(object sender, EventArgs e)
@@ -601,7 +601,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order6();
-            listView6.BackColor = Color.Green;
+            listView6.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady7_Click(object sender, EventArgs e)
@@ -612,7 +612,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order7();
-            listView7.BackColor = Color.Green;
+            listView7.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady8_Click(object sender, EventArgs e)
@@ -623,7 +623,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order8();
-            listView8.BackColor = Color.Green;
+            listView8.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady9_Click(object sender, EventArgs e)
@@ -634,7 +634,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order9();
-            listView9.BackColor = Color.Green;
+            listView9.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady10_Click(object sender, EventArgs e)
@@ -645,7 +645,7 @@ namespace OrderSystemUI.MainUI
             OrderSystemLogic.BarKitchenLogic kitchenLogic = new OrderSystemLogic.BarKitchenLogic();
             kitchenLogic.OrderStatus(tableID, statusChange);
             order10();
-            listView10.BackColor = Color.Green;
+            listView10.BackColor = Color.MediumSeaGreen;
         }
 
         private void Refresh_btn_Click(object sender, EventArgs e)
