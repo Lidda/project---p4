@@ -59,6 +59,23 @@ namespace OrderSystemLogic
 
         }
 
+        public List<OrderItem> GetTimes(int tableID)
+        {
+            try
+            {
+                List<OrderItem> OrderList = barkitchen_db.DB_Get_Ordertime(tableID);
+
+                return OrderList;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Something went wrong");
+            }
+
+        }
+
+
 
         public void OrderStatus(int tableID, int statusChange)
         {

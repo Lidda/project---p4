@@ -31,8 +31,6 @@
             this.btn_OrderOverview = new System.Windows.Forms.Button();
             this.btn_LunchMenu = new System.Windows.Forms.Button();
             this.btn_DinnerMenu = new System.Windows.Forms.Button();
-            this.btn_Comments = new System.Windows.Forms.Button();
-            this.btn_Bill = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFree
@@ -98,9 +96,9 @@
             // Btn_BeverageMenu
             // 
             this.Btn_BeverageMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_BeverageMenu.Location = new System.Drawing.Point(87, 130);
+            this.Btn_BeverageMenu.Location = new System.Drawing.Point(72, 130);
             this.Btn_BeverageMenu.Name = "Btn_BeverageMenu";
-            this.Btn_BeverageMenu.Size = new System.Drawing.Size(135, 135);
+            this.Btn_BeverageMenu.Size = new System.Drawing.Size(150, 150);
             this.Btn_BeverageMenu.TabIndex = 6;
             this.Btn_BeverageMenu.Text = "Beverages";
             this.Btn_BeverageMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,18 +109,19 @@
             this.btn_OrderOverview.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OrderOverview.Location = new System.Drawing.Point(245, 130);
             this.btn_OrderOverview.Name = "btn_OrderOverview";
-            this.btn_OrderOverview.Size = new System.Drawing.Size(135, 135);
+            this.btn_OrderOverview.Size = new System.Drawing.Size(150, 150);
             this.btn_OrderOverview.TabIndex = 7;
             this.btn_OrderOverview.Text = "Order overview";
             this.btn_OrderOverview.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_OrderOverview.UseVisualStyleBackColor = true;
+            this.btn_OrderOverview.Click += new System.EventHandler(this.btn_OrderOverview_Click);
             // 
             // btn_LunchMenu
             // 
             this.btn_LunchMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LunchMenu.Location = new System.Drawing.Point(87, 289);
+            this.btn_LunchMenu.Location = new System.Drawing.Point(72, 319);
             this.btn_LunchMenu.Name = "btn_LunchMenu";
-            this.btn_LunchMenu.Size = new System.Drawing.Size(135, 135);
+            this.btn_LunchMenu.Size = new System.Drawing.Size(150, 150);
             this.btn_LunchMenu.TabIndex = 8;
             this.btn_LunchMenu.Text = "Lunch";
             this.btn_LunchMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -132,43 +131,19 @@
             // btn_DinnerMenu
             // 
             this.btn_DinnerMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DinnerMenu.Location = new System.Drawing.Point(245, 289);
+            this.btn_DinnerMenu.Location = new System.Drawing.Point(245, 319);
             this.btn_DinnerMenu.Name = "btn_DinnerMenu";
-            this.btn_DinnerMenu.Size = new System.Drawing.Size(135, 135);
+            this.btn_DinnerMenu.Size = new System.Drawing.Size(150, 150);
             this.btn_DinnerMenu.TabIndex = 9;
             this.btn_DinnerMenu.Text = "Dinner";
             this.btn_DinnerMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DinnerMenu.UseVisualStyleBackColor = true;
-            // 
-            // btn_Comments
-            // 
-            this.btn_Comments.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Comments.Location = new System.Drawing.Point(245, 450);
-            this.btn_Comments.Name = "btn_Comments";
-            this.btn_Comments.Size = new System.Drawing.Size(135, 135);
-            this.btn_Comments.TabIndex = 10;
-            this.btn_Comments.Text = "Comments";
-            this.btn_Comments.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Comments.UseVisualStyleBackColor = true;
-            // 
-            // btn_Bill
-            // 
-            this.btn_Bill.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Bill.Location = new System.Drawing.Point(87, 450);
-            this.btn_Bill.Name = "btn_Bill";
-            this.btn_Bill.Size = new System.Drawing.Size(135, 135);
-            this.btn_Bill.TabIndex = 11;
-            this.btn_Bill.Text = "Bill";
-            this.btn_Bill.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Bill.UseVisualStyleBackColor = true;
             // 
             // OrderMenuUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.btn_Bill);
-            this.Controls.Add(this.btn_Comments);
             this.Controls.Add(this.btn_DinnerMenu);
             this.Controls.Add(this.btn_LunchMenu);
             this.Controls.Add(this.btn_OrderOverview);
@@ -194,7 +169,5 @@
         private System.Windows.Forms.Button btn_OrderOverview;
         private System.Windows.Forms.Button btn_LunchMenu;
         private System.Windows.Forms.Button btn_DinnerMenu;
-        private System.Windows.Forms.Button btn_Comments;
-        private System.Windows.Forms.Button btn_Bill;
     }
 }
