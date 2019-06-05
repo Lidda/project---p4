@@ -18,7 +18,6 @@ namespace OrderSystemModel
         public string name { get; set; }
         public int amount { get; set; }
         public Item item { get; set; }
-<<<<<<< HEAD
         public DateTime TimeOfOrder { get; set; }
         public DateTime dateTime { get; set; }
         public string comment
@@ -40,8 +39,5 @@ namespace OrderSystemModel
                 }
             }
         }
-=======
-        public string comment{ get; set; }
->>>>>>> c1a86512947aac1dec9c90e29646efdbd70339cd
     }
 }
