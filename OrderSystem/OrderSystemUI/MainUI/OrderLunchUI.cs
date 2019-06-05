@@ -15,7 +15,7 @@ namespace OrderSystemUI.MainUI
     public partial class OrderLunchUI : Form
     {
         TakeOrderLogic takeOrderLogic = new TakeOrderLogic();
-        OrderItem orderItem;
+        List<OrderItem> orderItem;
         List<Item> items;
 
         OrderMenuUI orderMenuUI;
