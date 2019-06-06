@@ -613,7 +613,7 @@ namespace OrderSystemUI.MainUI
 
         private void timerTime_Tick(object sender, EventArgs e)
         {
-            this.TimeLabel.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+            this.TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
