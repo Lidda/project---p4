@@ -478,14 +478,14 @@
             this.DB_EditType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DB_EditType.FormattingEnabled = true;
             this.DB_EditType.Items.AddRange(new object[] {
-            "Beer",
-            "Tea",
-            "Coffee",
-            "Liquor",
+            "Bier",
+            "Thee",
+            "Koffie",
+            "Drank",
             "Lunch",
-            "Softdrink",
-            "Wine",
-            "Dinner"});
+            "Frisdrank",
+            "Wijn",
+            "Diner"});
             this.DB_EditType.Location = new System.Drawing.Point(160, 266);
             this.DB_EditType.Name = "DB_EditType";
             this.DB_EditType.Size = new System.Drawing.Size(266, 37);
@@ -620,9 +620,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_ManageStock);
             this.Controls.Add(this.PNL_AddItem);
-            this.Controls.Add(this.PNL_EditItem);
             this.Name = "EditStockUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voorraden";

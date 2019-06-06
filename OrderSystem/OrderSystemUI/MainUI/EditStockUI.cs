@@ -16,7 +16,7 @@ namespace OrderSystemUI.MainUI
     {
         ItemLogic itemLogic = new ItemLogic();
         Employee loggedInEmployee;
-        Item selectedItem;
+        Item selectedItem = new Item();
 
         public EditStockUI(Employee loggedInEmployee)
         {
