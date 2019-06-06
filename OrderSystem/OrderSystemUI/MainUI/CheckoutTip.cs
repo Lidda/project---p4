@@ -41,21 +41,23 @@ namespace OrderSystemUI.MainUI
             //back button + cancels tip
             order.tip = 0;
 
-            this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order.Table, order.Employee);
-            coUI.ShowDialog();
+            GoBackToOverview();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //just a back button
-            this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order.Table, order.Employee);
-            coUI.ShowDialog();
+            GoBackToOverview();
         }
 
         private void btnConfirmTip_Click(object sender, EventArgs e)
         {
+            //go back to order overview
+            GoBackToOverview();
+        }
+        private void GoBackToOverview()
+        {
+            //go back to order overview
             this.Hide();
             CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
