@@ -14,7 +14,7 @@ namespace OrderSystemUI.MainUI
 {
     public partial class FinancesUI : Form
     {
-        FinancesLogic financesLogic = new FinancesLogic();
+        OrderLogic orderLogic = new OrderLogic();
         Employee loggedInEmployee;
 
         public FinancesUI(Employee loggedInEmployee)
@@ -26,7 +26,7 @@ namespace OrderSystemUI.MainUI
 
         private void LoadDailyProfit()
         {
-            List<Profit> FinanceListView = financesLogic.GetAllFinances();
+            List<Profit> FinanceListView = orderLogic.DailyProfit();
 
             ListView_Finances.Items.Clear();
 
@@ -40,7 +40,7 @@ namespace OrderSystemUI.MainUI
 
         private void LoadMonthlyProfit()
         {
-            List<Profit> FinanceListView = financesLogic.MonthlyProfit();
+            List<Profit> FinanceListView = orderLogic.MonthlyProfit();
 
             ListView_Finances.Items.Clear();
 
@@ -54,7 +54,7 @@ namespace OrderSystemUI.MainUI
 
         private void LoadYearlyProfit()
         {
-            List<Profit> FinanceListView = financesLogic.YearlyProfit();
+            List<Profit> FinanceListView = orderLogic.YearlyProfit();
 
             ListView_Finances.Items.Clear();
 

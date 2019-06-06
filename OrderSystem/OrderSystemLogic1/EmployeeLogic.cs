@@ -8,7 +8,7 @@ using OrderSystemModel;
 
 namespace OrderSystemLogic
 {
-    //FIX ME: maybe make a singleton?
+    //FIX ME: maybe make a singleton? << je hebt deze vaker nodig, bij login en bij manage employees: dualton?
     public class EmployeeLogic
     {
         EmployeeDAL employee_db = new EmployeeDAL();

@@ -8,15 +8,22 @@ using OrderSystemDAL;
 
 namespace OrderSystemLogic
 {
-    public class FinancesLogic
+    public class OrderLogic
     {
-        FinancesDAL financesDAL = new FinancesDAL();
+        OrderDAL orderDAL = new OrderDAL();
 
-        public List<Profit> GetAllFinances()
+
+
+
+
+
+
+
+        public List<Profit> DailyProfit()
         {
             try
             {
-                return financesDAL.GetAllOrders();
+                return orderDAL.GetDailyProfits();
             }
             catch
             {
@@ -28,7 +35,7 @@ namespace OrderSystemLogic
         {
             try
             {
-                return financesDAL.GetMonthlyProfits();
+                return orderDAL.GetMonthlyProfits();
             }
             catch
             {
@@ -40,7 +47,7 @@ namespace OrderSystemLogic
         {
             try
             {
-                return financesDAL.GetYearlyProfits();
+                return orderDAL.GetYearlyProfits();
             }
             catch
             {
