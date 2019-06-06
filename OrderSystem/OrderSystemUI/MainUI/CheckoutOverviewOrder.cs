@@ -69,20 +69,20 @@ namespace OrderSystemUI.MainUI
                 //go back to overview
                 //opens th form corresponding with user
                 this.Hide();
-                if (order.Employee.type == OrderSystemModel.Type.Bartender)
+                if (order.Employee.type == OrderSystemModel.Type.Barman)
                 {
-                    BarUI barUI = new BarUI(order.Employee);
-                    barUI.ShowDialog();
+                    //BarUI barUI = new BarUI(order.Employee);
+                    //barUI.ShowDialog();
                 }
-                else if (order.Employee.type == OrderSystemModel.Type.Waiter)
+                else if (order.Employee.type == OrderSystemModel.Type.Serveerder)
                 {
                     TableOverviewUI waiterUI = new TableOverviewUI(order.Employee);
                     waiterUI.ShowDialog();
                 }
-                else if (order.Employee.type == OrderSystemModel.Type.Cook)
+                else if (order.Employee.type == OrderSystemModel.Type.Kok)
                 {
-                    KitchenUI kitchenUI = new KitchenUI(order.Employee);
-                    kitchenUI.ShowDialog();
+                    //KitchenUI kitchenUI = new KitchenUI(order.Employee);
+                    //kitchenUI.ShowDialog();
                 }
                 else if (order.Employee.type == OrderSystemModel.Type.Manager)
                 {

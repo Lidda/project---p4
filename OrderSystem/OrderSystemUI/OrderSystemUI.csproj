@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainUI\BarUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\BarUI.Designer.cs">
+      <DependentUpon>BarUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI\CheckoutComments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,12 +65,6 @@
     </Compile>
     <Compile Include="MainUI\CheckoutConfirmation.Designer.cs">
       <DependentUpon>CheckoutConfirmation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainUI\BarUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainUI\BarUI.Designer.cs">
-      <DependentUpon>BarUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\CheckoutOverviewOrder.cs">
       <SubType>Form</SubType>
@@ -102,17 +102,17 @@
     <Compile Include="MainUI\FinancesUI.Designer.cs">
       <DependentUpon>FinancesUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\OrderLunchUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainUI\OrderLunchUI.Designer.cs">
-      <DependentUpon>OrderLunchUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainUI\KitchenUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainUI\KitchenUI.Designer.cs">
       <DependentUpon>KitchenUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUI\OrderLunchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI\OrderLunchUI.Designer.cs">
+      <DependentUpon>OrderLunchUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\LoginUI.cs">
       <SubType>Form</SubType>

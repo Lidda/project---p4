@@ -34,15 +34,15 @@ namespace OrderSystemUI.MainUI {
                 this.Hide();
 
                 //opens th form corresponding with user
-                if (employee.type == OrderSystemModel.Type.Bartender) {
-                    BarUI barUI = new BarUI(employee);
-                    barUI.ShowDialog();
-                } else if (employee.type == OrderSystemModel.Type.Waiter) {
+                if (employee.type == OrderSystemModel.Type.Barman) {
+                    //BarUI barUI = new BarUI(employee);
+                    //barUI.ShowDialog();
+                } else if (employee.type == OrderSystemModel.Type.Serveerder) {
                     TableOverviewUI waiterUI = new TableOverviewUI(employee);
                     waiterUI.ShowDialog();
-                } else if (employee.type == OrderSystemModel.Type.Cook) {
-                    KitchenUI kitchenUI = new KitchenUI(employee);
-                    kitchenUI.ShowDialog();
+                } else if (employee.type == OrderSystemModel.Type.Kok) {
+                    //KitchenUI kitchenUI = new KitchenUI(employee);
+                   // kitchenUI.ShowDialog();
                 } else if (employee.type == OrderSystemModel.Type.Manager) {
                     ManagerUI managerUI = new ManagerUI(employee);
                     managerUI.ShowDialog();

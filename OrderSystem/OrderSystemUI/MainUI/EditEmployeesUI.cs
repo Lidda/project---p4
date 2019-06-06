@@ -18,6 +18,7 @@ namespace OrderSystemUI
     {
         EmployeeLogic employeeLogic = new EmployeeLogic();
         Employee loggedInEmployee;
+        Employee selectedEmployee;
 
 
         public EditEmployeesUI(Employee loggedInEmployee)
@@ -59,6 +60,10 @@ namespace OrderSystemUI
             {
                 PNL_ManageEmployee.Hide();
                 PNL_EditEmployee.Show();
+                TXTB_EditEmployeeName.Text = selectedEmployee.name;
+                TXTB_EditEmployeeUsername.Text = selectedEmployee.username;
+                TXTB_EditEmployeePassword.Text = selectedEmployee.password;
+                DB_EditEmployeeType.Text = selectedEmployee.type.ToString();
             }
             else if(panelName == "PNL_AddEmployee")
             {
@@ -75,7 +80,7 @@ namespace OrderSystemUI
             employee.password = TXTB_AddEmployeePassword.Text;
             employee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_AddEmployeeType.SelectedItem.ToString());
             employeeLogic.AddEmployee(employee);
-            MessageBox.Show("Employee was succesfully added!");
+            MessageBox.Show("Medewerder succesvol toegevoegd");
             ShowPanel("PNL_ManageEmployees");
         }
 
@@ -91,36 +96,30 @@ namespace OrderSystemUI
 
         private void ListView_Employees_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            
-            LBL_EditEmployeeID.Text = e.Item.SubItems[0].Text;
-            TXTB_EditEmployeeName.Text = e.Item.SubItems[1].Text;
-            TXTB_EditEmployeeUsername.Text = e.Item.SubItems[2].Text;
-            TXTB_EditEmployeePassword.Text = e.Item.SubItems[3].Text;
-            DB_EditEmployeeType.Text = e.Item.SubItems[4].Text;
+            selectedEmployee.ID = int.Parse(e.Item.SubItems[0].Text);
+            selectedEmployee.name = e.Item.SubItems[1].Text;
+            selectedEmployee.username = e.Item.SubItems[2].Text;
+            selectedEmployee.password = e.Item.SubItems[3].Text;
+            selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), e.Item.SubItems[4].Text);
         }
 
         private void BTN_EditEmployee_Click(object sender, EventArgs e)
         {
-            
-            Employee employee = new Employee();
-            employee.ID = int.Parse(LBL_EditEmployeeID.Text);
-            employee.name = TXTB_EditEmployeeName.Text;
-            employee.username = TXTB_EditEmployeeUsername.Text;
-            employee.password = TXTB_EditEmployeePassword.Text;
-            employee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_EditEmployeeType.Text);
-            employeeLogic.EditEmployee(employee);
-            MessageBox.Show("Employee was succesfully edited");
+            selectedEmployee.name = TXTB_EditEmployeeName.Text;
+            selectedEmployee.username = TXTB_EditEmployeeUsername.Text;
+            selectedEmployee.password = TXTB_EditEmployeePassword.Text;
+            selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_EditEmployeeType.Text);
+            employeeLogic.EditEmployee(selectedEmployee);
+            MessageBox.Show("Medewerker is succesvol aangepast");
             ShowPanel("PNL_ManageEmployees");
         }
 
         private void DeleteEmployee_Click(object sender, EventArgs e)
-        {
-            Employee employee = new Employee();
-            employee.ID = int.Parse(LBL_EditEmployeeID.Text);              
-            if(MessageBox.Show("Are you sure you want to delete this employee?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        {           
+            if(MessageBox.Show("Weet u zeker dat u deze medewerker wilt verwijderen?", "Deleten...", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                employeeLogic.DeleteEmployee(employee);
-                MessageBox.Show("Employee succesfully deleted");
+                employeeLogic.DeleteEmployee(new Employee { ID = selectedEmployee.ID });
+                MessageBox.Show("Medewerker is succesvol aangepast gedeletet");
                 ShowPanel("PNL_ManageEmployees");
             }
         }

@@ -58,22 +58,22 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time1.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time1.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0)
-                {
-                    listView1.BackColor = Color.Tomato;
-                    listView1.Items.Add(li);
-                }
-                else
-                {
-                    listView1.BackColor = Color.MediumSeaGreen;
-                }
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView1.BackColor = Color.Tomato;
+                //    listView1.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView1.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
@@ -103,23 +103,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time2.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time2.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView2.BackColor = Color.Tomato;
-                    listView2.Items.Add(li);
-                }
-                else
-                {
-                    listView2.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView2.BackColor = Color.Tomato;
+                //    listView2.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView2.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
         }
@@ -146,22 +146,22 @@ namespace OrderSystemUI.MainUI
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
 
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time3.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time3.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0)
-                {
-                    listView3.BackColor = Color.Tomato;
-                    listView3.Items.Add(li);
-                }
-                else
-                {
-                    listView3.BackColor = Color.MediumSeaGreen;
-                }
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView3.BackColor = Color.Tomato;
+                //    listView3.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView3.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
@@ -188,23 +188,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time4.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time4.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView4.BackColor = Color.Tomato;
-                    listView4.Items.Add(li);
-                }
-                else
-                {
-                    listView4.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView4.BackColor = Color.Tomato;
+                //    listView4.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView4.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
           
@@ -232,23 +232,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time5.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time5.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView5.BackColor = Color.Tomato;
-                    listView5.Items.Add(li);
-                }
-                else
-                {
-                    listView5.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView5.BackColor = Color.Tomato;
+                //    listView5.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView5.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
             
@@ -276,23 +276,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time6.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time6.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView6.BackColor = Color.Tomato;
-                    listView6.Items.Add(li);
-                }
-                else
-                {
-                    listView6.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView6.BackColor = Color.Tomato;
+                //    listView6.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView6.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
             
@@ -320,23 +320,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time7.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time7.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView7.BackColor = Color.Tomato;
-                    listView7.Items.Add(li);
-                }
-                else
-                {
-                    listView7.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView7.BackColor = Color.Tomato;
+                //    listView7.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView7.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
             
@@ -364,23 +364,23 @@ namespace OrderSystemUI.MainUI
 
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time8.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time8.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView8.BackColor = Color.Tomato;
-                    listView8.Items.Add(li);
-                }
-                else
-                {
-                    listView8.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView8.BackColor = Color.Tomato;
+                //    listView8.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView8.BackColor = Color.MediumSeaGreen;
+                //}
 
 
             }
@@ -409,23 +409,23 @@ namespace OrderSystemUI.MainUI
             foreach (OrderSystemModel.OrderItem o in OrderList)
             {
 
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time9.Text = datestring;
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time9.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView9.BackColor = Color.Tomato;
-                    listView9.Items.Add(li);
-                }
-                else
-                {
-                    listView9.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView9.BackColor = Color.Tomato;
+                //    listView9.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView9.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
             
@@ -455,20 +455,20 @@ namespace OrderSystemUI.MainUI
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time10.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
-                    listView10.BackColor = Color.Tomato;
-                    listView10.Items.Add(li);
-                }
-                else
-                {
-                    listView10.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView10.BackColor = Color.Tomato;
+                //    listView10.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView10.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
             

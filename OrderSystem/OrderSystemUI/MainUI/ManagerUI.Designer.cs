@@ -38,9 +38,9 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Location = new System.Drawing.Point(6, 6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(60, 23);
+            this.btnLogout.Size = new System.Drawing.Size(63, 23);
             this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -55,7 +55,7 @@
             this.BTN_Stats.Name = "BTN_Stats";
             this.BTN_Stats.Size = new System.Drawing.Size(440, 141);
             this.BTN_Stats.TabIndex = 4;
-            this.BTN_Stats.Text = "Business statistics";
+            this.BTN_Stats.Text = "Inkomsten";
             this.BTN_Stats.UseVisualStyleBackColor = false;
             this.BTN_Stats.Click += new System.EventHandler(this.BTN_Stats_Click);
             // 
@@ -70,7 +70,7 @@
             this.BTN_ManageProducts.Name = "BTN_ManageProducts";
             this.BTN_ManageProducts.Size = new System.Drawing.Size(440, 141);
             this.BTN_ManageProducts.TabIndex = 5;
-            this.BTN_ManageProducts.Text = "Manage products";
+            this.BTN_ManageProducts.Text = "Producten";
             this.BTN_ManageProducts.UseVisualStyleBackColor = false;
             this.BTN_ManageProducts.Click += new System.EventHandler(this.BTN_ManageProducts_Click);
             // 
@@ -85,7 +85,7 @@
             this.BTN_ManageEmployees.Name = "BTN_ManageEmployees";
             this.BTN_ManageEmployees.Size = new System.Drawing.Size(440, 141);
             this.BTN_ManageEmployees.TabIndex = 6;
-            this.BTN_ManageEmployees.Text = "Manage employees";
+            this.BTN_ManageEmployees.Text = "Medewerkers";
             this.BTN_ManageEmployees.UseVisualStyleBackColor = false;
             this.BTN_ManageEmployees.Click += new System.EventHandler(this.BTN_ManageEmployees_Click);
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.btnLogout);
             this.Name = "ManagerUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerUI";
+            this.Text = "Manager overzicht";
             this.ResumeLayout(false);
 
         }
