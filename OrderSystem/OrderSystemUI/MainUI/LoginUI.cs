@@ -41,8 +41,8 @@ namespace OrderSystemUI.MainUI {
                     TableOverviewUI waiterUI = new TableOverviewUI(employee);
                     waiterUI.ShowDialog();
                 } else if (employee.type == OrderSystemModel.Type.Kok) {
-                    //KitchenUI kitchenUI = new KitchenUI(employee);
-                   // kitchenUI.ShowDialog();
+                    KitchenUI kitchenUI = new KitchenUI(employee);
+                    kitchenUI.ShowDialog();
                 } else if (employee.type == OrderSystemModel.Type.Manager) {
                     ManagerUI managerUI = new ManagerUI(employee);
                     managerUI.ShowDialog();

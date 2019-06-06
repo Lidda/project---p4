@@ -36,6 +36,27 @@ namespace OrderSystemLogic
             }
         }
 
+        public List<Order> GetFoodOrders(int tableID)
+        {
+            try
+            {
+                List<Order> OrderList = orderDAL.Db_Get_All_Foods(tableID);
+
+                return OrderList;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Something went wrong");
+            }
+
+        }
+
+        public void OrderStatus(int tableID, int statusChange)
+        {
+            orderDAL.OrderStatus(tableID, statusChange);
+        }
+
         public List<Profit> DailyProfit()
         {
             try
