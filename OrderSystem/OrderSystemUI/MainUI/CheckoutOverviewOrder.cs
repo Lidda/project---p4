@@ -137,7 +137,7 @@ namespace OrderSystemUI.MainUI
                         li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.item.comment));
                     }
                     li.SubItems.Add(item.item.amount.ToString());
-                    li.SubItems.Add(item.item.GetAmount("Total").ToString("0.00"));
+                    li.SubItems.Add(item.GetAmount("Total").ToString("0.00"));
                     listViewOrderItems.Items.Add(li);
                 }
             }

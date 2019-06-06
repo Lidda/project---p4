@@ -23,14 +23,21 @@ namespace OrderSystemDAL {
         private List<OrderItem> ReadOrderItems(DataTable dataTable) {
             List<OrderItem> orderItems = new List<OrderItem>();
 
-            foreach (DataRow dr in dataTable.Rows) {
-                OrderItem orderItem = new OrderItem() {
-                     item = itemDAL.Db_Get_Item(new Item { itemID = (int)dr["itemID"] }),
-                     amount = (int)dr["amount"],
-                     status = (OrderItem.Status)dr["status"],
-                     comment = (string)dr["comment"],
-                     TimeOfOrder = (DateTime)dr["timeOfOrder"]
-                };
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem orderItem = new OrderItem();
+                orderItem.item = itemDAL.Db_Get_Item(new Item { itemID = (int)dr["itemID"] });
+                orderItem.amount = (int)dr["amount"];
+                orderItem.status = (OrderItem.Status)dr["status"];
+                if (dr["comment"] == DBNull.Value)
+                {
+                    orderItem.comment = "";
+                }
+                else
+                {
+                    orderItem.comment = (string)dr["comment"];
+                }
+                orderItem.TimeOfOrder = (DateTime)dr["timeOfOrder"];
                 orderItems.Add(orderItem);
             }
             return orderItems;

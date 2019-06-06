@@ -31,7 +31,7 @@ namespace OrderSystemModel
             double total = 0;
             foreach(OrderItem i in orderItems)
             {
-                total = total + i.item.GetAmount(priceType);
+                total = total + i.GetAmount(priceType);
             }
             if (priceType == "Total" && tip > 0)
             {

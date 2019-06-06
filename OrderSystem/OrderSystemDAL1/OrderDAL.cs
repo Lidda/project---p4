@@ -38,15 +38,22 @@ namespace OrderSystemDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Order order = new Order()
+                Order order = new Order();
+                order.orderID = (int)dr["OrderID"];
+                order.orderDate = (DateTime)dr["DateOrdered"];
+                order.orderItems = orderItemDAL.Db_Get_All_OrderItems(new Order { orderID = (int)dr["OrderID"] });
+                order.Employee = employeeDAL.Db_Get_Employee((int)dr["EmployeeID"]);
+                order.Table = tableDAL.DbGetTableByID((int)dr["tableID"]);
+                if (dr["comment"] == DBNull.Value)
                 {
-                    orderItems = orderItemDAL.Db_Get_All_OrderItems(new Order { orderID = (int)dr["OrderID"] }),
-                    Employee = employeeDAL.Db_Get_Employee((int)dr["EmployeeID"]),
-                    Table = tableDAL.DbGetTableByID((int)dr["tableID"]),
-                    comment = (string)dr["comment"],
-                    PaymentStatus = (bool)dr["PaymentStatus"],
-                    totalAmount = (double)dr["TotalAmount"]
-                };
+                    order.comment = "";
+                }
+                else
+                {
+                    order.comment = (string)dr["comment"];
+                }
+                order.PaymentStatus = (bool)dr["PaymentStatus"];
+                order.totalAmount = (double)dr["TotalAmount"];
                 orders.Add(order);
             }
             return orders;
