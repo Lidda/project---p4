@@ -12,12 +12,29 @@ namespace OrderSystemLogic
     {
         OrderDAL orderDAL = new OrderDAL();
 
+        public Order get_Order(Order order)
+        {
+            try
+            {
+                return orderDAL.Db_Get_Order(order);
+            }
+            catch
+            {
+                throw new Exception("Could not get order from database");
+            }
+        }
 
-
-
-
-
-
+        public List<Order> Get_All_Orders()
+        {
+            try
+            {
+                return orderDAL.Db_Get_All_Orders();
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
 
         public List<Profit> DailyProfit()
         {
@@ -27,7 +44,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Could not get orders from database");
+                throw new Exception("Could not get daily profits from database");
             }
         }
 
@@ -39,7 +56,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Could not get monthly profit from database");
+                throw new Exception("Could not get monthly profits from database");
             }
         }
 
@@ -51,7 +68,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Could not get yearly profit from database");
+                throw new Exception("Could not get yearly profits from database");
             }
         }
     }

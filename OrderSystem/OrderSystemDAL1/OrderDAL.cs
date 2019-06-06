@@ -17,12 +17,19 @@ namespace OrderSystemDAL
 
         public Order Db_Get_Order(Order order)
         {
-            string query = "SELECT comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE OrderID = @OrderID";
+            string query = "SELECT orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE OrderID = @OrderID";
             SqlParameter[] sqlParameters = new SqlParameter[]
             { 
                 new SqlParameter("@OrderID", order.orderID)
             };
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
+        }
+
+        public List<Order> Db_Get_All_Orders()
+        {
+            string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
         private List<Order> ReadOrders(DataTable dataTable)
