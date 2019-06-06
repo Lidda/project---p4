@@ -114,7 +114,7 @@ namespace OrderSystemUI {
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
-            mark3.Hide();
+            orderMark3.Hide();
             //barKitchenLogic.OrderStatus(tables[2].ID, 2);
         }
 
@@ -175,43 +175,100 @@ namespace OrderSystemUI {
             SetTableColors();
         }
 
-        //FIX ME not called yet
-        private void showOrderMarks(List<Order> orders) {
+        //loops through orders: then loops through each orderItem IN orders and checks the status
+        private void CheckOrdersStatusses(List<Order> orders) {
             foreach (Order o in orders) {
-                switch (o.Table.ID) {
-                    case 1:
-                        mark1.Visible = true;
+                foreach (OrderItem i in o.orderItems) {
+                    if (i.status == OrderItem.Status.ready) {
+                        ShowOrderReadyMarks(o.Table);
                         break;
-                    case 2:
-                        mark2.Visible = true;
-                        break;
-                    case 3:
-                        mark3.Visible = true;
-                        break;
-                    case 4:
-                        mark4.Visible = true;
-                        break;
-                    case 5:
-                        mark5.Visible = true;
-                        break;
-                    case 6:
-                        mark6.Visible = true;
-                        break;
-                    case 7:
-                        mark7.Visible = true;
-                        break;
-                    case 8:
-                        mark8.Visible = true;
-                        break;
-                    case 9:
-                        mark9.Visible = true;
-                        break;
-                    case 10:
-                        mark10.Visible = true;
-                        break;
+                    } else if (i.status == OrderItem.Status.ordered) {
+                        ShowOrderOngoingMarks(o.Table);                      
+                    }
                 }
             }
+        }
 
+        //makes the 'ongoing' (hourglass) mark visible next to the corresponding table
+        private void ShowOrderOngoingMarks(Table table) {
+            switch (table.ID) {
+                case 1:
+                    hourglass1.Visible = true;
+                    break;
+                case 2:
+                    hourglass2.Visible = true;
+                    break;
+                case 3:
+                    hourglass3.Visible = true;
+                    break;
+                case 4:
+                    hourglass4.Visible = true;
+                    break;
+                case 5:
+                    hourglass5.Visible = true;
+                    break;
+                case 6:
+                    hourglass6.Visible = true;
+                    break;
+                case 7:
+                    hourglass7.Visible = true;
+                    break;
+                case 8:
+                    hourglass8.Visible = true;
+                    break;
+                case 9:
+                    hourglass9.Visible = true;
+                    break;
+                case 10:
+                    hourglass10.Visible = true;
+                    break;
+            }
+        }
+
+        //makes 'ready' (!) mark visible next to the corresponding table
+        private void ShowOrderReadyMarks(Table table) {
+            switch (table.ID) {
+                case 1:
+                    mark1.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 2:
+                    mark2.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 3:
+                    orderMark3.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 4:
+                    mark4.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 5:
+                    mark5.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 6:
+                    mark6.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 7:
+                    mark7.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 8:
+                    mark8.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 9:
+                    mark9.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+                case 10:
+                    mark10.Visible = true;
+                    hourglass1.Visible = false;
+                    break;
+            }
         }
 
     }

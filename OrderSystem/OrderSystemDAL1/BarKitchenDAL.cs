@@ -55,7 +55,5 @@ namespace OrderSystemDAL
             }
             return orderItems;
         }
-
-
     }
 }

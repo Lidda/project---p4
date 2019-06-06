@@ -62,8 +62,9 @@
             // 
             // BackButton
             // 
-            this.BackButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.SystemColors.Window;
@@ -79,6 +80,7 @@
             // 
             this.BTN_Monthly.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BTN_Monthly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Monthly.FlatAppearance.BorderSize = 0;
             this.BTN_Monthly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Monthly.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Monthly.ForeColor = System.Drawing.SystemColors.Window;
@@ -94,6 +96,7 @@
             // 
             this.BTN_Yearly.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BTN_Yearly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Yearly.FlatAppearance.BorderSize = 0;
             this.BTN_Yearly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Yearly.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Yearly.ForeColor = System.Drawing.SystemColors.Window;
@@ -109,6 +112,7 @@
             // 
             this.BTN_Daily.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BTN_Daily.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Daily.FlatAppearance.BorderSize = 0;
             this.BTN_Daily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Daily.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Daily.ForeColor = System.Drawing.SystemColors.Window;
