@@ -21,7 +21,7 @@ namespace OrderSystemUI.MainUI
 
             this.order = order;
             //set text
-            lblTipHeader.Text = string.Format("Add tip table {0}", order.Table.ID);
+            lblTipHeader.Text = string.Format("Fooi tafel {0}", order.Table.ID);
             lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
             lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
             lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));

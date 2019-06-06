@@ -63,9 +63,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label6.Location = new System.Drawing.Point(28, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 31);
+            this.label6.Size = new System.Drawing.Size(287, 31);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Add comment:";
+            this.label6.Text = "Voeg commentaar toe:";
             // 
             // txtComment
             // 
@@ -102,7 +102,7 @@
             this.btnAddCommentToOrder.Name = "btnAddCommentToOrder";
             this.btnAddCommentToOrder.Size = new System.Drawing.Size(447, 73);
             this.btnAddCommentToOrder.TabIndex = 26;
-            this.btnAddCommentToOrder.Text = "Add comment";
+            this.btnAddCommentToOrder.Text = "Voeg commentaar toe";
             this.btnAddCommentToOrder.UseVisualStyleBackColor = false;
             this.btnAddCommentToOrder.Click += new System.EventHandler(this.btnAddCommentToOrder_Click);
             // 
@@ -123,9 +123,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label5.Location = new System.Drawing.Point(28, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 31);
+            this.label5.Size = new System.Drawing.Size(256, 31);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Current comment: ";
+            this.label5.Text = "Huidig commentaar:";
             // 
             // lblCommentHeader
             // 

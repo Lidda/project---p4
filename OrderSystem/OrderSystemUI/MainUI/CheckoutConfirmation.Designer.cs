@@ -41,9 +41,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.label2.Location = new System.Drawing.Point(143, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 42);
+            this.label2.Size = new System.Drawing.Size(316, 42);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Payment succesful";
+            this.label2.Text = "Betaling geslaagd";
             // 
             // btnOK
             // 

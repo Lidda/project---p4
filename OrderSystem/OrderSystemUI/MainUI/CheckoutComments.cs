@@ -29,19 +29,19 @@ namespace OrderSystemUI.MainUI
             pnlAddComment.Show();
             pnlAddComment.BringToFront();
             //set title header
-            lblCommentHeader.Text = string.Format("Table {0} Order {1}: comment", order.Table.ID, order.orderID);
+            lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: comment", order.Table.ID, order.orderID);
             //empty textbox
             txtComment.Text = "";
             //set current comment
             if (order.comment == "")
             {
                 lblCurrentComment.Text = "there's no current comment yet!";
-                btnAddCommentToOrder.Text = "Add comment";
+                btnAddCommentToOrder.Text = "Voeg opmerking toe";
             }
             else
             {
                 lblCurrentComment.Text = order.comment;
-                btnAddCommentToOrder.Text = "Alter comment";
+                btnAddCommentToOrder.Text = "Verander opmerking";
             }
         }
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
@@ -54,8 +54,8 @@ namespace OrderSystemUI.MainUI
 
         private void btnDeleteComment_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure to delete this comment?",
-                                     "Confirm Delete!",
+            var confirmResult = MessageBox.Show("weet je zeker dat je deze opmerking wilt verwijderen?",
+                                     "Bevestig verwijderen!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {

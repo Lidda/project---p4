@@ -85,9 +85,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label9.Location = new System.Drawing.Point(36, 589);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 31);
+            this.label9.Size = new System.Drawing.Size(98, 31);
             this.label9.TabIndex = 39;
-            this.label9.Text = "Total:";
+            this.label9.Text = "Totaal:";
             // 
             // label10
             // 
@@ -95,9 +95,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label10.Location = new System.Drawing.Point(34, 470);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 31);
+            this.label10.Size = new System.Drawing.Size(140, 31);
             this.label10.TabIndex = 38;
-            this.label10.Text = "Order:";
+            this.label10.Text = "Bestelling:";
             // 
             // label11
             // 
@@ -105,9 +105,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label11.Location = new System.Drawing.Point(34, 523);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 31);
+            this.label11.Size = new System.Drawing.Size(75, 31);
             this.label11.TabIndex = 37;
-            this.label11.Text = "Tip:";
+            this.label11.Text = "Fooi:";
             // 
             // lblTipGrandTotal
             // 
@@ -149,7 +149,7 @@
             this.btnAddTipToOrder.Name = "btnAddTipToOrder";
             this.btnAddTipToOrder.Size = new System.Drawing.Size(550, 58);
             this.btnAddTipToOrder.TabIndex = 33;
-            this.btnAddTipToOrder.Text = "Add tip";
+            this.btnAddTipToOrder.Text = "Voeg fooi toe";
             this.btnAddTipToOrder.UseVisualStyleBackColor = false;
             this.btnAddTipToOrder.Click += new System.EventHandler(this.btnAddTipToOrder_Click);
             // 
@@ -168,9 +168,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label8.Location = new System.Drawing.Point(28, 95);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 31);
+            this.label8.Size = new System.Drawing.Size(173, 31);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Amount:";
+            this.label8.Text = "Hoeveelheid:";
             // 
             // lblTipHeader
             // 
@@ -210,7 +210,7 @@
             this.btnConfirmTip.Name = "btnConfirmTip";
             this.btnConfirmTip.Size = new System.Drawing.Size(444, 73);
             this.btnConfirmTip.TabIndex = 28;
-            this.btnConfirmTip.Text = "Confirm";
+            this.btnConfirmTip.Text = "Bevestig";
             this.btnConfirmTip.UseVisualStyleBackColor = false;
             this.btnConfirmTip.Click += new System.EventHandler(this.btnConfirmTip_Click);
             // 
