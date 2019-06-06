@@ -47,8 +47,6 @@
             this.TXTB_AddEmployeeUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PNL_EditEmployee = new System.Windows.Forms.Panel();
-            this.LBL_EditEmployeeID = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.DB_EditEmployeeType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -97,13 +95,13 @@
             this.EditEmployee.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.EditEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.EditEmployee.ForeColor = System.Drawing.SystemColors.Window;
             this.EditEmployee.Location = new System.Drawing.Point(162, 536);
             this.EditEmployee.Name = "EditEmployee";
             this.EditEmployee.Size = new System.Drawing.Size(135, 69);
             this.EditEmployee.TabIndex = 3;
-            this.EditEmployee.Text = "Edit";
+            this.EditEmployee.Text = "Bewerk";
             this.EditEmployee.UseVisualStyleBackColor = false;
             this.EditEmployee.Click += new System.EventHandler(this.EditEmployee_Click);
             // 
@@ -112,13 +110,13 @@
             this.DeleteEmployee.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.DeleteEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.DeleteEmployee.ForeColor = System.Drawing.SystemColors.Window;
             this.DeleteEmployee.Location = new System.Drawing.Point(311, 536);
             this.DeleteEmployee.Name = "DeleteEmployee";
             this.DeleteEmployee.Size = new System.Drawing.Size(135, 69);
             this.DeleteEmployee.TabIndex = 2;
-            this.DeleteEmployee.Text = "Delete";
+            this.DeleteEmployee.Text = "Verwijder";
             this.DeleteEmployee.UseVisualStyleBackColor = false;
             this.DeleteEmployee.Click += new System.EventHandler(this.DeleteEmployee_Click);
             // 
@@ -127,13 +125,13 @@
             this.AddEmployee.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.AddEmployee.ForeColor = System.Drawing.SystemColors.Window;
             this.AddEmployee.Location = new System.Drawing.Point(12, 536);
             this.AddEmployee.Name = "AddEmployee";
             this.AddEmployee.Size = new System.Drawing.Size(135, 69);
             this.AddEmployee.TabIndex = 1;
-            this.AddEmployee.Text = "Add";
+            this.AddEmployee.Text = "Voeg toe";
             this.AddEmployee.UseVisualStyleBackColor = false;
             this.AddEmployee.Click += new System.EventHandler(this.AddEmployee_Click);
             // 
@@ -222,7 +220,7 @@
             "Barman",
             "Kok",
             "Manager"});
-            this.DB_AddEmployeeType.Location = new System.Drawing.Point(44, 382);
+            this.DB_AddEmployeeType.Location = new System.Drawing.Point(44, 411);
             this.DB_AddEmployeeType.Name = "DB_AddEmployeeType";
             this.DB_AddEmployeeType.Size = new System.Drawing.Size(383, 37);
             this.DB_AddEmployeeType.TabIndex = 15;
@@ -232,7 +230,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(59, 25);
+            this.label5.Location = new System.Drawing.Point(58, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(346, 37);
             this.label5.TabIndex = 14;
@@ -245,7 +243,7 @@
             this.BTN_AddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_AddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_AddEmployee.ForeColor = System.Drawing.SystemColors.Window;
-            this.BTN_AddEmployee.Location = new System.Drawing.Point(41, 487);
+            this.BTN_AddEmployee.Location = new System.Drawing.Point(41, 504);
             this.BTN_AddEmployee.Name = "BTN_AddEmployee";
             this.BTN_AddEmployee.Size = new System.Drawing.Size(386, 85);
             this.BTN_AddEmployee.TabIndex = 12;
@@ -258,7 +256,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(39, 349);
+            this.label4.Location = new System.Drawing.Point(39, 378);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 10;
@@ -267,7 +265,7 @@
             // TXTB_AddEmployeeName
             // 
             this.TXTB_AddEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_AddEmployeeName.Location = new System.Drawing.Point(41, 137);
+            this.TXTB_AddEmployeeName.Location = new System.Drawing.Point(41, 166);
             this.TXTB_AddEmployeeName.Name = "TXTB_AddEmployeeName";
             this.TXTB_AddEmployeeName.Size = new System.Drawing.Size(386, 35);
             this.TXTB_AddEmployeeName.TabIndex = 9;
@@ -277,7 +275,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(36, 103);
+            this.label3.Location = new System.Drawing.Point(36, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 29);
             this.label3.TabIndex = 8;
@@ -286,7 +284,7 @@
             // TXTB_AddEmployeePassword
             // 
             this.TXTB_AddEmployeePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_AddEmployeePassword.Location = new System.Drawing.Point(41, 298);
+            this.TXTB_AddEmployeePassword.Location = new System.Drawing.Point(41, 327);
             this.TXTB_AddEmployeePassword.Name = "TXTB_AddEmployeePassword";
             this.TXTB_AddEmployeePassword.Size = new System.Drawing.Size(386, 35);
             this.TXTB_AddEmployeePassword.TabIndex = 7;
@@ -296,7 +294,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(39, 266);
+            this.label2.Location = new System.Drawing.Point(39, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 29);
             this.label2.TabIndex = 6;
@@ -305,7 +303,7 @@
             // TXTB_AddEmployeeUsername
             // 
             this.TXTB_AddEmployeeUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_AddEmployeeUsername.Location = new System.Drawing.Point(41, 218);
+            this.TXTB_AddEmployeeUsername.Location = new System.Drawing.Point(41, 247);
             this.TXTB_AddEmployeeUsername.Name = "TXTB_AddEmployeeUsername";
             this.TXTB_AddEmployeeUsername.Size = new System.Drawing.Size(386, 35);
             this.TXTB_AddEmployeeUsername.TabIndex = 5;
@@ -315,7 +313,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(36, 186);
+            this.label1.Location = new System.Drawing.Point(36, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 29);
             this.label1.TabIndex = 4;
@@ -323,8 +321,6 @@
             // 
             // PNL_EditEmployee
             // 
-            this.PNL_EditEmployee.Controls.Add(this.LBL_EditEmployeeID);
-            this.PNL_EditEmployee.Controls.Add(this.label8);
             this.PNL_EditEmployee.Controls.Add(this.button1);
             this.PNL_EditEmployee.Controls.Add(this.DB_EditEmployeeType);
             this.PNL_EditEmployee.Controls.Add(this.label6);
@@ -340,27 +336,6 @@
             this.PNL_EditEmployee.Name = "PNL_EditEmployee";
             this.PNL_EditEmployee.Size = new System.Drawing.Size(465, 681);
             this.PNL_EditEmployee.TabIndex = 16;
-            // 
-            // LBL_EditEmployeeID
-            // 
-            this.LBL_EditEmployeeID.AutoSize = true;
-            this.LBL_EditEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_EditEmployeeID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LBL_EditEmployeeID.Location = new System.Drawing.Point(114, 108);
-            this.LBL_EditEmployeeID.Name = "LBL_EditEmployeeID";
-            this.LBL_EditEmployeeID.Size = new System.Drawing.Size(0, 29);
-            this.LBL_EditEmployeeID.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(36, 108);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 29);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "ID:";
             // 
             // button1
             // 
@@ -382,11 +357,11 @@
             this.DB_EditEmployeeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DB_EditEmployeeType.FormattingEnabled = true;
             this.DB_EditEmployeeType.Items.AddRange(new object[] {
-            "Waiter",
-            "Bartender",
-            "Cook",
+            "Serveerder",
+            "Barman",
+            "Kok",
             "Manager"});
-            this.DB_EditEmployeeType.Location = new System.Drawing.Point(44, 433);
+            this.DB_EditEmployeeType.Location = new System.Drawing.Point(44, 397);
             this.DB_EditEmployeeType.Name = "DB_EditEmployeeType";
             this.DB_EditEmployeeType.Size = new System.Drawing.Size(383, 37);
             this.DB_EditEmployeeType.TabIndex = 15;
@@ -396,7 +371,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(93, 25);
+            this.label6.Location = new System.Drawing.Point(92, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(286, 37);
             this.label6.TabIndex = 14;
@@ -413,7 +388,7 @@
             this.BTN_EditEmployee.Name = "BTN_EditEmployee";
             this.BTN_EditEmployee.Size = new System.Drawing.Size(386, 85);
             this.BTN_EditEmployee.TabIndex = 12;
-            this.BTN_EditEmployee.Text = "Edit";
+            this.BTN_EditEmployee.Text = "Bewerk";
             this.BTN_EditEmployee.UseVisualStyleBackColor = false;
             this.BTN_EditEmployee.Click += new System.EventHandler(this.BTN_EditEmployee_Click);
             // 
@@ -422,7 +397,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(39, 400);
+            this.label7.Location = new System.Drawing.Point(39, 364);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 29);
             this.label7.TabIndex = 10;
@@ -431,7 +406,7 @@
             // TXTB_EditEmployeeName
             // 
             this.TXTB_EditEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_EditEmployeeName.Location = new System.Drawing.Point(41, 188);
+            this.TXTB_EditEmployeeName.Location = new System.Drawing.Point(41, 152);
             this.TXTB_EditEmployeeName.Name = "TXTB_EditEmployeeName";
             this.TXTB_EditEmployeeName.Size = new System.Drawing.Size(386, 35);
             this.TXTB_EditEmployeeName.TabIndex = 9;
@@ -441,16 +416,16 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label45.Location = new System.Drawing.Point(36, 154);
+            this.label45.Location = new System.Drawing.Point(36, 118);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(84, 29);
+            this.label45.Size = new System.Drawing.Size(83, 29);
             this.label45.TabIndex = 8;
-            this.label45.Text = "Name:";
+            this.label45.Text = "Naam:";
             // 
             // TXTB_EditEmployeePassword
             // 
             this.TXTB_EditEmployeePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_EditEmployeePassword.Location = new System.Drawing.Point(41, 349);
+            this.TXTB_EditEmployeePassword.Location = new System.Drawing.Point(41, 313);
             this.TXTB_EditEmployeePassword.Name = "TXTB_EditEmployeePassword";
             this.TXTB_EditEmployeePassword.Size = new System.Drawing.Size(386, 35);
             this.TXTB_EditEmployeePassword.TabIndex = 7;
@@ -460,16 +435,16 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(39, 317);
+            this.label9.Location = new System.Drawing.Point(39, 281);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 29);
+            this.label9.Size = new System.Drawing.Size(153, 29);
             this.label9.TabIndex = 6;
-            this.label9.Text = "Password:";
+            this.label9.Text = "Wachtwoord:";
             // 
             // TXTB_EditEmployeeUsername
             // 
             this.TXTB_EditEmployeeUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTB_EditEmployeeUsername.Location = new System.Drawing.Point(41, 269);
+            this.TXTB_EditEmployeeUsername.Location = new System.Drawing.Point(41, 233);
             this.TXTB_EditEmployeeUsername.Name = "TXTB_EditEmployeeUsername";
             this.TXTB_EditEmployeeUsername.Size = new System.Drawing.Size(386, 35);
             this.TXTB_EditEmployeeUsername.TabIndex = 5;
@@ -479,11 +454,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(36, 237);
+            this.label10.Location = new System.Drawing.Point(36, 201);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 29);
+            this.label10.Size = new System.Drawing.Size(197, 29);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Username:";
+            this.label10.Text = "Gebruikersnaam:";
             // 
             // EditEmployeesUI
             // 
@@ -491,8 +466,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_EditEmployee);
             this.Controls.Add(this.PNL_ManageEmployee);
+            this.Controls.Add(this.PNL_EditEmployee);
             this.Controls.Add(this.PNL_AddEmployee);
             this.Name = "EditEmployeesUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -542,7 +517,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColumnHeader EmployeeID;
-        private System.Windows.Forms.Label LBL_EditEmployeeID;
-        private System.Windows.Forms.Label label8;
     }
 }

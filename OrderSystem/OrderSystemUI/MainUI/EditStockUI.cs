@@ -16,6 +16,7 @@ namespace OrderSystemUI.MainUI
     {
         ItemLogic itemLogic = new ItemLogic();
         Employee loggedInEmployee;
+        Item selectedItem;
 
         public EditStockUI(Employee loggedInEmployee)
         {
@@ -59,6 +60,14 @@ namespace OrderSystemUI.MainUI
             {
                 PNL_ManageStock.Hide();
                 PNL_EditItem.Show();
+
+                TXTB_EditName.Text = selectedItem.name;
+                TXTB_EditStock.Text = selectedItem.stock.ToString();
+                TXTB_EditPrice.Text = selectedItem.price.ToString();
+                DB_EditCourse.Text = selectedItem.course;
+                DB_EditTAX.Text = selectedItem.tax.ToString();
+                DB_EditType.Text = selectedItem.foodtype;
+                TXTB_EditDescription.Text = selectedItem.description;
             }
         }
 
@@ -91,33 +100,25 @@ namespace OrderSystemUI.MainUI
 
         private void BTN_EditItem_Click(object sender, EventArgs e)
         {
-            Item item = new Item()
-            {
-                itemID = int.Parse(LBL_itemID.Text),
-                name = TXTB_EditName.Text,
-                stock = int.Parse(TXTB_EditStock.Text),
-                price = double.Parse(TXTB_EditPrice.Text),
-                course = DB_EditCourse.Text,
-                description = TXTB_EditDescription.Text,
-                tax = int.Parse(DB_EditTAX.Text.Substring(0, 1)),
-                foodtype = DB_EditType.Text
-            };
-            itemLogic.EditItem(item);
+            selectedItem.name = TXTB_EditName.Text;
+            selectedItem.stock = int.Parse(TXTB_EditStock.Text);
+            selectedItem.price = double.Parse(TXTB_EditPrice.Text);
+            selectedItem.course = DB_EditCourse.Text;
+            selectedItem.description = TXTB_EditDescription.Text;
+            selectedItem.tax = int.Parse(DB_EditTAX.Text.Substring(0, 1));
+            selectedItem.foodtype = DB_EditType.Text;
+
+            itemLogic.EditItem(selectedItem);
             MessageBox.Show("Item was succesfully Edited");
             ShowPanel("PNL_ManageStock");
         }
     
 
         private void DeleteItem_Click(object sender, EventArgs e)
-        {
-            Item item = new Item()
-            {
-                itemID = int.Parse(LBL_itemID.Text)
-            };
-            
+        {          
             if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                itemLogic.DeleteItem(item);
+                itemLogic.DeleteItem(selectedItem);
                 MessageBox.Show("Item was succesfully deleted");
                 ShowPanel("PNL_ManageStock");
             }          
@@ -125,14 +126,14 @@ namespace OrderSystemUI.MainUI
 
         private void ListView_Stock_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            LBL_itemID.Text = e.Item.SubItems[0].Text;
-            TXTB_EditName.Text = e.Item.SubItems[1].Text;
-            TXTB_EditStock.Text = e.Item.SubItems[2].Text;
-            TXTB_EditPrice.Text = e.Item.SubItems[3].Text;
-            DB_EditTAX.Text = e.Item.SubItems[4].Text;
-            DB_EditCourse.Text =  e.Item.SubItems[5].Text;
-            DB_EditType.Text = e.Item.SubItems[6].Text;
-            TXTB_EditDescription.Text = e.Item.SubItems[7].Text;
+            selectedItem.itemID  = int.Parse(e.Item.SubItems[0].Text);
+            selectedItem.name = e.Item.SubItems[1].Text;
+            selectedItem.stock = int.Parse(e.Item.SubItems[2].Text);
+            selectedItem.price = double.Parse(e.Item.SubItems[3].Text);
+            selectedItem.tax = int.Parse(e.Item.SubItems[4].Text);
+            selectedItem.course =  e.Item.SubItems[5].Text;
+            selectedItem.foodtype = e.Item.SubItems[6].Text;
+            selectedItem.description = e.Item.SubItems[7].Text;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
