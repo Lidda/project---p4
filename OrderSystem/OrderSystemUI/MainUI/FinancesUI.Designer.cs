@@ -52,12 +52,12 @@
             // 
             // FinancesDate
             // 
-            this.FinancesDate.Text = "Date";
+            this.FinancesDate.Text = "Datum";
             this.FinancesDate.Width = 335;
             // 
             // FinancesIncome
             // 
-            this.FinancesIncome.Text = "Income";
+            this.FinancesIncome.Text = "Inkomsten";
             this.FinancesIncome.Width = 94;
             // 
             // BackButton
@@ -86,7 +86,7 @@
             this.BTN_Monthly.Name = "BTN_Monthly";
             this.BTN_Monthly.Size = new System.Drawing.Size(135, 69);
             this.BTN_Monthly.TabIndex = 7;
-            this.BTN_Monthly.Text = "Monthly";
+            this.BTN_Monthly.Text = "Maand";
             this.BTN_Monthly.UseVisualStyleBackColor = false;
             this.BTN_Monthly.Click += new System.EventHandler(this.BTN_Monthly_Click);
             // 
@@ -101,7 +101,7 @@
             this.BTN_Yearly.Name = "BTN_Yearly";
             this.BTN_Yearly.Size = new System.Drawing.Size(135, 69);
             this.BTN_Yearly.TabIndex = 6;
-            this.BTN_Yearly.Text = "Yearly";
+            this.BTN_Yearly.Text = "Jaar";
             this.BTN_Yearly.UseVisualStyleBackColor = false;
             this.BTN_Yearly.Click += new System.EventHandler(this.BTN_Yearly_Click);
             // 
@@ -116,7 +116,7 @@
             this.BTN_Daily.Name = "BTN_Daily";
             this.BTN_Daily.Size = new System.Drawing.Size(135, 69);
             this.BTN_Daily.TabIndex = 5;
-            this.BTN_Daily.Text = "Daily";
+            this.BTN_Daily.Text = "Dag";
             this.BTN_Daily.UseVisualStyleBackColor = false;
             this.BTN_Daily.Click += new System.EventHandler(this.BTN_Daily_Click);
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.ListView_Finances);
             this.Name = "FinancesUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FinancesUI";
+            this.Text = "Financiën";
             this.ResumeLayout(false);
 
         }
