@@ -109,7 +109,7 @@
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(338, 131);
             this.btnCash.TabIndex = 1;
-            this.btnCash.Text = "Cash";
+            this.btnCash.Text = "Contant";
             this.btnCash.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCash.UseVisualStyleBackColor = false;
             this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
@@ -118,11 +118,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(92, 29);
+            this.label1.Location = new System.Drawing.Point(146, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 39);
+            this.label1.Size = new System.Drawing.Size(327, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Choose payment method:";
+            this.label1.Text = "Kies betaalmethode:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // CheckoutPay

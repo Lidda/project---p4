@@ -96,7 +96,7 @@ namespace OrderSystemUI.MainUI
                 pnlError.Hide();
 
                 //set title of header
-                lblCheckoutOverviewHeader.Text = string.Format("Order overview table {0}", order.Table.ID);
+                lblCheckoutOverviewHeader.Text = string.Format("Overzicht bestelling tafel {0}", order.Table.ID);
 
                 //set labels
                 lblOrderPriceWithoutTax.Show();
