@@ -64,22 +64,6 @@ namespace OrderSystemDAL
             }
             return orderItems;
         }
-
-        private List<OrderItem> ReadTime(DataTable dataTable)
-        {
-            List<OrderItem> orderTimes = new List<OrderItem>();
-            foreach(DataRow dr in dataTable.Rows)
-            {
-                OrderItem orderTime = new OrderItem()
-                {
-                    TimeOfOrder = (DateTime)dr["timeOfOrder"]
-                };
-                orderTimes.Add(orderTime);
-            }
-            return orderTimes;
-        }
-
-
-
+        
     }
 }
