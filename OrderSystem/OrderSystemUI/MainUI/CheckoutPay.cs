@@ -55,29 +55,6 @@ namespace OrderSystemUI.MainUI
             coUI.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //ignore
-        }
-
-        private void pnlConfirmation_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlChoosePayOption_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -83,7 +83,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label9.Location = new System.Drawing.Point(36, 589);
+            this.label9.Location = new System.Drawing.Point(34, 589);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 31);
             this.label9.TabIndex = 39;
@@ -176,11 +176,11 @@
             // 
             this.lblTipHeader.AutoSize = true;
             this.lblTipHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblTipHeader.Location = new System.Drawing.Point(172, 25);
+            this.lblTipHeader.Location = new System.Drawing.Point(205, 20);
             this.lblTipHeader.Name = "lblTipHeader";
-            this.lblTipHeader.Size = new System.Drawing.Size(232, 39);
+            this.lblTipHeader.Size = new System.Drawing.Size(183, 39);
             this.lblTipHeader.TabIndex = 30;
-            this.lblTipHeader.Text = "Add tip table x";
+            this.lblTipHeader.Text = "Fooi tafel x";
             // 
             // button3
             // 
@@ -219,10 +219,10 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(34, 760);
+            this.button2.Location = new System.Drawing.Point(34, 749);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 42);
+            this.button2.Size = new System.Drawing.Size(91, 53);
             this.button2.TabIndex = 23;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -234,7 +234,7 @@
             this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlTip);
             this.Name = "CheckoutTip";
-            this.Text = "CheckoutTip";
+            this.Text = "Voeg vooi toe";
             this.pnlTip.ResumeLayout(false);
             this.pnlTip.PerformLayout();
             this.ResumeLayout(false);

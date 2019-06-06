@@ -81,7 +81,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label2);
             this.Name = "CheckoutConfirmation";
-            this.Text = "CheckoutConfirmation";
+            this.Text = "Bevestiging";
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

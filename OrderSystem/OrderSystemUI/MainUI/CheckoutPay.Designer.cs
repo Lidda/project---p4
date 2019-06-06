@@ -49,7 +49,7 @@
             this.pnlChoosePayOption.Name = "pnlChoosePayOption";
             this.pnlChoosePayOption.Size = new System.Drawing.Size(635, 880);
             this.pnlChoosePayOption.TabIndex = 0;
-            this.pnlChoosePayOption.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChoosePayOption_Paint);
+            
             // 
             // btnCancel
             // 
@@ -123,7 +123,6 @@
             this.label1.Size = new System.Drawing.Size(327, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kies betaalmethode:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // CheckoutPay
             // 
@@ -133,7 +132,7 @@
             this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlChoosePayOption);
             this.Name = "CheckoutPay";
-            this.Text = "CheckoutPay";
+            this.Text = "Betaal";
             this.pnlChoosePayOption.ResumeLayout(false);
             this.pnlChoosePayOption.PerformLayout();
             this.ResumeLayout(false);

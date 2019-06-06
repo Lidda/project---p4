@@ -296,7 +296,7 @@
             this.Controls.Add(this.lblCheckoutOverviewHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckoutOverviewOrder";
-            this.Text = "CheckoutOverviewOrder";
+            this.Text = "Overzicht bestelling";
             this.pnlError.ResumeLayout(false);
             this.pnlError.PerformLayout();
             this.ResumeLayout(false);

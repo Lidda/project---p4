@@ -37,6 +37,11 @@ namespace OrderSystemUI.MainUI
         {
             InitializeComponent();
             this.order = order;
+
+            //hide
+            lblTip.Hide();
+            lblTipAmount.Hide();
+
             ShowPanel("Overview");
         }
         private void ShowPanel(string panelName)

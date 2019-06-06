@@ -29,7 +29,7 @@ namespace OrderSystemUI.MainUI
             pnlAddComment.Show();
             pnlAddComment.BringToFront();
             //set title header
-            lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: comment", order.Table.ID, order.orderID);
+            lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: commentaar", order.Table.ID, order.orderID);
             //empty textbox
             txtComment.Text = "";
             //set current comment

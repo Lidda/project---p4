@@ -131,11 +131,11 @@
             // 
             this.lblCommentHeader.AutoSize = true;
             this.lblCommentHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblCommentHeader.Location = new System.Drawing.Point(96, 7);
+            this.lblCommentHeader.Location = new System.Drawing.Point(27, 7);
             this.lblCommentHeader.Name = "lblCommentHeader";
-            this.lblCommentHeader.Size = new System.Drawing.Size(303, 39);
+            this.lblCommentHeader.Size = new System.Drawing.Size(335, 39);
             this.lblCommentHeader.TabIndex = 23;
-            this.lblCommentHeader.Text = "Order x: comments";
+            this.lblCommentHeader.Text = "Order x: commentaar";
             // 
             // button1
             // 
@@ -157,7 +157,7 @@
             this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlAddComment);
             this.Name = "CheckoutComments";
-            this.Text = "ChechkoutComments";
+            this.Text = "Commentaar";
             this.pnlAddComment.ResumeLayout(false);
             this.pnlAddComment.PerformLayout();
             this.ResumeLayout(false);

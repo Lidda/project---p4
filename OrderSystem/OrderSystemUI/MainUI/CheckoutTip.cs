@@ -29,11 +29,22 @@ namespace OrderSystemUI.MainUI
 
         private void btnAddTipToOrder_Click(object sender, EventArgs e)
         {
-            order.tip = double.Parse(txtTip.Text);
-            //update labels
-            lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
-            lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
-            lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            try
+            {
+                order.tip = double.Parse(txtTip.Text.Replace('.', ','));
+                //update labels
+                lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
+                lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
+                lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            }
+            catch
+            {
+                MessageBox.Show("Vul een geldig cijfer in!");
+            }
+            finally
+            {
+                txtTip.Text = "";
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
