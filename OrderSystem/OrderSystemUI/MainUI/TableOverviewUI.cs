@@ -19,7 +19,7 @@ namespace OrderSystemUI {
         Employee employee;
         List<Table> tables;
         TableLogic tableLogic;
-        BarKitchenLogic orderItemLogic;
+        BarKitchenLogic barKitchenLogic;
         private static System.Timers.Timer timer;
 
         public TableOverviewUI(Employee employee) {
@@ -105,43 +105,52 @@ namespace OrderSystemUI {
 
         private void mark1_Click_1(object sender, EventArgs e) {
             mark1.Hide();
-            //FIX ME: Call method that changes the orderItem status to 'delivered' 
+            //barKitchenLogic.OrderStatus(tables[0].ID, 2);
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
             mark2.Hide();
+            //barKitchenLogic.OrderStatus(tables[1].ID, 2);
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
             mark3.Hide();
+            //barKitchenLogic.OrderStatus(tables[2].ID, 2);
         }
 
         private void mark4_Click_1(object sender, EventArgs e) {
             mark4.Hide();
+            //barKitchenLogic.OrderStatus(tables[3].ID, 2);
         }
 
         private void mark5_Click_1(object sender, EventArgs e) {
             mark5.Hide();
+            //barKitchenLogic.OrderStatus(tables[4].ID, 2);
         }
 
         private void mark6_Click_1(object sender, EventArgs e) {
             mark6.Hide();
+            //barKitchenLogic.OrderStatus(tables[5].ID, 2);
         }
 
         private void mark7_Click_1(object sender, EventArgs e) {
             mark7.Hide();
+            //barKitchenLogic.OrderStatus(tables[6].ID, 2);
         }
 
         private void mark8_Click_1(object sender, EventArgs e) {
             mark8.Hide();
+            //barKitchenLogic.OrderStatus(tables[7].ID, 2);
         }
 
         private void mark9_Click_1(object sender, EventArgs e) {
             mark9.Hide();
+            //barKitchenLogic.OrderStatus(tables[8].ID, 2);
         }
 
         private void mark10_Click_1(object sender, EventArgs e) {
             mark10.Hide();
+            //barKitchenLogic.OrderStatus(tables[9].ID, 2);
         }
 
         private void InitOrderUI(Table table) {
@@ -166,10 +175,10 @@ namespace OrderSystemUI {
             SetTableColors();
         }
 
-        /*FIX ME not called yet
-        private void showOrderMarks(List<OrderItem> orderItems) {
-            foreach (OrderItem o in orderItems) {
-                switch (o.order.Table.ID) {
+        //FIX ME not called yet
+        private void showOrderMarks(List<Order> orders) {
+            foreach (Order o in orders) {
+                switch (o.Table.ID) {
                     case 1:
                         mark1.Visible = true;
                         break;
@@ -204,7 +213,6 @@ namespace OrderSystemUI {
             }
 
         }
-        */
 
     }
 }

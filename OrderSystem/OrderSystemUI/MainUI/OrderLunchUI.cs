@@ -252,7 +252,6 @@ namespace OrderSystemUI.MainUI
         {
             OrderItem orderItem = new OrderItem();
 
-            orderItem.orderID = this.orderID;
             orderItem.item = item;
             orderItem.amount = amount;
             orderItem.comment = "";

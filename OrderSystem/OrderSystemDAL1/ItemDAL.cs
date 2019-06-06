@@ -9,13 +9,20 @@ using System.Data;
 
 namespace OrderSystemDAL
 {
-    public class ItemDAL : Base
-    {
-        public List<Item> Db_Get_All_Items()
-        {
+    public class ItemDAL : Base {
+        public List<Item> Db_Get_All_Items() {
             string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public Item Db_Get_Item(Item item) {
+            string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS] WHERE itemID = @itemID";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@itemID", item.itemID)
+            };
+            return ReadItems(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
         private List<Item> ReadItems(DataTable dataTable)

@@ -11,11 +11,6 @@ namespace OrderSystemModel
         public enum Status { ordered, ready, delivered };
 
         public Status status { get; set; } 
-        public string foodtype { get; set; }
-        public int tableID { get; set; }
-        public int orderID { get; set; }
-        public int itemID { get; set; }
-        public string name { get; set; }
         public int amount { get; set; }
         public Item item { get; set; }
         public DateTime TimeOfOrder { get; set; }

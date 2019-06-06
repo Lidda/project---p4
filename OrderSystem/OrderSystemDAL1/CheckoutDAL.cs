@@ -23,7 +23,7 @@ namespace OrderSystemDAL
             order = ReadOrder(ExecuteSelectQuery(queryOrder, sqlParameters));
             //ordered items
             string queryItems = string.Format("SELECT I.itemID, I.name, I.price, O.amount, I.TAX, I.stock, O.comment, I.course, I.description, I.foodtype, O.status FROM ITEMS AS I JOIN ORDER_CONTAINS AS O ON I.itemID = O.itemID JOIN ORDERS AS D on D.orderID = O.orderID WHERE D.orderID = {0}", order.orderID);
-            order.items = ReadItems(ExecuteSelectQuery(queryItems, sqlParameters));
+            order.orderItems = ReadItems(ExecuteSelectQuery(queryItems, sqlParameters));
             //add table
             order.Table = table;
             //add employee

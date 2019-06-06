@@ -11,15 +11,11 @@ using System.Timers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrderSystemUI.MainUI
-{
-    public partial class BarUI : Form
-    {
+namespace OrderSystemUI.MainUI {
+    public partial class BarUI : Form {
         Employee employee;
 
-
-        public BarUI(Employee employee)
-        {
+        public BarUI(Employee employee) {
             this.employee = employee;
             InitializeComponent();
             order1();
@@ -34,8 +30,7 @@ namespace OrderSystemUI.MainUI
             order10();
         }
 
-        public void order1()
-        {
+        public void order1() {
             int tableID = 1;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -56,8 +51,7 @@ namespace OrderSystemUI.MainUI
 
 
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time1.Text = datestring;
 
@@ -65,23 +59,19 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.foodtype);
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView1.BackColor = Color.Tomato;
                     listView1.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView1.BackColor = Color.MediumSeaGreen;
                 }
 
             }
 
-            
+
 
         }
-        public void order2()
-        {
+        public void order2() {
             int tableID = 2;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -101,8 +91,7 @@ namespace OrderSystemUI.MainUI
             listView2.Columns.Add("Status");
             listView2.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time2.Text = datestring;
 
@@ -111,22 +100,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView2.BackColor = Color.Tomato;
                     listView2.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView2.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-           
+
 
         }
-        public void order3()
-        {
+        public void order3() {
             int tableID = 3;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -145,8 +130,7 @@ namespace OrderSystemUI.MainUI
             listView3.Columns.Add("Status");
             listView3.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time3.Text = datestring;
 
@@ -154,22 +138,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.foodtype);
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView3.BackColor = Color.Tomato;
                     listView3.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView3.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-           
+
 
         }
-        public void order4()
-        {
+        public void order4() {
             int tableID = 4;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -188,8 +168,7 @@ namespace OrderSystemUI.MainUI
             listView4.Columns.Add("Status");
             listView4.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time4.Text = datestring;
 
@@ -198,22 +177,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView4.BackColor = Color.Tomato;
                     listView4.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView4.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-         
+
 
         }
-        public void order5()
-        {
+        public void order5() {
             int tableID = 5;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -232,8 +207,7 @@ namespace OrderSystemUI.MainUI
             listView5.Columns.Add("Status");
             listView5.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time5.Text = datestring;
 
@@ -242,22 +216,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView5.BackColor = Color.Tomato;
                     listView5.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView5.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-            
+
 
         }
-        public void order6()
-        {
+        public void order6() {
             int tableID = 6;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -276,8 +246,7 @@ namespace OrderSystemUI.MainUI
             listView6.Columns.Add("Status");
             listView6.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time6.Text = datestring;
 
@@ -286,22 +255,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView6.BackColor = Color.Tomato;
                     listView6.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView6.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-           
+
 
         }
-        public void order7()
-        {
+        public void order7() {
             int tableID = 7;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -320,8 +285,7 @@ namespace OrderSystemUI.MainUI
             listView7.Columns.Add("Status");
             listView7.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time7.Text = datestring;
 
@@ -330,22 +294,18 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView7.BackColor = Color.Tomato;
                     listView7.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView7.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-           
+
 
         }
-        public void order8()
-        {
+        public void order8() {
             int tableID = 8;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -364,8 +324,7 @@ namespace OrderSystemUI.MainUI
             listView8.Columns[3].Width = 70;
 
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time8.Text = datestring;
 
@@ -374,24 +333,20 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView8.BackColor = Color.Tomato;
                     listView8.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView8.BackColor = Color.MediumSeaGreen;
                 }
 
 
             }
-            
 
-           
+
+
         }
-        public void order9()
-        {
+        public void order9() {
             int tableID = 9;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -410,8 +365,7 @@ namespace OrderSystemUI.MainUI
             listView9.Columns.Add("Status");
             listView9.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time9.Text = datestring;
 
@@ -420,21 +374,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView9.BackColor = Color.Tomato;
                     listView9.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView9.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-            
+
         }
-        public void order10()
-        {
+        public void order10() {
             int tableID = 10;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -453,8 +403,7 @@ namespace OrderSystemUI.MainUI
             listView10.Columns.Add("Status");
             listView10.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList)
-            {
+            foreach (OrderSystemModel.OrderItem o in OrderList) {
                 string datestring = o.TimeOfOrder.ToString("HH:mm");
                 Time10.Text = datestring;
 
@@ -463,32 +412,27 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(o.amount.ToString());
                 li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0)
-                {
+                if (li.SubItems.Count > 0) {
                     listView10.BackColor = Color.Tomato;
                     listView10.Items.Add(li);
-                }
-                else
-                {
+                } else {
                     listView10.BackColor = Color.MediumSeaGreen;
                 }
 
             }
-           
+
 
         }
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
+        private void btnLogout_Click(object sender, EventArgs e) {
             this.Hide();
             LoginUI loginUI = new LoginUI();
             loginUI.ShowDialog();
             this.Close();
         }
 
-        
 
-        private void btn_markReady1_Click(object sender, EventArgs e)
-        {
+
+        private void btn_markReady1_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 1;
 
@@ -498,8 +442,7 @@ namespace OrderSystemUI.MainUI
             listView1.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady2_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady2_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 2;
 
@@ -509,8 +452,7 @@ namespace OrderSystemUI.MainUI
             listView2.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady3_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady3_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 3;
 
@@ -520,8 +462,7 @@ namespace OrderSystemUI.MainUI
             listView3.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady4_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady4_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 4;
 
@@ -531,8 +472,7 @@ namespace OrderSystemUI.MainUI
             listView4.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady5_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady5_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 5;
 
@@ -542,8 +482,7 @@ namespace OrderSystemUI.MainUI
             listView5.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady6_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady6_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 6;
 
@@ -553,8 +492,7 @@ namespace OrderSystemUI.MainUI
             listView6.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady7_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady7_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 7;
 
@@ -564,8 +502,7 @@ namespace OrderSystemUI.MainUI
             listView7.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady8_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady8_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 8;
 
@@ -575,8 +512,7 @@ namespace OrderSystemUI.MainUI
             listView8.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady9_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady9_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 9;
 
@@ -586,8 +522,7 @@ namespace OrderSystemUI.MainUI
             listView9.BackColor = Color.MediumSeaGreen;
         }
 
-        private void btn_markReady10_Click(object sender, EventArgs e)
-        {
+        private void btn_markReady10_Click(object sender, EventArgs e) {
             int statusChange = 1;
             int tableID = 10;
 
@@ -597,8 +532,7 @@ namespace OrderSystemUI.MainUI
             listView10.BackColor = Color.MediumSeaGreen;
         }
 
-        private void Refresh_btn_Click(object sender, EventArgs e)
-        {
+        private void Refresh_btn_Click(object sender, EventArgs e) {
             order1();
             order2();
             order3();
@@ -611,9 +545,9 @@ namespace OrderSystemUI.MainUI
             order10();
         }
 
-        private void timerTime_Tick(object sender, EventArgs e)
-        {
+        private void timerTime_Tick(object sender, EventArgs e) {
             this.TimeLabel.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
     }
 }
+*/

@@ -96,7 +96,7 @@ namespace OrderSystemDAL
                 string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
                 SqlParameter[] sqlParametersAdd = new SqlParameter[]
                 {
-                    new SqlParameter("@orderID", orderItem.orderID),
+                    // FIX ME new SqlParameter("@orderID", order.orderID),
                     new SqlParameter("@itemID", orderItem.item.itemID),
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@comment", orderItem.comment),
@@ -125,7 +125,7 @@ namespace OrderSystemDAL
                 {
                     new SqlParameter("@amount", orderItem.amount),
                     new SqlParameter("@itemID", orderItem.item.itemID),
-                    new SqlParameter("@orderID", orderItem.orderID),
+                    // FIX ME new SqlParameter("@orderID", order.orderID),
                 };
                 ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
 

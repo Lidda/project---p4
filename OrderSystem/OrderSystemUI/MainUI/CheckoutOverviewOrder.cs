@@ -24,7 +24,7 @@ namespace OrderSystemUI.MainUI
             lblTip.Hide();
             lblTipAmount.Hide();
             order = logic.GetOrder(table, employee);
-            if (order.items.Count == 0)
+            if (order.orderItems.Count == 0)
             {
                 ShowPanel("Error");
             }
@@ -125,7 +125,7 @@ namespace OrderSystemUI.MainUI
                 //empty listview before filling it
                 listViewOrderItems.Items.Clear();
                 //filling listview
-                foreach(OrderItem item in order.items)
+                foreach(OrderItem item in order.orderItems)
                 {
                     ListViewItem li;
                     if (item.item.comment == "")

@@ -49,6 +49,8 @@
     <Compile Include="FinancesDAL.cs" />
     <Compile Include="ItemDAL.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="OrderDAL.cs" />
+    <Compile Include="OrderItemDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableDAL.cs" />
     <Compile Include="TakeOrderDAL.cs" />
