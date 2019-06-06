@@ -30,7 +30,8 @@ namespace OrderSystemUI.MainUI {
             order10();
         }
 
-        public void order1() {
+        public void order1()
+        {
             int tableID = 1;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -51,27 +52,32 @@ namespace OrderSystemUI.MainUI {
 
 
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time1.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+               // Time1.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0) {
-                    listView1.BackColor = Color.Tomato;
-                    listView1.Items.Add(li);
-                } else {
-                    listView1.BackColor = Color.MediumSeaGreen;
-                }
+               // ListViewItem li = new ListViewItem(o.name);
+               // li.SubItems.Add(o.foodtype);
+              //  li.SubItems.Add(o.amount.ToString());
+               // li.SubItems.Add(o.status.ToString());
+              //  if (li.SubItems.Count > 0)
+               // {
+              //      listView1.BackColor = Color.Tomato;
+               //     listView1.Items.Add(li);
+              //  }
+                //else
+                //{
+                //    listView1.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
 
         }
-        public void order2() {
+        public void order2()
+        {
             int tableID = 2;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -91,27 +97,32 @@ namespace OrderSystemUI.MainUI {
             listView2.Columns.Add("Status");
             listView2.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time2.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time2.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView2.BackColor = Color.Tomato;
-                    listView2.Items.Add(li);
-                } else {
-                    listView2.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView2.BackColor = Color.Tomato;
+                //    listView2.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView2.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order3() {
+        public void order3()
+        {
             int tableID = 3;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -130,26 +141,31 @@ namespace OrderSystemUI.MainUI {
             listView3.Columns.Add("Status");
             listView3.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time3.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time3.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
-                if (li.SubItems.Count > 0) {
-                    listView3.BackColor = Color.Tomato;
-                    listView3.Items.Add(li);
-                } else {
-                    listView3.BackColor = Color.MediumSeaGreen;
-                }
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView3.BackColor = Color.Tomato;
+                //    listView3.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView3.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order4() {
+        public void order4()
+        {
             int tableID = 4;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -168,27 +184,32 @@ namespace OrderSystemUI.MainUI {
             listView4.Columns.Add("Status");
             listView4.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time4.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time4.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView4.BackColor = Color.Tomato;
-                    listView4.Items.Add(li);
-                } else {
-                    listView4.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView4.BackColor = Color.Tomato;
+                //    listView4.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView4.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order5() {
+        public void order5()
+        {
             int tableID = 5;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -207,27 +228,32 @@ namespace OrderSystemUI.MainUI {
             listView5.Columns.Add("Status");
             listView5.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time5.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time5.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView5.BackColor = Color.Tomato;
-                    listView5.Items.Add(li);
-                } else {
-                    listView5.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView5.BackColor = Color.Tomato;
+                //    listView5.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView5.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order6() {
+        public void order6()
+        {
             int tableID = 6;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -246,27 +272,32 @@ namespace OrderSystemUI.MainUI {
             listView6.Columns.Add("Status");
             listView6.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time6.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time6.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView6.BackColor = Color.Tomato;
-                    listView6.Items.Add(li);
-                } else {
-                    listView6.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView6.BackColor = Color.Tomato;
+                //    listView6.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView6.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order7() {
+        public void order7()
+        {
             int tableID = 7;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -285,27 +316,32 @@ namespace OrderSystemUI.MainUI {
             listView7.Columns.Add("Status");
             listView7.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time7.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time7.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView7.BackColor = Color.Tomato;
-                    listView7.Items.Add(li);
-                } else {
-                    listView7.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView7.BackColor = Color.Tomato;
+                //    listView7.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView7.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
 
         }
-        public void order8() {
+        public void order8()
+        {
             int tableID = 8;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -324,21 +360,25 @@ namespace OrderSystemUI.MainUI {
             listView8.Columns[3].Width = 70;
 
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time8.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time8.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView8.BackColor = Color.Tomato;
-                    listView8.Items.Add(li);
-                } else {
-                    listView8.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView8.BackColor = Color.Tomato;
+                //    listView8.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView8.BackColor = Color.MediumSeaGreen;
+                //}
 
 
             }
@@ -346,7 +386,8 @@ namespace OrderSystemUI.MainUI {
 
 
         }
-        public void order9() {
+        public void order9()
+        {
             int tableID = 9;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -365,26 +406,31 @@ namespace OrderSystemUI.MainUI {
             listView9.Columns.Add("Status");
             listView9.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time9.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time9.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView9.BackColor = Color.Tomato;
-                    listView9.Items.Add(li);
-                } else {
-                    listView9.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView9.BackColor = Color.Tomato;
+                //    listView9.Items.Add(li);
+               
+                //else
+                //{
+                //    listView9.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
         }
-        public void order10() {
+        public void order10()
+        {
             int tableID = 10;
 
             OrderSystemLogic.BarKitchenLogic barLogic = new OrderSystemLogic.BarKitchenLogic();
@@ -403,21 +449,25 @@ namespace OrderSystemUI.MainUI {
             listView10.Columns.Add("Status");
             listView10.Columns[3].Width = 70;
 
-            foreach (OrderSystemModel.OrderItem o in OrderList) {
-                string datestring = o.TimeOfOrder.ToString("HH:mm");
-                Time10.Text = datestring;
+            foreach (OrderSystemModel.OrderItem o in OrderList)
+            {
+                //string datestring = o.TimeOfOrder.ToString("HH:mm");
+                //Time10.Text = datestring;
 
-                ListViewItem li = new ListViewItem(o.name);
-                li.SubItems.Add(o.foodtype);
-                li.SubItems.Add(o.amount.ToString());
-                li.SubItems.Add(o.status.ToString());
+                //ListViewItem li = new ListViewItem(o.name);
+                //li.SubItems.Add(o.foodtype);
+                //li.SubItems.Add(o.amount.ToString());
+                //li.SubItems.Add(o.status.ToString());
 
-                if (li.SubItems.Count > 0) {
-                    listView10.BackColor = Color.Tomato;
-                    listView10.Items.Add(li);
-                } else {
-                    listView10.BackColor = Color.MediumSeaGreen;
-                }
+                //if (li.SubItems.Count > 0)
+                //{
+                //    listView10.BackColor = Color.Tomato;
+                //    listView10.Items.Add(li);
+                //}
+                //else
+                //{
+                //    listView10.BackColor = Color.MediumSeaGreen;
+                //}
 
             }
 
@@ -550,4 +600,3 @@ namespace OrderSystemUI.MainUI {
         }
     }
 }
-*/

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel
 {
-    public enum Type { Bartender = 1, Waiter, Cook, Manager };
+    public enum Type { Barman = 1, Serveerder, Kok, Manager };
     public class Employee
     {
         public int ID;

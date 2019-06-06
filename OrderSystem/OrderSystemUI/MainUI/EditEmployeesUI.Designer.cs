@@ -30,9 +30,9 @@
             this.AddEmployee = new System.Windows.Forms.Button();
             this.ListView_Employees = new System.Windows.Forms.ListView();
             this.EmployeeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Password = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Naam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Gebruikersnaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Wachtwoord = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PNL_AddEmployee = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -141,9 +141,9 @@
             // 
             this.ListView_Employees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.EmployeeID,
-            this.name,
-            this.Username,
-            this.Password,
+            this.Naam,
+            this.Gebruikersnaam,
+            this.Wachtwoord,
             this.Type});
             this.ListView_Employees.FullRowSelect = true;
             this.ListView_Employees.GridLines = true;
@@ -160,20 +160,20 @@
             this.EmployeeID.Text = "ID";
             this.EmployeeID.Width = 0;
             // 
-            // name
+            // Naam
             // 
-            this.name.Text = "Name";
-            this.name.Width = 130;
+            this.Naam.Text = "Naam";
+            this.Naam.Width = 130;
             // 
-            // Username
+            // Gebruikersnaam
             // 
-            this.Username.Text = "Username";
-            this.Username.Width = 114;
+            this.Gebruikersnaam.Text = "Gebruikersnaam";
+            this.Gebruikersnaam.Width = 114;
             // 
-            // Password
+            // Wachtwoord
             // 
-            this.Password.Text = "Password";
-            this.Password.Width = 114;
+            this.Wachtwoord.Text = "Wachtwoord";
+            this.Wachtwoord.Width = 114;
             // 
             // Type
             // 
@@ -218,9 +218,9 @@
             this.DB_AddEmployeeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DB_AddEmployeeType.FormattingEnabled = true;
             this.DB_AddEmployeeType.Items.AddRange(new object[] {
-            "Waiter",
-            "Bartender",
-            "Cook",
+            "Serveerder",
+            "Barman",
+            "Kok",
             "Manager"});
             this.DB_AddEmployeeType.Location = new System.Drawing.Point(44, 382);
             this.DB_AddEmployeeType.Name = "DB_AddEmployeeType";
@@ -232,11 +232,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(126, 25);
+            this.label5.Location = new System.Drawing.Point(59, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 37);
+            this.label5.Size = new System.Drawing.Size(346, 37);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Add employee";
+            this.label5.Text = "Medewerker toevoegen";
             // 
             // BTN_AddEmployee
             // 
@@ -249,7 +249,7 @@
             this.BTN_AddEmployee.Name = "BTN_AddEmployee";
             this.BTN_AddEmployee.Size = new System.Drawing.Size(386, 85);
             this.BTN_AddEmployee.TabIndex = 12;
-            this.BTN_AddEmployee.Text = "Add";
+            this.BTN_AddEmployee.Text = "Voeg toe";
             this.BTN_AddEmployee.UseVisualStyleBackColor = false;
             this.BTN_AddEmployee.Click += new System.EventHandler(this.BTN_AddEmployee_Click);
             // 
@@ -279,9 +279,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(36, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 29);
+            this.label3.Size = new System.Drawing.Size(83, 29);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Name:";
+            this.label3.Text = "Naam:";
             // 
             // TXTB_AddEmployeePassword
             // 
@@ -298,9 +298,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(39, 266);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 29);
+            this.label2.Size = new System.Drawing.Size(153, 29);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Password:";
+            this.label2.Text = "Wachtwoord:";
             // 
             // TXTB_AddEmployeeUsername
             // 
@@ -317,9 +317,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(36, 186);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(197, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Gebruikersnaam:";
             // 
             // PNL_EditEmployee
             // 
@@ -396,11 +396,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(126, 25);
+            this.label6.Location = new System.Drawing.Point(93, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 37);
+            this.label6.Size = new System.Drawing.Size(286, 37);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Edit employee";
+            this.label6.Text = "Wijzig medewerker";
             // 
             // BTN_EditEmployee
             // 
@@ -491,12 +491,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_AddEmployee);
-            this.Controls.Add(this.PNL_ManageEmployee);
             this.Controls.Add(this.PNL_EditEmployee);
+            this.Controls.Add(this.PNL_ManageEmployee);
+            this.Controls.Add(this.PNL_AddEmployee);
             this.Name = "EditEmployeesUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage employees";
+            this.Text = "Manage medewerkers";
             this.PNL_ManageEmployee.ResumeLayout(false);
             this.PNL_AddEmployee.ResumeLayout(false);
             this.PNL_AddEmployee.PerformLayout();
@@ -509,9 +509,9 @@
         #endregion
         private System.Windows.Forms.Panel PNL_ManageEmployee;
         private System.Windows.Forms.ListView ListView_Employees;
-        private System.Windows.Forms.ColumnHeader name;
-        private System.Windows.Forms.ColumnHeader Username;
-        private System.Windows.Forms.ColumnHeader Password;
+        private System.Windows.Forms.ColumnHeader Naam;
+        private System.Windows.Forms.ColumnHeader Gebruikersnaam;
+        private System.Windows.Forms.ColumnHeader Wachtwoord;
         private System.Windows.Forms.ColumnHeader Type;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button EditEmployee;
