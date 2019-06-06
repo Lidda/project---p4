@@ -57,17 +57,23 @@ namespace OrderSystemUI.MainUI
                 PNL_AddItem.Show();
             }
             else if(panelName == "PNL_EditItem")
-            {
-                PNL_ManageStock.Hide();
-                PNL_EditItem.Show();
-
-                TXTB_EditName.Text = selectedItem.name;
-                TXTB_EditStock.Text = selectedItem.stock.ToString();
-                TXTB_EditPrice.Text = selectedItem.price.ToString();
-                DB_EditCourse.Text = selectedItem.course;
-                DB_EditTAX.Text = selectedItem.tax.ToString();
-                DB_EditType.Text = selectedItem.foodtype;
-                TXTB_EditDescription.Text = selectedItem.description;
+            {               
+                try
+                {
+                    TXTB_EditName.Text = selectedItem.name;
+                    TXTB_EditStock.Text = selectedItem.stock.ToString();
+                    TXTB_EditPrice.Text = selectedItem.price.ToString();
+                    DB_EditCourse.Text = selectedItem.course;
+                    DB_EditTAX.Text = selectedItem.tax.ToString();
+                    DB_EditType.Text = selectedItem.foodtype;
+                    TXTB_EditDescription.Text = selectedItem.description;
+                    PNL_ManageStock.Hide();
+                    PNL_EditItem.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("Selecteer eerst een product");
+                }
             }
         }
 

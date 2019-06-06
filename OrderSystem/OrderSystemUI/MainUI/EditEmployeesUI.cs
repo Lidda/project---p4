@@ -18,7 +18,7 @@ namespace OrderSystemUI
     {
         EmployeeLogic employeeLogic = new EmployeeLogic();
         Employee loggedInEmployee;
-        Employee selectedEmployee;
+        Employee selectedEmployee = new Employee();
 
 
         public EditEmployeesUI(Employee loggedInEmployee)
@@ -58,12 +58,19 @@ namespace OrderSystemUI
             }
             else if (panelName == "PNL_EditEmployee")
             {
-                PNL_ManageEmployee.Hide();
-                PNL_EditEmployee.Show();
-                TXTB_EditEmployeeName.Text = selectedEmployee.name;
-                TXTB_EditEmployeeUsername.Text = selectedEmployee.username;
-                TXTB_EditEmployeePassword.Text = selectedEmployee.password;
-                DB_EditEmployeeType.Text = selectedEmployee.type.ToString();
+                try
+                {                    
+                    TXTB_EditEmployeeName.Text = selectedEmployee.name;
+                    TXTB_EditEmployeeUsername.Text = selectedEmployee.username;
+                    TXTB_EditEmployeePassword.Text = selectedEmployee.password;
+                    DB_EditEmployeeType.Text = selectedEmployee.type.ToString();
+                    PNL_ManageEmployee.Hide();
+                    PNL_EditEmployee.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("Selecteer eerst een medewerker");
+                }
             }
             else if(panelName == "PNL_AddEmployee")
             {
@@ -96,11 +103,11 @@ namespace OrderSystemUI
 
         private void ListView_Employees_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            selectedEmployee.ID = int.Parse(e.Item.SubItems[0].Text);
-            selectedEmployee.name = e.Item.SubItems[1].Text;
-            selectedEmployee.username = e.Item.SubItems[2].Text;
-            selectedEmployee.password = e.Item.SubItems[3].Text;
-            selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), e.Item.SubItems[4].Text);
+                selectedEmployee.ID = int.Parse(e.Item.SubItems[0].Text);
+                selectedEmployee.name = e.Item.SubItems[1].Text;
+                selectedEmployee.username = e.Item.SubItems[2].Text;
+                selectedEmployee.password = e.Item.SubItems[3].Text;
+                selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), e.Item.SubItems[4].Text);          
         }
 
         private void BTN_EditEmployee_Click(object sender, EventArgs e)
