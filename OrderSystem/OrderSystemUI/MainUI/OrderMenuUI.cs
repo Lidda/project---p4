@@ -26,7 +26,7 @@ namespace OrderSystemUI.MainUI {
             this.tableUI = tableUI;
             this.employee = employee;
             this.table = table;
-
+        
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);
             tableUI.Hide();

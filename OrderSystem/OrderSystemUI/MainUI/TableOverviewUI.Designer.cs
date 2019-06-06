@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableOverviewUI));
             this.btnTable1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnTable2 = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@
             this.btnTable10 = new System.Windows.Forms.Button();
             this.mark1 = new System.Windows.Forms.Button();
             this.mark2 = new System.Windows.Forms.Button();
-            this.mark3 = new System.Windows.Forms.Button();
+            this.orderMark3 = new System.Windows.Forms.Button();
             this.mark4 = new System.Windows.Forms.Button();
             this.mark5 = new System.Windows.Forms.Button();
             this.mark6 = new System.Windows.Forms.Button();
@@ -44,6 +45,16 @@
             this.mark8 = new System.Windows.Forms.Button();
             this.mark9 = new System.Windows.Forms.Button();
             this.mark10 = new System.Windows.Forms.Button();
+            this.hourglass1 = new System.Windows.Forms.Label();
+            this.hourglass2 = new System.Windows.Forms.Label();
+            this.hourglass3 = new System.Windows.Forms.Label();
+            this.hourglass4 = new System.Windows.Forms.Label();
+            this.hourglass5 = new System.Windows.Forms.Label();
+            this.hourglass6 = new System.Windows.Forms.Label();
+            this.hourglass7 = new System.Windows.Forms.Label();
+            this.hourglass8 = new System.Windows.Forms.Label();
+            this.hourglass9 = new System.Windows.Forms.Label();
+            this.hourglass10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -72,7 +83,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(60, 23);
             this.btnLogout.TabIndex = 2;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -226,6 +237,7 @@
             this.mark1.Text = "!";
             this.mark1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark1.UseVisualStyleBackColor = false;
+            this.mark1.Visible = false;
             this.mark1.Click += new System.EventHandler(this.mark1_Click_1);
             // 
             // mark2
@@ -243,24 +255,26 @@
             this.mark2.Text = "!";
             this.mark2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark2.UseVisualStyleBackColor = false;
+            this.mark2.Visible = false;
             this.mark2.Click += new System.EventHandler(this.mark2_Click_1);
             // 
-            // mark3
+            // orderMark3
             // 
-            this.mark3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mark3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mark3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mark3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mark3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mark3.ForeColor = System.Drawing.Color.Crimson;
-            this.mark3.Location = new System.Drawing.Point(188, 178);
-            this.mark3.Name = "mark3";
-            this.mark3.Size = new System.Drawing.Size(53, 82);
-            this.mark3.TabIndex = 24;
-            this.mark3.Text = "!";
-            this.mark3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mark3.UseVisualStyleBackColor = false;
-            this.mark3.Click += new System.EventHandler(this.mark3_Click_1);
+            this.orderMark3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.orderMark3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.orderMark3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.orderMark3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderMark3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderMark3.ForeColor = System.Drawing.Color.Crimson;
+            this.orderMark3.Location = new System.Drawing.Point(188, 178);
+            this.orderMark3.Name = "orderMark3";
+            this.orderMark3.Size = new System.Drawing.Size(53, 82);
+            this.orderMark3.TabIndex = 24;
+            this.orderMark3.Text = "!";
+            this.orderMark3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.orderMark3.UseVisualStyleBackColor = false;
+            this.orderMark3.Visible = false;
+            this.orderMark3.Click += new System.EventHandler(this.mark3_Click_1);
             // 
             // mark4
             // 
@@ -277,6 +291,7 @@
             this.mark4.Text = "!";
             this.mark4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark4.UseVisualStyleBackColor = false;
+            this.mark4.Visible = false;
             this.mark4.Click += new System.EventHandler(this.mark4_Click_1);
             // 
             // mark5
@@ -294,6 +309,7 @@
             this.mark5.Text = "!";
             this.mark5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark5.UseVisualStyleBackColor = false;
+            this.mark5.Visible = false;
             this.mark5.Click += new System.EventHandler(this.mark5_Click_1);
             // 
             // mark6
@@ -311,6 +327,7 @@
             this.mark6.Text = "!";
             this.mark6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark6.UseVisualStyleBackColor = false;
+            this.mark6.Visible = false;
             this.mark6.Click += new System.EventHandler(this.mark6_Click_1);
             // 
             // mark7
@@ -328,6 +345,7 @@
             this.mark7.Text = "!";
             this.mark7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark7.UseVisualStyleBackColor = false;
+            this.mark7.Visible = false;
             this.mark7.Click += new System.EventHandler(this.mark7_Click_1);
             // 
             // mark8
@@ -345,6 +363,7 @@
             this.mark8.Text = "!";
             this.mark8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark8.UseVisualStyleBackColor = false;
+            this.mark8.Visible = false;
             this.mark8.Click += new System.EventHandler(this.mark8_Click_1);
             // 
             // mark9
@@ -362,6 +381,7 @@
             this.mark9.Text = "!";
             this.mark9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark9.UseVisualStyleBackColor = false;
+            this.mark9.Visible = false;
             this.mark9.Click += new System.EventHandler(this.mark9_Click_1);
             // 
             // mark10
@@ -379,7 +399,108 @@
             this.mark10.Text = "!";
             this.mark10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mark10.UseVisualStyleBackColor = false;
+            this.mark10.Visible = false;
             this.mark10.Click += new System.EventHandler(this.mark10_Click_1);
+            // 
+            // hourglass1
+            // 
+            this.hourglass1.Image = ((System.Drawing.Image)(resources.GetObject("hourglass1.Image")));
+            this.hourglass1.Location = new System.Drawing.Point(184, 94);
+            this.hourglass1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass1.Name = "hourglass1";
+            this.hourglass1.Size = new System.Drawing.Size(37, 53);
+            this.hourglass1.TabIndex = 32;
+            this.hourglass1.Visible = false;
+            // 
+            // hourglass2
+            // 
+            this.hourglass2.Image = ((System.Drawing.Image)(resources.GetObject("hourglass2.Image")));
+            this.hourglass2.Location = new System.Drawing.Point(384, 94);
+            this.hourglass2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass2.Name = "hourglass2";
+            this.hourglass2.Size = new System.Drawing.Size(37, 53);
+            this.hourglass2.TabIndex = 33;
+            this.hourglass2.Visible = false;
+            // 
+            // hourglass3
+            // 
+            this.hourglass3.Image = ((System.Drawing.Image)(resources.GetObject("hourglass3.Image")));
+            this.hourglass3.Location = new System.Drawing.Point(184, 206);
+            this.hourglass3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass3.Name = "hourglass3";
+            this.hourglass3.Size = new System.Drawing.Size(37, 53);
+            this.hourglass3.TabIndex = 34;
+            this.hourglass3.Visible = false;
+            // 
+            // hourglass4
+            // 
+            this.hourglass4.Image = ((System.Drawing.Image)(resources.GetObject("hourglass4.Image")));
+            this.hourglass4.Location = new System.Drawing.Point(384, 206);
+            this.hourglass4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass4.Name = "hourglass4";
+            this.hourglass4.Size = new System.Drawing.Size(37, 53);
+            this.hourglass4.TabIndex = 35;
+            this.hourglass4.Visible = false;
+            // 
+            // hourglass5
+            // 
+            this.hourglass5.Image = ((System.Drawing.Image)(resources.GetObject("hourglass5.Image")));
+            this.hourglass5.Location = new System.Drawing.Point(184, 321);
+            this.hourglass5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass5.Name = "hourglass5";
+            this.hourglass5.Size = new System.Drawing.Size(37, 53);
+            this.hourglass5.TabIndex = 36;
+            this.hourglass5.Visible = false;
+            // 
+            // hourglass6
+            // 
+            this.hourglass6.Image = ((System.Drawing.Image)(resources.GetObject("hourglass6.Image")));
+            this.hourglass6.Location = new System.Drawing.Point(384, 321);
+            this.hourglass6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass6.Name = "hourglass6";
+            this.hourglass6.Size = new System.Drawing.Size(37, 53);
+            this.hourglass6.TabIndex = 37;
+            this.hourglass6.Visible = false;
+            // 
+            // hourglass7
+            // 
+            this.hourglass7.Image = ((System.Drawing.Image)(resources.GetObject("hourglass7.Image")));
+            this.hourglass7.Location = new System.Drawing.Point(184, 438);
+            this.hourglass7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass7.Name = "hourglass7";
+            this.hourglass7.Size = new System.Drawing.Size(37, 53);
+            this.hourglass7.TabIndex = 38;
+            this.hourglass7.Visible = false;
+            // 
+            // hourglass8
+            // 
+            this.hourglass8.Image = ((System.Drawing.Image)(resources.GetObject("hourglass8.Image")));
+            this.hourglass8.Location = new System.Drawing.Point(384, 438);
+            this.hourglass8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass8.Name = "hourglass8";
+            this.hourglass8.Size = new System.Drawing.Size(37, 53);
+            this.hourglass8.TabIndex = 39;
+            this.hourglass8.Visible = false;
+            // 
+            // hourglass9
+            // 
+            this.hourglass9.Image = ((System.Drawing.Image)(resources.GetObject("hourglass9.Image")));
+            this.hourglass9.Location = new System.Drawing.Point(184, 553);
+            this.hourglass9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass9.Name = "hourglass9";
+            this.hourglass9.Size = new System.Drawing.Size(37, 53);
+            this.hourglass9.TabIndex = 40;
+            this.hourglass9.Visible = false;
+            // 
+            // hourglass10
+            // 
+            this.hourglass10.Image = ((System.Drawing.Image)(resources.GetObject("hourglass10.Image")));
+            this.hourglass10.Location = new System.Drawing.Point(384, 553);
+            this.hourglass10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hourglass10.Name = "hourglass10";
+            this.hourglass10.Size = new System.Drawing.Size(37, 53);
+            this.hourglass10.TabIndex = 41;
+            this.hourglass10.Visible = false;
             // 
             // TableOverviewUI
             // 
@@ -387,6 +508,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.hourglass10);
+            this.Controls.Add(this.hourglass9);
+            this.Controls.Add(this.hourglass8);
+            this.Controls.Add(this.hourglass7);
+            this.Controls.Add(this.hourglass6);
+            this.Controls.Add(this.hourglass5);
+            this.Controls.Add(this.hourglass4);
+            this.Controls.Add(this.hourglass3);
+            this.Controls.Add(this.hourglass2);
+            this.Controls.Add(this.hourglass1);
             this.Controls.Add(this.mark10);
             this.Controls.Add(this.mark9);
             this.Controls.Add(this.mark8);
@@ -394,7 +525,7 @@
             this.Controls.Add(this.mark6);
             this.Controls.Add(this.mark5);
             this.Controls.Add(this.mark4);
-            this.Controls.Add(this.mark3);
+            this.Controls.Add(this.orderMark3);
             this.Controls.Add(this.mark2);
             this.Controls.Add(this.mark1);
             this.Controls.Add(this.btnTable10);
@@ -409,7 +540,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnTable1);
             this.ForeColor = System.Drawing.Color.Crimson;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "TableOverviewUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOverviewUI";
@@ -432,7 +563,7 @@
         private System.Windows.Forms.Button btnTable10;
         private System.Windows.Forms.Button mark1;
         private System.Windows.Forms.Button mark2;
-        private System.Windows.Forms.Button mark3;
+        private System.Windows.Forms.Button orderMark3;
         private System.Windows.Forms.Button mark4;
         private System.Windows.Forms.Button mark5;
         private System.Windows.Forms.Button mark6;
@@ -440,5 +571,15 @@
         private System.Windows.Forms.Button mark8;
         private System.Windows.Forms.Button mark9;
         private System.Windows.Forms.Button mark10;
+        private System.Windows.Forms.Label hourglass1;
+        private System.Windows.Forms.Label hourglass2;
+        private System.Windows.Forms.Label hourglass3;
+        private System.Windows.Forms.Label hourglass4;
+        private System.Windows.Forms.Label hourglass5;
+        private System.Windows.Forms.Label hourglass6;
+        private System.Windows.Forms.Label hourglass7;
+        private System.Windows.Forms.Label hourglass8;
+        private System.Windows.Forms.Label hourglass9;
+        private System.Windows.Forms.Label hourglass10;
     }
 }
