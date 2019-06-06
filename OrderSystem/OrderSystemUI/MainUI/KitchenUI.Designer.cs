@@ -83,7 +83,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(60, 23);
             this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Log uit";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -95,7 +95,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(139, 19);
             this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Kitchen Overview";
+            this.textBox2.Text = "Keuken Overzicht";
             // 
             // listView1
             // 
@@ -183,9 +183,9 @@
             // 
             this.btn_markReady1.Location = new System.Drawing.Point(125, 326);
             this.btn_markReady1.Name = "btn_markReady1";
-            this.btn_markReady1.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady1.Size = new System.Drawing.Size(111, 23);
             this.btn_markReady1.TabIndex = 13;
-            this.btn_markReady1.Text = "Mark as ready";
+            this.btn_markReady1.Text = "Markeer als gereed";
             this.btn_markReady1.UseVisualStyleBackColor = true;
             this.btn_markReady1.Click += new System.EventHandler(this.btn_markReady1_Click);
             // 
@@ -193,9 +193,9 @@
             // 
             this.btn_markReady2.Location = new System.Drawing.Point(558, 326);
             this.btn_markReady2.Name = "btn_markReady2";
-            this.btn_markReady2.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady2.Size = new System.Drawing.Size(128, 23);
             this.btn_markReady2.TabIndex = 14;
-            this.btn_markReady2.Text = "Mark as ready";
+            this.btn_markReady2.Text = "Markeer als gereed";
             this.btn_markReady2.UseVisualStyleBackColor = true;
             this.btn_markReady2.Click += new System.EventHandler(this.btn_markReady2_Click);
             // 
@@ -203,9 +203,9 @@
             // 
             this.btn_markReady3.Location = new System.Drawing.Point(997, 326);
             this.btn_markReady3.Name = "btn_markReady3";
-            this.btn_markReady3.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady3.Size = new System.Drawing.Size(123, 23);
             this.btn_markReady3.TabIndex = 15;
-            this.btn_markReady3.Text = "Mark as ready";
+            this.btn_markReady3.Text = "Markeer als gereed";
             this.btn_markReady3.UseVisualStyleBackColor = true;
             this.btn_markReady3.Click += new System.EventHandler(this.btn_markReady3_Click);
             // 
@@ -213,9 +213,9 @@
             // 
             this.btn_markReady4.Location = new System.Drawing.Point(1376, 326);
             this.btn_markReady4.Name = "btn_markReady4";
-            this.btn_markReady4.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady4.Size = new System.Drawing.Size(109, 23);
             this.btn_markReady4.TabIndex = 16;
-            this.btn_markReady4.Text = "Mark as ready";
+            this.btn_markReady4.Text = "Markeer als gereed";
             this.btn_markReady4.UseVisualStyleBackColor = true;
             this.btn_markReady4.Click += new System.EventHandler(this.btn_markReady4_Click);
             // 
@@ -223,9 +223,9 @@
             // 
             this.btn_markReady5.Location = new System.Drawing.Point(125, 625);
             this.btn_markReady5.Name = "btn_markReady5";
-            this.btn_markReady5.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady5.Size = new System.Drawing.Size(111, 23);
             this.btn_markReady5.TabIndex = 17;
-            this.btn_markReady5.Text = "Mark as ready";
+            this.btn_markReady5.Text = "Markeer als gereed";
             this.btn_markReady5.UseVisualStyleBackColor = true;
             this.btn_markReady5.Click += new System.EventHandler(this.btn_markReady5_Click);
             // 
@@ -233,9 +233,9 @@
             // 
             this.btn_markReady6.Location = new System.Drawing.Point(558, 625);
             this.btn_markReady6.Name = "btn_markReady6";
-            this.btn_markReady6.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady6.Size = new System.Drawing.Size(128, 23);
             this.btn_markReady6.TabIndex = 18;
-            this.btn_markReady6.Text = "Mark as ready";
+            this.btn_markReady6.Text = "Markeer als gereed";
             this.btn_markReady6.UseVisualStyleBackColor = true;
             this.btn_markReady6.Click += new System.EventHandler(this.btn_markReady6_Click);
             // 
@@ -287,9 +287,9 @@
             // 
             this.btn_markReady7.Location = new System.Drawing.Point(997, 625);
             this.btn_markReady7.Name = "btn_markReady7";
-            this.btn_markReady7.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady7.Size = new System.Drawing.Size(123, 23);
             this.btn_markReady7.TabIndex = 23;
-            this.btn_markReady7.Text = "Mark as ready";
+            this.btn_markReady7.Text = "Markeer als gereed";
             this.btn_markReady7.UseVisualStyleBackColor = true;
             this.btn_markReady7.Click += new System.EventHandler(this.btn_markReady7_Click);
             // 
@@ -297,9 +297,9 @@
             // 
             this.btn_markReady8.Location = new System.Drawing.Point(1376, 625);
             this.btn_markReady8.Name = "btn_markReady8";
-            this.btn_markReady8.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady8.Size = new System.Drawing.Size(109, 23);
             this.btn_markReady8.TabIndex = 24;
-            this.btn_markReady8.Text = "Mark as ready";
+            this.btn_markReady8.Text = "Markeer als gereed";
             this.btn_markReady8.UseVisualStyleBackColor = true;
             this.btn_markReady8.Click += new System.EventHandler(this.btn_markReady8_Click);
             // 
@@ -307,9 +307,9 @@
             // 
             this.btn_markReady9.Location = new System.Drawing.Point(125, 960);
             this.btn_markReady9.Name = "btn_markReady9";
-            this.btn_markReady9.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady9.Size = new System.Drawing.Size(111, 23);
             this.btn_markReady9.TabIndex = 25;
-            this.btn_markReady9.Text = "Mark as ready";
+            this.btn_markReady9.Text = "Markeer als gereed";
             this.btn_markReady9.UseVisualStyleBackColor = true;
             this.btn_markReady9.Click += new System.EventHandler(this.btn_markReady9_Click);
             // 
@@ -317,9 +317,9 @@
             // 
             this.btn_markReady10.Location = new System.Drawing.Point(567, 960);
             this.btn_markReady10.Name = "btn_markReady10";
-            this.btn_markReady10.Size = new System.Drawing.Size(94, 23);
+            this.btn_markReady10.Size = new System.Drawing.Size(119, 23);
             this.btn_markReady10.TabIndex = 26;
-            this.btn_markReady10.Text = "Mark as ready";
+            this.btn_markReady10.Text = "Markeer als gereed";
             this.btn_markReady10.UseVisualStyleBackColor = true;
             this.btn_markReady10.Click += new System.EventHandler(this.btn_markReady10_Click);
             // 
@@ -328,90 +328,90 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(159, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Table 1";
+            this.label1.Text = "Tafel 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(596, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Table 2";
+            this.label2.Text = "Tafel 2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1014, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Table 3";
+            this.label3.Text = "Tafel 3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(1407, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 30;
-            this.label4.Text = "Table 4";
+            this.label4.Text = "Tafel 4";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(148, 379);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Table 5";
+            this.label5.Text = "Tafel 5";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(596, 379);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 32;
-            this.label6.Text = "Table 6";
+            this.label6.Text = "Tafel 6";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(1014, 369);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Table 7";
+            this.label7.Text = "Tafel 7";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(1407, 379);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 34;
-            this.label8.Text = "Table 8";
+            this.label8.Text = "Tafel 8";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(148, 680);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 35;
-            this.label9.Text = "Table 9";
+            this.label9.Text = "Tafel 9";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(590, 680);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 36;
-            this.label10.Text = "Table 10";
+            this.label10.Text = "Tafel 10";
             // 
             // timerRefresh
             // 
