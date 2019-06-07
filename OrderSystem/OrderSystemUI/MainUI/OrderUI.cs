@@ -47,7 +47,7 @@ namespace OrderSystemUI.MainUI
 
             foreach (ListView listView in listViews)
             {
-                listView.Clear();
+                listView.Items.Clear();
             }
 
             foreach (Item item in items)
@@ -72,6 +72,8 @@ namespace OrderSystemUI.MainUI
         {
             ListViewItem listViewItem = new ListViewItem(item.name);
             listViewItem.SubItems.Add("0");
+            listViewItem.SubItems.Add("");
+            listViewItem.SubItems.Add(item.stock.ToString());
             listView.Items.Add(listViewItem);
         }
 
@@ -96,11 +98,15 @@ namespace OrderSystemUI.MainUI
         //Lowers the quantity of selected item
         private void SubtractItem(ListView listView)
         {
-            if (listView.SelectedItems.Count > 0 && Convert.ToInt32(listView_Desserts.SelectedItems[0].SubItems[1].Text) >= 1)
+            if (listView.SelectedItems.Count > 0)
             {
-                int count = Convert.ToInt32(listView_Desserts.SelectedItems[0].SubItems[1].Text) - 1;
-                listView_Desserts.SelectedItems[0].SubItems[1].Text = count.ToString();
+                if (Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) >= 1)
+                {
+                    int count = Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) - 1;
+                    listView.SelectedItems[0].SubItems[1].Text = count.ToString();
+                }
             }
+            
         }
 
         private void AddItemToOrder(int amount, string comment, Item item)
