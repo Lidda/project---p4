@@ -92,5 +92,28 @@ namespace OrderSystemLogic
                 throw new Exception("Could not get yearly profits from database");
             }
         }
+
+        public void Set_Order_To_Paid(Order order)
+        {
+            try
+            {
+                orderDAL.SetOrderToPaid(order);
+            }
+            catch
+            {
+                throw new Exception("something went wrong");
+            }
+        }
+        public void Edit_Order_Comment(Order order)
+        {
+            try
+            {
+                orderDAL.EditOrderComment(order);
+            }
+            catch
+            {
+                throw new Exception("something went wrong");
+            }
+        }
     }
 }

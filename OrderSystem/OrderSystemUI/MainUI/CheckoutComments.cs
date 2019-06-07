@@ -15,7 +15,7 @@ namespace OrderSystemUI.MainUI
     public partial class CheckoutComments : Form
     {
         private Order order;
-        private CheckoutLogic logic = new CheckoutLogic();
+        private OrderLogic orderLogic = new OrderLogic();
         public CheckoutComments(Order order)
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace OrderSystemUI.MainUI
         {
             //add comment/alter comment
             order.comment = txtComment.Text;
-            logic.EditComment(order);
+            orderLogic.Edit_Order_Comment(order);
             InitComments();
         }
 
@@ -61,7 +61,7 @@ namespace OrderSystemUI.MainUI
             {
                 //delete comment
                 order.comment = "";
-                logic.EditComment(order);
+                orderLogic.Edit_Order_Comment(order);
             }
             InitComments();
         }

@@ -13,7 +13,6 @@ namespace OrderSystemModel
         public double price { get; set; }
         public int tax { get; set; }
         public string foodtype { get; set; }
-        public int amount { get; set; }
         public int stock { get; set; }
         public string course { get; set; }
         public string description { get; set; }

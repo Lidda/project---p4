@@ -273,7 +273,7 @@ namespace OrderSystemUI.MainUI
         private void btn_ConfirmOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(table, employee);
+            CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(new Order());
             orderOverview.ShowDialog();
         }
     }
