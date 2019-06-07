@@ -251,6 +251,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.Location = new System.Drawing.Point(149, 512);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

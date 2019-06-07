@@ -34,6 +34,7 @@ namespace OrderSystemUI.MainUI
                 ShowPanel("Overview");
             }
         }
+
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
@@ -61,8 +62,8 @@ namespace OrderSystemUI.MainUI
                 this.Hide();
                 if (order.Employee.type == OrderSystemModel.employeeType.Barman)
                 {
-                    //BarUI barUI = new BarUI(order.Employee);
-                    //barUI.ShowDialog();
+                    BarUI barUI = new BarUI(order.Employee);
+                    barUI.ShowDialog();
                 }
                 else if (order.Employee.type == OrderSystemModel.employeeType.Serveerder)
                 {
@@ -71,8 +72,8 @@ namespace OrderSystemUI.MainUI
                 }
                 else if (order.Employee.type == OrderSystemModel.employeeType.Kok)
                 {
-                    //KitchenUI kitchenUI = new KitchenUI(order.Employee);
-                    //kitchenUI.ShowDialog();
+                    KitchenUI kitchenUI = new KitchenUI(order.Employee);
+                    kitchenUI.ShowDialog();
                 }
                 else if (order.Employee.type == OrderSystemModel.employeeType.Manager)
                 {

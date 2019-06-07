@@ -47,14 +47,11 @@ namespace OrderSystemUI.MainUI
             this.Hide();
             checkoutconfUI.ShowDialog();
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
         }
-
-        
     }
 }
