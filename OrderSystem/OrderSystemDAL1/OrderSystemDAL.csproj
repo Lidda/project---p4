@@ -50,7 +50,6 @@
     <Compile Include="OrderItemDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableDAL.cs" />
-    <Compile Include="TakeOrderDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OrderSystemModel1\OrderSystemModel.csproj">

@@ -42,5 +42,73 @@ namespace OrderSystemDAL {
         public void ChangeOrderItemStatus() {
 
         }
+
+        //Adds items to orders
+        public void AddItemsToOrder(Order order)
+        {
+            foreach (OrderItem orderItem in order.orderItems)
+            {
+                //Adds items to ORDER_CONTAINS
+                try
+                {
+                    //Tries to insert new orderItem into database
+                    string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
+                    SqlParameter[] sqlParametersAdd = new SqlParameter[]
+                    {
+                        new SqlParameter("@itemID", orderItem.item.itemID),
+                        new SqlParameter("@amount", orderItem.amount),
+                        new SqlParameter("@comment", orderItem.comment),
+                    };
+                    ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
+                }
+                catch
+                {
+                    //Updates the orderItem amount and comment if inserting fails
+                    string queryUpdateOrder = "UPDATE [ORDER_CONTAINS] SET amount = amount + @amount, comment = @comment WHERE itemID = @itemID AND orderID = @orderID)";
+                    SqlParameter[] sqlParametersUpdateOrderItem = new SqlParameter[]
+                    {
+                        new SqlParameter("@itemID", orderItem.item.itemID),
+                        new SqlParameter("@amount", orderItem.amount),
+                        new SqlParameter("@comment", orderItem.comment),
+                    };
+                    ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrderItem);
+                }
+
+                //Updates stock in ITEMS
+                string querySubtractFromStock = "UPDATE ITEMS set stock = stock - @amount WHERE itemID = @itemID";
+                SqlParameter[] sqlParametersUpdate = new SqlParameter[]
+                {
+                    new SqlParameter("@amount", orderItem.amount),
+                    new SqlParameter("@itemID", orderItem.item.itemID),
+                };
+                ExecuteEditQuery(querySubtractFromStock, sqlParametersUpdate);
+            }
+        }
+
+        //Remove item(s) from an order
+        public void RemoveItemsFromOrder(List<OrderItem> orderItems)
+        {
+            foreach (OrderItem orderItem in orderItems)
+            {
+                //Updates the items in ORDER_CONTAINS
+                string queryUpdateOrder = "UPDATE ORDER_CONTAINS set amount - @amount WHERE itemID = @itemID AND orderID = @orderID";
+                SqlParameter[] sqlParametersUpdateOrder = new SqlParameter[]
+                {
+                    new SqlParameter("@amount", orderItem.amount),
+                    new SqlParameter("@itemID", orderItem.item.itemID),
+                    // FIX ME new SqlParameter("@orderID", order.orderID),
+                };
+                ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
+
+                //Updates stock in ITEMS
+                string querySubtractFromStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
+                SqlParameter[] sqlParametersUpdate = new SqlParameter[]
+                {
+                    new SqlParameter("@amount", orderItem.amount),
+                    new SqlParameter("@itemID", orderItem.item.itemID),
+                };
+                ExecuteEditQuery(querySubtractFromStock, sqlParametersUpdate);
+            }
+        }
     }
 }

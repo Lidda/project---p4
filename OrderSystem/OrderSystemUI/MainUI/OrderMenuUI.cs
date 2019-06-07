@@ -13,11 +13,10 @@ using static OrderSystemModel.Table;
 
 namespace OrderSystemUI.MainUI {
     public partial class OrderMenuUI : Form {
-        Employee employee;
         Table table;
         TableOverviewUI tableUI;
         TableLogic tableLogic = new TableLogic();
-        TakeOrderLogic takeOrderLogic = new TakeOrderLogic();
+        OrderLogic orderLogic = new OrderLogic();
         Order order = new Order();
 
         public OrderMenuUI(Employee employee, Table table, TableOverviewUI tableUI) {
@@ -25,11 +24,12 @@ namespace OrderSystemUI.MainUI {
 
             this.tableUI = tableUI;
             this.order.Employee = employee;
+            this.order.Table = table;
             this.table = table;
             this.Text = "table " + table.ID + "- Order Menu";
             tableNumber.Text = "Table " + table.ID;
 
-            takeOrderLogic.AddNewOrder(employee.ID, table.ID);
+            orderLogic.AddNewOrder(order);
 
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);
@@ -92,20 +92,11 @@ namespace OrderSystemUI.MainUI {
             }
         }
 
-        private void MakeNewOrder(int orderID)
-        {
-            this.order.orderID = orderID++;
-            this.order.Employee = this.employee;
-            this.order.Table = this.table;
-            this.order.orderDate = DateTime.Now;
-        }
-
         private void btn_LunchMenu_Click(object sender, EventArgs e)
         {
-            int orderID = takeOrderLogic.GetLatestOrderID();
 
             this.Hide();
-            OrderUI lunchUI = new OrderUI(employee, table, orderID, this);
+            OrderUI lunchUI = new OrderUI(order, this);
             lunchUI.ShowDialog();
         }
 

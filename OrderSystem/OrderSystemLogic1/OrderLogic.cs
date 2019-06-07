@@ -115,5 +115,41 @@ namespace OrderSystemLogic
                 throw new Exception("something went wrong");
             }
         }
+
+        public void AddNewOrder(Order order)
+        {
+            try
+            {
+                orderDAL.AddNewOrder(order);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
+
+        public void RemoveOrder(Order order)
+        {
+            try
+            {
+                orderDAL.RemoveOrder(order);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong while removing order");
+            }
+        }
+
+        public Order GetLatestOrderID()
+        {
+            try
+            {
+                return orderDAL.DB_Get_Latest_Order();
+            }
+            catch
+            {
+                throw new Exception("Something went wrong while retrieving orderID");
+            }
+        }
     }
 }

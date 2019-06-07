@@ -201,5 +201,57 @@ namespace OrderSystemDAL
         }
         //einde afrekenen queries
 
+        //Adds new order to ORDERS
+        public void AddNewOrder(Order order)
+        {
+            string query = "INSERT INTO [ORDERS] (employeeID, tableID) VALUES (@employeeID, @tableID)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@employeeID", order.Employee.ID),
+                new SqlParameter("@tableID", order.Table.ID),
+            };
+            ExecuteEditQuery(query, sqlParameters);
+
+        }
+
+        //Removes an order from both ORDERS and ORDER_CONTAINS
+        public void RemoveOrder(Order order)
+        {
+            string query = "DELETE FROM ORDERS, ORDER_CONTAINS WHERE orderID = @orderID";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@orderID", order.orderID),
+            };
+            ExecuteSelectQuery(query, sqlParameters);
+        }
+
+        public Order DB_Get_Latest_Order()
+        {
+            string query = "SELECT MAX(orderID) FROM ORDERS";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return GetOrder(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Order GetOrder(DataTable dataTable)
+        {
+            Order order = new Order();
+            order.orderID = (int)dataTable.Rows[0]["OrderID"];
+            order.orderDate = (DateTime)dataTable.Rows[0]["DateOrdered"];
+            order.orderItems = orderItemDAL.Db_Get_All_OrderItems((int)dataTable.Rows[0]["OrderID"]);
+            order.Employee = employeeDAL.Db_Get_Employee((int)dataTable.Rows[0]["EmployeeID"]);
+            order.Table = tableDAL.DbGetTableByID((int)dataTable.Rows[0]["tableID"]);
+            if (dataTable.Rows[0]["comment"] == DBNull.Value)
+            {
+                order.comment = "";
+            }
+            else
+            {
+                order.comment = (string)dataTable.Rows[0]["comment"];
+            }
+            order.PaymentStatus = (bool)dataTable.Rows[0]["PaymentStatus"];
+            order.totalAmount = (double)dataTable.Rows[0]["TotalAmount"];
+
+            return order;
+        }
     }
 }
