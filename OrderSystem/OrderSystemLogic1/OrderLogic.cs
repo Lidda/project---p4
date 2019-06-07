@@ -163,5 +163,17 @@ namespace OrderSystemLogic
                 throw new Exception("Something went wrong while retrieving order");
             }
         }
+
+        public Order GetTableOrder(Table table)
+        {
+            try
+            {
+                return orderDAL.Db_Get_Table_Order(table);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong while retrieving orderID");
+            }
+        }
     }
 }
