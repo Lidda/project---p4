@@ -34,6 +34,8 @@ namespace OrderSystemUI.MainUI {
 
         private void btnBack_Click(object sender, EventArgs e) {
             this.Hide();
+            tableUI.tables = tableLogic.GetAllTables();
+            tableUI.SetTableColors();
             tableUI.Show();
             this.Close();
         }

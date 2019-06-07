@@ -72,9 +72,9 @@ namespace OrderSystemDAL
         }
 
         //Query to update status of order
-        public void OrderStatus(int tableID, int statusChange)
+        public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
         {
-            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =( '" + statusChange + "') FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID WHERE ORDERS.TABLEID = ( '" + tableID + "')";
+            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.[status] = " + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID WHERE ORDERS.TABLEID = " + tableID + " AND ORDER_CONTAINS.[status] = " + (int)status + "";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

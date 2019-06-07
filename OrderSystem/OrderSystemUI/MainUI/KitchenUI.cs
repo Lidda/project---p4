@@ -491,110 +491,120 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 1;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order1();
             listView1.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady2_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 2;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order2();
             listView2.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady3_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 3;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order3();
             listView3.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady4_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 4;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order4();
             listView4.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady5_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 5;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order5();
             listView5.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady6_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 6;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order6();
             listView6.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady7_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 7;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order7();
             listView7.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady8_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 8;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order8();
             listView8.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady9_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 9;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order9();
             listView9.BackColor = Color.MediumSeaGreen;
         }
 
         private void btn_markReady10_Click(object sender, EventArgs e)
         {
-            int statusChange = 1;
+            OrderItem.Status status = OrderItem.Status.ordered;
+            OrderItem.Status statusChange = OrderItem.Status.ready;
             int tableID = 10;
 
 
-            orderLogic.OrderStatus(tableID, statusChange);
+            orderLogic.ChangeOrderStatus(tableID, status, statusChange);
             order10();
             listView10.BackColor = Color.MediumSeaGreen;
         }

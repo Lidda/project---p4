@@ -15,12 +15,12 @@ using System.Timers;
 
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {
+        public List<Table> tables;
         List<Button> buttons = new List<Button>();
         List<Order> orders = new List<Order>();
         Employee employee;
-        List<Table> tables;
         TableLogic tableLogic;
-        //OrderLogic orderLogic = new OrderLogic();
+        OrderLogic orderLogic = new OrderLogic();
         private static System.Timers.Timer timer;
 
         public TableOverviewUI(Employee employee) {
@@ -41,14 +41,13 @@ namespace OrderSystemUI {
 
             //initialize tables by getting them from the database
             tables = tableLogic.GetAllTables();
+            //SetTableColors();
             SetTableColors();
-            //orders = orderLogic.Get_All_Orders();
-            //CheckOrdersStatusses(orders);
 
             TablesTimer();
         }
 
-        private void SetTableColors() {
+        public void SetTableColors() {
             for (int i = 0; i < tables.Count; i++) {
                 if (tables[i].Status == Availability.Available) {
                     buttons[i].BackColor = Color.FromKnownColor(KnownColor.AppWorkspace);
@@ -109,52 +108,52 @@ namespace OrderSystemUI {
 
         private void mark1_Click_1(object sender, EventArgs e) {
             mark1.Hide();
-            //barKitchenLogic.OrderStatus(tables[0].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
             mark2.Hide();
-            //barKitchenLogic.OrderStatus(tables[1].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
             orderMark3.Hide();
-            //barKitchenLogic.OrderStatus(tables[2].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[2].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark4_Click_1(object sender, EventArgs e) {
             mark4.Hide();
-            //barKitchenLogic.OrderStatus(tables[3].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[3].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark5_Click_1(object sender, EventArgs e) {
             mark5.Hide();
-            //barKitchenLogic.OrderStatus(tables[4].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[4].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark6_Click_1(object sender, EventArgs e) {
             mark6.Hide();
-            //barKitchenLogic.OrderStatus(tables[5].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[5].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark7_Click_1(object sender, EventArgs e) {
             mark7.Hide();
-            //barKitchenLogic.OrderStatus(tables[6].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[6].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark8_Click_1(object sender, EventArgs e) {
             mark8.Hide();
-            //barKitchenLogic.OrderStatus(tables[7].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[7].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark9_Click_1(object sender, EventArgs e) {
             mark9.Hide();
-            //barKitchenLogic.OrderStatus(tables[8].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[8].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void mark10_Click_1(object sender, EventArgs e) {
             mark10.Hide();
-            //barKitchenLogic.OrderStatus(tables[9].ID, 2);
+            orderLogic.ChangeOrderStatus(tables[9].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
         }
 
         private void InitOrderUI(Table table) {
@@ -166,29 +165,29 @@ namespace OrderSystemUI {
 
         private void TablesTimer() {
             timer = new System.Timers.Timer();
-            timer.Interval = 5000;
+            timer.Interval = 1;
             timer.Elapsed += OnTimedEvent;
             timer.AutoReset = true;
             timer.Enabled = true;
         }
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
-            //update table statusses etc.
+            //sets the interval to check the database every 15 seconds
+            timer.Interval = 15000;
+
+            //reload database data
             tables = tableLogic.GetAllTables();
             OrderLogic orderLogic = new OrderLogic();
             orders = orderLogic.Get_All_Orders();
 
             //ESSENTIAL: excutes both methods on the main thread
+            // methods update table colors + order status marks
             Invoke((MethodInvoker)delegate {
-                CheckOrdersStatusses(orders);
                 SetTableColors();
+                CheckOrdersStatusses(orders);
             });
         }
 
-        //FIX ME 
-        private void UpdateUI() {
-
-        }
 
         //loops through orders: then loops through each orderItem IN orders and checks the status
         private void CheckOrdersStatusses(List<Order> orders) {

@@ -26,14 +26,14 @@ namespace OrderSystemLogic
 
         public List<Order> Get_All_Orders()
         {
-            //try
-            //{
+            try
+            {
                 return orderDAL.Db_Get_All_Orders();
-            //}
-            //catch
-            //{
-             //   throw new Exception("Could not get orders from database");
-            //}
+            }
+            catch
+            {
+               throw new Exception("Could not get orders from database");
+            }
         }
 
         public List<Order> GetFoodOrders(int tableID)
@@ -52,9 +52,9 @@ namespace OrderSystemLogic
 
         }
 
-        public void OrderStatus(int tableID, int statusChange)
+        public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
         {
-            orderDAL.OrderStatus(tableID, statusChange);
+            orderDAL.ChangeOrderStatus(tableID, status, statusChange);
         }
 
         public List<Profit> DailyProfit()
