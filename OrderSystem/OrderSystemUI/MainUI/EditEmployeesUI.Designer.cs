@@ -161,17 +161,17 @@
             // Naam
             // 
             this.Naam.Text = "Naam";
-            this.Naam.Width = 130;
+            this.Naam.Width = 120;
             // 
             // Gebruikersnaam
             // 
             this.Gebruikersnaam.Text = "Gebruikersnaam";
-            this.Gebruikersnaam.Width = 114;
+            this.Gebruikersnaam.Width = 107;
             // 
             // Wachtwoord
             // 
             this.Wachtwoord.Text = "Wachtwoord";
-            this.Wachtwoord.Width = 114;
+            this.Wachtwoord.Width = 111;
             // 
             // Type
             // 

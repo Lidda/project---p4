@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OrderSystemModel
 {
-    public enum Type { Barman = 1, Serveerder, Kok, Manager };
+    public enum employeeType { Barman = 1, Serveerder, Kok, Manager };
     public class Employee
     {
         public int ID;
         public string name;
         public string username;
         public string password;
-        public Type type;
+        public employeeType type;
     }
 }

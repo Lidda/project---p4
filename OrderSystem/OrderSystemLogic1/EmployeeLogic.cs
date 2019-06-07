@@ -8,7 +8,6 @@ using OrderSystemModel;
 
 namespace OrderSystemLogic
 {
-    //FIX ME: maybe make a singleton? << je hebt deze vaker nodig, bij login en bij manage employees: dualton?
     public class EmployeeLogic
     {
         EmployeeDAL employee_db = new EmployeeDAL();
@@ -21,7 +20,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Yikes, dat is niet best");
+                throw new Exception("failed to add employee to database");
             }
         }
 
@@ -33,7 +32,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Yikes, dat is ook niet best");
+                throw new Exception("failed to get employees from database");
             }            
         }
 
@@ -45,7 +44,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Yikes, dat is  al helemaal niet best");
+                throw new Exception("failed to edit employee in databse");
             }
         }
 
@@ -57,7 +56,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Yikes, dat is  al helemaaaaaal niet best");
+                throw new Exception("failed to delete empoyee from database");
             }
         }
     }

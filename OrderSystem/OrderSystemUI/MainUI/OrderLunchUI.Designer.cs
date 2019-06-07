@@ -500,6 +500,7 @@
             this.Controls.Add(this.lbl_DessertHeader);
             this.Controls.Add(this.btnBack);
             this.Name = "OrderLunchUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lunch menu";
             this.ResumeLayout(false);
 
