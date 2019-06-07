@@ -15,7 +15,7 @@ namespace OrderSystemUI.MainUI
     public partial class CheckoutPay : Form
     {
         private Order order;
-        private CheckoutLogic logic = new CheckoutLogic();
+        private OrderLogic orderLogic = new OrderLogic();
         public CheckoutPay(Order order)
         {
             InitializeComponent();
@@ -42,19 +42,16 @@ namespace OrderSystemUI.MainUI
         }
         private void Pay()
         {
-            logic.SetToPaid(order);
+            orderLogic.Set_Order_To_Paid(order);
             CheckoutConfirmation checkoutconfUI = new CheckoutConfirmation(order);
             this.Hide();
             checkoutconfUI.ShowDialog();
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
             coUI.ShowDialog();
         }
-
-        
     }
 }

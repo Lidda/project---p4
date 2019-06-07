@@ -14,16 +14,17 @@ namespace OrderSystemUI.MainUI
 {
     public partial class CheckoutOverviewOrder : Form
     {
-        private CheckoutLogic logic = new CheckoutLogic();
+        private OrderLogic logic = new OrderLogic();
         private Order order;
 
-        public CheckoutOverviewOrder(Table table, Employee employee)
+        public CheckoutOverviewOrder(Order order)
         {
             InitializeComponent();
+            this.order = order;
+
             //hide
             lblTip.Hide();
             lblTipAmount.Hide();
-            order = logic.GetOrder(table, employee);
             if (order.orderItems.Count == 0)
             {
                 ShowPanel("Error");
@@ -33,17 +34,7 @@ namespace OrderSystemUI.MainUI
                 ShowPanel("Overview");
             }
         }
-        public CheckoutOverviewOrder(Order order)
-        {
-            InitializeComponent();
-            this.order = order;
 
-            //hide
-            lblTip.Hide();
-            lblTipAmount.Hide();
-
-            ShowPanel("Overview");
-        }
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
@@ -69,22 +60,22 @@ namespace OrderSystemUI.MainUI
                 //go back to overview
                 //opens th form corresponding with user
                 this.Hide();
-                if (order.Employee.type == OrderSystemModel.Type.Barman)
+                if (order.Employee.type == OrderSystemModel.employeeType.Barman)
                 {
-                    //BarUI barUI = new BarUI(order.Employee);
-                    //barUI.ShowDialog();
+                    BarUI barUI = new BarUI(order.Employee);
+                    barUI.ShowDialog();
                 }
-                else if (order.Employee.type == OrderSystemModel.Type.Serveerder)
+                else if (order.Employee.type == OrderSystemModel.employeeType.Serveerder)
                 {
                     TableOverviewUI waiterUI = new TableOverviewUI(order.Employee);
                     waiterUI.ShowDialog();
                 }
-                else if (order.Employee.type == OrderSystemModel.Type.Kok)
+                else if (order.Employee.type == OrderSystemModel.employeeType.Kok)
                 {
-                    //KitchenUI kitchenUI = new KitchenUI(order.Employee);
-                    //kitchenUI.ShowDialog();
+                    KitchenUI kitchenUI = new KitchenUI(order.Employee);
+                    kitchenUI.ShowDialog();
                 }
-                else if (order.Employee.type == OrderSystemModel.Type.Manager)
+                else if (order.Employee.type == OrderSystemModel.employeeType.Manager)
                 {
                     ManagerUI managerUI = new ManagerUI(order.Employee);
                     managerUI.ShowDialog();
@@ -128,7 +119,7 @@ namespace OrderSystemUI.MainUI
                 foreach(OrderItem item in order.orderItems)
                 {
                     ListViewItem li;
-                    if (item.item.comment == "")
+                    if (string.IsNullOrWhiteSpace(item.item.comment))
                     {
                         li = new ListViewItem(item.item.name);
                     }
@@ -136,7 +127,7 @@ namespace OrderSystemUI.MainUI
                     {
                         li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.item.comment));
                     }
-                    li.SubItems.Add(item.item.amount.ToString());
+                    li.SubItems.Add(item.amount.ToString());
                     li.SubItems.Add(item.GetAmount("Total").ToString("0.00"));
                     listViewOrderItems.Items.Add(li);
                 }
@@ -174,7 +165,7 @@ namespace OrderSystemUI.MainUI
             //view comment
             if (listViewOrderItems.SelectedItems.Count >= 1)
             {
-               string comment = listViewOrderItems.SelectedItems[0].ToString();
+               string comment = listViewOrderItems.SelectedItems[0].Text;
                 MessageBox.Show(comment);
             }
             

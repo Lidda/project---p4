@@ -75,7 +75,7 @@ namespace OrderSystemDAL
                     name = (string)dr["name"],
                     username = (string)(dr["username"].ToString()),
                     password = (string)(dr["password"].ToString()),
-                    type = (OrderSystemModel.Type)dr["type"]
+                    type = (OrderSystemModel.employeeType)dr["type"]
                 };
                 employees.Add(employee);
             }
@@ -99,7 +99,7 @@ namespace OrderSystemDAL
                 DataRow dr = dataTable.Rows[0];
                 employee.ID = (int)dr["employeeID"];
                 employee.name = (string)dr["name"];
-                employee.type = (OrderSystemModel.Type)dr["type"];
+                employee.type = (OrderSystemModel.employeeType)dr["type"];
                 return employee;
             }
 
