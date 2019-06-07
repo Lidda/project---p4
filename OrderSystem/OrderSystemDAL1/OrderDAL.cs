@@ -227,7 +227,7 @@ namespace OrderSystemDAL
 
         public Order DB_Get_Latest_Order()
         {
-            string query = "SELECT MAX(orderID) FROM ORDERS";
+            string query = "SELECT * FROM ORDERS WHERE orderID = (SELECT MAX(orderID) FROM ORDERS)";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return GetOrder(ExecuteSelectQuery(query, sqlParameters));
         }

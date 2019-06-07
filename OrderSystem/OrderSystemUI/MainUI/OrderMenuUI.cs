@@ -31,6 +31,8 @@ namespace OrderSystemUI.MainUI {
 
             orderLogic.AddNewOrder(order);
 
+            order = orderLogic.GetLatestOrder();
+
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);
             tableUI.Hide();

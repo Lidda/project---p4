@@ -140,7 +140,7 @@ namespace OrderSystemLogic
             }
         }
 
-        public Order GetLatestOrderID()
+        public Order GetLatestOrder()
         {
             try
             {

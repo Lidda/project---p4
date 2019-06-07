@@ -53,13 +53,14 @@ namespace OrderSystemDAL {
                 {
                     //Tries to insert new orderItem into database
                     string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
-                    SqlParameter[] sqlParametersAdd = new SqlParameter[]
+                    SqlParameter[] sqlParametersAddOrderItem = new SqlParameter[]
                     {
+                        new SqlParameter("@orderID", order.orderID),
                         new SqlParameter("@itemID", orderItem.item.itemID),
                         new SqlParameter("@amount", orderItem.amount),
                         new SqlParameter("@comment", orderItem.comment),
                     };
-                    ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
+                    ExecuteEditQuery(queryAddToOrder, sqlParametersAddOrderItem);
                 }
                 catch
                 {
@@ -67,6 +68,7 @@ namespace OrderSystemDAL {
                     string queryUpdateOrder = "UPDATE [ORDER_CONTAINS] SET amount = amount + @amount, comment = @comment WHERE itemID = @itemID AND orderID = @orderID)";
                     SqlParameter[] sqlParametersUpdateOrderItem = new SqlParameter[]
                     {
+                        new SqlParameter("@orderID", order.orderID),
                         new SqlParameter("@itemID", orderItem.item.itemID),
                         new SqlParameter("@amount", orderItem.amount),
                         new SqlParameter("@comment", orderItem.comment),
