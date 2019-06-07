@@ -22,16 +22,20 @@ namespace OrderSystemUI.MainUI {
         public OrderMenuUI(Employee employee, Table table, TableOverviewUI tableUI) {
             InitializeComponent();
 
-            this.tableUI = tableUI;
             this.order.Employee = employee;
             this.order.Table = table;
+            this.tableUI = tableUI;
             this.table = table;
             this.Text = "table " + table.ID + "- Order Menu";
             tableNumber.Text = "Table " + table.ID;
 
-            orderLogic.AddNewOrder(order);
+            order = orderLogic.GetLatestTableOrder(table);
 
-            order = orderLogic.GetLatestOrder();
+            if (order.PaymentStatus)
+            {
+                orderLogic.AddNewOrder(order);
+                order = orderLogic.GetLatestOrder();
+            }
 
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);

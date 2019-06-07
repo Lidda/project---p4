@@ -253,5 +253,15 @@ namespace OrderSystemDAL
 
             return order;
         }
+
+        public Order Db_Get_LatestTableOrder(Table table)
+        {
+            string query = "SELECT TOP 1 orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE tableID = 7 ORDER BY orderID desc";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@tableID", table.ID)
+            };
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
+        }
     }
 }

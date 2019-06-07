@@ -90,8 +90,16 @@ namespace OrderSystemUI.MainUI
         {
             if (listView.SelectedItems.Count > 0)
             {
-                int count = Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) + 1;
-                listView.SelectedItems[0].SubItems[1].Text = count.ToString();
+                if (Convert.ToInt32(listView.SelectedItems[0].SubItems[3].Text) == 0)
+                {
+                    MessageBox.Show("Error", "Dit product is niet meer op voorraad");
+                }
+                else
+                {
+                    int count = Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) + 1;
+                    listView.SelectedItems[0].SubItems[1].Text = count.ToString();
+                }
+                
             }
         }
 
@@ -109,13 +117,12 @@ namespace OrderSystemUI.MainUI
             
         }
 
-        private void AddItemToOrder(int amount, string comment, Item item)
+        private void AddItemToOrder(int amount, Item item)
         {
             OrderItem orderItem = new OrderItem();
 
             orderItem.item = item;
             orderItem.amount = amount;
-            orderItem.comment = comment;
             orderItem.status = OrderItem.Status.ordered;
 
             order.orderItems.Add(orderItem);
@@ -142,9 +149,9 @@ namespace OrderSystemUI.MainUI
                     if (Convert.ToInt32(listView.Items[i].SubItems[1].Text) >= 1)
                     {
                         int amount = Convert.ToInt32(listView.Items[i].SubItems[1].Text);
-                        Item item = items.Find(j => j.name == listView_Starters.Items[i].SubItems[0].Text);
+                        Item item = items.Find(j => j.name == listView.Items[i].SubItems[0].Text);
 
-                        AddItemToOrder(amount, listView.Items[i].SubItems[2].Text, item);
+                        AddItemToOrder(amount, item);
                     }
                 }
             }
@@ -181,6 +188,62 @@ namespace OrderSystemUI.MainUI
         private void btn_SubtractMainCourse_Click(object sender, EventArgs e)
         {
             SubtractItem(listView_MainCourses);
+        }
+
+        private void btn_CommentStarter_Click(object sender, EventArgs e)
+        {
+            ClearListViewSelection(listView_Starters);
+            ShowPanel("Comment");
+        }
+
+        private void btn_CommentMainCourse_Click(object sender, EventArgs e)
+        {
+            ClearListViewSelection(listView_MainCourses);
+            ShowPanel("Comment");
+        }
+
+        private void btn_CommentDessert_Click(object sender, EventArgs e)
+        {
+            ClearListViewSelection(listView_Desserts);
+            ShowPanel("Comment");
+        }
+
+        private void ClearListViewSelection(ListView selectedListView)
+        {
+            foreach (ListView listView in listViews)
+            {
+                if (listView != selectedListView)
+                {
+                    listView.SelectedItems.Clear();
+                }
+            }
+        }
+
+        private void btn_AddCommentToItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListView listView in listViews)
+            {
+                if (listView.SelectedItems.Count >= 0)
+                {
+                    listView.SelectedItems[0].SubItems[4].Text = txt_AddCommentToItem.Text;
+
+                    pnl_Comment.Hide();
+                }
+            }
+        }
+
+        private void btn_CancelComment_Click(object sender, EventArgs e)
+        {
+            txt_AddCommentToItem.Clear();
+            pnl_Comment.Hide();
+        }
+
+        private void ShowPanel(string panelName)
+        {
+            if(panelName == "Comment")
+            {
+                pnl_Comment.Show();
+            }
         }
     }
 }

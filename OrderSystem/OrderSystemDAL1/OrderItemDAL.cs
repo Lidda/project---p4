@@ -51,6 +51,7 @@ namespace OrderSystemDAL {
                 //Adds items to ORDER_CONTAINS
                 try
                 {
+                    DateTime dateTime = DateTime.Now;
                     //Tries to insert new orderItem into database
                     string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
                     SqlParameter[] sqlParametersAddOrderItem = new SqlParameter[]
