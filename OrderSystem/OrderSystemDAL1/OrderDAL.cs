@@ -175,7 +175,16 @@ namespace OrderSystemDAL
 
         //begin afrekenen
         //
-        //
+        //get unpaid order of today
+        public Order Db_Get_Table_Order(Table table)
+        {
+            string query = "SELECT orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE TableID = @tableID AND PaymentStatus = 0 AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@tableID", table.ID)
+            };
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
+        }
         //set order to paid
         public void SetOrderToPaid(Order order)
         {

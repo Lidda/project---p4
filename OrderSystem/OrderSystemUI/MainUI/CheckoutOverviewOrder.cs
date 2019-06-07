@@ -17,6 +17,23 @@ namespace OrderSystemUI.MainUI
         private OrderLogic logic = new OrderLogic();
         private Order order;
 
+        public CheckoutOverviewOrder(Table table)
+        {
+            InitializeComponent();
+            this.order = logic.GetTableOrder(table);
+
+            //hide
+            lblTip.Hide();
+            lblTipAmount.Hide();
+            if (order.orderItems.Count == 0)
+            {
+                ShowPanel("Error");
+            }
+            else
+            {
+                ShowPanel("Overview");
+            }
+        }
         public CheckoutOverviewOrder(Order order)
         {
             InitializeComponent();
@@ -34,7 +51,6 @@ namespace OrderSystemUI.MainUI
                 ShowPanel("Overview");
             }
         }
-
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
