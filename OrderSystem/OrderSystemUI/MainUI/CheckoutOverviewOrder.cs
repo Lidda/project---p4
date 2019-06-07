@@ -14,25 +14,9 @@ namespace OrderSystemUI.MainUI
 {
     public partial class CheckoutOverviewOrder : Form
     {
-        private CheckoutLogic logic = new CheckoutLogic();
+        private OrderLogic logic = new OrderLogic();
         private Order order;
 
-        public CheckoutOverviewOrder(Table table, Employee employee)
-        {
-            InitializeComponent();
-            //hide
-            lblTip.Hide();
-            lblTipAmount.Hide();
-            order = logic.GetOrder(table, employee);
-            if (order.orderItems.Count == 0)
-            {
-                ShowPanel("Error");
-            }
-            else
-            {
-                ShowPanel("Overview");
-            }
-        }
         public CheckoutOverviewOrder(Order order)
         {
             InitializeComponent();
@@ -41,8 +25,14 @@ namespace OrderSystemUI.MainUI
             //hide
             lblTip.Hide();
             lblTipAmount.Hide();
-
-            ShowPanel("Overview");
+            if (order.orderItems.Count == 0)
+            {
+                ShowPanel("Error");
+            }
+            else
+            {
+                ShowPanel("Overview");
+            }
         }
         private void ShowPanel(string panelName)
         {
@@ -128,7 +118,7 @@ namespace OrderSystemUI.MainUI
                 foreach(OrderItem item in order.orderItems)
                 {
                     ListViewItem li;
-                    if (item.item.comment == "")
+                    if (string.IsNullOrWhiteSpace(item.item.comment))
                     {
                         li = new ListViewItem(item.item.name);
                     }
@@ -136,7 +126,7 @@ namespace OrderSystemUI.MainUI
                     {
                         li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.item.comment));
                     }
-                    li.SubItems.Add(item.item.amount.ToString());
+                    li.SubItems.Add(item.amount.ToString());
                     li.SubItems.Add(item.GetAmount("Total").ToString("0.00"));
                     listViewOrderItems.Items.Add(li);
                 }
@@ -174,7 +164,7 @@ namespace OrderSystemUI.MainUI
             //view comment
             if (listViewOrderItems.SelectedItems.Count >= 1)
             {
-               string comment = listViewOrderItems.SelectedItems[0].ToString();
+               string comment = listViewOrderItems.SelectedItems[0].Text;
                 MessageBox.Show(comment);
             }
             

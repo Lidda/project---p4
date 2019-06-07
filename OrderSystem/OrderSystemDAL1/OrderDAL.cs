@@ -170,9 +170,31 @@ namespace OrderSystemDAL
                 years.Add(year);
             }
             return years;
-        }     
+        }
         // eind profits
 
+        //begin afrekenen
+        //
+        //
+        //set order to paid
+        public void SetOrderToPaid(Order order)
+        {
+            //set to paid
+            string query = string.Format("UPDATE ORDERS SET PaymentStatus = 1 WHERE orderID = {0}", order.orderID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+
+            string queryTotalAmount = string.Format("UPDATE ORDERS SET TotalAmount = {0} WHERE orderID = {1}", order.GetTotalAmount("Total").ToString().Replace(',', '.'), order.orderID);
+
+            ExecuteEditQuery(queryTotalAmount, sqlParameters);
+        }
+        // Add comment to order
+        public void EditOrderComment(Order order)
+        {
+            string query = string.Format("UPDATE ORDERS SET comment = '{0}' WHERE orderID = {1}", order.comment, order.orderID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
     }
 }
