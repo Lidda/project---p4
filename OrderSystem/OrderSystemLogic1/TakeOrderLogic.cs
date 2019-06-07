@@ -12,45 +12,6 @@ namespace OrderSystemLogic
     {
         TakeOrderDAL takeOrder_db = new TakeOrderDAL();
 
-        //Gets all drinks from Items
-        public List<Item> GetBeverages()
-        {
-            try
-            {
-                return takeOrder_db.DB_Get_All_Beverages();
-            }
-            catch
-            {
-                throw new Exception("Something went wrong");
-            }
-        }
-
-        //Gets all dinner items from Items
-        public List<Item> GetDinnerItems()
-        {
-            try
-            {
-                return takeOrder_db.DB_Get_All_DinnerItems();
-            }
-            catch
-            {
-                throw new Exception("Something went wrong");
-            }
-        }
-
-        //Gets all lunch items from Items
-        public List<Item> GetLunchItems()
-        {
-            try
-            {
-                return takeOrder_db.DB_Get_All_LunchItems();
-            }
-            catch
-            {
-                throw new Exception("Something went wrong");
-            }
-        }
-
         public void AddItemsToOrder(List<OrderItem> orderItems)
         {
             try

@@ -12,30 +12,6 @@ namespace OrderSystemDAL
     public class TakeOrderDAL : Base
 
     {
-        //Get all drinks from ITEMS
-        public List<Item> DB_Get_All_Beverages()
-        {
-            string query = "SELECT * FROM ITEMS WHERE course = 'Beverage'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetItems(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        //Get all dinner items from ITEMS
-        public List<Item> DB_Get_All_DinnerItems()
-        {
-            string query = "SELECT * FROM ITEMS WHERE foodtype = 'Dinner'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetItems(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        //Get all Lunch items from ITEMS
-        public List<Item> DB_Get_All_LunchItems()
-        {
-            string query = "SELECT * FROM [ITEMS] WHERE foodtype = 'Lunch'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetItems(ExecuteSelectQuery(query, sqlParameters));
-        }
-
         //Gets all items of requisted type
         private List<Item> GetItems(DataTable dataTable)
         {
@@ -93,15 +69,30 @@ namespace OrderSystemDAL
             foreach (OrderItem orderItem in orderItems)
             {
                 //Adds items to ORDER_CONTAINS
-                string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
-                SqlParameter[] sqlParametersAdd = new SqlParameter[]
+                try
                 {
-                    // FIX ME new SqlParameter("@orderID", order.orderID),
-                    new SqlParameter("@itemID", orderItem.item.itemID),
-                    new SqlParameter("@amount", orderItem.amount),
-                    new SqlParameter("@comment", orderItem.comment),
-                };
-                ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
+                    //Tries to insert new orderItem into database
+                    string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
+                    SqlParameter[] sqlParametersAdd = new SqlParameter[]
+                    {
+                        new SqlParameter("@itemID", orderItem.item.itemID),
+                        new SqlParameter("@amount", orderItem.amount),
+                        new SqlParameter("@comment", orderItem.comment),
+                    };
+                    ExecuteEditQuery(queryAddToOrder, sqlParametersAdd);
+                }
+                catch
+                {
+                    //Updates the orderItem amount and comment if inserting fails
+                    string queryUpdateOrder = "UPDATE [ORDER_CONTAINS] SET amount = amount + @amount, comment = @comment WHERE itemID = @itemID AND orderID = @orderID)";
+                    SqlParameter[] sqlParametersUpdateOrderItem = new SqlParameter[]
+                    {
+                        new SqlParameter("@itemID", orderItem.item.itemID),
+                        new SqlParameter("@amount", orderItem.amount),
+                        new SqlParameter("@comment", orderItem.comment),
+                    };
+                    ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrderItem);
+                }
 
                 //Updates stock in ITEMS
                 string querySubtractFromStock = "UPDATE ITEMS set stock = stock - @amount WHERE itemID = @itemID";

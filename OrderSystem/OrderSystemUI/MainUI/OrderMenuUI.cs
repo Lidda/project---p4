@@ -24,11 +24,13 @@ namespace OrderSystemUI.MainUI {
             InitializeComponent();
 
             this.tableUI = tableUI;
-            this.employee = employee;
+            this.order.Employee = employee;
             this.table = table;
             this.Text = "table " + table.ID + "- Order Menu";
             tableNumber.Text = "Table " + table.ID;
-        
+
+            takeOrderLogic.AddNewOrder(employee.ID, table.ID);
+
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);
             tableUI.Hide();
@@ -47,9 +49,7 @@ namespace OrderSystemUI.MainUI {
 
             //writes the status off to database
             tableLogic.UpdateTableStatus(Availability.Unavailable, table);
-
-            //Adds new order to database
-            takeOrderLogic.AddNewOrder(employee.ID, table.ID);
+            
         }
 
         private void btnFree_Click(object sender, EventArgs e) {
@@ -105,7 +105,7 @@ namespace OrderSystemUI.MainUI {
             int orderID = takeOrderLogic.GetLatestOrderID();
 
             this.Hide();
-            OrderLunchUI lunchUI = new OrderLunchUI(employee, table, orderID, this);
+            OrderUI lunchUI = new OrderUI(employee, table, orderID, this);
             lunchUI.ShowDialog();
         }
 
