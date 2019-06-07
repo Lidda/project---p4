@@ -47,7 +47,6 @@
     <Compile Include="CheckoutDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
     <Compile Include="ItemDAL.cs" />
-    <Compile Include="LoginDAL.cs" />
     <Compile Include="OrderDAL.cs" />
     <Compile Include="OrderItemDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

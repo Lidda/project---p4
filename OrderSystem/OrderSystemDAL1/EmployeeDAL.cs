@@ -22,8 +22,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void EditEmployee(Employee employee)
-        {
+        public void EditEmployee(Employee employee) {
             string query = "UPDATE [EMPLOYEES] SET name = @name, username = @username, password = @password, type = @type WHERE employeeID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -36,8 +35,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void DeleteEmployee(Employee employee)
-        {
+        public void DeleteEmployee(Employee employee) {
             string query = "DELETE FROM [EMPLOYEES] WHERE employeeID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -82,6 +80,31 @@ namespace OrderSystemDAL
                 employees.Add(employee);
             }
             return employees;
+        }
+
+        public Employee Db_Find_User(Employee employee) {
+
+            //the query only gets the employee with matching username and password
+            string query = string.Format("SELECT employeeID, name, username, password, type FROM [EMPLOYEES] " +
+                "WHERE (username = '{0}' OR employeeID = {1}) AND password = '{2}'", employee.username, employee.ID, employee.password);
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadEmployee(ExecuteSelectQuery(query, sqlParameters), employee);
+        }
+
+        private Employee ReadEmployee(DataTable dataTable, Employee employee) {
+
+            // if the query returned an employee it means the username and password matched, and it gets the one employee.
+            if (dataTable.Rows.Count > 0) {
+                DataRow dr = dataTable.Rows[0];
+                employee.ID = (int)dr["employeeID"];
+                employee.name = (string)dr["name"];
+                employee.type = (OrderSystemModel.Type)dr["type"];
+                return employee;
+            }
+
+            // if the query did not match it returns the employee as null. 
+            return null;
         }
     }
 }

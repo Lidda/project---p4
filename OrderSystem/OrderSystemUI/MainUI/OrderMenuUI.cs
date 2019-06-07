@@ -26,6 +26,8 @@ namespace OrderSystemUI.MainUI {
             this.tableUI = tableUI;
             this.employee = employee;
             this.table = table;
+            this.Text = "table " + table.ID + "- Order Menu";
+            tableNumber.Text = "Table " + table.ID;
         
             InitTableStatusColors();
             tableLogic.AssignEmployeeToTable(employee, table);
@@ -76,7 +78,7 @@ namespace OrderSystemUI.MainUI {
 
         private void UpdateColors(Availability status) {
             if (status == Availability.Available) {
-                btnFree.BackColor = Color.FromKnownColor(KnownColor.MenuHighlight);
+                btnFree.BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
                 btnTaken.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
                 btnReserved.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
             } else if (status == Availability.Reserved) {
@@ -84,7 +86,7 @@ namespace OrderSystemUI.MainUI {
                 btnTaken.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
                 btnFree.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
             } else {
-                btnTaken.BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
+                btnTaken.BackColor = Color.FromKnownColor(KnownColor.ActiveCaption);
                 btnFree.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
                 btnReserved.BackColor = Color.FromKnownColor(KnownColor.ControlDark);
             }
@@ -112,6 +114,10 @@ namespace OrderSystemUI.MainUI {
             this.Hide();
             CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(table, employee);
             orderOverview.ShowDialog();
+        }
+
+        private void Btn_BeverageMenu_Click(object sender, EventArgs e) {
+
         }
     }
 }

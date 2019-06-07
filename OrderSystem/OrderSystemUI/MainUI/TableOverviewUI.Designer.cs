@@ -81,7 +81,7 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Location = new System.Drawing.Point(6, 6);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(60, 23);
+            this.btnLogout.Size = new System.Drawing.Size(64, 23);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -405,7 +405,7 @@
             // hourglass1
             // 
             this.hourglass1.Image = ((System.Drawing.Image)(resources.GetObject("hourglass1.Image")));
-            this.hourglass1.Location = new System.Drawing.Point(184, 94);
+            this.hourglass1.Location = new System.Drawing.Point(185, 84);
             this.hourglass1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass1.Name = "hourglass1";
             this.hourglass1.Size = new System.Drawing.Size(37, 53);
@@ -415,7 +415,7 @@
             // hourglass2
             // 
             this.hourglass2.Image = ((System.Drawing.Image)(resources.GetObject("hourglass2.Image")));
-            this.hourglass2.Location = new System.Drawing.Point(384, 94);
+            this.hourglass2.Location = new System.Drawing.Point(385, 84);
             this.hourglass2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass2.Name = "hourglass2";
             this.hourglass2.Size = new System.Drawing.Size(37, 53);
@@ -425,7 +425,7 @@
             // hourglass3
             // 
             this.hourglass3.Image = ((System.Drawing.Image)(resources.GetObject("hourglass3.Image")));
-            this.hourglass3.Location = new System.Drawing.Point(184, 206);
+            this.hourglass3.Location = new System.Drawing.Point(185, 196);
             this.hourglass3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass3.Name = "hourglass3";
             this.hourglass3.Size = new System.Drawing.Size(37, 53);
@@ -435,7 +435,7 @@
             // hourglass4
             // 
             this.hourglass4.Image = ((System.Drawing.Image)(resources.GetObject("hourglass4.Image")));
-            this.hourglass4.Location = new System.Drawing.Point(384, 206);
+            this.hourglass4.Location = new System.Drawing.Point(385, 196);
             this.hourglass4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass4.Name = "hourglass4";
             this.hourglass4.Size = new System.Drawing.Size(37, 53);
@@ -445,7 +445,7 @@
             // hourglass5
             // 
             this.hourglass5.Image = ((System.Drawing.Image)(resources.GetObject("hourglass5.Image")));
-            this.hourglass5.Location = new System.Drawing.Point(184, 321);
+            this.hourglass5.Location = new System.Drawing.Point(185, 311);
             this.hourglass5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass5.Name = "hourglass5";
             this.hourglass5.Size = new System.Drawing.Size(37, 53);
@@ -455,7 +455,7 @@
             // hourglass6
             // 
             this.hourglass6.Image = ((System.Drawing.Image)(resources.GetObject("hourglass6.Image")));
-            this.hourglass6.Location = new System.Drawing.Point(384, 321);
+            this.hourglass6.Location = new System.Drawing.Point(385, 311);
             this.hourglass6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass6.Name = "hourglass6";
             this.hourglass6.Size = new System.Drawing.Size(37, 53);
@@ -465,7 +465,7 @@
             // hourglass7
             // 
             this.hourglass7.Image = ((System.Drawing.Image)(resources.GetObject("hourglass7.Image")));
-            this.hourglass7.Location = new System.Drawing.Point(184, 438);
+            this.hourglass7.Location = new System.Drawing.Point(185, 428);
             this.hourglass7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass7.Name = "hourglass7";
             this.hourglass7.Size = new System.Drawing.Size(37, 53);
@@ -475,7 +475,7 @@
             // hourglass8
             // 
             this.hourglass8.Image = ((System.Drawing.Image)(resources.GetObject("hourglass8.Image")));
-            this.hourglass8.Location = new System.Drawing.Point(384, 438);
+            this.hourglass8.Location = new System.Drawing.Point(385, 428);
             this.hourglass8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass8.Name = "hourglass8";
             this.hourglass8.Size = new System.Drawing.Size(37, 53);
@@ -485,7 +485,7 @@
             // hourglass9
             // 
             this.hourglass9.Image = ((System.Drawing.Image)(resources.GetObject("hourglass9.Image")));
-            this.hourglass9.Location = new System.Drawing.Point(184, 553);
+            this.hourglass9.Location = new System.Drawing.Point(185, 543);
             this.hourglass9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass9.Name = "hourglass9";
             this.hourglass9.Size = new System.Drawing.Size(37, 53);
@@ -495,7 +495,7 @@
             // hourglass10
             // 
             this.hourglass10.Image = ((System.Drawing.Image)(resources.GetObject("hourglass10.Image")));
-            this.hourglass10.Location = new System.Drawing.Point(384, 553);
+            this.hourglass10.Location = new System.Drawing.Point(385, 543);
             this.hourglass10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass10.Name = "hourglass10";
             this.hourglass10.Size = new System.Drawing.Size(37, 53);

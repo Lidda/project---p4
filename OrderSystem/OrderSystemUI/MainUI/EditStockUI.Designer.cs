@@ -506,6 +506,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
@@ -536,6 +537,7 @@
             // 
             this.BTN_EditItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BTN_EditItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_EditItem.FlatAppearance.BorderSize = 0;
             this.BTN_EditItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_EditItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_EditItem.ForeColor = System.Drawing.SystemColors.Window;

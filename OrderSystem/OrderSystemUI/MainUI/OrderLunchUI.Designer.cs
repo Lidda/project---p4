@@ -81,9 +81,10 @@
             // lbl_DessertHeader
             // 
             this.lbl_DessertHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_DessertHeader.BackColor = System.Drawing.Color.Silver;
+            this.lbl_DessertHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_DessertHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_DessertHeader.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DessertHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_DessertHeader.Location = new System.Drawing.Point(26, 386);
             this.lbl_DessertHeader.Name = "lbl_DessertHeader";
             this.lbl_DessertHeader.Size = new System.Drawing.Size(411, 37);
@@ -95,9 +96,10 @@
             // lbl_MainCourseHeader
             // 
             this.lbl_MainCourseHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_MainCourseHeader.BackColor = System.Drawing.Color.Silver;
+            this.lbl_MainCourseHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_MainCourseHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_MainCourseHeader.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MainCourseHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_MainCourseHeader.Location = new System.Drawing.Point(26, 211);
             this.lbl_MainCourseHeader.Name = "lbl_MainCourseHeader";
             this.lbl_MainCourseHeader.Size = new System.Drawing.Size(411, 37);
@@ -109,9 +111,10 @@
             // lbl_StartersHeader
             // 
             this.lbl_StartersHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_StartersHeader.BackColor = System.Drawing.Color.Silver;
+            this.lbl_StartersHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_StartersHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_StartersHeader.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StartersHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_StartersHeader.Location = new System.Drawing.Point(26, 36);
             this.lbl_StartersHeader.Name = "lbl_StartersHeader";
             this.lbl_StartersHeader.Size = new System.Drawing.Size(411, 37);
@@ -140,7 +143,7 @@
             this.listView_Starters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView_Starters.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_Starters.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_Starters.FullRowSelect = true;
             this.listView_Starters.GridLines = true;
             this.listView_Starters.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -325,7 +328,7 @@
             this.listView_MainCourses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView_MainCourses.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_MainCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_MainCourses.FullRowSelect = true;
             this.listView_MainCourses.GridLines = true;
             this.listView_MainCourses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -432,7 +435,7 @@
             this.listView_Desserts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
-            this.listView_Desserts.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_Desserts.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_Desserts.FullRowSelect = true;
             this.listView_Desserts.GridLines = true;
             this.listView_Desserts.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;

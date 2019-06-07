@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace OrderSystemUI.MainUI {
     public partial class LoginUI : Form {
         Employee employee = new Employee();
-        LoginLogic logic = new LoginLogic();
+        EmployeeLogic employeeLogic = new EmployeeLogic();
 
         public LoginUI() {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace OrderSystemUI.MainUI {
             }
             employee.password = passwordInput.Text;
 
-            if (logic.CheckForUser(employee)) {
+            if (employeeLogic.CheckForUser(employee)) {
                 this.Hide();
 
                 //opens th form corresponding with user
