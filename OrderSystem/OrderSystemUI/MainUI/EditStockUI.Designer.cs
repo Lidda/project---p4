@@ -176,7 +176,7 @@
             // ItemName
             // 
             this.ItemName.Text = "Product naam";
-            this.ItemName.Width = 241;
+            this.ItemName.Width = 229;
             // 
             // ItemStock
             // 
@@ -620,8 +620,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_ManageStock);
+            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_AddItem);
             this.Name = "EditStockUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

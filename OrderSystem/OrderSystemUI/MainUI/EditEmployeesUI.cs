@@ -57,20 +57,13 @@ namespace OrderSystemUI
                 }
             }
             else if (panelName == "PNL_EditEmployee")
-            {
-                try
-                {                    
-                    TXTB_EditEmployeeName.Text = selectedEmployee.name;
-                    TXTB_EditEmployeeUsername.Text = selectedEmployee.username;
-                    TXTB_EditEmployeePassword.Text = selectedEmployee.password;
-                    DB_EditEmployeeType.Text = selectedEmployee.type.ToString();
-                    PNL_ManageEmployee.Hide();
-                    PNL_EditEmployee.Show();
-                }
-                catch
-                {
-                    MessageBox.Show("Selecteer eerst een medewerker");
-                }
+            {                   
+                TXTB_EditEmployeeName.Text = selectedEmployee.name;
+                TXTB_EditEmployeeUsername.Text = selectedEmployee.username;
+                TXTB_EditEmployeePassword.Text = selectedEmployee.password;
+                DB_EditEmployeeType.Text = selectedEmployee.type.ToString();
+                PNL_ManageEmployee.Hide();
+                PNL_EditEmployee.Show();                
             }
             else if(panelName == "PNL_AddEmployee")
             {
@@ -80,20 +73,34 @@ namespace OrderSystemUI
         }
 
         private void BTN_AddEmployee_Click(object sender, EventArgs e)
-        {          
-            Employee employee = new Employee();
-            employee.name = TXTB_AddEmployeeName.Text;
-            employee.username = TXTB_AddEmployeeUsername.Text;
-            employee.password = TXTB_AddEmployeePassword.Text;
-            employee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_AddEmployeeType.SelectedItem.ToString());
-            employeeLogic.AddEmployee(employee);
-            MessageBox.Show("Medewerder succesvol toegevoegd");
-            ShowPanel("PNL_ManageEmployees");
+        {
+            try
+            {
+                Employee employee = new Employee();
+                employee.name = TXTB_AddEmployeeName.Text;
+                employee.username = TXTB_AddEmployeeUsername.Text;
+                employee.password = TXTB_AddEmployeePassword.Text;
+                employee.type = (OrderSystemModel.employeeType)Enum.Parse(typeof(OrderSystemModel.employeeType), DB_AddEmployeeType.SelectedItem.ToString());
+                employeeLogic.AddEmployee(employee);
+                MessageBox.Show("Medewerder succesvol toegevoegd");
+                ShowPanel("PNL_ManageEmployees");
+            }
+            catch
+            {
+                MessageBox.Show("Niet alle velden zijn ingevuld");
+            }
         }
 
         private void EditEmployee_Click(object sender, EventArgs e)
         {
-            ShowPanel("PNL_EditEmployee");
+            if (selectedEmployee.ID != 0)
+            {
+                ShowPanel("PNL_EditEmployee");
+            }
+            else
+            {
+                MessageBox.Show("Selecteer eerst een medewerker");
+            }
         }
 
         private void AddEmployee_Click(object sender, EventArgs e)
@@ -107,27 +114,43 @@ namespace OrderSystemUI
                 selectedEmployee.name = e.Item.SubItems[1].Text;
                 selectedEmployee.username = e.Item.SubItems[2].Text;
                 selectedEmployee.password = e.Item.SubItems[3].Text;
-                selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), e.Item.SubItems[4].Text);          
+                selectedEmployee.type = (OrderSystemModel.employeeType)Enum.Parse(typeof(OrderSystemModel.employeeType), e.Item.SubItems[4].Text);          
         }
 
         private void BTN_EditEmployee_Click(object sender, EventArgs e)
         {
-            selectedEmployee.name = TXTB_EditEmployeeName.Text;
-            selectedEmployee.username = TXTB_EditEmployeeUsername.Text;
-            selectedEmployee.password = TXTB_EditEmployeePassword.Text;
-            selectedEmployee.type = (OrderSystemModel.Type)Enum.Parse(typeof(OrderSystemModel.Type), DB_EditEmployeeType.Text);
-            employeeLogic.EditEmployee(selectedEmployee);
-            MessageBox.Show("Medewerker is succesvol aangepast");
-            ShowPanel("PNL_ManageEmployees");
+            try
+            {
+                selectedEmployee.name = TXTB_EditEmployeeName.Text;
+                selectedEmployee.username = TXTB_EditEmployeeUsername.Text;
+                selectedEmployee.password = TXTB_EditEmployeePassword.Text;
+                selectedEmployee.type = (OrderSystemModel.employeeType)Enum.Parse(typeof(OrderSystemModel.employeeType), DB_EditEmployeeType.Text);
+                employeeLogic.EditEmployee(selectedEmployee);
+                selectedEmployee = new Employee();
+                MessageBox.Show("Medewerker is succesvol aangepast");
+                ShowPanel("PNL_ManageEmployees");
+            }
+            catch
+            {
+                MessageBox.Show("Niet alle velden zijn ingevuld");
+            }
         }
 
         private void DeleteEmployee_Click(object sender, EventArgs e)
-        {           
-            if(MessageBox.Show("Weet u zeker dat u deze medewerker wilt verwijderen?", "Deleten...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        {
+            if (selectedEmployee.ID != 0)
             {
-                employeeLogic.DeleteEmployee(new Employee { ID = selectedEmployee.ID });
-                MessageBox.Show("Medewerker is succesvol aangepast gedeletet");
-                ShowPanel("PNL_ManageEmployees");
+                if (MessageBox.Show("Weet u zeker dat u deze medewerker wilt verwijderen?", "Deleten...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    employeeLogic.DeleteEmployee(new Employee { ID = selectedEmployee.ID });
+                    selectedEmployee = new Employee();
+                    MessageBox.Show("Medewerker is succesvol gedeletet");
+                    ShowPanel("PNL_ManageEmployees");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecteer eerst een medewerker");
             }
         }
 

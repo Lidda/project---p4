@@ -77,7 +77,7 @@ namespace OrderSystemDAL
                     name = (string)dr["name"],
                     username = (string)(dr["username"].ToString()),
                     password = (string)(dr["password"].ToString()),
-                    type = (OrderSystemModel.Type)dr["type"]
+                    type = (OrderSystemModel.employeeType)dr["type"]
                 };
                 employees.Add(employee);
             }

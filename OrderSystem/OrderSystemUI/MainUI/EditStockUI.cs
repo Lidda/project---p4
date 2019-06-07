@@ -84,50 +84,80 @@ namespace OrderSystemUI.MainUI
 
         private void EditItem_Click(object sender, EventArgs e)
         {
-            ShowPanel("PNL_EditItem");
+            if (selectedItem.itemID != 0)                
+            {
+                ShowPanel("PNL_EditItem");
+            }
+            else
+            {
+                MessageBox.Show("Selecteer eerst een product");
+            }
         }
 
         private void BTN_AddItem_Click(object sender, EventArgs e)
         {
-            Item item = new Item()
+            try
             {
-                name = TXTB_AddName.Text,
-                stock = int.Parse(TXTB_AddStock.Text),
-                price = double.Parse(TXTB_AddPrice.Text),
-                course = DB_AddCourse.Text,
-                description = TXTB_AddDescription.Text,
-                tax = int.Parse(DB_AddTAX.Text.Substring(0, 1)),
-                foodtype = DB_AddType.Text
-            };
-            itemLogic.Additem(item);
-            MessageBox.Show("Item was succesfully Added");
-            ShowPanel("PNL_ManageStock");
+                Item item = new Item()
+                {
+                    name = TXTB_AddName.Text,
+                    stock = int.Parse(TXTB_AddStock.Text),
+                    price = double.Parse(TXTB_AddPrice.Text),
+                    course = DB_AddCourse.Text,
+                    description = TXTB_AddDescription.Text,
+                    tax = int.Parse(DB_AddTAX.Text.Substring(0, 1)),
+                    foodtype = DB_AddType.Text
+                };
+                itemLogic.Additem(item);
+                MessageBox.Show("Item was succesfully Added");
+                ShowPanel("PNL_ManageStock");
+            }
+            catch
+            {
+                MessageBox.Show("Niet alle velden zijn gevuld");
+            }
         }
 
         private void BTN_EditItem_Click(object sender, EventArgs e)
         {
-            selectedItem.name = TXTB_EditName.Text;
-            selectedItem.stock = int.Parse(TXTB_EditStock.Text);
-            selectedItem.price = double.Parse(TXTB_EditPrice.Text);
-            selectedItem.course = DB_EditCourse.Text;
-            selectedItem.description = TXTB_EditDescription.Text;
-            selectedItem.tax = int.Parse(DB_EditTAX.Text.Substring(0, 1));
-            selectedItem.foodtype = DB_EditType.Text;
+            try
+            {
+                    selectedItem.name = TXTB_EditName.Text;
+                    selectedItem.stock = int.Parse(TXTB_EditStock.Text);
+                    selectedItem.price = double.Parse(TXTB_EditPrice.Text);
+                    selectedItem.course = DB_EditCourse.Text;
+                    selectedItem.description = TXTB_EditDescription.Text;
+                    selectedItem.tax = int.Parse(DB_EditTAX.Text.Substring(0, 1));
+                    selectedItem.foodtype = DB_EditType.Text;
 
-            itemLogic.EditItem(selectedItem);
-            MessageBox.Show("Item was succesfully Edited");
-            ShowPanel("PNL_ManageStock");
+                    itemLogic.EditItem(selectedItem);
+                    selectedItem = new Item();
+                    MessageBox.Show("Item was succesfully Edited");
+                    ShowPanel("PNL_ManageStock");
+            }
+            catch
+            {
+                MessageBox.Show("Niet alle velden zijn gevuld");
+            }
         }
     
 
         private void DeleteItem_Click(object sender, EventArgs e)
-        {          
-            if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        {
+            if (selectedItem.itemID != 0)
             {
-                itemLogic.DeleteItem(selectedItem);
-                MessageBox.Show("Item was succesfully deleted");
-                ShowPanel("PNL_ManageStock");
-            }          
+                if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    itemLogic.DeleteItem(selectedItem);
+                    selectedItem = new Item();
+                    MessageBox.Show("Item was succesfully deleted");
+                    ShowPanel("PNL_ManageStock");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecteer eerst een product");
+            }
         }
 
         private void ListView_Stock_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)

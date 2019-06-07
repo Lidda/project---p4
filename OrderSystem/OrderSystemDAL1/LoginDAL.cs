@@ -28,7 +28,7 @@ namespace OrderSystemDAL {
                 DataRow dr = dataTable.Rows[0];
                 employee.ID = (int)dr["employeeID"];
                 employee.name = (string)dr["name"];
-                employee.type = (OrderSystemModel.Type)dr["type"];
+                employee.type = (OrderSystemModel.employeeType)dr["type"];
                 return employee;
             }
 
