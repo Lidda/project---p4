@@ -8,14 +8,14 @@ using OrderSystemModel;
 using System.Data;
 
 namespace OrderSystemDAL {
-    public class OrderItemDAL : Base{
+    public class OrderItemDAL : Base {
         ItemDAL itemDAL = new ItemDAL();
 
-        public List<OrderItem> Db_Get_All_OrderItems(Order order) {
-            string query = "SELECT itemID, status, amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID";
+        public List<OrderItem> Db_Get_All_OrderItems(int orderID) {
+            string query = "SELECT itemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter("@OrderID", order.orderID)
+                new SqlParameter("@OrderID", orderID)
             };
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -23,24 +23,24 @@ namespace OrderSystemDAL {
         private List<OrderItem> ReadOrderItems(DataTable dataTable) {
             List<OrderItem> orderItems = new List<OrderItem>();
 
-            foreach (DataRow dr in dataTable.Rows)
-            {
+            foreach (DataRow dr in dataTable.Rows) {
                 OrderItem orderItem = new OrderItem();
                 orderItem.item = itemDAL.Db_Get_Item(new Item { itemID = (int)dr["itemID"] });
                 orderItem.amount = (int)dr["amount"];
                 orderItem.status = (OrderItem.Status)dr["status"];
-                if (dr["comment"] == DBNull.Value)
-                {
+                if (dr["comment"] == DBNull.Value) {
                     orderItem.comment = "";
-                }
-                else
-                {
+                } else {
                     orderItem.comment = (string)dr["comment"];
                 }
                 orderItem.TimeOfOrder = (DateTime)dr["timeOfOrder"];
                 orderItems.Add(orderItem);
             }
             return orderItems;
+        }
+
+        public void ChangeOrderItemStatus() {
+
         }
     }
 }

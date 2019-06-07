@@ -42,7 +42,7 @@ namespace OrderSystemDAL
                 Order order = new Order();
                 order.orderID = (int)dr["OrderID"];
                 order.orderDate = (DateTime)dr["DateOrdered"];
-                order.orderItems = orderItemDAL.Db_Get_All_OrderItems(new Order { orderID = (int)dr["OrderID"] });
+                order.orderItems = orderItemDAL.Db_Get_All_OrderItems((int)dr["OrderID"]);
                 order.Employee = employeeDAL.Db_Get_Employee((int)dr["EmployeeID"]);
                 order.Table = tableDAL.DbGetTableByID((int)dr["tableID"]);
                 if (dr["comment"] == DBNull.Value)
@@ -55,6 +55,7 @@ namespace OrderSystemDAL
                 }
                 order.PaymentStatus = (bool)dr["PaymentStatus"];
                 order.totalAmount = (double)dr["TotalAmount"];
+
                 orders.Add(order);
             }
             return orders;

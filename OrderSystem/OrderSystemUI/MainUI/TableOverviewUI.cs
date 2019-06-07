@@ -16,10 +16,11 @@ using System.Timers;
 namespace OrderSystemUI {
     public partial class TableOverviewUI : Form {
         List<Button> buttons = new List<Button>();
+        List<Order> orders = new List<Order>();
         Employee employee;
         List<Table> tables;
         TableLogic tableLogic;
-        BarKitchenLogic barKitchenLogic;
+        //OrderLogic orderLogic = new OrderLogic();
         private static System.Timers.Timer timer;
 
         public TableOverviewUI(Employee employee) {
@@ -41,6 +42,9 @@ namespace OrderSystemUI {
             //initialize tables by getting them from the database
             tables = tableLogic.GetAllTables();
             SetTableColors();
+            //orders = orderLogic.Get_All_Orders();
+            //CheckOrdersStatusses(orders);
+
             TablesTimer();
         }
 
@@ -171,8 +175,19 @@ namespace OrderSystemUI {
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
             //update table statusses etc.
             tables = tableLogic.GetAllTables();
-            //FIX ME: orderItems = orderItemLogic.getOrders();
-            SetTableColors();
+            OrderLogic orderLogic = new OrderLogic();
+            orders = orderLogic.Get_All_Orders();
+
+            //ESSENTIAL: excutes both methods on the main thread
+            Invoke((MethodInvoker)delegate {
+                CheckOrdersStatusses(orders);
+                SetTableColors();
+            });
+        }
+
+        //FIX ME 
+        private void UpdateUI() {
+
         }
 
         //loops through orders: then loops through each orderItem IN orders and checks the status
