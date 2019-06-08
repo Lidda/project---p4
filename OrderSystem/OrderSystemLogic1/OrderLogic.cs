@@ -147,7 +147,6 @@ namespace OrderSystemLogic
                 throw new Exception("Something went wrong while retrieving order");
             }
         }
-        
 
         public Order GetTableOrder(Table table)
         {

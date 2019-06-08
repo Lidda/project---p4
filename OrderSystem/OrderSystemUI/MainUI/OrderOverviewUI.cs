@@ -94,6 +94,8 @@ namespace OrderSystemUI.MainUI
                 orderItemLogic.RemoveOrderItems(orderItem);
             }
 
+            stockAmount = 0;
+
             pnl_EditItem.Hide();
         }
 
