@@ -69,19 +69,13 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<Order> GetOrdersKitchen(Order order)
+        public Order GetOrdersKitchen(Order order)
         {
-            string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE NOT course = 'Drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
+            string query = "SELECT O.OrderID,c.amount, i.name, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = 2 AND i.foodtype LIKE '%Dinner' OR i.foodtype LIKE '%Lunch' AND status = 0 AND o.tableID =2";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
+            return GetOrder(ExecuteSelectQuery(query, sqlParameters));
         }
-        //Query to get all food for kitchen
-        public List<Order> Db_Get_All_Foods(int tableID)
-        {
-            string query = "SELECT ORDER_CONTAINS.orderID, ORDER_CONTAINS.timeOfOrder, ORDER_CONTAINS.itemID, ORDER_CONTAINS.amount, ORDER_CONTAINS.status,ORDERS.tableID, ITEMS.name, items.foodtype  FROM ORDER_CONTAINS LEFT JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID LEFT JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE order_contains.status = 0 AND orders.tableID = ('" + tableID + "') AND items.foodtype LIKE '%Dinner' OR items.foodtype LIKE '%Lunch' AND status = 0 AND orders.tableID =" + tableID;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadFoodOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
+     
 
         //Query to update status of order
         public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)

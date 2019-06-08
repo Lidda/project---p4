@@ -29,7 +29,6 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-
         //Query to update status of order
         public void OrderStatus(int tableID, int statusChange) {
             string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =( '" + statusChange + "') FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID WHERE ORDERS.TABLEID = ( '" + tableID + "')";
