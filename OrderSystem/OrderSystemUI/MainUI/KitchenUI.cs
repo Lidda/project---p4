@@ -20,7 +20,7 @@ namespace OrderSystemUI.MainUI
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
-            List<Order> order = orderLogic.GetOrderskitchen();
+            this.order = orderLogic.GetOrderskitchen(order);
             InitializeComponent();
             Order1();
         }
