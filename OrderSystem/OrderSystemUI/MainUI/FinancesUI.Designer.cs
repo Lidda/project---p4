@@ -62,7 +62,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
