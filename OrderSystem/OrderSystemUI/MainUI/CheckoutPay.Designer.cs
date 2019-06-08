@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPay));
             this.pnlChoosePayOption = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCreditCard = new System.Windows.Forms.Button();
             this.btnCash = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.pnlChoosePayOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,8 +48,21 @@
             this.pnlChoosePayOption.Location = new System.Drawing.Point(0, 1);
             this.pnlChoosePayOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlChoosePayOption.Name = "pnlChoosePayOption";
-            this.pnlChoosePayOption.Size = new System.Drawing.Size(635, 880);
+            this.pnlChoosePayOption.Size = new System.Drawing.Size(635, 885);
             this.pnlChoosePayOption.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(0, 778);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(99, 59);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // button3
             // 
@@ -63,7 +76,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(339, 130);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Debitcard";
+            this.button3.Text = "Pinnen";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -111,19 +124,6 @@
             this.label1.Size = new System.Drawing.Size(327, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kies betaalmethode:";
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(29, 749);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(99, 59);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // CheckoutPay
             // 

@@ -20,19 +20,27 @@ namespace OrderSystemUI.MainUI
         public CheckoutOverviewOrder(Table table)
         {
             InitializeComponent();
-            this.order = logic.GetTableOrder(table);
+            try
+            {
+                this.order = logic.GetTableOrder(table);
+
+                if (order.orderItems.Count == 0)
+                {
+                    ShowPanel("Error");
+                }
+                else
+                {
+                    ShowPanel("Overview");
+                }
+            }
+            catch
+            {
+                ShowPanel("Error");
+            }
 
             //hide
             lblTip.Hide();
             lblTipAmount.Hide();
-            if (order.orderItems.Count == 0)
-            {
-                ShowPanel("Error");
-            }
-            else
-            {
-                ShowPanel("Overview");
-            }
         }
         public CheckoutOverviewOrder(Order order)
         {
