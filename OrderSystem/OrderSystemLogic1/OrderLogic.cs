@@ -172,7 +172,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Something went wrong while retrieving orderID");
+                throw new Exception("Something went wrong while retrieving order");
             }
         }
     }

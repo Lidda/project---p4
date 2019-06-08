@@ -28,7 +28,9 @@ namespace OrderSystemUI.MainUI
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            Pay();
+            CheckoutPayChange checkoutPayChangeUI = new CheckoutPayChange(order);
+            this.Hide();
+            checkoutPayChangeUI.ShowDialog();
         }
 
         private void btnCreditCard_Click(object sender, EventArgs e)
