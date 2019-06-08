@@ -25,7 +25,7 @@ namespace OrderSystemLogic
         }
 
 
-        public Order GetOrderskitchen(Order order)
+        public List<Order> GetOrderskitchen(Order order)
         {
             try
             {
