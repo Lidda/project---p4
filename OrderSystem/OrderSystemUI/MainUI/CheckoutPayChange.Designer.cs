@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPayChange));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCalculateChange = new System.Windows.Forms.Button();
             this.lblNotEnough = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -152,12 +154,26 @@
             this.lblNotEnough.TabIndex = 35;
             this.lblNotEnough.Text = "De klant heeft €bedrag te kort gegeven";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(0, 780);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(99, 59);
+            this.btnBack.TabIndex = 36;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // CheckoutPayChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 838);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblNotEnough);
             this.Controls.Add(this.btnCalculateChange);
             this.Controls.Add(this.btnOK);
@@ -187,5 +203,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCalculateChange;
         private System.Windows.Forms.Label lblNotEnough;
+        private System.Windows.Forms.Button btnBack;
     }
 }

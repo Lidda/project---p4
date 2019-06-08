@@ -78,5 +78,12 @@ namespace OrderSystemUI.MainUI
                 txtChangeAmount.Text = "";
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CheckoutPay checkoutUI = new CheckoutPay(order);
+            checkoutUI.ShowDialog();
+        }
     }
 }
