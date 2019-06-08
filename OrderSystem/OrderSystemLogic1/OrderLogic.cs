@@ -25,11 +25,11 @@ namespace OrderSystemLogic
         }
 
 
-        public Order GetOrderskitchen(Order order)
+        public List<Order> GetOrderskitchen(int tableID)
         {
             try
             {
-                return orderDAL.GetOrdersKitchen(order);
+                return orderDAL.GetOrdersKitchen(tableID);
             }
             catch
             {

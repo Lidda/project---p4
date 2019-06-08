@@ -20,7 +20,7 @@ namespace OrderSystemDAL
         {
             string query = "SELECT orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE OrderID = @OrderID";
             SqlParameter[] sqlParameters = new SqlParameter[]
-            { 
+            {
                 new SqlParameter("@OrderID", order.orderID)
             };
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
@@ -69,13 +69,13 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-        public Order GetOrdersKitchen(Order order)
+        public List<Order> GetOrdersKitchen(int tableID)
         {
-            string query = "SELECT O.OrderID,c.amount, i.name, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = 2 AND i.foodtype LIKE '%Dinner' OR i.foodtype LIKE '%Lunch' AND status = 0 AND o.tableID =2";
+            string query = "SELECT O.OrderID,c.amount, i.name, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.foodtype LIKE '%Dinner' OR i.foodtype LIKE '%Lunch' AND status = 0 AND o.tableID =" + tableID;
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetOrder(ExecuteSelectQuery(query, sqlParameters));
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-     
+
 
         //Query to update status of order
         public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
@@ -113,7 +113,7 @@ namespace OrderSystemDAL
         {
             string query = "SELECT DateOrdered AS Date, SUM(TotalAmount) AS Total FROM [ORDERS] GROUP BY DateOrdered";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadDailyProfits(ExecuteSelectQuery(query, sqlParameters));         
+            return ReadDailyProfits(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<Profit> GetMonthlyProfits()
@@ -138,7 +138,7 @@ namespace OrderSystemDAL
             {
                 Profit day = new Profit()
                 {
-                    date = (DateTime)dr["Date"],                   
+                    date = (DateTime)dr["Date"],
                     DayIncome = (double)(dr["Total"]),
                 };
                 days.Add(day);
