@@ -34,7 +34,7 @@ namespace OrderSystemUI.MainUI {
             if (order.PaymentStatus)
             {
                 orderLogic.AddNewOrder(order);
-                order = orderLogic.GetLatestOrder();
+                this.order = orderLogic.GetLatestOrder();
             }
 
             InitTableStatusColors();
@@ -109,7 +109,7 @@ namespace OrderSystemUI.MainUI {
         private void btn_OrderOverview_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverviewOrder orderOverview = new CheckoutOverviewOrder(table);
+            OrderOverviewUI orderOverview = new OrderOverviewUI(order, this);
             orderOverview.ShowDialog();
         }
 

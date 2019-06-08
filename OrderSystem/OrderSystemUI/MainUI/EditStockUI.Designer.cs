@@ -406,6 +406,7 @@
             // 
             // PNL_EditItem
             // 
+            this.PNL_EditItem.Controls.Add(this.PNL_ManageStock);
             this.PNL_EditItem.Controls.Add(this.TXTB_EditDescription);
             this.PNL_EditItem.Controls.Add(this.label5);
             this.PNL_EditItem.Controls.Add(this.DB_EditTAX);
@@ -622,7 +623,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.PNL_ManageStock);
             this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_AddItem);
             this.Name = "EditStockUI";

@@ -14,14 +14,17 @@ namespace OrderSystemUI.MainUI
 {
     public partial class OrderUI : Form
     {
-        OrderItemLogic orderItemLogic = new OrderItemLogic();
+        //OrderItemLogic orderItemLogic = new OrderItemLogic();
         ItemLogic itemLogic = new ItemLogic();
+        OrderItemLogic orderItemLogic = new OrderItemLogic();
+
         Order order = new Order();
 
         List<ListView> listViews = new List<ListView>();
         List<Item> items;
 
         OrderMenuUI orderMenuUI;
+        OrderOverviewUI orderOverviewUI;
             
         public OrderUI(Order order, OrderMenuUI orderMenuUI)
         {
@@ -29,11 +32,12 @@ namespace OrderSystemUI.MainUI
 
             this.orderMenuUI = orderMenuUI;
 
-            listViews.Add(listView_Starters);
-            listViews.Add(listView_MainCourses);
-            listViews.Add(listView_Desserts);
+            listViews.Add(listView_StartersLunch);
+            listViews.Add(listView_MainCoursesLunch);
+            listViews.Add(listView_DessertsLunch);
 
             this.order = order;
+            this.order.orderItems.Clear();
 
             AssignItemsToListViews();
 
@@ -54,15 +58,15 @@ namespace OrderSystemUI.MainUI
             {
                 if (item.course == "Starter" && item.foodtype == "Lunch")
                 {
-                    AddItemToListView(listView_Starters, item);
+                    AddItemToListView(listView_StartersLunch, item);
                 }
                 else if (item.course == "Main course" && item.foodtype == "Lunch")
                 {
-                    AddItemToListView(listView_MainCourses, item);
+                    AddItemToListView(listView_MainCoursesLunch, item);
                 }
                 else if ((item.course == "Dessert" && item.foodtype == "Lunch"))
                 {
-                    AddItemToListView(listView_Desserts, item);
+                    AddItemToListView(listView_DessertsLunch, item);
                 }
             }
         }
@@ -70,11 +74,12 @@ namespace OrderSystemUI.MainUI
         //Adds item to the right listview
         private void AddItemToListView(ListView listView, Item item)
         {
-            ListViewItem listViewItem = new ListViewItem(item.name);
-            listViewItem.SubItems.Add("0");
-            listViewItem.SubItems.Add("");
-            listViewItem.SubItems.Add(item.stock.ToString());
-            listView.Items.Add(listViewItem);
+            ListViewItem li = new ListViewItem(item.name);
+            li.SubItems.Add("0");
+            li.SubItems.Add(item.price.ToString());
+            li.SubItems.Add(item.stock.ToString());
+            li.SubItems.Add("");
+            listView.Items.Add(li);
         }
 
         //Goes to previous screen
@@ -108,21 +113,22 @@ namespace OrderSystemUI.MainUI
         {
             if (listView.SelectedItems.Count > 0)
             {
-                if (Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) >= 1)
+                int count = Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text);
+
+                if (count >= 1)
                 {
-                    int count = Convert.ToInt32(listView.SelectedItems[0].SubItems[1].Text) - 1;
                     listView.SelectedItems[0].SubItems[1].Text = count.ToString();
                 }
             }
-            
         }
 
-        private void AddItemToOrder(int amount, Item item)
+        private void AddItemToOrder(int amount, Item item, string comment)
         {
             OrderItem orderItem = new OrderItem();
 
             orderItem.item = item;
             orderItem.amount = amount;
+            orderItem.comment = comment;
             orderItem.status = OrderItem.Status.ordered;
 
             order.orderItems.Add(orderItem);
@@ -132,9 +138,9 @@ namespace OrderSystemUI.MainUI
         {
             for (int i = 0; i < 3; i++)
             {
-                listView_Starters.Items[i].SubItems[1].Text = "0";
-                listView_MainCourses.Items[i].SubItems[1].Text = "0";
-                listView_Desserts.Items[i].SubItems[1].Text = "0";
+                listView_StartersLunch.Items[i].SubItems[1].Text = "0";
+                listView_MainCoursesLunch.Items[i].SubItems[1].Text = "0";
+                listView_DessertsLunch.Items[i].SubItems[1].Text = "0";
             }
         }
 
@@ -151,61 +157,45 @@ namespace OrderSystemUI.MainUI
                         int amount = Convert.ToInt32(listView.Items[i].SubItems[1].Text);
                         Item item = items.Find(j => j.name == listView.Items[i].SubItems[0].Text);
 
-                        AddItemToOrder(amount, item);
+                        AddItemToOrder(amount, item, listView.Items[i].SubItems[4].Text);
                     }
                 }
             }
             orderItemLogic.AddItemsToOrder(order);
 
             order.orderItems.Clear();
+            orderOverviewUI = new OrderOverviewUI(order, orderMenuUI);
+            orderOverviewUI.ShowDialog();
         }
 
         private void btn_AddDessert_Click(object sender, EventArgs e)
         {
-            AddItem(listView_Desserts);
+            AddItem(listView_DessertsLunch);
         }
 
         private void btn_SubtractDessert_Click(object sender, EventArgs e)
         {
-            SubtractItem(listView_Desserts);
+            SubtractItem(listView_DessertsLunch);
         }
 
         private void btn_AddStarter_Click(object sender, EventArgs e)
         {
-            AddItem(listView_Starters);
+            AddItem(listView_StartersLunch);
         }
 
         private void btn_SubtractStarter_Click(object sender, EventArgs e)
         {
-            SubtractItem(listView_Starters);
+            SubtractItem(listView_StartersLunch);
         }
 
         private void btn_AddMainCourse_Click(object sender, EventArgs e)
         {
-            AddItem(listView_MainCourses);
+            AddItem(listView_MainCoursesLunch);
         }
 
         private void btn_SubtractMainCourse_Click(object sender, EventArgs e)
         {
-            SubtractItem(listView_MainCourses);
-        }
-
-        private void btn_CommentStarter_Click(object sender, EventArgs e)
-        {
-            ClearListViewSelection(listView_Starters);
-            ShowPanel("Comment");
-        }
-
-        private void btn_CommentMainCourse_Click(object sender, EventArgs e)
-        {
-            ClearListViewSelection(listView_MainCourses);
-            ShowPanel("Comment");
-        }
-
-        private void btn_CommentDessert_Click(object sender, EventArgs e)
-        {
-            ClearListViewSelection(listView_Desserts);
-            ShowPanel("Comment");
+            SubtractItem(listView_MainCoursesLunch);
         }
 
         private void ClearListViewSelection(ListView selectedListView)
@@ -219,15 +209,53 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        private void ShowPanel(string panelName)
+        {
+            if(panelName == "Comment")
+            {
+                pnl_Comment.Show();
+            }
+        }
+
+        private void btn_AddCommentStarter_Click(object sender, EventArgs e)
+        {
+
+            CheckSelection(listView_StartersLunch);
+        }
+
+        private void btn_AddCommentDessertLunch_Click(object sender, EventArgs e)
+        {
+            CheckSelection(listView_DessertsLunch);
+        }
+
+        private void btn_AddCommentMainCourseLunch_Click(object sender, EventArgs e)
+        {
+            CheckSelection(listView_MainCoursesLunch);
+        }
+
+        private void CheckSelection(ListView listView)
+        {
+            if (listView.SelectedItems.Count >= 1)
+            {
+                ClearListViewSelection(listView);
+                ShowPanel("Comment");
+            }
+            else
+            {
+                MessageBox.Show("Error", "Selecteer eerst een product");
+            }
+        }
+
         private void btn_AddCommentToItem_Click(object sender, EventArgs e)
         {
             foreach (ListView listView in listViews)
             {
-                if (listView.SelectedItems.Count >= 0)
+                if (listView.SelectedItems.Count >= 1)
                 {
                     listView.SelectedItems[0].SubItems[4].Text = txt_AddCommentToItem.Text;
 
                     pnl_Comment.Hide();
+                    txt_AddCommentToItem.Clear();
                 }
             }
         }
@@ -236,14 +264,6 @@ namespace OrderSystemUI.MainUI
         {
             txt_AddCommentToItem.Clear();
             pnl_Comment.Hide();
-        }
-
-        private void ShowPanel(string panelName)
-        {
-            if(panelName == "Comment")
-            {
-                pnl_Comment.Show();
-            }
         }
     }
 }

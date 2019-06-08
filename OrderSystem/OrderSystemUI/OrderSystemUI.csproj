@@ -108,11 +108,11 @@
     <Compile Include="MainUI\KitchenUI.Designer.cs">
       <DependentUpon>KitchenUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\OrderOverview.cs">
+    <Compile Include="MainUI\OrderOverviewUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\OrderOverview.Designer.cs">
-      <DependentUpon>OrderOverview.cs</DependentUpon>
+    <Compile Include="MainUI\OrderOverviewUI.Designer.cs">
+      <DependentUpon>OrderOverviewUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\OrderUI.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="MainUI\ManagerUI.resx">
       <DependentUpon>ManagerUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\OrderOverview.resx">
-      <DependentUpon>OrderOverview.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\OrderOverviewUI.resx">
+      <DependentUpon>OrderOverviewUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\OrderUI.resx">
       <DependentUpon>OrderUI.cs</DependentUpon>

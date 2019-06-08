@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderUI));
             this.btnBack = new System.Windows.Forms.Button();
             this.lbl_DessertHeader = new System.Windows.Forms.Label();
             this.lbl_MainCourseHeader = new System.Windows.Forms.Label();
             this.lbl_StartersHeader = new System.Windows.Forms.Label();
             this.btn_OrderOverview = new System.Windows.Forms.Button();
-            this.listView_Starters = new System.Windows.Forms.ListView();
+            this.listView_StartersLunch = new System.Windows.Forms.ListView();
             this.nameStartersLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantityStartersLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.priceStartersLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockStartersLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.commentStartersLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_AddStarter = new System.Windows.Forms.Button();
-            this.btn_CommentStarter = new System.Windows.Forms.Button();
             this.btn_SubtractStarter = new System.Windows.Forms.Button();
             this.btn_SubtractMainCourse = new System.Windows.Forms.Button();
-            this.btn_CommentMainCourse = new System.Windows.Forms.Button();
             this.btn_AddMainCourse = new System.Windows.Forms.Button();
             this.btn_SubtractDessert = new System.Windows.Forms.Button();
-            this.btn_CommentDessert = new System.Windows.Forms.Button();
             this.btn_AddDessert = new System.Windows.Forms.Button();
-            this.listView_MainCourses = new System.Windows.Forms.ListView();
+            this.listView_MainCoursesLunch = new System.Windows.Forms.ListView();
             this.nameMainCoursesLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantityMainCoursesLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.priceMainCoursesLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockMainCoursesLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.commentMainCoursesLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView_Desserts = new System.Windows.Forms.ListView();
+            this.listView_DessertsLunch = new System.Windows.Forms.ListView();
             this.nameDessertsLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantityDessertsLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.priceDessertsLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockDessertsLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.commentDessertLunch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_AddCommentStarterLunch = new System.Windows.Forms.Button();
+            this.btn_AddCommentDessertLunch = new System.Windows.Forms.Button();
+            this.btn_AddCommentMainCourseLunch = new System.Windows.Forms.Button();
             this.pnl_Comment = new System.Windows.Forms.Panel();
             this.btn_CancelComment = new System.Windows.Forms.Button();
             this.btn_AddCommentToItem = new System.Windows.Forms.Button();
@@ -143,42 +144,42 @@
             this.btn_OrderOverview.UseVisualStyleBackColor = false;
             this.btn_OrderOverview.Click += new System.EventHandler(this.btn_ConfirmOrder_Click);
             // 
-            // listView_Starters
+            // listView_StartersLunch
             // 
-            this.listView_Starters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView_StartersLunch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameStartersLunch,
             this.quantityStartersLunch,
             this.priceStartersLunch,
             this.stockStartersLunch,
             this.commentStartersLunch});
-            this.listView_Starters.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView_Starters.FullRowSelect = true;
-            this.listView_Starters.GridLines = true;
-            this.listView_Starters.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView_Starters.HideSelection = false;
-            this.listView_Starters.Location = new System.Drawing.Point(26, 72);
-            this.listView_Starters.MultiSelect = false;
-            this.listView_Starters.Name = "listView_Starters";
-            this.listView_Starters.Scrollable = false;
-            this.listView_Starters.Size = new System.Drawing.Size(376, 103);
-            this.listView_Starters.TabIndex = 53;
-            this.listView_Starters.UseCompatibleStateImageBehavior = false;
-            this.listView_Starters.View = System.Windows.Forms.View.Details;
+            this.listView_StartersLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_StartersLunch.FullRowSelect = true;
+            this.listView_StartersLunch.GridLines = true;
+            this.listView_StartersLunch.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView_StartersLunch.HideSelection = false;
+            this.listView_StartersLunch.Location = new System.Drawing.Point(26, 72);
+            this.listView_StartersLunch.MultiSelect = false;
+            this.listView_StartersLunch.Name = "listView_StartersLunch";
+            this.listView_StartersLunch.Scrollable = false;
+            this.listView_StartersLunch.Size = new System.Drawing.Size(376, 103);
+            this.listView_StartersLunch.TabIndex = 53;
+            this.listView_StartersLunch.UseCompatibleStateImageBehavior = false;
+            this.listView_StartersLunch.View = System.Windows.Forms.View.Details;
             // 
             // nameStartersLunch
             // 
             this.nameStartersLunch.Text = "Name";
-            this.nameStartersLunch.Width = 289;
+            this.nameStartersLunch.Width = 324;
             // 
             // quantityStartersLunch
             // 
             this.quantityStartersLunch.Text = "#";
-            this.quantityStartersLunch.Width = 43;
+            this.quantityStartersLunch.Width = 47;
             // 
             // priceStartersLunch
             // 
             this.priceStartersLunch.Text = "€";
-            this.priceStartersLunch.Width = 40;
+            this.priceStartersLunch.Width = 0;
             // 
             // stockStartersLunch
             // 
@@ -195,6 +196,7 @@
             this.btn_AddStarter.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddStarter.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_AddStarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddStarter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddStarter.Location = new System.Drawing.Point(404, 72);
             this.btn_AddStarter.Name = "btn_AddStarter";
             this.btn_AddStarter.Size = new System.Drawing.Size(33, 33);
@@ -203,24 +205,12 @@
             this.btn_AddStarter.UseVisualStyleBackColor = false;
             this.btn_AddStarter.Click += new System.EventHandler(this.btn_AddStarter_Click);
             // 
-            // btn_CommentStarter
-            // 
-            this.btn_CommentStarter.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_CommentStarter.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_CommentStarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CommentStarter.Location = new System.Drawing.Point(404, 107);
-            this.btn_CommentStarter.Name = "btn_CommentStarter";
-            this.btn_CommentStarter.Size = new System.Drawing.Size(33, 33);
-            this.btn_CommentStarter.TabIndex = 60;
-            this.btn_CommentStarter.Text = "C";
-            this.btn_CommentStarter.UseVisualStyleBackColor = false;
-            this.btn_CommentStarter.Click += new System.EventHandler(this.btn_CommentStarter_Click);
-            // 
             // btn_SubtractStarter
             // 
             this.btn_SubtractStarter.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractStarter.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_SubtractStarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SubtractStarter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractStarter.Location = new System.Drawing.Point(404, 142);
             this.btn_SubtractStarter.Name = "btn_SubtractStarter";
             this.btn_SubtractStarter.Size = new System.Drawing.Size(33, 33);
@@ -234,6 +224,7 @@
             this.btn_SubtractMainCourse.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractMainCourse.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_SubtractMainCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SubtractMainCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractMainCourse.Location = new System.Drawing.Point(404, 317);
             this.btn_SubtractMainCourse.Name = "btn_SubtractMainCourse";
             this.btn_SubtractMainCourse.Size = new System.Drawing.Size(33, 33);
@@ -242,24 +233,12 @@
             this.btn_SubtractMainCourse.UseVisualStyleBackColor = false;
             this.btn_SubtractMainCourse.Click += new System.EventHandler(this.btn_SubtractMainCourse_Click);
             // 
-            // btn_CommentMainCourse
-            // 
-            this.btn_CommentMainCourse.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_CommentMainCourse.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_CommentMainCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CommentMainCourse.Location = new System.Drawing.Point(404, 282);
-            this.btn_CommentMainCourse.Name = "btn_CommentMainCourse";
-            this.btn_CommentMainCourse.Size = new System.Drawing.Size(33, 33);
-            this.btn_CommentMainCourse.TabIndex = 80;
-            this.btn_CommentMainCourse.Text = "C";
-            this.btn_CommentMainCourse.UseVisualStyleBackColor = false;
-            this.btn_CommentMainCourse.Click += new System.EventHandler(this.btn_CommentMainCourse_Click);
-            // 
             // btn_AddMainCourse
             // 
             this.btn_AddMainCourse.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddMainCourse.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_AddMainCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddMainCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddMainCourse.Location = new System.Drawing.Point(404, 247);
             this.btn_AddMainCourse.Name = "btn_AddMainCourse";
             this.btn_AddMainCourse.Size = new System.Drawing.Size(33, 33);
@@ -273,6 +252,7 @@
             this.btn_SubtractDessert.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractDessert.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_SubtractDessert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SubtractDessert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractDessert.Location = new System.Drawing.Point(404, 492);
             this.btn_SubtractDessert.Name = "btn_SubtractDessert";
             this.btn_SubtractDessert.Size = new System.Drawing.Size(33, 33);
@@ -281,24 +261,12 @@
             this.btn_SubtractDessert.UseVisualStyleBackColor = false;
             this.btn_SubtractDessert.Click += new System.EventHandler(this.btn_SubtractDessert_Click);
             // 
-            // btn_CommentDessert
-            // 
-            this.btn_CommentDessert.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_CommentDessert.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_CommentDessert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CommentDessert.Location = new System.Drawing.Point(404, 457);
-            this.btn_CommentDessert.Name = "btn_CommentDessert";
-            this.btn_CommentDessert.Size = new System.Drawing.Size(33, 33);
-            this.btn_CommentDessert.TabIndex = 84;
-            this.btn_CommentDessert.Text = "C";
-            this.btn_CommentDessert.UseVisualStyleBackColor = false;
-            this.btn_CommentDessert.Click += new System.EventHandler(this.btn_CommentDessert_Click);
-            // 
             // btn_AddDessert
             // 
             this.btn_AddDessert.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddDessert.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_AddDessert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddDessert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddDessert.Location = new System.Drawing.Point(404, 422);
             this.btn_AddDessert.Name = "btn_AddDessert";
             this.btn_AddDessert.Size = new System.Drawing.Size(33, 33);
@@ -307,27 +275,27 @@
             this.btn_AddDessert.UseVisualStyleBackColor = false;
             this.btn_AddDessert.Click += new System.EventHandler(this.btn_AddDessert_Click);
             // 
-            // listView_MainCourses
+            // listView_MainCoursesLunch
             // 
-            this.listView_MainCourses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView_MainCoursesLunch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameMainCoursesLunch,
             this.quantityMainCoursesLunch,
             this.priceMainCoursesLunch,
             this.stockMainCoursesLunch,
             this.commentMainCoursesLunch});
-            this.listView_MainCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView_MainCourses.FullRowSelect = true;
-            this.listView_MainCourses.GridLines = true;
-            this.listView_MainCourses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView_MainCourses.HideSelection = false;
-            this.listView_MainCourses.Location = new System.Drawing.Point(26, 247);
-            this.listView_MainCourses.MultiSelect = false;
-            this.listView_MainCourses.Name = "listView_MainCourses";
-            this.listView_MainCourses.Scrollable = false;
-            this.listView_MainCourses.Size = new System.Drawing.Size(376, 103);
-            this.listView_MainCourses.TabIndex = 86;
-            this.listView_MainCourses.UseCompatibleStateImageBehavior = false;
-            this.listView_MainCourses.View = System.Windows.Forms.View.Details;
+            this.listView_MainCoursesLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_MainCoursesLunch.FullRowSelect = true;
+            this.listView_MainCoursesLunch.GridLines = true;
+            this.listView_MainCoursesLunch.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView_MainCoursesLunch.HideSelection = false;
+            this.listView_MainCoursesLunch.Location = new System.Drawing.Point(26, 247);
+            this.listView_MainCoursesLunch.MultiSelect = false;
+            this.listView_MainCoursesLunch.Name = "listView_MainCoursesLunch";
+            this.listView_MainCoursesLunch.Scrollable = false;
+            this.listView_MainCoursesLunch.Size = new System.Drawing.Size(376, 103);
+            this.listView_MainCoursesLunch.TabIndex = 86;
+            this.listView_MainCoursesLunch.UseCompatibleStateImageBehavior = false;
+            this.listView_MainCoursesLunch.View = System.Windows.Forms.View.Details;
             // 
             // nameMainCoursesLunch
             // 
@@ -342,7 +310,7 @@
             // priceMainCoursesLunch
             // 
             this.priceMainCoursesLunch.Text = "€";
-            this.priceMainCoursesLunch.Width = 40;
+            this.priceMainCoursesLunch.Width = 0;
             // 
             // stockMainCoursesLunch
             // 
@@ -354,42 +322,42 @@
             this.commentMainCoursesLunch.Text = "C";
             this.commentMainCoursesLunch.Width = 0;
             // 
-            // listView_Desserts
+            // listView_DessertsLunch
             // 
-            this.listView_Desserts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView_DessertsLunch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameDessertsLunch,
             this.quantityDessertsLunch,
             this.priceDessertsLunch,
             this.stockDessertsLunch,
             this.commentDessertLunch});
-            this.listView_Desserts.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView_Desserts.FullRowSelect = true;
-            this.listView_Desserts.GridLines = true;
-            this.listView_Desserts.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView_Desserts.HideSelection = false;
-            this.listView_Desserts.Location = new System.Drawing.Point(26, 422);
-            this.listView_Desserts.MultiSelect = false;
-            this.listView_Desserts.Name = "listView_Desserts";
-            this.listView_Desserts.Scrollable = false;
-            this.listView_Desserts.Size = new System.Drawing.Size(376, 103);
-            this.listView_Desserts.TabIndex = 87;
-            this.listView_Desserts.UseCompatibleStateImageBehavior = false;
-            this.listView_Desserts.View = System.Windows.Forms.View.Details;
+            this.listView_DessertsLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DessertsLunch.FullRowSelect = true;
+            this.listView_DessertsLunch.GridLines = true;
+            this.listView_DessertsLunch.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView_DessertsLunch.HideSelection = false;
+            this.listView_DessertsLunch.Location = new System.Drawing.Point(26, 422);
+            this.listView_DessertsLunch.MultiSelect = false;
+            this.listView_DessertsLunch.Name = "listView_DessertsLunch";
+            this.listView_DessertsLunch.Scrollable = false;
+            this.listView_DessertsLunch.Size = new System.Drawing.Size(376, 103);
+            this.listView_DessertsLunch.TabIndex = 87;
+            this.listView_DessertsLunch.UseCompatibleStateImageBehavior = false;
+            this.listView_DessertsLunch.View = System.Windows.Forms.View.Details;
             // 
             // nameDessertsLunch
             // 
             this.nameDessertsLunch.Text = "Name";
-            this.nameDessertsLunch.Width = 289;
+            this.nameDessertsLunch.Width = 324;
             // 
             // quantityDessertsLunch
             // 
             this.quantityDessertsLunch.Text = "#";
-            this.quantityDessertsLunch.Width = 43;
+            this.quantityDessertsLunch.Width = 47;
             // 
             // priceDessertsLunch
             // 
             this.priceDessertsLunch.Text = "€";
-            this.priceDessertsLunch.Width = 40;
+            this.priceDessertsLunch.Width = 0;
             // 
             // stockDessertsLunch
             // 
@@ -401,6 +369,51 @@
             this.commentDessertLunch.Text = "C";
             this.commentDessertLunch.Width = 0;
             // 
+            // btn_AddCommentStarterLunch
+            // 
+            this.btn_AddCommentStarterLunch.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddCommentStarterLunch.FlatAppearance.BorderSize = 0;
+            this.btn_AddCommentStarterLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddCommentStarterLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btn_AddCommentStarterLunch.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddCommentStarterLunch.Image")));
+            this.btn_AddCommentStarterLunch.Location = new System.Drawing.Point(404, 107);
+            this.btn_AddCommentStarterLunch.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddCommentStarterLunch.Name = "btn_AddCommentStarterLunch";
+            this.btn_AddCommentStarterLunch.Size = new System.Drawing.Size(33, 33);
+            this.btn_AddCommentStarterLunch.TabIndex = 89;
+            this.btn_AddCommentStarterLunch.UseVisualStyleBackColor = false;
+            this.btn_AddCommentStarterLunch.Click += new System.EventHandler(this.btn_AddCommentStarter_Click);
+            // 
+            // btn_AddCommentDessertLunch
+            // 
+            this.btn_AddCommentDessertLunch.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddCommentDessertLunch.FlatAppearance.BorderSize = 0;
+            this.btn_AddCommentDessertLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddCommentDessertLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btn_AddCommentDessertLunch.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddCommentDessertLunch.Image")));
+            this.btn_AddCommentDessertLunch.Location = new System.Drawing.Point(404, 457);
+            this.btn_AddCommentDessertLunch.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddCommentDessertLunch.Name = "btn_AddCommentDessertLunch";
+            this.btn_AddCommentDessertLunch.Size = new System.Drawing.Size(33, 33);
+            this.btn_AddCommentDessertLunch.TabIndex = 90;
+            this.btn_AddCommentDessertLunch.UseVisualStyleBackColor = false;
+            this.btn_AddCommentDessertLunch.Click += new System.EventHandler(this.btn_AddCommentDessertLunch_Click);
+            // 
+            // btn_AddCommentMainCourseLunch
+            // 
+            this.btn_AddCommentMainCourseLunch.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddCommentMainCourseLunch.FlatAppearance.BorderSize = 0;
+            this.btn_AddCommentMainCourseLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddCommentMainCourseLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btn_AddCommentMainCourseLunch.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddCommentMainCourseLunch.Image")));
+            this.btn_AddCommentMainCourseLunch.Location = new System.Drawing.Point(404, 282);
+            this.btn_AddCommentMainCourseLunch.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddCommentMainCourseLunch.Name = "btn_AddCommentMainCourseLunch";
+            this.btn_AddCommentMainCourseLunch.Size = new System.Drawing.Size(33, 33);
+            this.btn_AddCommentMainCourseLunch.TabIndex = 88;
+            this.btn_AddCommentMainCourseLunch.UseVisualStyleBackColor = false;
+            this.btn_AddCommentMainCourseLunch.Click += new System.EventHandler(this.btn_AddCommentMainCourseLunch_Click);
+            // 
             // pnl_Comment
             // 
             this.pnl_Comment.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -409,10 +422,10 @@
             this.pnl_Comment.Controls.Add(this.btn_AddCommentToItem);
             this.pnl_Comment.Controls.Add(this.label1);
             this.pnl_Comment.Controls.Add(this.txt_AddCommentToItem);
-            this.pnl_Comment.Location = new System.Drawing.Point(12, 176);
+            this.pnl_Comment.Location = new System.Drawing.Point(12, 169);
             this.pnl_Comment.Name = "pnl_Comment";
             this.pnl_Comment.Size = new System.Drawing.Size(440, 247);
-            this.pnl_Comment.TabIndex = 88;
+            this.pnl_Comment.TabIndex = 93;
             this.pnl_Comment.Visible = false;
             // 
             // btn_CancelComment
@@ -473,18 +486,18 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
             this.Controls.Add(this.pnl_Comment);
-            this.Controls.Add(this.listView_Desserts);
-            this.Controls.Add(this.listView_MainCourses);
+            this.Controls.Add(this.btn_AddCommentMainCourseLunch);
+            this.Controls.Add(this.btn_AddCommentDessertLunch);
+            this.Controls.Add(this.btn_AddCommentStarterLunch);
+            this.Controls.Add(this.listView_DessertsLunch);
+            this.Controls.Add(this.listView_MainCoursesLunch);
             this.Controls.Add(this.btn_SubtractDessert);
-            this.Controls.Add(this.btn_CommentDessert);
             this.Controls.Add(this.btn_AddDessert);
             this.Controls.Add(this.btn_SubtractMainCourse);
-            this.Controls.Add(this.btn_CommentMainCourse);
             this.Controls.Add(this.btn_AddMainCourse);
             this.Controls.Add(this.btn_SubtractStarter);
-            this.Controls.Add(this.btn_CommentStarter);
             this.Controls.Add(this.btn_AddStarter);
-            this.Controls.Add(this.listView_Starters);
+            this.Controls.Add(this.listView_StartersLunch);
             this.Controls.Add(this.btn_OrderOverview);
             this.Controls.Add(this.lbl_StartersHeader);
             this.Controls.Add(this.lbl_MainCourseHeader);
@@ -506,37 +519,37 @@
         private System.Windows.Forms.Label lbl_MainCourseHeader;
         private System.Windows.Forms.Label lbl_StartersHeader;
         private System.Windows.Forms.Button btn_OrderOverview;
-        private System.Windows.Forms.ListView listView_Starters;
+        private System.Windows.Forms.ListView listView_StartersLunch;
         private System.Windows.Forms.ColumnHeader nameStartersLunch;
         private System.Windows.Forms.ColumnHeader quantityStartersLunch;
         private System.Windows.Forms.Button btn_AddStarter;
-        private System.Windows.Forms.Button btn_CommentStarter;
         private System.Windows.Forms.Button btn_SubtractStarter;
         private System.Windows.Forms.ColumnHeader priceStartersLunch;
         private System.Windows.Forms.Button btn_SubtractMainCourse;
-        private System.Windows.Forms.Button btn_CommentMainCourse;
         private System.Windows.Forms.Button btn_AddMainCourse;
         private System.Windows.Forms.Button btn_SubtractDessert;
-        private System.Windows.Forms.Button btn_CommentDessert;
         private System.Windows.Forms.Button btn_AddDessert;
         private System.Windows.Forms.ColumnHeader stockStartersLunch;
         private System.Windows.Forms.ColumnHeader commentStartersLunch;
-        private System.Windows.Forms.ListView listView_MainCourses;
+        private System.Windows.Forms.ListView listView_MainCoursesLunch;
         private System.Windows.Forms.ColumnHeader nameMainCoursesLunch;
         private System.Windows.Forms.ColumnHeader quantityMainCoursesLunch;
         private System.Windows.Forms.ColumnHeader priceMainCoursesLunch;
         private System.Windows.Forms.ColumnHeader stockMainCoursesLunch;
         private System.Windows.Forms.ColumnHeader commentMainCoursesLunch;
-        private System.Windows.Forms.ListView listView_Desserts;
+        private System.Windows.Forms.ListView listView_DessertsLunch;
         private System.Windows.Forms.ColumnHeader nameDessertsLunch;
         private System.Windows.Forms.ColumnHeader quantityDessertsLunch;
         private System.Windows.Forms.ColumnHeader priceDessertsLunch;
         private System.Windows.Forms.ColumnHeader stockDessertsLunch;
         private System.Windows.Forms.ColumnHeader commentDessertLunch;
+        private System.Windows.Forms.Button btn_AddCommentStarterLunch;
+        private System.Windows.Forms.Button btn_AddCommentDessertLunch;
+        private System.Windows.Forms.Button btn_AddCommentMainCourseLunch;
         private System.Windows.Forms.Panel pnl_Comment;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_AddCommentToItem;
         private System.Windows.Forms.Button btn_CancelComment;
         private System.Windows.Forms.Button btn_AddCommentToItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_AddCommentToItem;
     }
 }

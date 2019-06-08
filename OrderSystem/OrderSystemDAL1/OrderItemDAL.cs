@@ -66,7 +66,7 @@ namespace OrderSystemDAL {
                 catch
                 {
                     //Updates the orderItem amount and comment if inserting fails
-                    string queryUpdateOrder = "UPDATE [ORDER_CONTAINS] SET amount = amount + @amount, comment = @comment WHERE itemID = @itemID AND orderID = @orderID)";
+                    string queryUpdateOrder = "UPDATE [ORDER_CONTAINS] SET amount = amount + @amount, comment = REPLACE(comment, comment, @comment) WHERE itemID = @itemID AND orderID = @orderID)";
                     SqlParameter[] sqlParametersUpdateOrderItem = new SqlParameter[]
                     {
                         new SqlParameter("@orderID", order.orderID),
