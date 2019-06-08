@@ -24,6 +24,18 @@ namespace OrderSystemLogic
             }
         }
 
+
+        public Order GetOrderskitchen(Order order)
+        {
+            try
+            {
+                return orderDAL.GetOrdersKitchen(order);
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
         public List<Order> Get_All_Orders()
         {
             try
@@ -151,18 +163,7 @@ namespace OrderSystemLogic
                 throw new Exception("Something went wrong while retrieving order");
             }
         }
-
-        public Order GetLatestTableOrder(Table table)
-        {
-            try
-            {
-                return orderDAL.Db_Get_LatestTableOrder(table);
-            }
-            catch
-            {
-                throw new Exception("Something went wrong while retrieving order");
-            }
-        }
+        
 
         public Order GetTableOrder(Table table)
         {

@@ -63,6 +63,18 @@ namespace OrderSystemDAL
 
         //begin kitchen and bar orders
 
+        public List<Order> GetOrdersBar()
+        {
+            string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE course = 'Drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public List<Order> GetOrdersKitchen(Order order)
+        {
+            string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE NOT course = 'Drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
         //Query to get all food for kitchen
         public List<Order> Db_Get_All_Foods(int tableID)
         {
