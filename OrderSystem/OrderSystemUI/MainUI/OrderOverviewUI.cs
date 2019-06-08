@@ -17,12 +17,13 @@ namespace OrderSystemUI.MainUI
         OrderItemLogic orderItemLogic = new OrderItemLogic();
         OrderLogic orderLogic = new OrderLogic();
 
+        int stockAmount;
         Order order;
         Item selectedItem = new Item();
 
-        OrderMenuUI orderUI;
+        OrderHomeUI orderUI;
 
-        public OrderOverviewUI(Order order, OrderMenuUI orderMenuUI)
+        public OrderOverviewUI(Order order, OrderHomeUI orderMenuUI)
         {
             InitializeComponent();
 
@@ -36,14 +37,14 @@ namespace OrderSystemUI.MainUI
         {
             foreach (OrderItem orderItem in order.orderItems)
             {
-                double price = orderItem.amount * orderItem.item.price;
+                 double price = orderItem.amount * orderItem.item.price;
 
-                ListViewItem li = new ListViewItem(orderItem.item.name);
-                li.SubItems.Add(orderItem.amount.ToString());
-                li.SubItems.Add(price.ToString());
-                li.SubItems.Add(orderItem.comment.ToString());
+                 ListViewItem li = new ListViewItem(orderItem.item.name);
+                 li.SubItems.Add(orderItem.amount.ToString());
+                 li.SubItems.Add(price.ToString());
+                 li.SubItems.Add(orderItem.comment.ToString());
 
-                listView_Overview.Items.Add(li);
+                 listView_Overview.Items.Add(li);
             }
         }
 
@@ -73,6 +74,8 @@ namespace OrderSystemUI.MainUI
 
         private void btn_ConfirmEdit_Click(object sender, EventArgs e)
         {
+            int amount = Convert.ToInt32(txt_Amount.Text);
+
             listView_Overview.SelectedItems[0].SubItems[1].Text = txt_Amount.Text;
             listView_Overview.SelectedItems[0].SubItems[3].Text = txt_Comment.Text;
 
@@ -80,10 +83,21 @@ namespace OrderSystemUI.MainUI
             txt_Amount.Clear();
             txt_Comment.Clear();
 
+            OrderItem orderItem = order.orderItems.Find(i => i.item.name == listView_Overview.SelectedItems[0].SubItems[0].Text);
+
+            if (amount >= 1)
+            {
+                orderItemLogic.UpdateOrderItems(orderItem, stockAmount);
+            }
+            else
+            {
+                orderItemLogic.RemoveOrderItems(orderItem);
+            }
+
             pnl_EditItem.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_AddAmount_Click(object sender, EventArgs e)
         {
             int amount = Convert.ToInt32(txt_Amount.Text);
             amount++;
@@ -92,14 +106,21 @@ namespace OrderSystemUI.MainUI
 
         private void btn_SubtractAmount_Click(object sender, EventArgs e)
         {
-            
             int amount = Convert.ToInt32(txt_Amount.Text);
 
             if (amount >= 1)
             {
-                amount++;
+                amount--;
+                stockAmount++;
+
                 txt_Amount.Text = amount.ToString();
             }
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            orderUI.Show();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace OrderSystemDAL
                 Order order = new Order();
                 order.orderID = (int)dr["OrderID"];
                 order.orderDate = (DateTime)dr["DateOrdered"];
-                order.orderItems = orderItemDAL.Db_Get_All_OrderItems((int)dr["OrderID"]);
+                order.orderItems = orderItemDAL.Db_Get_All_OrderItems((int)dr["orderID"]);
                 order.Employee = employeeDAL.Db_Get_Employee((int)dr["EmployeeID"]);
                 order.Table = tableDAL.DbGetTableByID((int)dr["tableID"]);
                 if (dr["comment"] == DBNull.Value)
@@ -178,7 +178,7 @@ namespace OrderSystemDAL
         //get unpaid order of today
         public Order Db_Get_Table_Order(Table table)
         {
-            string query = "SELECT orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE TableID = @tableID AND PaymentStatus = 0 AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE() ,120), 120)";
+            string query = "SELECT orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE TableID = @tableID AND PaymentStatus = 0";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
                 new SqlParameter("@tableID", table.ID)
@@ -261,16 +261,6 @@ namespace OrderSystemDAL
             order.totalAmount = (double)dataTable.Rows[0]["TotalAmount"];
 
             return order;
-        }
-
-        public Order Db_Get_LatestTableOrder(Table table)
-        {
-            string query = "SELECT TOP 1 orderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE tableID = 7 ORDER BY orderID desc";
-            SqlParameter[] sqlParameters = new SqlParameter[]
-            {
-                new SqlParameter("@tableID", table.ID)
-            };
-            return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
         }
     }
 }

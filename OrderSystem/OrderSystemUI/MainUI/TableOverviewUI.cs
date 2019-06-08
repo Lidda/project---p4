@@ -159,7 +159,7 @@ namespace OrderSystemUI {
         private void InitOrderUI(Table table) {
             this.Hide();
             table.Employee = employee;
-            OrderMenuUI orderUI = new OrderMenuUI(employee, table, this);
+            OrderHomeUI orderUI = new OrderHomeUI(employee, table, this);
             orderUI.ShowDialog();
         }
 

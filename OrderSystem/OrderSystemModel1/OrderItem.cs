@@ -10,6 +10,7 @@ namespace OrderSystemModel
     {
         public enum Status { ordered, ready, delivered };
 
+        public int ID { get; set; }
         public Status status { get; set; } 
         public int amount { get; set; }
         public Item item { get; set; }

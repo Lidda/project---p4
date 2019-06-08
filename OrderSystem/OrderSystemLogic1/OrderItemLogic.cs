@@ -24,11 +24,23 @@ namespace OrderSystemLogic
             }
         }
 
-        public void RemoveItemsFromOrder(List<OrderItem> orderItems)
+        public void UpdateOrderItems(OrderItem orderItems, int stockAmount)
         {
             try
             {
-                orderItem_db.RemoveItemsFromOrder(orderItems);
+                orderItem_db.UpdateOrderItems(orderItems, stockAmount);
+            }
+            catch
+            {
+                throw new Exception("Something went wrong while removing items");
+            }
+        }
+
+        public void RemoveOrderItems(OrderItem orderItems)
+        {
+            try
+            {
+                orderItem_db.RemoveOrderItems(orderItems);
             }
             catch
             {

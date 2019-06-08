@@ -114,11 +114,11 @@
     <Compile Include="MainUI\OrderOverviewUI.Designer.cs">
       <DependentUpon>OrderOverviewUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\OrderUI.cs">
+    <Compile Include="MainUI\OrderMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\OrderUI.Designer.cs">
-      <DependentUpon>OrderUI.cs</DependentUpon>
+    <Compile Include="MainUI\OrderMenuUI.Designer.cs">
+      <DependentUpon>OrderMenuUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\LoginUI.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <Compile Include="MainUI\ManagerUI.Designer.cs">
       <DependentUpon>ManagerUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\OrderMenuUI.cs">
+    <Compile Include="MainUI\OrderHomeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\OrderMenuUI.Designer.cs">
-      <DependentUpon>OrderMenuUI.cs</DependentUpon>
+    <Compile Include="MainUI\OrderHomeUI.Designer.cs">
+      <DependentUpon>OrderHomeUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,11 +195,11 @@
     <EmbeddedResource Include="MainUI\OrderOverviewUI.resx">
       <DependentUpon>OrderOverviewUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\OrderUI.resx">
-      <DependentUpon>OrderUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainUI\OrderMenuUI.resx">
       <DependentUpon>OrderMenuUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI\OrderHomeUI.resx">
+      <DependentUpon>OrderHomeUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\TableOverviewUI.resx">
       <DependentUpon>TableOverviewUI.cs</DependentUpon>

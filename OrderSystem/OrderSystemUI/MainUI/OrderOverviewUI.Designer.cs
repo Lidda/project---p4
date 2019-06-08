@@ -36,6 +36,8 @@
             this.btn_EditItem = new System.Windows.Forms.Button();
             this.btn_DeleteItem = new System.Windows.Forms.Button();
             this.pnl_EditItem = new System.Windows.Forms.Panel();
+            this.btn_SubtractAmount = new System.Windows.Forms.Button();
+            this.btn_AddAmount = new System.Windows.Forms.Button();
             this.btn_CancelEdit = new System.Windows.Forms.Button();
             this.btn_ConfirmEdit = new System.Windows.Forms.Button();
             this.txt_Amount = new System.Windows.Forms.TextBox();
@@ -44,9 +46,7 @@
             this.lbl_ItemComment = new System.Windows.Forms.Label();
             this.lbl_ItemAmount = new System.Windows.Forms.Label();
             this.lbl_ItemName = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btn_AddAmount = new System.Windows.Forms.Button();
-            this.btn_SubtractAmount = new System.Windows.Forms.Button();
+            this.btn_Home = new System.Windows.Forms.Button();
             this.pnl_EditItem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +134,36 @@
             this.pnl_EditItem.Size = new System.Drawing.Size(437, 552);
             this.pnl_EditItem.TabIndex = 4;
             this.pnl_EditItem.Visible = false;
+            // 
+            // btn_SubtractAmount
+            // 
+            this.btn_SubtractAmount.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_SubtractAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_SubtractAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SubtractAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SubtractAmount.Location = new System.Drawing.Point(189, 146);
+            this.btn_SubtractAmount.Name = "btn_SubtractAmount";
+            this.btn_SubtractAmount.Size = new System.Drawing.Size(33, 33);
+            this.btn_SubtractAmount.TabIndex = 33;
+            this.btn_SubtractAmount.Text = "-";
+            this.btn_SubtractAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_SubtractAmount.UseVisualStyleBackColor = false;
+            this.btn_SubtractAmount.Click += new System.EventHandler(this.btn_SubtractAmount_Click);
+            // 
+            // btn_AddAmount
+            // 
+            this.btn_AddAmount.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_AddAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_AddAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddAmount.Location = new System.Drawing.Point(150, 146);
+            this.btn_AddAmount.Name = "btn_AddAmount";
+            this.btn_AddAmount.Size = new System.Drawing.Size(33, 33);
+            this.btn_AddAmount.TabIndex = 32;
+            this.btn_AddAmount.Text = "+";
+            this.btn_AddAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_AddAmount.UseVisualStyleBackColor = false;
+            this.btn_AddAmount.Click += new System.EventHandler(this.btn_AddAmount_Click);
             // 
             // btn_CancelEdit
             // 
@@ -223,49 +253,20 @@
             this.lbl_ItemName.TabIndex = 0;
             this.lbl_ItemName.Text = "Gerecht:";
             // 
-            // btnBack
+            // btn_Home
             // 
-            this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(12, 632);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(95, 37);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.Text = "HOME";
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
-            // btn_AddAmount
-            // 
-            this.btn_AddAmount.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_AddAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_AddAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddAmount.Location = new System.Drawing.Point(150, 146);
-            this.btn_AddAmount.Name = "btn_AddAmount";
-            this.btn_AddAmount.Size = new System.Drawing.Size(33, 33);
-            this.btn_AddAmount.TabIndex = 32;
-            this.btn_AddAmount.Text = "+";
-            this.btn_AddAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AddAmount.UseVisualStyleBackColor = false;
-            this.btn_AddAmount.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_SubtractAmount
-            // 
-            this.btn_SubtractAmount.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_SubtractAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_SubtractAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SubtractAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SubtractAmount.Location = new System.Drawing.Point(189, 146);
-            this.btn_SubtractAmount.Name = "btn_SubtractAmount";
-            this.btn_SubtractAmount.Size = new System.Drawing.Size(33, 33);
-            this.btn_SubtractAmount.TabIndex = 33;
-            this.btn_SubtractAmount.Text = "-";
-            this.btn_SubtractAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_SubtractAmount.UseVisualStyleBackColor = false;
-            this.btn_SubtractAmount.Click += new System.EventHandler(this.btn_SubtractAmount_Click);
+            this.btn_Home.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_Home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Home.Location = new System.Drawing.Point(12, 632);
+            this.btn_Home.Name = "btn_Home";
+            this.btn_Home.Size = new System.Drawing.Size(95, 37);
+            this.btn_Home.TabIndex = 5;
+            this.btn_Home.Text = "Home";
+            this.btn_Home.UseVisualStyleBackColor = false;
+            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
             // OrderOverviewUI
             // 
@@ -273,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btn_Home);
             this.Controls.Add(this.pnl_EditItem);
             this.Controls.Add(this.btn_DeleteItem);
             this.Controls.Add(this.btn_EditItem);
@@ -304,7 +305,7 @@
         private System.Windows.Forms.Button btn_CancelEdit;
         private System.Windows.Forms.Button btn_ConfirmEdit;
         private System.Windows.Forms.ColumnHeader ItemComment;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Button btn_AddAmount;
         private System.Windows.Forms.Button btn_SubtractAmount;
     }

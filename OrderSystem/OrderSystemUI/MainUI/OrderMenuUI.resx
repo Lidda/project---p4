@@ -117,4 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_AddCommentStarterLunch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAALtJREFUWEft
+        l8EKwjAQROOf60FQ/E5BT36B2hnISWY8SDbdyj54t53NUEJpW/EPHOANvoPlGTxrBy1HqMKRnqHlClUo
+        0ge0PKEKRWupQl2LKzQKtZtaqlDXku4OvaAK7AepdlOLKzQKtZtaNlNIPf5fVLupxRWK1lJ3qGtRw3QU
+        aje1qOEZWtTwDC1qeIYWNRwtP/YtKhDtCVpUIMo75G/QV1SQr/zV+CxzgauSqgxJVYakKkNSlSk2QGsL
+        bCw3tFFxAUsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_AddCommentDessertLunch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAALtJREFUWEft
+        l8EKwjAQROOf60FQ/E5BT36B2hnISWY8SDbdyj54t53NUEJpW/EPHOANvoPlGTxrBy1HqMKRnqHlClUo
+        0ge0PKEKRWupQl2LKzQKtZtaqlDXku4OvaAK7AepdlOLKzQKtZtaNlNIPf5fVLupxRWK1lJ3qGtRw3QU
+        aje1qOEZWtTwDC1qeIYWNRwtP/YtKhDtCVpUIMo75G/QV1SQr/zV+CxzgauSqgxJVYakKkNSlSk2QGsL
+        bCw3tFFxAUsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_AddCommentMainCourseLunch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAALtJREFUWEft
+        l8EKwjAQROOf60FQ/E5BT36B2hnISWY8SDbdyj54t53NUEJpW/EPHOANvoPlGTxrBy1HqMKRnqHlClUo
+        0ge0PKEKRWupQl2LKzQKtZtaqlDXku4OvaAK7AepdlOLKzQKtZtaNlNIPf5fVLupxRWK1lJ3qGtRw3QU
+        aje1qOEZWtTwDC1qeIYWNRwtP/YtKhDtCVpUIMo75G/QV1SQr/zV+CxzgauSqgxJVYakKkNSlSk2QGsL
+        bCw3tFFxAUsAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
