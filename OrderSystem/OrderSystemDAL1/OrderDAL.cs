@@ -69,11 +69,11 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
-        public Order GetOrdersKitchen(Order order)
+        public List <Order> GetOrdersKitchen()
         {
             string query = "SELECT O.OrderID,c.amount, i.name, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = 2 AND i.foodtype LIKE '%Dinner' OR i.foodtype LIKE '%Lunch' AND status = 0 AND o.tableID =2";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return GetOrder(ExecuteSelectQuery(query, sqlParameters));
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
      
 
