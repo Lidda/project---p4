@@ -24,6 +24,18 @@ namespace OrderSystemLogic
             }
         }
 
+
+        public Order GetOrderskitchen(Order order)
+        {
+            try
+            {
+                return orderDAL.GetOrdersKitchen(order);
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
         public List<Order> Get_All_Orders()
         {
             try
@@ -34,22 +46,6 @@ namespace OrderSystemLogic
             {
                throw new Exception("Could not get orders from database");
             }
-        }
-
-        public List<Order> GetFoodOrders(int tableID)
-        {
-            try
-            {
-                List<Order> OrderList = orderDAL.Db_Get_All_Foods(tableID);
-
-                return OrderList;
-            }
-            catch (Exception)
-            {
-
-                throw new Exception("Something went wrong");
-            }
-
         }
 
         public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
