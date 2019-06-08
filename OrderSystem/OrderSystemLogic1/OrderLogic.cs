@@ -152,18 +152,6 @@ namespace OrderSystemLogic
             }
         }
 
-        public Order GetLatestTableOrder(Table table)
-        {
-            try
-            {
-                return orderDAL.Db_Get_LatestTableOrder(table);
-            }
-            catch
-            {
-                throw new Exception("Something went wrong while retrieving order");
-            }
-        }
-
         public Order GetTableOrder(Table table)
         {
             try
