@@ -29,11 +29,16 @@ namespace OrderSystemUI.MainUI
 
         private void InitTipFormLabels()
         {
+            //show euro signs
+            lblEuroSign1.Show();
+            lbleuroSign2.Show();
+            lblEuroSign3.Show();
+
             //set text of labels
             lblTipHeader.Text = string.Format("Fooi tafel {0}", order.Table.ID);
-            lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
-            lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
-            lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            lblTipTip.Text = string.Format("{0:0.00}", order.tip);
+            lblTipTotal.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total") - order.tip);
+            lblTipGrandTotal.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total"));
         }
 
         private void btnAddTipToOrder_Click(object sender, EventArgs e)
@@ -92,6 +97,11 @@ namespace OrderSystemUI.MainUI
             //sets tip to 0
             order.tip = 0;
             InitTipFormLabels();
+        }
+
+        private void pnlTip_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

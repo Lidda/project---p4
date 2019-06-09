@@ -27,6 +27,7 @@ namespace OrderSystemUI.MainUI
             //hide tip labels
             lblTip.Hide();
             lblTipAmount.Hide();
+            lblTipEuroSign.Hide();
 
             //check if there's a order
             //if no; show "error" panel
@@ -90,9 +91,9 @@ namespace OrderSystemUI.MainUI
                 lblTotalAmount.Show();
 
                 //set label prices
-                this.lblOrderPriceWithoutTax.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("withoutTax"));
-                this.lblTaxAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Tax"));
-                this.lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+                this.lblOrderPriceWithoutTax.Text = string.Format("{0:0.00}", order.GetTotalAmount("withoutTax"));
+                this.lblTaxAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Tax"));
+                this.lblTotalAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total"));
 
                 //check if there's given a tip
                 //if yes, show labels
@@ -100,7 +101,8 @@ namespace OrderSystemUI.MainUI
                 {
                     lblTip.Show();
                     lblTipAmount.Show();
-                    lblTipAmount.Text = string.Format("€ {0:0.00}", order.tip);
+                    lblTipEuroSign.Show();
+                    lblTipAmount.Text = string.Format("{0:0.00}", order.tip);
                 }
 
                 //empty listview before filling it
