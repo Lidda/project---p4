@@ -46,7 +46,7 @@
             this.btnFree.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFree.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFree.Location = new System.Drawing.Point(77, 74);
-            this.btnFree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFree.Margin = new System.Windows.Forms.Padding(4);
             this.btnFree.Name = "btnFree";
             this.btnFree.Size = new System.Drawing.Size(152, 43);
             this.btnFree.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBack.Location = new System.Drawing.Point(0, 774);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(145, 65);
             this.btnBack.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.btnTaken.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaken.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTaken.Location = new System.Drawing.Point(237, 74);
-            this.btnTaken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTaken.Margin = new System.Windows.Forms.Padding(4);
             this.btnTaken.Name = "btnTaken";
             this.btnTaken.Size = new System.Drawing.Size(152, 43);
             this.btnTaken.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.btnReserved.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReserved.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReserved.Location = new System.Drawing.Point(397, 74);
-            this.btnReserved.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReserved.Margin = new System.Windows.Forms.Padding(4);
             this.btnReserved.Name = "btnReserved";
             this.btnReserved.Size = new System.Drawing.Size(152, 43);
             this.btnReserved.TabIndex = 5;
@@ -118,7 +118,7 @@
             this.Btn_BeverageMenu.Image = ((System.Drawing.Image)(resources.GetObject("Btn_BeverageMenu.Image")));
             this.Btn_BeverageMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_BeverageMenu.Location = new System.Drawing.Point(93, 148);
-            this.Btn_BeverageMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_BeverageMenu.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_BeverageMenu.Name = "Btn_BeverageMenu";
             this.Btn_BeverageMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.Btn_BeverageMenu.Size = new System.Drawing.Size(200, 185);
@@ -139,7 +139,7 @@
             this.btn_OrderOverview.Image = ((System.Drawing.Image)(resources.GetObject("btn_OrderOverview.Image")));
             this.btn_OrderOverview.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_OrderOverview.Location = new System.Drawing.Point(320, 148);
-            this.btn_OrderOverview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_OrderOverview.Margin = new System.Windows.Forms.Padding(4);
             this.btn_OrderOverview.Name = "btn_OrderOverview";
             this.btn_OrderOverview.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btn_OrderOverview.Size = new System.Drawing.Size(200, 185);
@@ -159,7 +159,7 @@
             this.btn_LunchMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_LunchMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_LunchMenu.Image")));
             this.btn_LunchMenu.Location = new System.Drawing.Point(93, 357);
-            this.btn_LunchMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LunchMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LunchMenu.Name = "btn_LunchMenu";
             this.btn_LunchMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btn_LunchMenu.Size = new System.Drawing.Size(200, 185);
@@ -179,7 +179,7 @@
             this.btn_DinnerMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_DinnerMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_DinnerMenu.Image")));
             this.btn_DinnerMenu.Location = new System.Drawing.Point(320, 356);
-            this.btn_DinnerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DinnerMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DinnerMenu.Name = "btn_DinnerMenu";
             this.btn_DinnerMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btn_DinnerMenu.Size = new System.Drawing.Size(200, 185);
@@ -212,7 +212,7 @@
             this.btn_Checkout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Checkout.Image")));
             this.btn_Checkout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Checkout.Location = new System.Drawing.Point(207, 567);
-            this.btn_Checkout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Checkout.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Checkout.Name = "btn_Checkout";
             this.btn_Checkout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.btn_Checkout.Size = new System.Drawing.Size(200, 185);
@@ -239,7 +239,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFree);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrderHomeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderUI";

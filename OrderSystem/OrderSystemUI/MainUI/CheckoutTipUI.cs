@@ -37,6 +37,12 @@ namespace OrderSystemUI.MainUI
             try
             {
                 order.tip = double.Parse(txtTip.Text.Replace('.', ','));
+
+                //check if the tip is greater or equal to zero
+                if (order.tip < 0)
+                {
+                    throw new Exception();
+                }
                 InitTipFormLabels();
             }
             catch
