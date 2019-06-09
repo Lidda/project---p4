@@ -20,7 +20,7 @@ namespace OrderSystemUI.MainUI
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
-            
+
             InitializeComponent();
             Order1(orders);
             Order2(orders);
@@ -35,8 +35,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order1(List<Order> orders)
         {
-            int tableID = 1;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(1);
             listView1.Items.Clear();
             foreach (Order o in orders)
             {
@@ -44,8 +43,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView1.BackColor = Color.Tomato;
@@ -60,8 +58,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order2(List<Order> orders)
         {
-            int tableID = 2;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(2);
             listView2.Items.Clear();
             foreach (Order o in orders)
             {
@@ -69,7 +66,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -85,8 +81,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order3(List<Order> orders)
         {
-            int tableID = 3;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(3);
             listView3.Items.Clear();
             foreach (Order o in orders)
             {
@@ -94,8 +89,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView3.BackColor = Color.Tomato;
@@ -108,10 +102,9 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order4(List<Order> orders) { 
-        
-            int tableID = 4;
-            orders = orderLogic.GetOrderskitchen(tableID);
+        public void Order4(List<Order> orders)
+        {
+            orders = orderLogic.GetOrderskitchen(4);
             listView4.Items.Clear();
             foreach (Order o in orders)
             {
@@ -119,7 +112,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -135,8 +127,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order5(List<Order> orders)
         {
-            int tableID = 5;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(5);
             listView5.Items.Clear();
             foreach (Order o in orders)
             {
@@ -144,8 +135,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView5.BackColor = Color.Tomato;
@@ -160,8 +150,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order6(List<Order> orders)
         {
-            int tableID = 6;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(6);
             listView6.Items.Clear();
             foreach (Order o in orders)
             {
@@ -169,7 +158,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -185,8 +173,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order7(List<Order> orders)
         {
-            int tableID = 7;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(7);
             listView7.Items.Clear();
             foreach (Order o in orders)
             {
@@ -194,7 +181,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -210,8 +196,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order8(List<Order> orders)
         {
-            int tableID = 8;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(8);
             listView8.Items.Clear();
             foreach (Order o in orders)
             {
@@ -219,8 +204,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView8.BackColor = Color.Tomato;
@@ -235,8 +219,7 @@ namespace OrderSystemUI.MainUI
         }
         public void Order9(List<Order> orders)
         {
-            int tableID = 9;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(9);
             listView9.Items.Clear();
             foreach (Order o in orders)
             {
@@ -244,8 +227,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView9.BackColor = Color.Tomato;
@@ -261,8 +243,7 @@ namespace OrderSystemUI.MainUI
 
         public void Order10(List<Order> orders)
         {
-            int tableID = 10;
-            orders = orderLogic.GetOrderskitchen(tableID);
+            orders = orderLogic.GetOrderskitchen(10);
             listView10.Items.Clear();
             foreach (Order o in orders)
             {
@@ -270,8 +251,7 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
-                     li.SubItems.Add(order.amount.ToString());
+                    li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
                         listView10.BackColor = Color.Tomato;
@@ -295,8 +275,8 @@ namespace OrderSystemUI.MainUI
             Order7(orders);
             Order8(orders);
             Order9(orders);
-            Order10(orders);    
-           
+            Order10(orders);
+
         }
         private void timerTime_Tick(object sender, EventArgs e)
         {
@@ -305,7 +285,81 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
-           
+            orderLogic.ChangeOrderStatus(1, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order1(orders);
+            listView1.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady2_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(2, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order2(orders);
+            listView2.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady3_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(3, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order3(orders);
+            listView3.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady4_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(4, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order4(orders);
+            listView4.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady5_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(5, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order5(orders);
+            listView5.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady6_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(6, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order6(orders);
+            listView6.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady7_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(7, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order7(orders);
+            listView7.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady8_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(8, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order8(orders);
+            listView8.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady9_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(9, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order9(orders);
+            listView9.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btn_markReady10_Click(object sender, EventArgs e)
+        {
+            orderLogic.ChangeOrderStatus(10, OrderItem.Status.ordered, OrderItem.Status.ready);
+            Order10(orders);
+            listView10.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginUI loginUI = new LoginUI();
+            loginUI.ShowDialog();
+            this.Close();
+
         }
     }
 }

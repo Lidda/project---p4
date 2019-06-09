@@ -37,7 +37,7 @@
             // 
             // btnFree
             // 
-            this.btnFree.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnFree.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnFree.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFree.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnFree.FlatAppearance.BorderSize = 0;
@@ -56,10 +56,11 @@
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(12, 632);
+            this.btnBack.Location = new System.Drawing.Point(0, 644);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(95, 37);
             this.btnBack.TabIndex = 3;

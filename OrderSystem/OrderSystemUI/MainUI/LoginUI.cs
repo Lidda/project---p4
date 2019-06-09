@@ -10,45 +10,62 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OrderSystemUI.MainUI {
-    public partial class LoginUI : Form {
+namespace OrderSystemUI.MainUI
+{
+    public partial class LoginUI : Form
+    {
         Employee employee = new Employee();
         EmployeeLogic employeeLogic = new EmployeeLogic();
 
-        public LoginUI() {
+        public LoginUI()
+        {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e) {
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
             int employeeID;
 
             //tries to turn the received input into an it; if it's successful it sets the employee ID; if it is not successful it sets the username.
-            if (int.TryParse(usernameInput.Text, out employeeID)) {
+            if (int.TryParse(usernameInput.Text, out employeeID))
+            {
                 employee.ID = employeeID;
-            } else {
+            }
+            else
+            {
                 employee.username = usernameInput.Text;
             }
             employee.password = passwordInput.Text;
 
-            if (employeeLogic.CheckForUser(employee)) {
+            if (employeeLogic.CheckForUser(employee))
+            {
                 this.Hide();
 
                 //opens th form corresponding with user
-                if (employee.type == OrderSystemModel.employeeType.Barman) {
-                    //BarUI barUI = new BarUI(employee);
-                    //barUI.ShowDialog();
-                } else if (employee.type == OrderSystemModel.employeeType.Serveerder) {
+                if (employee.type == OrderSystemModel.employeeType.Barman)
+                {
+                    BarUI barUI = new BarUI(employee);
+                    barUI.ShowDialog();
+                }
+                else if (employee.type == OrderSystemModel.employeeType.Serveerder)
+                {
                     TableOverviewUI waiterUI = new TableOverviewUI(employee);
                     waiterUI.ShowDialog();
-                } else if (employee.type == OrderSystemModel.employeeType.Kok) {
+                }
+                else if (employee.type == OrderSystemModel.employeeType.Kok)
+                {
                     KitchenUI kitchenUI = new KitchenUI(employee);
                     kitchenUI.ShowDialog();
-                } else if (employee.type == OrderSystemModel.employeeType.Manager) {
+                }
+                else if (employee.type == OrderSystemModel.employeeType.Manager)
+                {
                     ManagerUI managerUI = new ManagerUI(employee);
                     managerUI.ShowDialog();
                 }
                 this.Close();
-            } else {
+            }
+            else
+            {
                 MessageBox.Show("Invalid username or password.");
                 usernameInput.Clear();
                 passwordInput.Clear();
