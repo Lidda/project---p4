@@ -43,7 +43,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -67,7 +66,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -91,7 +89,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -115,7 +112,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -139,7 +135,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -163,7 +158,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -187,7 +181,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -211,7 +204,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -235,7 +227,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
@@ -260,7 +251,6 @@ namespace OrderSystemUI.MainUI
                 {
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
-                    li.SubItems.Add(order.item.foodtype);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {

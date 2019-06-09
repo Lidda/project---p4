@@ -58,22 +58,18 @@
             this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -89,32 +85,26 @@
             this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView6 = new System.Windows.Forms.ListView();
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView7 = new System.Windows.Forms.ListView();
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView8 = new System.Windows.Forms.ListView();
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView9 = new System.Windows.Forms.ListView();
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView10 = new System.Windows.Forms.ListView();
             this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -357,8 +347,9 @@
             this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader16,
             this.columnHeader17,
-            this.columnHeader18,
             this.columnHeader19});
+            this.listView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView4.GridLines = true;
             this.listView4.Location = new System.Drawing.Point(1276, 117);
             this.listView4.Name = "listView4";
@@ -374,12 +365,7 @@
             // columnHeader17
             // 
             this.columnHeader17.Text = "Name";
-            this.columnHeader17.Width = 120;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Type";
-            this.columnHeader18.Width = 80;
+            this.columnHeader17.Width = 205;
             // 
             // columnHeader19
             // 
@@ -391,8 +377,9 @@
             this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
             this.columnHeader12,
-            this.columnHeader13,
             this.columnHeader14});
+            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView3.GridLines = true;
             this.listView3.Location = new System.Drawing.Point(886, 117);
             this.listView3.Name = "listView3";
@@ -403,21 +390,16 @@
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "Time";
+            this.columnHeader11.Text = "Tijd";
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Name";
-            this.columnHeader12.Width = 120;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Type";
-            this.columnHeader13.Width = 80;
+            this.columnHeader12.Text = "Naam";
+            this.columnHeader12.Width = 205;
             // 
             // columnHeader14
             // 
-            this.columnHeader14.Text = "Amount";
+            this.columnHeader14.Text = "Aantal";
             // 
             // listView2
             // 
@@ -425,8 +407,9 @@
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8,
             this.columnHeader9});
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(453, 117);
             this.listView2.Name = "listView2";
@@ -437,21 +420,16 @@
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Time";
+            this.columnHeader6.Text = "Tijd";
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Name";
-            this.columnHeader7.Width = 120;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Type";
-            this.columnHeader8.Width = 80;
+            this.columnHeader7.Text = "Naam";
+            this.columnHeader7.Width = 205;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Amount";
+            this.columnHeader9.Text = "Aantal";
             // 
             // listView1
             // 
@@ -459,8 +437,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
             this.columnHeader4});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(24, 117);
             this.listView1.Name = "listView1";
@@ -472,21 +451,16 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Time";
+            this.columnHeader1.Text = "Tijd";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Type";
-            this.columnHeader3.Width = 80;
+            this.columnHeader2.Text = "Naam";
+            this.columnHeader2.Width = 205;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Amount";
+            this.columnHeader4.Text = "Aantal";
             // 
             // textBox2
             // 
@@ -637,8 +611,9 @@
             this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader10,
-            this.columnHeader15,
             this.columnHeader21});
+            this.listView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView5.GridLines = true;
             this.listView5.Location = new System.Drawing.Point(24, 400);
             this.listView5.Name = "listView5";
@@ -649,21 +624,16 @@
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Time";
+            this.columnHeader5.Text = "Tijd";
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Name";
-            this.columnHeader10.Width = 120;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Type";
-            this.columnHeader15.Width = 80;
+            this.columnHeader10.Text = "Naam";
+            this.columnHeader10.Width = 205;
             // 
             // columnHeader21
             // 
-            this.columnHeader21.Text = "Amount";
+            this.columnHeader21.Text = "Aantal";
             // 
             // listView6
             // 
@@ -671,8 +641,9 @@
             this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader23,
             this.columnHeader24,
-            this.columnHeader25,
             this.columnHeader26});
+            this.listView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView6.GridLines = true;
             this.listView6.Location = new System.Drawing.Point(453, 400);
             this.listView6.Name = "listView6";
@@ -683,21 +654,16 @@
             // 
             // columnHeader23
             // 
-            this.columnHeader23.Text = "Time";
+            this.columnHeader23.Text = "Tijd";
             // 
             // columnHeader24
             // 
-            this.columnHeader24.Text = "Name";
-            this.columnHeader24.Width = 120;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "Type";
-            this.columnHeader25.Width = 80;
+            this.columnHeader24.Text = "Naam";
+            this.columnHeader24.Width = 205;
             // 
             // columnHeader26
             // 
-            this.columnHeader26.Text = "Amount";
+            this.columnHeader26.Text = "Aantal";
             // 
             // listView7
             // 
@@ -705,8 +671,9 @@
             this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader28,
             this.columnHeader29,
-            this.columnHeader30,
             this.columnHeader31});
+            this.listView7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView7.GridLines = true;
             this.listView7.Location = new System.Drawing.Point(886, 400);
             this.listView7.Name = "listView7";
@@ -717,21 +684,16 @@
             // 
             // columnHeader28
             // 
-            this.columnHeader28.Text = "Time";
+            this.columnHeader28.Text = "Tijd";
             // 
             // columnHeader29
             // 
-            this.columnHeader29.Text = "Name";
-            this.columnHeader29.Width = 120;
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Type";
-            this.columnHeader30.Width = 80;
+            this.columnHeader29.Text = "Naam";
+            this.columnHeader29.Width = 205;
             // 
             // columnHeader31
             // 
-            this.columnHeader31.Text = "Amount";
+            this.columnHeader31.Text = "Aantal";
             // 
             // listView8
             // 
@@ -739,8 +701,9 @@
             this.listView8.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader33,
             this.columnHeader34,
-            this.columnHeader35,
             this.columnHeader36});
+            this.listView8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView8.GridLines = true;
             this.listView8.Location = new System.Drawing.Point(1276, 400);
             this.listView8.Name = "listView8";
@@ -751,21 +714,16 @@
             // 
             // columnHeader33
             // 
-            this.columnHeader33.Text = "Time";
+            this.columnHeader33.Text = "Tijd";
             // 
             // columnHeader34
             // 
-            this.columnHeader34.Text = "Name";
-            this.columnHeader34.Width = 120;
-            // 
-            // columnHeader35
-            // 
-            this.columnHeader35.Text = "Type";
-            this.columnHeader35.Width = 80;
+            this.columnHeader34.Text = "Naam";
+            this.columnHeader34.Width = 205;
             // 
             // columnHeader36
             // 
-            this.columnHeader36.Text = "Amount";
+            this.columnHeader36.Text = "Aantal";
             // 
             // listView9
             // 
@@ -773,8 +731,9 @@
             this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader38,
             this.columnHeader39,
-            this.columnHeader40,
             this.columnHeader41});
+            this.listView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView9.GridLines = true;
             this.listView9.Location = new System.Drawing.Point(24, 701);
             this.listView9.Name = "listView9";
@@ -785,21 +744,16 @@
             // 
             // columnHeader38
             // 
-            this.columnHeader38.Text = "Time";
+            this.columnHeader38.Text = "Tijd";
             // 
             // columnHeader39
             // 
-            this.columnHeader39.Text = "Name";
-            this.columnHeader39.Width = 120;
-            // 
-            // columnHeader40
-            // 
-            this.columnHeader40.Text = "Type";
-            this.columnHeader40.Width = 80;
+            this.columnHeader39.Text = "Naam";
+            this.columnHeader39.Width = 205;
             // 
             // columnHeader41
             // 
-            this.columnHeader41.Text = "Amount";
+            this.columnHeader41.Text = "Aantal";
             // 
             // listView10
             // 
@@ -807,8 +761,9 @@
             this.listView10.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader43,
             this.columnHeader44,
-            this.columnHeader45,
             this.columnHeader46});
+            this.listView10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView10.GridLines = true;
             this.listView10.Location = new System.Drawing.Point(453, 701);
             this.listView10.Name = "listView10";
@@ -819,21 +774,16 @@
             // 
             // columnHeader43
             // 
-            this.columnHeader43.Text = "Time";
+            this.columnHeader43.Text = "Tijd";
             // 
             // columnHeader44
             // 
-            this.columnHeader44.Text = "Name";
-            this.columnHeader44.Width = 120;
-            // 
-            // columnHeader45
-            // 
-            this.columnHeader45.Text = "Type";
-            this.columnHeader45.Width = 80;
+            this.columnHeader44.Text = "Naam";
+            this.columnHeader44.Width = 205;
             // 
             // columnHeader46
             // 
-            this.columnHeader46.Text = "Amount";
+            this.columnHeader46.Text = "Aantal";
             // 
             // pictureBox1
             // 
@@ -953,7 +903,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button btn_markReady2;
         private System.Windows.Forms.Button btn_markReady3;
@@ -966,45 +915,36 @@
         private System.Windows.Forms.Button btn_markReady10;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ListView listView5;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.ListView listView7;
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.ColumnHeader columnHeader29;
-        private System.Windows.Forms.ColumnHeader columnHeader30;
         private System.Windows.Forms.ColumnHeader columnHeader31;
         private System.Windows.Forms.ListView listView8;
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.ColumnHeader columnHeader34;
-        private System.Windows.Forms.ColumnHeader columnHeader35;
         private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.ListView listView9;
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.ColumnHeader columnHeader39;
-        private System.Windows.Forms.ColumnHeader columnHeader40;
         private System.Windows.Forms.ColumnHeader columnHeader41;
         private System.Windows.Forms.ListView listView10;
         private System.Windows.Forms.ColumnHeader columnHeader43;
         private System.Windows.Forms.ColumnHeader columnHeader44;
-        private System.Windows.Forms.ColumnHeader columnHeader45;
         private System.Windows.Forms.ColumnHeader columnHeader46;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
