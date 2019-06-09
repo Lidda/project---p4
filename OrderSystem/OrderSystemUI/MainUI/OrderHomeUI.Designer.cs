@@ -37,7 +37,7 @@
             // 
             // btnFree
             // 
-            this.btnFree.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnFree.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnFree.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFree.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnFree.FlatAppearance.BorderSize = 0;
@@ -56,10 +56,11 @@
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(12, 632);
+            this.btnBack.Location = new System.Drawing.Point(0, 644);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(95, 37);
             this.btnBack.TabIndex = 3;
@@ -200,7 +201,7 @@
             this.btn_Checkout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Checkout.UseVisualStyleBackColor = false;
             // 
-            // OrderMenuUI
+            // OrderHomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +218,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFree);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Name = "OrderMenuUI";
+            this.Name = "OrderHomeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderUI";
             this.ResumeLayout(false);
