@@ -40,7 +40,7 @@ namespace OrderSystemLogic
         {
             try
             {
-                orderItem_db.RemoveOrderItems(orderItems);
+                orderItem_db.RemoveOrderItem(orderItems);
             }
             catch
             {

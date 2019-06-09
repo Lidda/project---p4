@@ -37,15 +37,33 @@ namespace OrderSystemUI.MainUI
         {
             foreach (OrderItem orderItem in order.orderItems)
             {
-                 double price = orderItem.amount * orderItem.item.price;
+                double price = orderItem.amount * orderItem.item.price;
 
-                 ListViewItem li = new ListViewItem(orderItem.item.name);
-                 li.SubItems.Add(orderItem.amount.ToString());
-                 li.SubItems.Add(price.ToString());
-                 li.SubItems.Add(orderItem.comment.ToString());
-                 li.SubItems.Add(orderItem.ID.ToString());
+                ListViewItem li = new ListViewItem(orderItem.item.name);
+                li.SubItems.Add(orderItem.amount.ToString());
+                li.SubItems.Add(price.ToString());
+                if (orderItem.status == OrderItem.Status.ordered)
+                {
+                    li.SubItems.Add("O");
+                    li.SubItems[3].ForeColor = System.Drawing.Color.Red;
+                }
+                else if (orderItem.status == OrderItem.Status.ready)
+                {
+                    
+                    li.SubItems.Add("✔");
+                    li.SubItems[3].ForeColor = System.Drawing.Color.Orange;
+                }
+                else
+                {
+                    li.SubItems.Add("✔");
+                    li.SubItems[3].ForeColor = System.Drawing.Color.Green;
+                }
+                li.UseItemStyleForSubItems = false;
 
-                 listView_Overview.Items.Add(li);
+                li.SubItems.Add(orderItem.ID.ToString());
+                li.SubItems.Add(orderItem.comment.ToString());
+
+                listView_Overview.Items.Add(li);
             }
         }
 
@@ -71,6 +89,8 @@ namespace OrderSystemUI.MainUI
             txt_Comment.Clear();
 
             pnl_EditItem.Hide();
+
+            stockAmount = 0;
         }
 
         private void btn_ConfirmEdit_Click(object sender, EventArgs e)
@@ -127,6 +147,8 @@ namespace OrderSystemUI.MainUI
         {
             this.Hide();
             orderUI.Show();
+
+            stockAmount = 0;
         }
 
         private void btn_DeleteItem_Click(object sender, EventArgs e)

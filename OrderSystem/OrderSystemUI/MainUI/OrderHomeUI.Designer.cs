@@ -171,6 +171,7 @@
             this.btn_DinnerMenu.Text = "Dinner";
             this.btn_DinnerMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DinnerMenu.UseVisualStyleBackColor = false;
+            this.btn_DinnerMenu.Click += new System.EventHandler(this.btn_DinnerMenu_Click);
             // 
             // tableNumber
             // 
@@ -199,8 +200,9 @@
             this.btn_Checkout.Text = "Betalen";
             this.btn_Checkout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Checkout.UseVisualStyleBackColor = false;
+            this.btn_Checkout.Click += new System.EventHandler(this.btn_Checkout_Click);
             // 
-            // OrderMenuUI
+            // OrderHomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +219,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnFree);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Name = "OrderMenuUI";
+            this.Name = "OrderHomeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderUI";
             this.ResumeLayout(false);

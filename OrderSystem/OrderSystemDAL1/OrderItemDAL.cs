@@ -12,7 +12,7 @@ namespace OrderSystemDAL {
         ItemDAL itemDAL = new ItemDAL();
 
         public List<OrderItem> Db_Get_All_OrderItems(int orderID) {
-            string query = "SELECT itemID, orderItemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID";
+            string query = "SELECT itemID, orderItemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID ORDER BY orderitemID ASC";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
                 new SqlParameter("@OrderID", orderID)
@@ -88,23 +88,31 @@ namespace OrderSystemDAL {
             ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
 
             //Updates stock in ITEMS
-            string querySubtractFromStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
+            string queryUpdateStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
             SqlParameter[] sqlParametersUpdate = new SqlParameter[]
             {
                 new SqlParameter("@amount", stockAmount),
                 new SqlParameter("@itemID", orderItem.item.itemID),
             };
-            ExecuteEditQuery(querySubtractFromStock, sqlParametersUpdate);
+            ExecuteEditQuery(queryUpdateStock, sqlParametersUpdate);
         }
 
-        public void RemoveOrderItems(OrderItem orderItem)
+        public void RemoveOrderItem(OrderItem orderItem)
         {
             string query = "DELETE FROM ORDER_CONTAINS WHERE orderItemID = @orderItemID";
-            SqlParameter[] sqlParameter = new SqlParameter[]
+            SqlParameter[] sqlParameterRemoveItem = new SqlParameter[]
             {
                     new SqlParameter("@orderItemID", orderItem.ID)
             };
-            ExecuteEditQuery(query, sqlParameter);
+            ExecuteEditQuery(query, sqlParameterRemoveItem);
+
+            string queryUpdateStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
+            SqlParameter[] sqlParametersUpdate = new SqlParameter[]
+            {
+                new SqlParameter("@amount", orderItem.amount),
+                new SqlParameter("@itemID", orderItem.item.itemID),
+            };
+            ExecuteEditQuery(queryUpdateStock, sqlParametersUpdate);
         }
     }
 }

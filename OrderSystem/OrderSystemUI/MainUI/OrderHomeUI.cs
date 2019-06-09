@@ -104,8 +104,8 @@ namespace OrderSystemUI.MainUI {
         private void btn_LunchMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
-            OrderMenuUI lunchUI = new OrderMenuUI(order, this);
-            lunchUI.ShowDialog();
+            OrderMenuUI orderMenuUI = new OrderMenuUI(order, this, "");
+            orderMenuUI.ShowDialog();
         }
 
         private void btn_OrderOverview_Click(object sender, EventArgs e)
@@ -115,8 +115,25 @@ namespace OrderSystemUI.MainUI {
             orderOverview.ShowDialog();
         }
 
-        private void Btn_BeverageMenu_Click(object sender, EventArgs e) {
+        private void Btn_BeverageMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderMenuUI orderMenuUI = new OrderMenuUI(order, this, "Drinks");
+            orderMenuUI.ShowDialog();
+        }
 
+        private void btn_DinnerMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderMenuUI orderMenuUI = new OrderMenuUI(order, this, "Dinner");
+            orderMenuUI.ShowDialog();
+        }
+
+        private void btn_Checkout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CheckoutOverviewOrder checkoutOverview = new CheckoutOverviewOrder(this.order);
+            checkoutOverview.ShowDialog();
         }
     }
 }

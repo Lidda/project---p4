@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.listView_Overview = new System.Windows.Forms.ListView();
-            this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ItemAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ItemPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ItemComment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.itemComment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_EditItem = new System.Windows.Forms.Button();
             this.btn_DeleteItem = new System.Windows.Forms.Button();
             this.pnl_EditItem = new System.Windows.Forms.Panel();
@@ -47,21 +49,22 @@
             this.lbl_ItemAmount = new System.Windows.Forms.Label();
             this.lbl_ItemName = new System.Windows.Forms.Label();
             this.btn_Home = new System.Windows.Forms.Button();
-            this.itemID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_EditItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView_Overview
             // 
             this.listView_Overview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ItemName,
-            this.ItemAmount,
-            this.ItemPrice,
-            this.ItemComment,
-            this.itemID});
+            this.itemName,
+            this.itemAmount,
+            this.itemPrice,
+            this.itemStatus,
+            this.itemID,
+            this.itemComment});
             this.listView_Overview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_Overview.FullRowSelect = true;
             this.listView_Overview.GridLines = true;
+            this.listView_Overview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_Overview.HideSelection = false;
             this.listView_Overview.Location = new System.Drawing.Point(14, 12);
             this.listView_Overview.MultiSelect = false;
@@ -71,25 +74,35 @@
             this.listView_Overview.UseCompatibleStateImageBehavior = false;
             this.listView_Overview.View = System.Windows.Forms.View.Details;
             // 
-            // ItemName
+            // itemName
             // 
-            this.ItemName.Text = "Product naam";
-            this.ItemName.Width = 342;
+            this.itemName.Text = "Product naam";
+            this.itemName.Width = 310;
             // 
-            // ItemAmount
+            // itemAmount
             // 
-            this.ItemAmount.Text = "#";
-            this.ItemAmount.Width = 40;
+            this.itemAmount.Text = "#";
+            this.itemAmount.Width = 40;
             // 
-            // ItemPrice
+            // itemPrice
             // 
-            this.ItemPrice.Text = "€";
-            this.ItemPrice.Width = 51;
+            this.itemPrice.Text = "€";
+            this.itemPrice.Width = 43;
             // 
-            // ItemComment
+            // itemStatus
             // 
-            this.ItemComment.Text = "C";
-            this.ItemComment.Width = 0;
+            this.itemStatus.Text = "S";
+            this.itemStatus.Width = 40;
+            // 
+            // itemID
+            // 
+            this.itemID.Text = "ID";
+            this.itemID.Width = 0;
+            // 
+            // itemComment
+            // 
+            this.itemComment.Text = "C";
+            this.itemComment.Width = 0;
             // 
             // btn_EditItem
             // 
@@ -132,7 +145,7 @@
             this.pnl_EditItem.Controls.Add(this.lbl_ItemComment);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemAmount);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemName);
-            this.pnl_EditItem.Location = new System.Drawing.Point(15, 12);
+            this.pnl_EditItem.Location = new System.Drawing.Point(14, 12);
             this.pnl_EditItem.Name = "pnl_EditItem";
             this.pnl_EditItem.Size = new System.Drawing.Size(437, 552);
             this.pnl_EditItem.TabIndex = 4;
@@ -206,6 +219,7 @@
             this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Amount.Location = new System.Drawing.Point(80, 148);
             this.txt_Amount.Name = "txt_Amount";
+            this.txt_Amount.ReadOnly = true;
             this.txt_Amount.Size = new System.Drawing.Size(44, 26);
             this.txt_Amount.TabIndex = 5;
             // 
@@ -271,11 +285,6 @@
             this.btn_Home.UseVisualStyleBackColor = false;
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
-            // itemID
-            // 
-            this.itemID.Text = "ID";
-            this.itemID.Width = 0;
-            // 
             // OrderOverviewUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,9 +307,9 @@
         #endregion
 
         private System.Windows.Forms.ListView listView_Overview;
-        private System.Windows.Forms.ColumnHeader ItemName;
-        private System.Windows.Forms.ColumnHeader ItemAmount;
-        private System.Windows.Forms.ColumnHeader ItemPrice;
+        private System.Windows.Forms.ColumnHeader itemName;
+        private System.Windows.Forms.ColumnHeader itemAmount;
+        private System.Windows.Forms.ColumnHeader itemPrice;
         private System.Windows.Forms.Button btn_EditItem;
         private System.Windows.Forms.Button btn_DeleteItem;
         private System.Windows.Forms.Panel pnl_EditItem;
@@ -312,10 +321,11 @@
         private System.Windows.Forms.Label lbl_DisplayItemName;
         private System.Windows.Forms.Button btn_CancelEdit;
         private System.Windows.Forms.Button btn_ConfirmEdit;
-        private System.Windows.Forms.ColumnHeader ItemComment;
+        private System.Windows.Forms.ColumnHeader itemStatus;
         private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Button btn_AddAmount;
         private System.Windows.Forms.Button btn_SubtractAmount;
         private System.Windows.Forms.ColumnHeader itemID;
+        private System.Windows.Forms.ColumnHeader itemComment;
     }
 }
