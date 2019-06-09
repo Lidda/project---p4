@@ -176,7 +176,7 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Back.Location = new System.Drawing.Point(12, 632);
+            this.btn_Back.Location = new System.Drawing.Point(1, 646);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(95, 37);
             this.btn_Back.TabIndex = 4;
@@ -238,7 +238,7 @@
             this.btn_OrderOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_OrderOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OrderOverview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_OrderOverview.Location = new System.Drawing.Point(357, 632);
+            this.btn_OrderOverview.Location = new System.Drawing.Point(370, 646);
             this.btn_OrderOverview.Name = "btn_OrderOverview";
             this.btn_OrderOverview.Size = new System.Drawing.Size(95, 37);
             this.btn_OrderOverview.TabIndex = 50;

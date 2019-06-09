@@ -79,12 +79,13 @@
             // 
             this.BackButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.BackButton.Location = new System.Drawing.Point(12, 625);
+            this.BackButton.Location = new System.Drawing.Point(0, 637);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(93, 44);
+            this.BackButton.Size = new System.Drawing.Size(105, 44);
             this.BackButton.TabIndex = 4;
             this.BackButton.Text = "<";
             this.BackButton.UseVisualStyleBackColor = false;

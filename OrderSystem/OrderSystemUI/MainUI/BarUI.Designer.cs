@@ -174,6 +174,8 @@
             // btn_markReady10
             // 
             this.btn_markReady10.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady10.FlatAppearance.BorderSize = 0;
+            this.btn_markReady10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady10.Location = new System.Drawing.Point(550, 919);
@@ -187,6 +189,8 @@
             // btn_markReady9
             // 
             this.btn_markReady9.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady9.FlatAppearance.BorderSize = 0;
+            this.btn_markReady9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady9.Location = new System.Drawing.Point(114, 919);
@@ -200,6 +204,8 @@
             // btn_markReady8
             // 
             this.btn_markReady8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady8.FlatAppearance.BorderSize = 0;
+            this.btn_markReady8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady8.Location = new System.Drawing.Point(1378, 613);
@@ -213,6 +219,8 @@
             // btn_markReady7
             // 
             this.btn_markReady7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady7.FlatAppearance.BorderSize = 0;
+            this.btn_markReady7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady7.Location = new System.Drawing.Point(986, 613);
@@ -226,6 +234,8 @@
             // btn_markReady6
             // 
             this.btn_markReady6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady6.FlatAppearance.BorderSize = 0;
+            this.btn_markReady6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady6.Location = new System.Drawing.Point(550, 613);
@@ -239,6 +249,8 @@
             // btn_markReady5
             // 
             this.btn_markReady5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady5.FlatAppearance.BorderSize = 0;
+            this.btn_markReady5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady5.Location = new System.Drawing.Point(114, 613);
@@ -252,6 +264,8 @@
             // btn_markReady4
             // 
             this.btn_markReady4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady4.FlatAppearance.BorderSize = 0;
+            this.btn_markReady4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady4.Location = new System.Drawing.Point(1378, 321);
@@ -265,6 +279,8 @@
             // btn_markReady3
             // 
             this.btn_markReady3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady3.FlatAppearance.BorderSize = 0;
+            this.btn_markReady3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady3.Location = new System.Drawing.Point(986, 321);
@@ -278,6 +294,8 @@
             // btn_markReady2
             // 
             this.btn_markReady2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady2.FlatAppearance.BorderSize = 0;
+            this.btn_markReady2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady2.Location = new System.Drawing.Point(550, 321);
@@ -292,14 +310,15 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Location = new System.Drawing.Point(12, 12);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(60, 23);
+            this.btnLogout.Size = new System.Drawing.Size(79, 23);
             this.btnLogout.TabIndex = 107;
-            this.btnLogout.Text = "Log uit";
+            this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -735,6 +754,8 @@
             // btn_markReady1
             // 
             this.btn_markReady1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady1.FlatAppearance.BorderSize = 0;
+            this.btn_markReady1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady1.Location = new System.Drawing.Point(114, 321);

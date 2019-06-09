@@ -55,6 +55,7 @@
             this.hourglass8 = new System.Windows.Forms.Label();
             this.hourglass9 = new System.Windows.Forms.Label();
             this.hourglass10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -64,7 +65,7 @@
             this.btnTable1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable1.Location = new System.Drawing.Point(71, 65);
+            this.btnTable1.Location = new System.Drawing.Point(70, 77);
             this.btnTable1.Name = "btnTable1";
             this.btnTable1.Size = new System.Drawing.Size(111, 82);
             this.btnTable1.TabIndex = 0;
@@ -79,7 +80,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(6, 6);
+            this.btnLogout.Location = new System.Drawing.Point(12, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(64, 23);
             this.btnLogout.TabIndex = 2;
@@ -94,7 +95,7 @@
             this.btnTable2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable2.Location = new System.Drawing.Point(268, 65);
+            this.btnTable2.Location = new System.Drawing.Point(267, 77);
             this.btnTable2.Name = "btnTable2";
             this.btnTable2.Size = new System.Drawing.Size(111, 82);
             this.btnTable2.TabIndex = 3;
@@ -109,7 +110,7 @@
             this.btnTable3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable3.Location = new System.Drawing.Point(71, 178);
+            this.btnTable3.Location = new System.Drawing.Point(70, 190);
             this.btnTable3.Name = "btnTable3";
             this.btnTable3.Size = new System.Drawing.Size(111, 82);
             this.btnTable3.TabIndex = 4;
@@ -124,7 +125,7 @@
             this.btnTable4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable4.Location = new System.Drawing.Point(268, 178);
+            this.btnTable4.Location = new System.Drawing.Point(267, 190);
             this.btnTable4.Name = "btnTable4";
             this.btnTable4.Size = new System.Drawing.Size(111, 82);
             this.btnTable4.TabIndex = 5;
@@ -139,7 +140,7 @@
             this.btnTable5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable5.Location = new System.Drawing.Point(71, 295);
+            this.btnTable5.Location = new System.Drawing.Point(70, 307);
             this.btnTable5.Name = "btnTable5";
             this.btnTable5.Size = new System.Drawing.Size(111, 82);
             this.btnTable5.TabIndex = 6;
@@ -154,7 +155,7 @@
             this.btnTable7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable7.Location = new System.Drawing.Point(71, 410);
+            this.btnTable7.Location = new System.Drawing.Point(70, 422);
             this.btnTable7.Name = "btnTable7";
             this.btnTable7.Size = new System.Drawing.Size(111, 82);
             this.btnTable7.TabIndex = 7;
@@ -169,7 +170,7 @@
             this.btnTable6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable6.Location = new System.Drawing.Point(268, 295);
+            this.btnTable6.Location = new System.Drawing.Point(267, 307);
             this.btnTable6.Name = "btnTable6";
             this.btnTable6.Size = new System.Drawing.Size(111, 82);
             this.btnTable6.TabIndex = 8;
@@ -184,7 +185,7 @@
             this.btnTable8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable8.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable8.Location = new System.Drawing.Point(268, 410);
+            this.btnTable8.Location = new System.Drawing.Point(267, 422);
             this.btnTable8.Name = "btnTable8";
             this.btnTable8.Size = new System.Drawing.Size(111, 82);
             this.btnTable8.TabIndex = 9;
@@ -199,7 +200,7 @@
             this.btnTable9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable9.Location = new System.Drawing.Point(71, 524);
+            this.btnTable9.Location = new System.Drawing.Point(70, 536);
             this.btnTable9.Name = "btnTable9";
             this.btnTable9.Size = new System.Drawing.Size(111, 82);
             this.btnTable9.TabIndex = 10;
@@ -214,7 +215,7 @@
             this.btnTable10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTable10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTable10.Location = new System.Drawing.Point(268, 524);
+            this.btnTable10.Location = new System.Drawing.Point(267, 536);
             this.btnTable10.Name = "btnTable10";
             this.btnTable10.Size = new System.Drawing.Size(111, 82);
             this.btnTable10.TabIndex = 11;
@@ -230,7 +231,7 @@
             this.mark1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark1.ForeColor = System.Drawing.Color.Crimson;
-            this.mark1.Location = new System.Drawing.Point(188, 65);
+            this.mark1.Location = new System.Drawing.Point(187, 77);
             this.mark1.Name = "mark1";
             this.mark1.Size = new System.Drawing.Size(53, 82);
             this.mark1.TabIndex = 22;
@@ -248,7 +249,7 @@
             this.mark2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark2.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark2.ForeColor = System.Drawing.Color.Crimson;
-            this.mark2.Location = new System.Drawing.Point(385, 65);
+            this.mark2.Location = new System.Drawing.Point(384, 77);
             this.mark2.Name = "mark2";
             this.mark2.Size = new System.Drawing.Size(53, 82);
             this.mark2.TabIndex = 23;
@@ -266,7 +267,7 @@
             this.orderMark3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderMark3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderMark3.ForeColor = System.Drawing.Color.Crimson;
-            this.orderMark3.Location = new System.Drawing.Point(188, 178);
+            this.orderMark3.Location = new System.Drawing.Point(187, 190);
             this.orderMark3.Name = "orderMark3";
             this.orderMark3.Size = new System.Drawing.Size(53, 82);
             this.orderMark3.TabIndex = 24;
@@ -284,7 +285,7 @@
             this.mark4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark4.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark4.ForeColor = System.Drawing.Color.Crimson;
-            this.mark4.Location = new System.Drawing.Point(385, 178);
+            this.mark4.Location = new System.Drawing.Point(384, 190);
             this.mark4.Name = "mark4";
             this.mark4.Size = new System.Drawing.Size(53, 82);
             this.mark4.TabIndex = 25;
@@ -302,7 +303,7 @@
             this.mark5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark5.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark5.ForeColor = System.Drawing.Color.Crimson;
-            this.mark5.Location = new System.Drawing.Point(188, 295);
+            this.mark5.Location = new System.Drawing.Point(187, 307);
             this.mark5.Name = "mark5";
             this.mark5.Size = new System.Drawing.Size(53, 82);
             this.mark5.TabIndex = 26;
@@ -320,7 +321,7 @@
             this.mark6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark6.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark6.ForeColor = System.Drawing.Color.Crimson;
-            this.mark6.Location = new System.Drawing.Point(385, 295);
+            this.mark6.Location = new System.Drawing.Point(384, 307);
             this.mark6.Name = "mark6";
             this.mark6.Size = new System.Drawing.Size(53, 82);
             this.mark6.TabIndex = 27;
@@ -338,7 +339,7 @@
             this.mark7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark7.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark7.ForeColor = System.Drawing.Color.Crimson;
-            this.mark7.Location = new System.Drawing.Point(188, 410);
+            this.mark7.Location = new System.Drawing.Point(187, 422);
             this.mark7.Name = "mark7";
             this.mark7.Size = new System.Drawing.Size(53, 82);
             this.mark7.TabIndex = 28;
@@ -356,7 +357,7 @@
             this.mark8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark8.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark8.ForeColor = System.Drawing.Color.Crimson;
-            this.mark8.Location = new System.Drawing.Point(385, 410);
+            this.mark8.Location = new System.Drawing.Point(384, 422);
             this.mark8.Name = "mark8";
             this.mark8.Size = new System.Drawing.Size(53, 82);
             this.mark8.TabIndex = 29;
@@ -374,7 +375,7 @@
             this.mark9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark9.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark9.ForeColor = System.Drawing.Color.Crimson;
-            this.mark9.Location = new System.Drawing.Point(188, 524);
+            this.mark9.Location = new System.Drawing.Point(187, 536);
             this.mark9.Name = "mark9";
             this.mark9.Size = new System.Drawing.Size(53, 82);
             this.mark9.TabIndex = 30;
@@ -392,7 +393,7 @@
             this.mark10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark10.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mark10.ForeColor = System.Drawing.Color.Crimson;
-            this.mark10.Location = new System.Drawing.Point(385, 524);
+            this.mark10.Location = new System.Drawing.Point(384, 536);
             this.mark10.Name = "mark10";
             this.mark10.Size = new System.Drawing.Size(53, 82);
             this.mark10.TabIndex = 31;
@@ -405,7 +406,7 @@
             // hourglass1
             // 
             this.hourglass1.Image = ((System.Drawing.Image)(resources.GetObject("hourglass1.Image")));
-            this.hourglass1.Location = new System.Drawing.Point(185, 84);
+            this.hourglass1.Location = new System.Drawing.Point(184, 96);
             this.hourglass1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass1.Name = "hourglass1";
             this.hourglass1.Size = new System.Drawing.Size(37, 53);
@@ -415,7 +416,7 @@
             // hourglass2
             // 
             this.hourglass2.Image = ((System.Drawing.Image)(resources.GetObject("hourglass2.Image")));
-            this.hourglass2.Location = new System.Drawing.Point(385, 84);
+            this.hourglass2.Location = new System.Drawing.Point(384, 96);
             this.hourglass2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass2.Name = "hourglass2";
             this.hourglass2.Size = new System.Drawing.Size(37, 53);
@@ -425,7 +426,7 @@
             // hourglass3
             // 
             this.hourglass3.Image = ((System.Drawing.Image)(resources.GetObject("hourglass3.Image")));
-            this.hourglass3.Location = new System.Drawing.Point(185, 196);
+            this.hourglass3.Location = new System.Drawing.Point(184, 208);
             this.hourglass3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass3.Name = "hourglass3";
             this.hourglass3.Size = new System.Drawing.Size(37, 53);
@@ -435,7 +436,7 @@
             // hourglass4
             // 
             this.hourglass4.Image = ((System.Drawing.Image)(resources.GetObject("hourglass4.Image")));
-            this.hourglass4.Location = new System.Drawing.Point(385, 196);
+            this.hourglass4.Location = new System.Drawing.Point(384, 208);
             this.hourglass4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass4.Name = "hourglass4";
             this.hourglass4.Size = new System.Drawing.Size(37, 53);
@@ -445,7 +446,7 @@
             // hourglass5
             // 
             this.hourglass5.Image = ((System.Drawing.Image)(resources.GetObject("hourglass5.Image")));
-            this.hourglass5.Location = new System.Drawing.Point(185, 311);
+            this.hourglass5.Location = new System.Drawing.Point(184, 323);
             this.hourglass5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass5.Name = "hourglass5";
             this.hourglass5.Size = new System.Drawing.Size(37, 53);
@@ -455,7 +456,7 @@
             // hourglass6
             // 
             this.hourglass6.Image = ((System.Drawing.Image)(resources.GetObject("hourglass6.Image")));
-            this.hourglass6.Location = new System.Drawing.Point(385, 311);
+            this.hourglass6.Location = new System.Drawing.Point(384, 323);
             this.hourglass6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass6.Name = "hourglass6";
             this.hourglass6.Size = new System.Drawing.Size(37, 53);
@@ -465,7 +466,7 @@
             // hourglass7
             // 
             this.hourglass7.Image = ((System.Drawing.Image)(resources.GetObject("hourglass7.Image")));
-            this.hourglass7.Location = new System.Drawing.Point(185, 428);
+            this.hourglass7.Location = new System.Drawing.Point(184, 440);
             this.hourglass7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass7.Name = "hourglass7";
             this.hourglass7.Size = new System.Drawing.Size(37, 53);
@@ -475,7 +476,7 @@
             // hourglass8
             // 
             this.hourglass8.Image = ((System.Drawing.Image)(resources.GetObject("hourglass8.Image")));
-            this.hourglass8.Location = new System.Drawing.Point(385, 428);
+            this.hourglass8.Location = new System.Drawing.Point(384, 440);
             this.hourglass8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass8.Name = "hourglass8";
             this.hourglass8.Size = new System.Drawing.Size(37, 53);
@@ -485,7 +486,7 @@
             // hourglass9
             // 
             this.hourglass9.Image = ((System.Drawing.Image)(resources.GetObject("hourglass9.Image")));
-            this.hourglass9.Location = new System.Drawing.Point(185, 543);
+            this.hourglass9.Location = new System.Drawing.Point(184, 555);
             this.hourglass9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass9.Name = "hourglass9";
             this.hourglass9.Size = new System.Drawing.Size(37, 53);
@@ -495,12 +496,23 @@
             // hourglass10
             // 
             this.hourglass10.Image = ((System.Drawing.Image)(resources.GetObject("hourglass10.Image")));
-            this.hourglass10.Location = new System.Drawing.Point(385, 543);
+            this.hourglass10.Location = new System.Drawing.Point(384, 555);
             this.hourglass10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass10.Name = "hourglass10";
             this.hourglass10.Size = new System.Drawing.Size(37, 53);
             this.hourglass10.TabIndex = 41;
             this.hourglass10.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(126, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 32);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Tafel Overzicht";
             // 
             // TableOverviewUI
             // 
@@ -508,6 +520,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.hourglass10);
             this.Controls.Add(this.hourglass9);
             this.Controls.Add(this.hourglass8);
@@ -545,6 +558,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOverviewUI";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -581,5 +595,6 @@
         private System.Windows.Forms.Label hourglass8;
         private System.Windows.Forms.Label hourglass9;
         private System.Windows.Forms.Label hourglass10;
+        private System.Windows.Forms.Label label1;
     }
 }
