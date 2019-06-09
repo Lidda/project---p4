@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutTipUI));
             this.pnlTip = new System.Windows.Forms.Panel();
+            this.btnDeleteTip = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.txtTip = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblTipHeader = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnConfirmTip = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlTip.SuspendLayout();
@@ -50,6 +50,7 @@
             // pnlTip
             // 
             this.pnlTip.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlTip.Controls.Add(this.btnDeleteTip);
             this.pnlTip.Controls.Add(this.label12);
             this.pnlTip.Controls.Add(this.label9);
             this.pnlTip.Controls.Add(this.label10);
@@ -61,7 +62,6 @@
             this.pnlTip.Controls.Add(this.txtTip);
             this.pnlTip.Controls.Add(this.label8);
             this.pnlTip.Controls.Add(this.lblTipHeader);
-            this.pnlTip.Controls.Add(this.button3);
             this.pnlTip.Controls.Add(this.btnConfirmTip);
             this.pnlTip.Controls.Add(this.button2);
             this.pnlTip.Location = new System.Drawing.Point(3, 4);
@@ -69,6 +69,20 @@
             this.pnlTip.Name = "pnlTip";
             this.pnlTip.Size = new System.Drawing.Size(613, 831);
             this.pnlTip.TabIndex = 32;
+            // 
+            // btnDeleteTip
+            // 
+            this.btnDeleteTip.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteTip.FlatAppearance.BorderSize = 0;
+            this.btnDeleteTip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteTip.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteTip.Image")));
+            this.btnDeleteTip.Location = new System.Drawing.Point(34, 656);
+            this.btnDeleteTip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteTip.Name = "btnDeleteTip";
+            this.btnDeleteTip.Size = new System.Drawing.Size(90, 73);
+            this.btnDeleteTip.TabIndex = 41;
+            this.btnDeleteTip.UseVisualStyleBackColor = false;
+            this.btnDeleteTip.Click += new System.EventHandler(this.btnDeleteTip_Click);
             // 
             // label12
             // 
@@ -184,22 +198,6 @@
             this.lblTipHeader.TabIndex = 30;
             this.lblTipHeader.Text = "Fooi tafel x";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(35, 656);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 73);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // btnConfirmTip
             // 
             this.btnConfirmTip.BackColor = System.Drawing.SystemColors.Highlight;
@@ -230,14 +228,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // CheckoutTip
+            // CheckoutTipUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlTip);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "CheckoutTip";
+            this.Name = "CheckoutTipUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voeg vooi toe";
             this.pnlTip.ResumeLayout(false);
@@ -260,8 +258,8 @@
         private System.Windows.Forms.TextBox txtTip;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblTipHeader;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnConfirmTip;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDeleteTip;
     }
 }

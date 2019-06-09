@@ -37,11 +37,10 @@ namespace OrderSystemUI.MainUI
         {
             if (change >= 0)
             {
+                orderLogic.Set_Order_To_Paid(order);
                 CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
                 this.Hide();
                 checkoutconfUI.ShowDialog();
-
-                orderLogic.Set_Order_To_Paid(order);
             }
             else
             {

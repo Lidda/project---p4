@@ -75,5 +75,12 @@ namespace OrderSystemUI.MainUI
             CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();
         }
+
+        private void btnDeleteTip_Click(object sender, EventArgs e)
+        {
+            //back button + cancels tip
+            order.tip = 0;
+            InitTipFormLabels();
+        }
     }
 }
