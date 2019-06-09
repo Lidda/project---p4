@@ -26,10 +26,19 @@ namespace OrderSystemDAL
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        public List<Order> Db_Get_All_Orders()
-        {
+        public List<Order> Db_Get_All_Orders() {
             string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        //gets an order from a specific date: used to cut down on unnecessary database traffic
+        public List<Order> Db_Get_Orders_By_Date(DateTime date) {
+            string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE DateOrdered = @date";
+            SqlParameter[] sqlParameters = new SqlParameter[]
+            {
+                new SqlParameter("@date", date)
+            };
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
@@ -63,13 +72,13 @@ namespace OrderSystemDAL
 
         //begin kitchen and bar orders
 
-        public List<Order> GetOrdersBar(int tableID)
-        {
+        public List<Order> GetOrdersBar(int tableID) {
             string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.course LIKE '%drank'";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
+
         public List<Order> GetOrdersKitchen(int tableID)
         {
             string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.foodtype LIKE '%Dinner'  OR i.foodtype LIKE '%Lunch' AND status = 0 AND o.tableID =" + tableID;

@@ -50,11 +50,11 @@ namespace OrderSystemUI {
         public void SetTableColors() {
             for (int i = 0; i < tables.Count; i++) {
                 if (tables[i].Status == Availability.Available) {
-                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.AppWorkspace);
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
                 } else if (tables[i].Status == Availability.Reserved) {
                     buttons[i].BackColor = Color.FromKnownColor(KnownColor.SandyBrown);
                 } else {
-                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
+                    buttons[i].BackColor = Color.FromKnownColor(KnownColor.AppWorkspace);
                 }
             }
         }
