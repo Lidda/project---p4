@@ -33,20 +33,20 @@ namespace OrderSystemUI.MainUI
             Order9(orders);
             Order10(orders);
         }
-        public void Order1(List<Order> order)
+        public void Order1(List<Order> orders)
         {
             int tableID = 1;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView1.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView1.BackColor = Color.Tomato;
                         listView1.Items.Add(li);
@@ -58,20 +58,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order2(List<Order> order)
+        public void Order2(List<Order> orders)
         {
             int tableID = 2;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView2.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                    li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView2.BackColor = Color.Tomato;
                         listView2.Items.Add(li);
@@ -83,20 +83,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order3(List<Order> order)
+        public void Order3(List<Order> orders)
         {
             int tableID = 3;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView3.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView3.BackColor = Color.Tomato;
                         listView3.Items.Add(li);
@@ -108,20 +108,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order4(List<Order> order)
-        {
+        public void Order4(List<Order> orders) { 
+        
             int tableID = 4;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView4.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                    li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView4.BackColor = Color.Tomato;
                         listView4.Items.Add(li);
@@ -133,20 +133,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order5(List<Order> order)
+        public void Order5(List<Order> orders)
         {
             int tableID = 5;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView5.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView5.BackColor = Color.Tomato;
                         listView5.Items.Add(li);
@@ -158,20 +158,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order6(List<Order> order)
+        public void Order6(List<Order> orders)
         {
             int tableID = 6;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView6.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                    li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView6.BackColor = Color.Tomato;
                         listView6.Items.Add(li);
@@ -183,20 +183,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order7(List<Order> order)
+        public void Order7(List<Order> orders)
         {
             int tableID = 7;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView7.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                    li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView7.BackColor = Color.Tomato;
                         listView7.Items.Add(li);
@@ -208,20 +208,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order8(List<Order> order)
+        public void Order8(List<Order> orders)
         {
             int tableID = 8;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView8.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView8.BackColor = Color.Tomato;
                         listView8.Items.Add(li);
@@ -233,20 +233,20 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-        public void Order9(List<Order> order)
+        public void Order9(List<Order> orders)
         {
             int tableID = 9;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView9.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView9.BackColor = Color.Tomato;
                         listView9.Items.Add(li);
@@ -259,20 +259,20 @@ namespace OrderSystemUI.MainUI
             }
         }
 
-        public void Order10(List<Order> order)
+        public void Order10(List<Order> orders)
         {
             int tableID = 10;
             orders = orderLogic.GetOrderskitchen(tableID);
             listView10.Items.Clear();
             foreach (Order o in orders)
             {
-                foreach (OrderItem orders in o.orderItems)
+                foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(orders.TimeOfOrder.ToString("HH:mm"));
-                    li.SubItems.Add(orders.item.name);
-                    li.SubItems.Add(orders.item.foodtype);
-                    li.SubItems.Add(orders.amount.ToString());
-                    if (orders.status == OrderItem.Status.ordered)
+                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    li.SubItems.Add(order.item.name);
+                    li.SubItems.Add(order.item.foodtype);
+                     li.SubItems.Add(order.amount.ToString());
+                    if (order.status == OrderItem.Status.ordered)
                     {
                         listView10.BackColor = Color.Tomato;
                         listView10.Items.Add(li);
