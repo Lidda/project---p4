@@ -21,7 +21,8 @@ namespace OrderSystemUI.MainUI
         {
             this.loggedInEmployee = loggedInEmployee;
             InitializeComponent();
-            LoadDailyProfit();           
+            LoadDailyProfit();
+            BTN_Daily.BackColor = Color.FromArgb(6, 69, 170);
         }
 
         private void LoadDailyProfit()
@@ -44,10 +45,10 @@ namespace OrderSystemUI.MainUI
 
             ListView_Finances.Items.Clear();
 
-            foreach (Profit day in FinanceListView)
+            foreach (Profit month in FinanceListView)
             {
-                ListViewItem li = new ListViewItem(day.date.ToString("MM/yyyy"));
-                li.SubItems.Add(string.Format("€{0:N2}", day.DayIncome));
+                ListViewItem li = new ListViewItem(month.date.ToString("MM/yyyy"));
+                li.SubItems.Add(string.Format("€{0:N2}", month.DayIncome));
                 ListView_Finances.Items.Add(li);
             }
         }
@@ -58,26 +59,39 @@ namespace OrderSystemUI.MainUI
 
             ListView_Finances.Items.Clear();
 
-            foreach (Profit day in FinanceListView)
+            foreach (Profit year in FinanceListView)
             {
-                ListViewItem li = new ListViewItem(day.date.ToString("yyyy"));
-                li.SubItems.Add(string.Format("€{0:N2}", day.DayIncome));
+                ListViewItem li = new ListViewItem(year.date.ToString("yyyy"));
+                li.SubItems.Add(string.Format("€{0:N2}", year.DayIncome));
                 ListView_Finances.Items.Add(li);
             }
         }
 
+        private void ResetButtonColour()
+        {
+            BTN_Monthly.BackColor = SystemColors.MenuHighlight;
+            BTN_Daily.BackColor = SystemColors.MenuHighlight;
+            BTN_Yearly.BackColor = SystemColors.MenuHighlight;
+        }
+
         private void BTN_Monthly_Click(object sender, EventArgs e)
         {
+            ResetButtonColour();
+            BTN_Monthly.BackColor = Color.FromArgb(6, 69, 170);
             LoadMonthlyProfit();
         }
 
         private void BTN_Yearly_Click(object sender, EventArgs e)
         {
+            ResetButtonColour();
+            BTN_Yearly.BackColor = Color.FromArgb(6, 69, 170);
             LoadYearlyProfit();
         }
 
         private void BTN_Daily_Click(object sender, EventArgs e)
         {
+            ResetButtonColour();
+            BTN_Daily.BackColor = Color.FromArgb(6, 69, 170);
             LoadDailyProfit();
         }
 

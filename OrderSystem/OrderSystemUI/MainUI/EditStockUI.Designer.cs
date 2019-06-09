@@ -98,9 +98,9 @@
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.BackButton.Location = new System.Drawing.Point(0, 639);
+            this.BackButton.Location = new System.Drawing.Point(0, 637);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(105, 42);
+            this.BackButton.Size = new System.Drawing.Size(105, 44);
             this.BackButton.TabIndex = 4;
             this.BackButton.Text = "<";
             this.BackButton.UseVisualStyleBackColor = false;
@@ -299,9 +299,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(12, 625);
+            this.button3.Location = new System.Drawing.Point(0, 637);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 44);
+            this.button3.Size = new System.Drawing.Size(105, 44);
             this.button3.TabIndex = 16;
             this.button3.Text = "<";
             this.button3.UseVisualStyleBackColor = false;
@@ -511,9 +511,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(12, 625);
+            this.button1.Location = new System.Drawing.Point(0, 637);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 44);
+            this.button1.Size = new System.Drawing.Size(105, 44);
             this.button1.TabIndex = 16;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = false;
@@ -624,8 +624,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 681);
             this.Controls.Add(this.PNL_ManageStock);
-            this.Controls.Add(this.PNL_EditItem);
             this.Controls.Add(this.PNL_AddItem);
+            this.Controls.Add(this.PNL_EditItem);
             this.Name = "EditStockUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voorraden";
