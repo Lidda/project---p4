@@ -60,7 +60,6 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,37 +91,31 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView6 = new System.Windows.Forms.ListView();
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView7 = new System.Windows.Forms.ListView();
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView8 = new System.Windows.Forms.ListView();
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView9 = new System.Windows.Forms.ListView();
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView10 = new System.Windows.Forms.ListView();
             this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -365,8 +358,7 @@
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18,
-            this.columnHeader19,
-            this.columnHeader20});
+            this.columnHeader19});
             this.listView4.GridLines = true;
             this.listView4.Location = new System.Drawing.Point(1276, 117);
             this.listView4.Name = "listView4";
@@ -382,10 +374,12 @@
             // columnHeader17
             // 
             this.columnHeader17.Text = "Name";
+            this.columnHeader17.Width = 120;
             // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "Type";
+            this.columnHeader18.Width = 80;
             // 
             // columnHeader19
             // 
@@ -414,10 +408,12 @@
             // columnHeader12
             // 
             this.columnHeader12.Text = "Name";
+            this.columnHeader12.Width = 120;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "Type";
+            this.columnHeader13.Width = 80;
             // 
             // columnHeader14
             // 
@@ -446,10 +442,12 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Name";
+            this.columnHeader7.Width = 120;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Type";
+            this.columnHeader8.Width = 80;
             // 
             // columnHeader9
             // 
@@ -479,10 +477,12 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Type";
+            this.columnHeader3.Width = 80;
             // 
             // columnHeader4
             // 
@@ -638,8 +638,7 @@
             this.columnHeader5,
             this.columnHeader10,
             this.columnHeader15,
-            this.columnHeader21,
-            this.columnHeader22});
+            this.columnHeader21});
             this.listView5.GridLines = true;
             this.listView5.Location = new System.Drawing.Point(24, 400);
             this.listView5.Name = "listView5";
@@ -655,10 +654,12 @@
             // columnHeader10
             // 
             this.columnHeader10.Text = "Name";
+            this.columnHeader10.Width = 120;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "Type";
+            this.columnHeader15.Width = 80;
             // 
             // columnHeader21
             // 
@@ -671,8 +672,7 @@
             this.columnHeader23,
             this.columnHeader24,
             this.columnHeader25,
-            this.columnHeader26,
-            this.columnHeader27});
+            this.columnHeader26});
             this.listView6.GridLines = true;
             this.listView6.Location = new System.Drawing.Point(453, 400);
             this.listView6.Name = "listView6";
@@ -688,10 +688,12 @@
             // columnHeader24
             // 
             this.columnHeader24.Text = "Name";
+            this.columnHeader24.Width = 120;
             // 
             // columnHeader25
             // 
             this.columnHeader25.Text = "Type";
+            this.columnHeader25.Width = 80;
             // 
             // columnHeader26
             // 
@@ -704,8 +706,7 @@
             this.columnHeader28,
             this.columnHeader29,
             this.columnHeader30,
-            this.columnHeader31,
-            this.columnHeader32});
+            this.columnHeader31});
             this.listView7.GridLines = true;
             this.listView7.Location = new System.Drawing.Point(886, 400);
             this.listView7.Name = "listView7";
@@ -721,10 +722,12 @@
             // columnHeader29
             // 
             this.columnHeader29.Text = "Name";
+            this.columnHeader29.Width = 120;
             // 
             // columnHeader30
             // 
             this.columnHeader30.Text = "Type";
+            this.columnHeader30.Width = 80;
             // 
             // columnHeader31
             // 
@@ -737,8 +740,7 @@
             this.columnHeader33,
             this.columnHeader34,
             this.columnHeader35,
-            this.columnHeader36,
-            this.columnHeader37});
+            this.columnHeader36});
             this.listView8.GridLines = true;
             this.listView8.Location = new System.Drawing.Point(1276, 400);
             this.listView8.Name = "listView8";
@@ -754,10 +756,12 @@
             // columnHeader34
             // 
             this.columnHeader34.Text = "Name";
+            this.columnHeader34.Width = 120;
             // 
             // columnHeader35
             // 
             this.columnHeader35.Text = "Type";
+            this.columnHeader35.Width = 80;
             // 
             // columnHeader36
             // 
@@ -770,8 +774,7 @@
             this.columnHeader38,
             this.columnHeader39,
             this.columnHeader40,
-            this.columnHeader41,
-            this.columnHeader42});
+            this.columnHeader41});
             this.listView9.GridLines = true;
             this.listView9.Location = new System.Drawing.Point(24, 701);
             this.listView9.Name = "listView9";
@@ -787,10 +790,12 @@
             // columnHeader39
             // 
             this.columnHeader39.Text = "Name";
+            this.columnHeader39.Width = 120;
             // 
             // columnHeader40
             // 
             this.columnHeader40.Text = "Type";
+            this.columnHeader40.Width = 80;
             // 
             // columnHeader41
             // 
@@ -803,8 +808,7 @@
             this.columnHeader43,
             this.columnHeader44,
             this.columnHeader45,
-            this.columnHeader46,
-            this.columnHeader47});
+            this.columnHeader46});
             this.listView10.GridLines = true;
             this.listView10.Location = new System.Drawing.Point(453, 701);
             this.listView10.Name = "listView10";
@@ -820,10 +824,12 @@
             // columnHeader44
             // 
             this.columnHeader44.Text = "Name";
+            this.columnHeader44.Width = 120;
             // 
             // columnHeader45
             // 
             this.columnHeader45.Text = "Type";
+            this.columnHeader45.Width = 80;
             // 
             // columnHeader46
             // 
@@ -966,7 +972,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
-        private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
@@ -976,37 +981,31 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader26;
-        private System.Windows.Forms.ColumnHeader columnHeader27;
         private System.Windows.Forms.ListView listView7;
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.ColumnHeader columnHeader29;
         private System.Windows.Forms.ColumnHeader columnHeader30;
         private System.Windows.Forms.ColumnHeader columnHeader31;
-        private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ListView listView8;
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.ColumnHeader columnHeader34;
         private System.Windows.Forms.ColumnHeader columnHeader35;
         private System.Windows.Forms.ColumnHeader columnHeader36;
-        private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ListView listView9;
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.ColumnHeader columnHeader39;
         private System.Windows.Forms.ColumnHeader columnHeader40;
         private System.Windows.Forms.ColumnHeader columnHeader41;
-        private System.Windows.Forms.ColumnHeader columnHeader42;
         private System.Windows.Forms.ListView listView10;
         private System.Windows.Forms.ColumnHeader columnHeader43;
         private System.Windows.Forms.ColumnHeader columnHeader44;
         private System.Windows.Forms.ColumnHeader columnHeader45;
         private System.Windows.Forms.ColumnHeader columnHeader46;
-        private System.Windows.Forms.ColumnHeader columnHeader47;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
