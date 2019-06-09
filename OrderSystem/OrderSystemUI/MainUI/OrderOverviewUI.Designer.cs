@@ -47,6 +47,7 @@
             this.lbl_ItemAmount = new System.Windows.Forms.Label();
             this.lbl_ItemName = new System.Windows.Forms.Label();
             this.btn_Home = new System.Windows.Forms.Button();
+            this.itemID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_EditItem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.ItemName,
             this.ItemAmount,
             this.ItemPrice,
-            this.ItemComment});
+            this.ItemComment,
+            this.itemID});
             this.listView_Overview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_Overview.FullRowSelect = true;
             this.listView_Overview.GridLines = true;
@@ -115,6 +117,7 @@
             this.btn_DeleteItem.TabIndex = 3;
             this.btn_DeleteItem.Text = "VERWIJDER ITEM";
             this.btn_DeleteItem.UseVisualStyleBackColor = false;
+            this.btn_DeleteItem.Click += new System.EventHandler(this.btn_DeleteItem_Click);
             // 
             // pnl_EditItem
             // 
@@ -129,7 +132,7 @@
             this.pnl_EditItem.Controls.Add(this.lbl_ItemComment);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemAmount);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemName);
-            this.pnl_EditItem.Location = new System.Drawing.Point(14, 12);
+            this.pnl_EditItem.Location = new System.Drawing.Point(15, 12);
             this.pnl_EditItem.Name = "pnl_EditItem";
             this.pnl_EditItem.Size = new System.Drawing.Size(437, 552);
             this.pnl_EditItem.TabIndex = 4;
@@ -268,6 +271,11 @@
             this.btn_Home.UseVisualStyleBackColor = false;
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
+            // itemID
+            // 
+            this.itemID.Text = "ID";
+            this.itemID.Width = 0;
+            // 
             // OrderOverviewUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,5 +316,6 @@
         private System.Windows.Forms.Button btn_Home;
         private System.Windows.Forms.Button btn_AddAmount;
         private System.Windows.Forms.Button btn_SubtractAmount;
+        private System.Windows.Forms.ColumnHeader itemID;
     }
 }

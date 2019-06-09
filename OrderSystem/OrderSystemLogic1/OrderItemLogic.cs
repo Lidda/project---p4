@@ -32,7 +32,7 @@ namespace OrderSystemLogic
             }
             catch
             {
-                throw new Exception("Something went wrong while removing items");
+                throw new Exception("Something went wrong while updating items");
             }
         }
 

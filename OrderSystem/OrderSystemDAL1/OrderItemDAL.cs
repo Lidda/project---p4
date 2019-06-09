@@ -75,26 +75,26 @@ namespace OrderSystemDAL {
         }
 
         //Remove item(s) from an order
-        public void UpdateOrderItems(OrderItem orderItem, int amount)
+        public void UpdateOrderItems(OrderItem orderItem, int stockAmount)
         {
-                //Updates the items in ORDER_CONTAINS
-                string queryUpdateOrder = "UPDATE ORDER_CONTAINS set amount - @amount WHERE itemID = @itemID AND orderID = @orderID";
-                SqlParameter[] sqlParametersUpdateOrder = new SqlParameter[]
-                {
+            //Updates the items in ORDER_CONTAINS
+             string queryUpdateOrder = "UPDATE ORDER_CONTAINS set amount = @amount WHERE orderItemID = @orderItemID AND itemID = @itemID";
+            SqlParameter[] sqlParametersUpdateOrder = new SqlParameter[]
+            {
                     new SqlParameter("@amount", orderItem.amount),
-                    new SqlParameter("@itemID", orderItem.item.itemID),
-                    new SqlParameter("@orderID", orderItem.ID),
-                };
-                ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
+                    new SqlParameter("@orderItemID", orderItem.ID),
+                    new SqlParameter("@itemID", orderItem.item.itemID)
+            };
+            ExecuteEditQuery(queryUpdateOrder, sqlParametersUpdateOrder);
 
-                //Updates stock in ITEMS
-                string querySubtractFromStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
-                SqlParameter[] sqlParametersUpdate = new SqlParameter[]
-                {
-                    new SqlParameter("@amount", amount),
-                    new SqlParameter("@itemID", orderItem.item.itemID),
-                };
-                ExecuteEditQuery(querySubtractFromStock, sqlParametersUpdate);
+            //Updates stock in ITEMS
+            string querySubtractFromStock = "UPDATE ITEMS set stock = stock + @amount WHERE itemID = @itemID";
+            SqlParameter[] sqlParametersUpdate = new SqlParameter[]
+            {
+                new SqlParameter("@amount", stockAmount),
+                new SqlParameter("@itemID", orderItem.item.itemID),
+            };
+            ExecuteEditQuery(querySubtractFromStock, sqlParametersUpdate);
         }
 
         public void RemoveOrderItems(OrderItem orderItem)
@@ -102,7 +102,7 @@ namespace OrderSystemDAL {
             string query = "DELETE FROM ORDER_CONTAINS WHERE orderItemID = @orderItemID";
             SqlParameter[] sqlParameter = new SqlParameter[]
             {
-                    new SqlParameter("@amount", orderItem.ID)
+                    new SqlParameter("@orderItemID", orderItem.ID)
             };
             ExecuteEditQuery(query, sqlParameter);
         }

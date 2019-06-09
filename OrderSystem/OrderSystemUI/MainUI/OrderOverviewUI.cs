@@ -43,6 +43,7 @@ namespace OrderSystemUI.MainUI
                  li.SubItems.Add(orderItem.amount.ToString());
                  li.SubItems.Add(price.ToString());
                  li.SubItems.Add(orderItem.comment.ToString());
+                 li.SubItems.Add(orderItem.ID.ToString());
 
                  listView_Overview.Items.Add(li);
             }
@@ -83,7 +84,7 @@ namespace OrderSystemUI.MainUI
             txt_Amount.Clear();
             txt_Comment.Clear();
 
-            OrderItem orderItem = order.orderItems.Find(i => i.item.name == listView_Overview.SelectedItems[0].SubItems[0].Text);
+            OrderItem orderItem = order.orderItems.Find(i => i.ID == Convert.ToInt32(listView_Overview.SelectedItems[0].SubItems[4].Text));
 
             if (amount >= 1)
             {
@@ -92,6 +93,7 @@ namespace OrderSystemUI.MainUI
             else
             {
                 orderItemLogic.RemoveOrderItems(orderItem);
+                listView_Overview.SelectedItems[0].Remove();
             }
 
             stockAmount = 0;
@@ -103,6 +105,8 @@ namespace OrderSystemUI.MainUI
         {
             int amount = Convert.ToInt32(txt_Amount.Text);
             amount++;
+            stockAmount--;
+
             txt_Amount.Text = amount.ToString();
         }
 
@@ -123,6 +127,14 @@ namespace OrderSystemUI.MainUI
         {
             this.Hide();
             orderUI.Show();
+        }
+
+        private void btn_DeleteItem_Click(object sender, EventArgs e)
+        {
+            OrderItem orderItem = order.orderItems.Find(i => i.ID == Convert.ToInt32(listView_Overview.SelectedItems[0].SubItems[4].Text));
+
+            orderItemLogic.RemoveOrderItems(orderItem);
+            listView_Overview.SelectedItems[0].Remove();
         }
     }
 }
