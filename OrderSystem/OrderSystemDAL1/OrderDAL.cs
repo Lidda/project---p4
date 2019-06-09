@@ -94,28 +94,7 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-
-        private List<Order> ReadFoodOrders(DataTable dataTable)
-        {
-            List<Order> FoodOrders = new List<Order>();
-
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Order order = new Order();
-
-                {
-                    order.Table.ID = (int)dr["tableID"];
-                    order.orderItem.TimeOfOrder = (DateTime)dr["timeOfOrder"];
-                    order.orderItem.item.name = (string)dr["name"];
-                    order.orderItem.item.foodtype = (string)dr["foodtype"];
-                    order.orderItem.amount = (int)dr["amount"];
-                    order.orderItem.status = (Status)dr["status"];
-                };
-                FoodOrders.Add(order);
-            }
-            return FoodOrders;
-        }
-
+        
         //end kitchen and bar orders
 
         //begin profits
