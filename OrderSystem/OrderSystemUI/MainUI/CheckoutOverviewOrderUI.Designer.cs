@@ -177,7 +177,7 @@
             // amount
             // 
             this.amount.Text = "X";
-            this.amount.Width = 75;
+            this.amount.Width = 52;
             // 
             // Price
             // 
