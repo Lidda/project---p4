@@ -14,10 +14,13 @@ namespace OrderSystemUI.MainUI
     public partial class CheckoutConfirmationUI : Form
     {
         private Order order;
+
         public CheckoutConfirmationUI(Order order)
         {
             InitializeComponent();
             this.order = order;
+
+            //adjust background image
             pbConfirmation.BackgroundImageLayout = ImageLayout.Stretch;
         }
 

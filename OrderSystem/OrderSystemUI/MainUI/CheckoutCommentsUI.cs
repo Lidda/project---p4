@@ -26,16 +26,20 @@ namespace OrderSystemUI.MainUI
             this.orderHomeUI = orderHomeUI;
             InitComments();
         }
+
         private void InitComments()
         {
             //show panel
             pnlAddComment.Show();
             pnlAddComment.BringToFront();
+
             //set title header
             lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: commentaar", order.Table.ID, order.orderID);
+            
             //empty textbox
             txtComment.Text = "";
-            //set current comment
+            
+            //set current comment label
             if (order.comment == "")
             {
                 lblCurrentComment.Text = "er is nog geen opmerking!";
@@ -47,6 +51,7 @@ namespace OrderSystemUI.MainUI
                 btnAddCommentToOrder.Text = "Verander commentaar";
             }
         }
+
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
         {
             //add comment/alter comment

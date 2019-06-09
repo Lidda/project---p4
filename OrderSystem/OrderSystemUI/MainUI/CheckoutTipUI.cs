@@ -16,26 +16,31 @@ namespace OrderSystemUI.MainUI
     {
         private OrderHomeUI orderHomeUI;
         private Order order;
+
         public CheckoutTipUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.orderHomeUI = orderHomeUI;
             this.order = order;
+            
             //set text
             InitTipFormLabels();
         }
+
         private void InitTipFormLabels()
         {
-            //set text
+            //set text of labels
             lblTipHeader.Text = string.Format("Fooi tafel {0}", order.Table.ID);
             lblTipTip.Text = string.Format("€ {0:0.00}", order.tip);
             lblTipTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total") - order.tip);
             lblTipGrandTotal.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
         }
+
         private void btnAddTipToOrder_Click(object sender, EventArgs e)
         {
             try
             {
+                //replace comma with a dot to make the program 'foolproof'
                 order.tip = double.Parse(txtTip.Text.Replace('.', ','));
 
                 //check if the tip is greater or equal to zero
@@ -84,7 +89,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnDeleteTip_Click(object sender, EventArgs e)
         {
-            //back button + cancels tip
+            //sets tip to 0
             order.tip = 0;
             InitTipFormLabels();
         }

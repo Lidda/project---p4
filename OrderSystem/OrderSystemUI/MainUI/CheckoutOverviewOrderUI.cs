@@ -23,9 +23,13 @@ namespace OrderSystemUI.MainUI
             InitializeComponent();
             this.order = order;
             this.orderHomeUI = orderHomeUI;
-            //hide
+
+            //hide tip labels
             lblTip.Hide();
             lblTipAmount.Hide();
+
+            //check if there's a order
+            //if no; show "error" panel
             if (order.orderItems.Count == 0)
             {
                 ShowPanel("Error");
@@ -35,22 +39,26 @@ namespace OrderSystemUI.MainUI
                 ShowPanel("Overview");
             }
         }
+
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
             {
+                //open tip UI
                 this.Hide();
                 CheckoutTipUI checkoutTipUI = new CheckoutTipUI(order, orderHomeUI);
                 checkoutTipUI.ShowDialog();
             }
             else if (panelName == "Pay")
             {
+                //open pay UI
                 this.Hide();
                 CheckoutPayUI checkoutUI = new CheckoutPayUI(order, orderHomeUI);
                 checkoutUI.ShowDialog();
             }
             else if (panelName == "Error")
             {
+                //show 'no orders found' panel
                 pnlError.Show();
                 pnlError.BringToFront();
             }
@@ -63,12 +71,14 @@ namespace OrderSystemUI.MainUI
             }
             else if (panelName == "Comment")
             {
+                //show comment UI
                 this.Hide();
                 CheckoutCommentsUI checkoutCommentsUI = new CheckoutCommentsUI(order, orderHomeUI);
                 checkoutCommentsUI.ShowDialog();
             }
             else if (panelName == "Overview")
             {
+                //hide other panel
                 pnlError.Hide();
 
                 //set title of header
@@ -79,7 +89,7 @@ namespace OrderSystemUI.MainUI
                 lblTaxAmount.Show();
                 lblTotalAmount.Show();
 
-
+                //set label prices
                 this.lblOrderPriceWithoutTax.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("withoutTax"));
                 this.lblTaxAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Tax"));
                 this.lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
@@ -95,6 +105,7 @@ namespace OrderSystemUI.MainUI
 
                 //empty listview before filling it
                 listViewOrderItems.Items.Clear();
+
                 //filling listview
                 foreach(OrderItem item in order.orderItems)
                 {
@@ -142,7 +153,8 @@ namespace OrderSystemUI.MainUI
 
         private void listViewOrderItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //view comment
+            //view comment of item
+            //check if there's a item selected in listview
             if (listViewOrderItems.SelectedItems.Count >= 1)
             {
                string comment = listViewOrderItems.SelectedItems[0].Text;

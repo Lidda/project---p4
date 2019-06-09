@@ -30,6 +30,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnCash_Click(object sender, EventArgs e)
         {
+            //open change calculator tool
             CheckoutPayChangeUI checkoutPayChangeUI = new CheckoutPayChangeUI(order, orderHomeUI);
             this.Hide();
             checkoutPayChangeUI.ShowDialog();
@@ -46,7 +47,10 @@ namespace OrderSystemUI.MainUI
         }
         private void Pay()
         {
+            //set order to paid
             orderLogic.Set_Order_To_Paid(order);
+
+            //show confirmation screen
             CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
             this.Hide();
             checkoutconfUI.ShowDialog();

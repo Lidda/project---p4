@@ -24,6 +24,7 @@ namespace OrderSystemUI.MainUI
             InitializeComponent();
             this.order = order;
             this.orderHomeUI = orderHomeUI;
+
             //hide labels
             lblChange.Hide();
             lblChangeText.Hide();
@@ -35,8 +36,10 @@ namespace OrderSystemUI.MainUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            //check if change is positive
             if (change >= 0)
             {
+                //set order to paid in the database
                 orderLogic.Set_Order_To_Paid(order);
                 CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
                 this.Hide();
@@ -61,12 +64,14 @@ namespace OrderSystemUI.MainUI
                 lblChangeText.Show();
                 change = change - order.GetTotalAmount("Total");
 
+                //check if customer paid enough
                 if (change < 0)
                 {
                     lblNotEnough.Show();
                     lblNotEnough.Text = string.Format("De klant heeft € {0:0.00} te kort gegeven!", 0 - change);
                 }
                 
+                //show amount change
                 lblChange.Text = string.Format("€ {0:0.00}", change);
                 
             }
@@ -82,6 +87,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //go back to PayUI
             this.Hide();
             CheckoutPayUI checkoutUI = new CheckoutPayUI(order, orderHomeUI);
             checkoutUI.ShowDialog();
