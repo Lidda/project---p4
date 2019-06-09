@@ -12,16 +12,18 @@ using OrderSystemLogic;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutPayChange : Form
+    public partial class CheckoutPayChangeUI : Form
     {
-        Order order;
-        OrderLogic orderLogic = new OrderLogic();
-        double change = 0;
-        public CheckoutPayChange(Order order)
+        private Order order;
+        private OrderHomeUI orderHomeUI;
+        private OrderLogic orderLogic = new OrderLogic();
+        private double change = 0;
+
+        public CheckoutPayChangeUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.order = order;
-
+            this.orderHomeUI = orderHomeUI;
             //hide labels
             lblChange.Hide();
             lblChangeText.Hide();
@@ -35,7 +37,7 @@ namespace OrderSystemUI.MainUI
         {
             if (change >= 0)
             {
-                CheckoutConfirmation checkoutconfUI = new CheckoutConfirmation(order);
+                CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
                 this.Hide();
                 checkoutconfUI.ShowDialog();
 
@@ -82,7 +84,7 @@ namespace OrderSystemUI.MainUI
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutPay checkoutUI = new CheckoutPay(order);
+            CheckoutPayUI checkoutUI = new CheckoutPayUI(order, orderHomeUI);
             checkoutUI.ShowDialog();
         }
     }

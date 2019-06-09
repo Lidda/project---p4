@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutPay
+    partial class CheckoutPayUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPayUI));
             this.pnlChoosePayOption = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();

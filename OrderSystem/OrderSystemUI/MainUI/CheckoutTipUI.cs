@@ -12,13 +12,14 @@ using OrderSystemModel;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutTip : Form
+    public partial class CheckoutTipUI : Form
     {
+        private OrderHomeUI orderHomeUI;
         private Order order;
-        public CheckoutTip(Order order)
+        public CheckoutTipUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
-
+            this.orderHomeUI = orderHomeUI;
             this.order = order;
             //set text
             InitTipFormLabels();
@@ -71,7 +72,7 @@ namespace OrderSystemUI.MainUI
         {
             //go back to order overview
             this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
+            CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();
         }
     }

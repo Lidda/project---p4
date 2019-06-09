@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutComments
+    partial class CheckoutCommentsUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutComments));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutCommentsUI));
             this.pnlAddComment = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtComment = new System.Windows.Forms.TextBox();

@@ -54,41 +54,41 @@
     <Compile Include="MainUI\BarUI.Designer.cs">
       <DependentUpon>BarUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutComments.cs">
+    <Compile Include="MainUI\CheckoutCommentsUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutComments.Designer.cs">
-      <DependentUpon>CheckoutComments.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutCommentsUI.Designer.cs">
+      <DependentUpon>CheckoutCommentsUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutConfirmation.cs">
+    <Compile Include="MainUI\CheckoutConfirmationUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutConfirmation.Designer.cs">
-      <DependentUpon>CheckoutConfirmation.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutConfirmationUI.Designer.cs">
+      <DependentUpon>CheckoutConfirmationUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutOverviewOrder.cs">
+    <Compile Include="MainUI\CheckoutOverviewOrderUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutOverviewOrder.Designer.cs">
-      <DependentUpon>CheckoutOverviewOrder.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutOverviewOrderUI.Designer.cs">
+      <DependentUpon>CheckoutOverviewOrderUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutPay.cs">
+    <Compile Include="MainUI\CheckoutPayUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutPay.Designer.cs">
-      <DependentUpon>CheckoutPay.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutPayUI.Designer.cs">
+      <DependentUpon>CheckoutPayUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutPayChange.cs">
+    <Compile Include="MainUI\CheckoutPayChangeUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutPayChange.Designer.cs">
-      <DependentUpon>CheckoutPayChange.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutPayChangeUI.Designer.cs">
+      <DependentUpon>CheckoutPayChangeUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI\CheckoutTip.cs">
+    <Compile Include="MainUI\CheckoutTipUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI\CheckoutTip.Designer.cs">
-      <DependentUpon>CheckoutTip.cs</DependentUpon>
+    <Compile Include="MainUI\CheckoutTipUI.Designer.cs">
+      <DependentUpon>CheckoutTipUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUI\EditEmployeesUI.cs">
       <SubType>Form</SubType>
@@ -165,23 +165,23 @@
     <EmbeddedResource Include="MainUI\BarUI.resx">
       <DependentUpon>BarUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutComments.resx">
-      <DependentUpon>CheckoutComments.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutCommentsUI.resx">
+      <DependentUpon>CheckoutCommentsUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutConfirmation.resx">
-      <DependentUpon>CheckoutConfirmation.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutConfirmationUI.resx">
+      <DependentUpon>CheckoutConfirmationUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutOverviewOrder.resx">
-      <DependentUpon>CheckoutOverviewOrder.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutOverviewOrderUI.resx">
+      <DependentUpon>CheckoutOverviewOrderUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutPay.resx">
-      <DependentUpon>CheckoutPay.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutPayUI.resx">
+      <DependentUpon>CheckoutPayUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutPayChange.resx">
-      <DependentUpon>CheckoutPayChange.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutPayChangeUI.resx">
+      <DependentUpon>CheckoutPayChangeUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI\CheckoutTip.resx">
-      <DependentUpon>CheckoutTip.cs</DependentUpon>
+    <EmbeddedResource Include="MainUI\CheckoutTipUI.resx">
+      <DependentUpon>CheckoutTipUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI\EditEmployeesUI.resx">
       <DependentUpon>EditEmployeesUI.cs</DependentUpon>

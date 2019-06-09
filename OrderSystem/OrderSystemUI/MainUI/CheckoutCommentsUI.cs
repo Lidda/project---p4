@@ -9,19 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderSystemModel;
 using OrderSystemLogic;
+using OrderSystemUI;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutComments : Form
+    public partial class CheckoutCommentsUI : Form
     {
         private Order order;
         private OrderLogic orderLogic = new OrderLogic();
+        private OrderHomeUI orderHomeUI;
 
-        public CheckoutComments(Order order)
+        public CheckoutCommentsUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.order = order;
-
+            this.orderHomeUI = orderHomeUI;
             InitComments();
         }
         private void InitComments()
@@ -71,7 +73,7 @@ namespace OrderSystemUI.MainUI
         {
             //back
             this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
+            CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();
         }
     }

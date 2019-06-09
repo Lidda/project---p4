@@ -12,14 +12,16 @@ using OrderSystemModel;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutPay : Form
+    public partial class CheckoutPayUI : Form
     {
         private Order order;
         private OrderLogic orderLogic = new OrderLogic();
-        public CheckoutPay(Order order)
+        private OrderHomeUI orderHomeUI;
+
+        public CheckoutPayUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
-
+            this.orderHomeUI = orderHomeUI;
             this.order = order;
             //show payment methods
             pnlChoosePayOption.Show();
@@ -28,7 +30,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            CheckoutPayChange checkoutPayChangeUI = new CheckoutPayChange(order);
+            CheckoutPayChangeUI checkoutPayChangeUI = new CheckoutPayChangeUI(order, orderHomeUI);
             this.Hide();
             checkoutPayChangeUI.ShowDialog();
         }
@@ -45,14 +47,14 @@ namespace OrderSystemUI.MainUI
         private void Pay()
         {
             orderLogic.Set_Order_To_Paid(order);
-            CheckoutConfirmation checkoutconfUI = new CheckoutConfirmation(order);
+            CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
             this.Hide();
             checkoutconfUI.ShowDialog();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
+            CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();
         }
     }

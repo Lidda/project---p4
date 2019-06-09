@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutTip
+    partial class CheckoutTipUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutTip));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutTipUI));
             this.pnlTip = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();

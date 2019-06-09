@@ -11,10 +11,10 @@ using OrderSystemModel;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutConfirmation : Form
+    public partial class CheckoutConfirmationUI : Form
     {
         private Order order;
-        public CheckoutConfirmation(Order order)
+        public CheckoutConfirmationUI(Order order)
         {
             InitializeComponent();
             this.order = order;

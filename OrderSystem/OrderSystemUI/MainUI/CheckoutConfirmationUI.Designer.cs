@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutConfirmation
+    partial class CheckoutConfirmationUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutConfirmation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutConfirmationUI));
             this.label2 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.pbConfirmation = new System.Windows.Forms.PictureBox();

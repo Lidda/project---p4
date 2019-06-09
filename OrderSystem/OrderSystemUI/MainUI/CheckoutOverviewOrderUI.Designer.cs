@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutOverviewOrder
+    partial class CheckoutOverviewOrderUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutOverviewOrder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutOverviewOrderUI));
             this.lblTipAmount = new System.Windows.Forms.Label();
             this.lblTaxAmount = new System.Windows.Forms.Label();
             this.lblOrderPriceWithoutTax = new System.Windows.Forms.Label();
