@@ -55,7 +55,16 @@
             this.btn_markReady1 = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
             this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,15 +86,6 @@
             this.btn_markReady8 = new System.Windows.Forms.Button();
             this.btn_markReady9 = new System.Windows.Forms.Button();
             this.btn_markReady10 = new System.Windows.Forms.Button();
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -135,90 +135,100 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(602, 685);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(587, 674);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 80;
             this.label10.Text = "Tafel 10";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(160, 685);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(164, 674);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 79;
             this.label9.Text = "Tafel 9";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1419, 384);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 78;
             this.label8.Text = "Tafel 8";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(1026, 374);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 77;
             this.label7.Text = "Tafel 7";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(608, 374);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(587, 374);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 76;
             this.label6.Text = "Tafel 6";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(171, 384);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(164, 374);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 75;
             this.label5.Text = "Tafel 5";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(1419, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 74;
             this.label4.Text = "Tafel 4";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1026, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 73;
             this.label3.Text = "Tafel 3";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(608, 89);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(594, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 72;
             this.label2.Text = "Tafel 2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 89);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(164, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 71;
             this.label1.Text = "Tafel 1";
             // 
@@ -360,6 +370,22 @@
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Time";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Name";
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Type";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Amount";
+            // 
             // listView3
             // 
             this.listView3.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -375,6 +401,22 @@
             this.listView3.TabIndex = 52;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Time";
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Name";
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Type";
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Amount";
             // 
             // listView2
             // 
@@ -464,6 +506,7 @@
             this.btnLogout.TabIndex = 48;
             this.btnLogout.Text = "Log uit";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btn_markReady2
             // 
@@ -476,6 +519,7 @@
             this.btn_markReady2.TabIndex = 92;
             this.btn_markReady2.Text = "Meld gereed";
             this.btn_markReady2.UseVisualStyleBackColor = false;
+            this.btn_markReady2.Click += new System.EventHandler(this.btn_markReady2_Click);
             // 
             // btn_markReady3
             // 
@@ -488,6 +532,7 @@
             this.btn_markReady3.TabIndex = 93;
             this.btn_markReady3.Text = "Meld gereed";
             this.btn_markReady3.UseVisualStyleBackColor = false;
+            this.btn_markReady3.Click += new System.EventHandler(this.btn_markReady3_Click);
             // 
             // btn_markReady4
             // 
@@ -500,6 +545,7 @@
             this.btn_markReady4.TabIndex = 94;
             this.btn_markReady4.Text = "Meld gereed";
             this.btn_markReady4.UseVisualStyleBackColor = false;
+            this.btn_markReady4.Click += new System.EventHandler(this.btn_markReady4_Click);
             // 
             // btn_markReady5
             // 
@@ -512,6 +558,7 @@
             this.btn_markReady5.TabIndex = 95;
             this.btn_markReady5.Text = "Meld gereed";
             this.btn_markReady5.UseVisualStyleBackColor = false;
+            this.btn_markReady5.Click += new System.EventHandler(this.btn_markReady5_Click);
             // 
             // btn_markReady6
             // 
@@ -524,6 +571,7 @@
             this.btn_markReady6.TabIndex = 96;
             this.btn_markReady6.Text = "Meld gereed";
             this.btn_markReady6.UseVisualStyleBackColor = false;
+            this.btn_markReady6.Click += new System.EventHandler(this.btn_markReady6_Click);
             // 
             // btn_markReady7
             // 
@@ -536,6 +584,7 @@
             this.btn_markReady7.TabIndex = 97;
             this.btn_markReady7.Text = "Meld gereed";
             this.btn_markReady7.UseVisualStyleBackColor = false;
+            this.btn_markReady7.Click += new System.EventHandler(this.btn_markReady7_Click);
             // 
             // btn_markReady8
             // 
@@ -548,6 +597,7 @@
             this.btn_markReady8.TabIndex = 98;
             this.btn_markReady8.Text = "Meld gereed";
             this.btn_markReady8.UseVisualStyleBackColor = false;
+            this.btn_markReady8.Click += new System.EventHandler(this.btn_markReady8_Click);
             // 
             // btn_markReady9
             // 
@@ -560,6 +610,7 @@
             this.btn_markReady9.TabIndex = 99;
             this.btn_markReady9.Text = "Meld gereed";
             this.btn_markReady9.UseVisualStyleBackColor = false;
+            this.btn_markReady9.Click += new System.EventHandler(this.btn_markReady9_Click);
             // 
             // btn_markReady10
             // 
@@ -572,38 +623,7 @@
             this.btn_markReady10.TabIndex = 100;
             this.btn_markReady10.Text = "Meld gereed";
             this.btn_markReady10.UseVisualStyleBackColor = false;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Time";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Name";
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Type";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Amount";
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Time";
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Name";
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Type";
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Amount";
+            this.btn_markReady10.Click += new System.EventHandler(this.btn_markReady10_Click);
             // 
             // listView5
             // 

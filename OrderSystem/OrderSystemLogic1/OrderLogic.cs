@@ -36,6 +36,18 @@ namespace OrderSystemLogic
                 throw new Exception("Could not get orders from database");
             }
         }
+
+        public List<Order> GetOrdersBar(int tableID)
+        {
+            try
+            {
+                return orderDAL.GetOrdersBar(tableID);
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
         public List<Order> Get_All_Orders()
         {
             try

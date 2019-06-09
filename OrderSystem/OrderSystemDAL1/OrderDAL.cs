@@ -63,9 +63,10 @@ namespace OrderSystemDAL
 
         //begin kitchen and bar orders
 
-        public List<Order> GetOrdersBar()
+        public List<Order> GetOrdersBar(int tableID)
         {
-            string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE course = 'Drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
+            string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.course LIKE '%drank'";
+
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
