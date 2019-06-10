@@ -274,12 +274,13 @@
             // 
             this.btn_Home.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Home.FlatAppearance.BorderSize = 0;
             this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Home.Location = new System.Drawing.Point(12, 632);
+            this.btn_Home.Location = new System.Drawing.Point(-4, 638);
             this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(95, 37);
+            this.btn_Home.Size = new System.Drawing.Size(107, 43);
             this.btn_Home.TabIndex = 5;
             this.btn_Home.Text = "Home";
             this.btn_Home.UseVisualStyleBackColor = false;

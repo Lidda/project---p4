@@ -1,6 +1,6 @@
 ﻿namespace OrderSystemUI.MainUI
 {
-    partial class CheckoutOverviewOrder
+    partial class CheckoutOverviewOrderUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutOverviewOrder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutOverviewOrderUI));
             this.lblTipAmount = new System.Windows.Forms.Label();
             this.lblTaxAmount = new System.Windows.Forms.Label();
             this.lblOrderPriceWithoutTax = new System.Windows.Forms.Label();
@@ -50,47 +50,57 @@
             this.pnlError = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblTipEuroSign = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlError.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTipAmount
             // 
+            this.lblTipAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTipAmount.AutoSize = true;
             this.lblTipAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipAmount.Location = new System.Drawing.Point(483, 553);
+            this.lblTipAmount.Location = new System.Drawing.Point(491, 552);
             this.lblTipAmount.Name = "lblTipAmount";
-            this.lblTipAmount.Size = new System.Drawing.Size(117, 31);
+            this.lblTipAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTipAmount.Size = new System.Drawing.Size(97, 31);
             this.lblTipAmount.TabIndex = 65;
-            this.lblTipAmount.Text = "insert tip";
+            this.lblTipAmount.Text = "000.00";
+            this.lblTipAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTaxAmount
             // 
             this.lblTaxAmount.AutoSize = true;
             this.lblTaxAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTaxAmount.Location = new System.Drawing.Point(483, 508);
+            this.lblTaxAmount.Location = new System.Drawing.Point(493, 507);
             this.lblTaxAmount.Name = "lblTaxAmount";
-            this.lblTaxAmount.Size = new System.Drawing.Size(117, 31);
+            this.lblTaxAmount.Size = new System.Drawing.Size(97, 31);
             this.lblTaxAmount.TabIndex = 66;
-            this.lblTaxAmount.Text = "inserttax";
+            this.lblTaxAmount.Text = "000,00";
+            this.lblTaxAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblOrderPriceWithoutTax
             // 
             this.lblOrderPriceWithoutTax.AutoSize = true;
             this.lblOrderPriceWithoutTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblOrderPriceWithoutTax.Location = new System.Drawing.Point(483, 468);
+            this.lblOrderPriceWithoutTax.Location = new System.Drawing.Point(493, 466);
             this.lblOrderPriceWithoutTax.Name = "lblOrderPriceWithoutTax";
-            this.lblOrderPriceWithoutTax.Size = new System.Drawing.Size(211, 31);
+            this.lblOrderPriceWithoutTax.Size = new System.Drawing.Size(97, 31);
             this.lblOrderPriceWithoutTax.TabIndex = 67;
-            this.lblOrderPriceWithoutTax.Text = "insertpricewotax";
+            this.lblOrderPriceWithoutTax.Text = "000,00";
+            this.lblOrderPriceWithoutTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTotalAmount
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTotalAmount.Location = new System.Drawing.Point(483, 615);
+            this.lblTotalAmount.Location = new System.Drawing.Point(491, 615);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(0, 31);
+            this.lblTotalAmount.Size = new System.Drawing.Size(97, 31);
             this.lblTotalAmount.TabIndex = 64;
+            this.lblTotalAmount.Text = "000.00";
             // 
             // label4
             // 
@@ -167,12 +177,12 @@
             // amount
             // 
             this.amount.Text = "X";
-            this.amount.Width = 75;
+            this.amount.Width = 52;
             // 
             // Price
             // 
             this.Price.Text = "€";
-            this.Price.Width = 75;
+            this.Price.Width = 78;
             // 
             // btnAddTip
             // 
@@ -227,12 +237,13 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.Location = new System.Drawing.Point(-1, 779);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(99, 58);
+            this.btnBack.Size = new System.Drawing.Size(136, 59);
             this.btnBack.TabIndex = 68;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -242,7 +253,7 @@
             this.pnlError.BackColor = System.Drawing.Color.Red;
             this.pnlError.Controls.Add(this.button1);
             this.pnlError.Controls.Add(this.label5);
-            this.pnlError.Location = new System.Drawing.Point(-1, 0);
+            this.pnlError.Location = new System.Drawing.Point(-1, 1);
             this.pnlError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlError.Name = "pnlError";
             this.pnlError.Size = new System.Drawing.Size(617, 837);
@@ -273,13 +284,57 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Geen openstaande bestellingen";
             // 
-            // CheckoutOverviewOrder
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label6.Location = new System.Drawing.Point(458, 466);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 31);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "€";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label7.Location = new System.Drawing.Point(458, 507);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 31);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "€";
+            // 
+            // lblTipEuroSign
+            // 
+            this.lblTipEuroSign.AutoSize = true;
+            this.lblTipEuroSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblTipEuroSign.Location = new System.Drawing.Point(458, 552);
+            this.lblTipEuroSign.Name = "lblTipEuroSign";
+            this.lblTipEuroSign.Size = new System.Drawing.Size(29, 31);
+            this.lblTipEuroSign.TabIndex = 72;
+            this.lblTipEuroSign.Text = "€";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label9.Location = new System.Drawing.Point(458, 615);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 31);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "€";
+            // 
+            // CheckoutOverviewOrderUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlError);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblTipEuroSign);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTipAmount);
             this.Controls.Add(this.lblTaxAmount);
@@ -296,7 +351,7 @@
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.lblCheckoutOverviewHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "CheckoutOverviewOrder";
+            this.Name = "CheckoutOverviewOrderUI";
             this.Text = "Overzicht bestelling";
             this.pnlError.ResumeLayout(false);
             this.pnlError.PerformLayout();
@@ -328,5 +383,9 @@
         private System.Windows.Forms.ColumnHeader Item;
         private System.Windows.Forms.ColumnHeader amount;
         private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTipEuroSign;
+        private System.Windows.Forms.Label label9;
     }
 }

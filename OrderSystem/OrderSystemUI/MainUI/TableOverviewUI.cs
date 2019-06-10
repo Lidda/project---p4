@@ -21,7 +21,8 @@ namespace OrderSystemUI {
         Employee employee;
         TableLogic tableLogic;
         OrderLogic orderLogic = new OrderLogic();
-        private static System.Timers.Timer timer;
+        private static System.Timers.Timer orderStatusTimer;
+        private static System.Timers.Timer timeTimer;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
@@ -44,7 +45,8 @@ namespace OrderSystemUI {
             //SetTableColors();
             SetTableColors();
 
-            TablesTimer();
+            OrderStatusTimer();
+            TimeOfOrderTimer();
         }
 
         public void SetTableColors() {
@@ -109,51 +111,61 @@ namespace OrderSystemUI {
         private void mark1_Click_1(object sender, EventArgs e) {
             mark1.Hide();
             orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark1.Visible = false;
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
             mark2.Hide();
             orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark2.Visible = false;
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
             orderMark3.Hide();
             orderLogic.ChangeOrderStatus(tables[2].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark3.Visible = false;
         }
 
         private void mark4_Click_1(object sender, EventArgs e) {
             mark4.Hide();
             orderLogic.ChangeOrderStatus(tables[3].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark4.Visible = false;
         }
 
         private void mark5_Click_1(object sender, EventArgs e) {
             mark5.Hide();
             orderLogic.ChangeOrderStatus(tables[4].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark5.Visible = false;
         }
 
         private void mark6_Click_1(object sender, EventArgs e) {
             mark6.Hide();
             orderLogic.ChangeOrderStatus(tables[5].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark6.Visible = false;
         }
 
         private void mark7_Click_1(object sender, EventArgs e) {
             mark7.Hide();
             orderLogic.ChangeOrderStatus(tables[6].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark7.Visible = false;
         }
 
         private void mark8_Click_1(object sender, EventArgs e) {
             mark8.Hide();
             orderLogic.ChangeOrderStatus(tables[7].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark8.Visible = false;
         }
 
         private void mark9_Click_1(object sender, EventArgs e) {
             mark9.Hide();
             orderLogic.ChangeOrderStatus(tables[8].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark9.Visible = false;
         }
 
         private void mark10_Click_1(object sender, EventArgs e) {
             mark10.Hide();
             orderLogic.ChangeOrderStatus(tables[9].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            TimeMark10.Visible = false;
         }
 
         private void InitOrderUI(Table table) {
@@ -163,17 +175,25 @@ namespace OrderSystemUI {
             orderUI.ShowDialog();
         }
 
-        private void TablesTimer() {
-            timer = new System.Timers.Timer();
-            timer.Interval = 1;
-            timer.Elapsed += OnTimedEvent;
-            timer.AutoReset = true;
-            timer.Enabled = true;
+        private void OrderStatusTimer() {
+            orderStatusTimer = new System.Timers.Timer();
+            orderStatusTimer.Interval = 1;
+            orderStatusTimer.Elapsed += OnTimedEventStatus;
+            orderStatusTimer.AutoReset = true;
+            orderStatusTimer.Enabled = true;
         }
 
-        private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e) {
+        private void TimeOfOrderTimer() {
+            timeTimer = new System.Timers.Timer();
+            timeTimer.Interval = 1;
+            timeTimer.Elapsed += OnTimedEventTime;
+            timeTimer.AutoReset = true;
+            timeTimer.Enabled = true;
+        }
+
+        private void OnTimedEventStatus(Object source, System.Timers.ElapsedEventArgs e) {
             //sets the interval to check the database every 15 seconds
-            timer.Interval = 15000;
+            orderStatusTimer.Interval = 15000;
 
             //reload database data
             tables = tableLogic.GetAllTables();
@@ -188,6 +208,24 @@ namespace OrderSystemUI {
             });
         }
 
+        private void OnTimedEventTime(Object source, System.Timers.ElapsedEventArgs e) {
+            timeTimer.Interval = 5000;
+
+            //ESSENTIAL: excutes both methods on the main thread
+            Invoke((MethodInvoker)delegate {
+                DateTime now = DateTime.Now;
+                TimeSpan time;
+                foreach (Order o in orders) {
+                    foreach (OrderItem i in o.orderItems) {
+                        if (i.status == OrderItem.Status.ordered || i.status == OrderItem.Status.ready) {
+                            time = now - i.TimeOfOrder;
+                            ShowTimeMarks(o.Table, time);
+                            break;
+                        }
+                    }
+                }
+            });          
+        }
 
         //loops through orders: then loops through each orderItem IN orders and checks the status
         private void CheckOrdersStatusses(List<Order> orders) {
@@ -200,6 +238,52 @@ namespace OrderSystemUI {
                         ShowOrderOngoingMarks(o.Table);                      
                     }
                 }
+            }
+        }
+
+        //show the 'timer' marks and updates the label it with the timespan given to it
+        private void ShowTimeMarks(Table table, TimeSpan date) {
+            switch (table.ID) {
+                case 1:
+                    TimeMark1.Visible = true;
+                    TimeMark1.Text = date.ToString((@"mm")) + " min" ;
+                    break;
+                case 2:
+                    TimeMark2.Visible = true;
+                    TimeMark2.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 3:
+                    TimeMark3.Visible = true;
+                    TimeMark3.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 4:
+                    TimeMark4.Visible = true;
+                    TimeMark4.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 5:
+                    TimeMark5.Visible = true;
+                    TimeMark5.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 6:
+                    TimeMark6.Visible = true;
+                    TimeMark6.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 7:
+                    TimeMark7.Visible = true;
+                    TimeMark7.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 8:
+                    TimeMark8.Visible = true;
+                    TimeMark8.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 9:
+                    TimeMark9.Visible = true;
+                    TimeMark9.Text = date.ToString((@"mm")) + " min";
+                    break;
+                case 10:
+                    TimeMark10.Visible = true;
+                    TimeMark10.Text = date.ToString((@"mm")) + "min";
+                    break;
             }
         }
 
@@ -248,39 +332,39 @@ namespace OrderSystemUI {
                     break;
                 case 2:
                     mark2.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass2.Visible = false;
                     break;
                 case 3:
                     orderMark3.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass3.Visible = false;
                     break;
                 case 4:
                     mark4.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass4.Visible = false;
                     break;
                 case 5:
                     mark5.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass5.Visible = false;
                     break;
                 case 6:
                     mark6.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass6.Visible = false;
                     break;
                 case 7:
                     mark7.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass7.Visible = false;
                     break;
                 case 8:
                     mark8.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass8.Visible = false;
                     break;
                 case 9:
                     mark9.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass9.Visible = false;
                     break;
                 case 10:
                     mark10.Visible = true;
-                    hourglass1.Visible = false;
+                    hourglass10.Visible = false;
                     break;
             }
         }

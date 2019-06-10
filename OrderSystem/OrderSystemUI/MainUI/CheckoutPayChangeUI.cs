@@ -12,15 +12,18 @@ using OrderSystemLogic;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutPayChange : Form
+    public partial class CheckoutPayChangeUI : Form
     {
-        Order order;
-        OrderLogic orderLogic = new OrderLogic();
-        double change = 0;
-        public CheckoutPayChange(Order order)
+        private Order order;
+        private OrderHomeUI orderHomeUI;
+        private OrderLogic orderLogic = new OrderLogic();
+        private double change = 0;
+
+        public CheckoutPayChangeUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.order = order;
+            this.orderHomeUI = orderHomeUI;
 
             //hide labels
             lblChange.Hide();
@@ -33,13 +36,14 @@ namespace OrderSystemUI.MainUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            //check if change is positive
             if (change >= 0)
             {
-                CheckoutConfirmation checkoutconfUI = new CheckoutConfirmation(order);
+                //set order to paid in the database
+                orderLogic.Set_Order_To_Paid(order);
+                CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
                 this.Hide();
                 checkoutconfUI.ShowDialog();
-
-                orderLogic.Set_Order_To_Paid(order);
             }
             else
             {
@@ -60,12 +64,14 @@ namespace OrderSystemUI.MainUI
                 lblChangeText.Show();
                 change = change - order.GetTotalAmount("Total");
 
+                //check if customer paid enough
                 if (change < 0)
                 {
                     lblNotEnough.Show();
                     lblNotEnough.Text = string.Format("De klant heeft € {0:0.00} te kort gegeven!", 0 - change);
                 }
                 
+                //show amount change
                 lblChange.Text = string.Format("€ {0:0.00}", change);
                 
             }
@@ -81,8 +87,9 @@ namespace OrderSystemUI.MainUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //go back to PayUI
             this.Hide();
-            CheckoutPay checkoutUI = new CheckoutPay(order);
+            CheckoutPayUI checkoutUI = new CheckoutPayUI(order, orderHomeUI);
             checkoutUI.ShowDialog();
         }
     }

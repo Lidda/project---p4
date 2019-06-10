@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderHomeUI));
             this.btnFree = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnTaken = new System.Windows.Forms.Button();
@@ -60,9 +61,9 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(0, 644);
+            this.btnBack.Location = new System.Drawing.Point(0, 642);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(95, 37);
+            this.btnBack.Size = new System.Drawing.Size(101, 40);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "<";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -110,6 +111,8 @@
             this.Btn_BeverageMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_BeverageMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_BeverageMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Btn_BeverageMenu.Image = ((System.Drawing.Image)(resources.GetObject("Btn_BeverageMenu.Image")));
+            this.Btn_BeverageMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_BeverageMenu.Location = new System.Drawing.Point(70, 120);
             this.Btn_BeverageMenu.Name = "Btn_BeverageMenu";
             this.Btn_BeverageMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -128,6 +131,8 @@
             this.btn_OrderOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_OrderOverview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OrderOverview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_OrderOverview.Image = ((System.Drawing.Image)(resources.GetObject("btn_OrderOverview.Image")));
+            this.btn_OrderOverview.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_OrderOverview.Location = new System.Drawing.Point(240, 120);
             this.btn_OrderOverview.Name = "btn_OrderOverview";
             this.btn_OrderOverview.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -146,6 +151,7 @@
             this.btn_LunchMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LunchMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LunchMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_LunchMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_LunchMenu.Image")));
             this.btn_LunchMenu.Location = new System.Drawing.Point(70, 290);
             this.btn_LunchMenu.Name = "btn_LunchMenu";
             this.btn_LunchMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -164,6 +170,7 @@
             this.btn_DinnerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DinnerMenu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DinnerMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_DinnerMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_DinnerMenu.Image")));
             this.btn_DinnerMenu.Location = new System.Drawing.Point(240, 289);
             this.btn_DinnerMenu.Name = "btn_DinnerMenu";
             this.btn_DinnerMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -193,6 +200,8 @@
             this.btn_Checkout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Checkout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Checkout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Checkout.Image")));
+            this.btn_Checkout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Checkout.Location = new System.Drawing.Point(155, 461);
             this.btn_Checkout.Name = "btn_Checkout";
             this.btn_Checkout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);

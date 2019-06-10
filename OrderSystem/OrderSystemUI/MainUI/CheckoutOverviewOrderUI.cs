@@ -9,47 +9,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderSystemLogic;
 using OrderSystemModel;
+using OrderSystemUI;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutOverviewOrder : Form
+    public partial class CheckoutOverviewOrderUI : Form
     {
-        private OrderLogic logic = new OrderLogic();
+        private OrderHomeUI orderHomeUI;
         private Order order;
 
-        public CheckoutOverviewOrder(Table table)
-        {
-            InitializeComponent();
-            try
-            {
-                this.order = logic.GetTableOrder(table);
-
-                if (order.orderItems.Count == 0)
-                {
-                    ShowPanel("Error");
-                }
-                else
-                {
-                    ShowPanel("Overview");
-                }
-            }
-            catch
-            {
-                ShowPanel("Error");
-            }
-
-            //hide
-            lblTip.Hide();
-            lblTipAmount.Hide();
-        }
-        public CheckoutOverviewOrder(Order order)
+        public CheckoutOverviewOrderUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.order = order;
+            this.orderHomeUI = orderHomeUI;
 
-            //hide
+            //hide tip labels
             lblTip.Hide();
             lblTipAmount.Hide();
+            lblTipEuroSign.Hide();
+
+            //check if there's a order
+            //if no; show "error" panel
             if (order.orderItems.Count == 0)
             {
                 ShowPanel("Error");
@@ -59,22 +40,26 @@ namespace OrderSystemUI.MainUI
                 ShowPanel("Overview");
             }
         }
+
         private void ShowPanel(string panelName)
         {
             if (panelName == "Tip")
             {
+                //open tip UI
                 this.Hide();
-                CheckoutTip checkoutTipUI = new CheckoutTip(order);
+                CheckoutTipUI checkoutTipUI = new CheckoutTipUI(order, orderHomeUI);
                 checkoutTipUI.ShowDialog();
             }
             else if (panelName == "Pay")
             {
+                //open pay UI
                 this.Hide();
-                CheckoutPay checkoutUI = new CheckoutPay(order);
+                CheckoutPayUI checkoutUI = new CheckoutPayUI(order, orderHomeUI);
                 checkoutUI.ShowDialog();
             }
             else if (panelName == "Error")
             {
+                //show 'no orders found' panel
                 pnlError.Show();
                 pnlError.BringToFront();
             }
@@ -82,37 +67,19 @@ namespace OrderSystemUI.MainUI
             {
                 //back
                 //go back to overview
-                //opens th form corresponding with user
                 this.Hide();
-                if (order.Employee.type == OrderSystemModel.employeeType.Barman)
-                {
-                    BarUI barUI = new BarUI(order.Employee);
-                    barUI.ShowDialog();
-                }
-                else if (order.Employee.type == OrderSystemModel.employeeType.Serveerder)
-                {
-                    TableOverviewUI waiterUI = new TableOverviewUI(order.Employee);
-                    waiterUI.ShowDialog();
-                }
-                else if (order.Employee.type == OrderSystemModel.employeeType.Kok)
-                {
-                    KitchenUI kitchenUI = new KitchenUI(order.Employee);
-                    kitchenUI.ShowDialog();
-                }
-                else if (order.Employee.type == OrderSystemModel.employeeType.Manager)
-                {
-                    ManagerUI managerUI = new ManagerUI(order.Employee);
-                    managerUI.ShowDialog();
-                }
+                orderHomeUI.Show();
             }
             else if (panelName == "Comment")
             {
+                //show comment UI
                 this.Hide();
-                CheckoutComments checkoutCommentsUI = new CheckoutComments(order);
+                CheckoutCommentsUI checkoutCommentsUI = new CheckoutCommentsUI(order, orderHomeUI);
                 checkoutCommentsUI.ShowDialog();
             }
             else if (panelName == "Overview")
             {
+                //hide other panel
                 pnlError.Hide();
 
                 //set title of header
@@ -123,10 +90,10 @@ namespace OrderSystemUI.MainUI
                 lblTaxAmount.Show();
                 lblTotalAmount.Show();
 
-
-                this.lblOrderPriceWithoutTax.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("withoutTax"));
-                this.lblTaxAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Tax"));
-                this.lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+                //set label prices
+                this.lblOrderPriceWithoutTax.Text = string.Format("{0:0.00}", order.GetTotalAmount("withoutTax"));
+                this.lblTaxAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Tax"));
+                this.lblTotalAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total"));
 
                 //check if there's given a tip
                 //if yes, show labels
@@ -134,22 +101,24 @@ namespace OrderSystemUI.MainUI
                 {
                     lblTip.Show();
                     lblTipAmount.Show();
-                    lblTipAmount.Text = string.Format("€ {0:0.00}", order.tip);
+                    lblTipEuroSign.Show();
+                    lblTipAmount.Text = string.Format("{0:0.00}", order.tip);
                 }
 
                 //empty listview before filling it
                 listViewOrderItems.Items.Clear();
+
                 //filling listview
                 foreach(OrderItem item in order.orderItems)
                 {
                     ListViewItem li;
-                    if (string.IsNullOrWhiteSpace(item.item.comment))
+                    if (string.IsNullOrWhiteSpace(item.comment))
                     {
                         li = new ListViewItem(item.item.name);
                     }
                     else
                     {
-                        li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.item.comment));
+                        li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.comment));
                     }
                     li.SubItems.Add(item.amount.ToString());
                     li.SubItems.Add(item.GetAmount("Total").ToString("0.00"));
@@ -186,7 +155,8 @@ namespace OrderSystemUI.MainUI
 
         private void listViewOrderItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //view comment
+            //view comment of item
+            //check if there's a item selected in listview
             if (listViewOrderItems.SelectedItems.Count >= 1)
             {
                string comment = listViewOrderItems.SelectedItems[0].Text;

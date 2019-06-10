@@ -132,7 +132,8 @@ namespace OrderSystemUI.MainUI {
         private void btn_Checkout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CheckoutOverviewOrder checkoutOverview = new CheckoutOverviewOrder(this.order);
+            order = orderLogic.GetTableOrder(table);
+            CheckoutOverviewOrderUI checkoutOverview = new CheckoutOverviewOrderUI(this.order, this);
             checkoutOverview.ShowDialog();
         }
     }

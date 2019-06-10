@@ -9,31 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderSystemModel;
 using OrderSystemLogic;
+using OrderSystemUI;
 
 namespace OrderSystemUI.MainUI
 {
-    public partial class CheckoutComments : Form
+    public partial class CheckoutCommentsUI : Form
     {
         private Order order;
         private OrderLogic orderLogic = new OrderLogic();
+        private OrderHomeUI orderHomeUI;
 
-        public CheckoutComments(Order order)
+        public CheckoutCommentsUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
             this.order = order;
-
+            this.orderHomeUI = orderHomeUI;
             InitComments();
         }
+
         private void InitComments()
         {
             //show panel
             pnlAddComment.Show();
             pnlAddComment.BringToFront();
+
             //set title header
             lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: commentaar", order.Table.ID, order.orderID);
+            
             //empty textbox
             txtComment.Text = "";
-            //set current comment
+            
+            //set current comment label
             if (order.comment == "")
             {
                 lblCurrentComment.Text = "er is nog geen opmerking!";
@@ -45,6 +51,7 @@ namespace OrderSystemUI.MainUI
                 btnAddCommentToOrder.Text = "Verander commentaar";
             }
         }
+
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
         {
             //add comment/alter comment
@@ -71,7 +78,7 @@ namespace OrderSystemUI.MainUI
         {
             //back
             this.Hide();
-            CheckoutOverviewOrder coUI = new CheckoutOverviewOrder(order);
+            CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();
         }
     }
