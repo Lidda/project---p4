@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.SystemColors.ControlLightLight, System.Drawing.Color.Empty, null);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.SystemColors.ControlLightLight, System.Drawing.Color.Empty, null);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarUI));
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -700,7 +700,7 @@
             this.listView2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView2.GridLines = true;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listView2.Location = new System.Drawing.Point(447, 118);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(330, 197);
@@ -792,7 +792,7 @@
             this.listView4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView4.GridLines = true;
             this.listView4.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem2});
             this.listView4.Location = new System.Drawing.Point(1270, 118);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(330, 197);
@@ -803,9 +803,10 @@
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
+            this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.Location = new System.Drawing.Point(1364, 22);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(56, 13);
+            this.TimeLabel.Size = new System.Drawing.Size(82, 16);
             this.TimeLabel.TabIndex = 125;
             this.TimeLabel.Text = "TimeLabel";
             // 
