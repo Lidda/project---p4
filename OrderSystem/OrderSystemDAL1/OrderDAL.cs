@@ -221,12 +221,13 @@ namespace OrderSystemDAL
         //Removes an order from both ORDERS and ORDER_CONTAINS
         public void RemoveOrder(Order order)
         {
-            string query = "DELETE FROM ORDERS, ORDER_CONTAINS WHERE orderID = @orderID";
-            SqlParameter[] sqlParameters = new SqlParameter[]
+
+            string queryOrder = "DELETE FROM ORDERS WHERE orderID = @orderID";
+            SqlParameter[] sqlParametersOrder = new SqlParameter[]
             {
                 new SqlParameter("@orderID", order.orderID),
             };
-            ExecuteSelectQuery(query, sqlParameters);
+            ExecuteEditQuery(queryOrder, sqlParametersOrder);
         }
 
         public Order DB_Get_Latest_Order()

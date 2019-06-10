@@ -32,7 +32,7 @@
             this.btn_Back = new System.Windows.Forms.Button();
             this.lbl_DessertLunch = new System.Windows.Forms.Label();
             this.lbl_MainCourseHeader = new System.Windows.Forms.Label();
-            this.lbl_StartersHeader = new System.Windows.Forms.Label();
+            this.lbl_StartersLunch = new System.Windows.Forms.Label();
             this.btn_OrderOverview = new System.Windows.Forms.Button();
             this.listView_StartersLunch = new System.Windows.Forms.ListView();
             this.starterLunchName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,7 +41,7 @@
             this.starterLunchStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.starterLunchComment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_AddStarter = new System.Windows.Forms.Button();
-            this.btn_SubtractStarter = new System.Windows.Forms.Button();
+            this.btn_SubtractStarterLunch = new System.Windows.Forms.Button();
             this.btn_SubtractMainCourse = new System.Windows.Forms.Button();
             this.btn_AddMainCourse = new System.Windows.Forms.Button();
             this.btn_SubtractDessert = new System.Windows.Forms.Button();
@@ -214,20 +214,20 @@
             this.lbl_MainCourseHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbl_MainCourseHeader.UseWaitCursor = true;
             // 
-            // lbl_StartersHeader
+            // lbl_StartersLunch
             // 
-            this.lbl_StartersHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_StartersHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_StartersHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_StartersHeader.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_StartersHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_StartersHeader.Location = new System.Drawing.Point(26, 39);
-            this.lbl_StartersHeader.Name = "lbl_StartersHeader";
-            this.lbl_StartersHeader.Size = new System.Drawing.Size(411, 37);
-            this.lbl_StartersHeader.TabIndex = 37;
-            this.lbl_StartersHeader.Text = "Voorgerechten";
-            this.lbl_StartersHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_StartersHeader.UseWaitCursor = true;
+            this.lbl_StartersLunch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_StartersLunch.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_StartersLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_StartersLunch.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StartersLunch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_StartersLunch.Location = new System.Drawing.Point(26, 39);
+            this.lbl_StartersLunch.Name = "lbl_StartersLunch";
+            this.lbl_StartersLunch.Size = new System.Drawing.Size(411, 37);
+            this.lbl_StartersLunch.TabIndex = 37;
+            this.lbl_StartersLunch.Text = "Voorgerechten";
+            this.lbl_StartersLunch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_StartersLunch.UseWaitCursor = true;
             // 
             // btn_OrderOverview
             // 
@@ -259,7 +259,7 @@
             this.listView_StartersLunch.GridLines = true;
             this.listView_StartersLunch.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listView_StartersLunch.HideSelection = false;
-            this.listView_StartersLunch.Location = new System.Drawing.Point(26, 74);
+            this.listView_StartersLunch.Location = new System.Drawing.Point(26, 75);
             this.listView_StartersLunch.MultiSelect = false;
             this.listView_StartersLunch.Name = "listView_StartersLunch";
             this.listView_StartersLunch.Size = new System.Drawing.Size(376, 103);
@@ -306,19 +306,19 @@
             this.btn_AddStarter.UseVisualStyleBackColor = false;
             this.btn_AddStarter.Click += new System.EventHandler(this.btn_AddStarter_Click);
             // 
-            // btn_SubtractStarter
+            // btn_SubtractStarterLunch
             // 
-            this.btn_SubtractStarter.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_SubtractStarter.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_SubtractStarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SubtractStarter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SubtractStarter.Location = new System.Drawing.Point(404, 145);
-            this.btn_SubtractStarter.Name = "btn_SubtractStarter";
-            this.btn_SubtractStarter.Size = new System.Drawing.Size(33, 33);
-            this.btn_SubtractStarter.TabIndex = 62;
-            this.btn_SubtractStarter.Text = "-";
-            this.btn_SubtractStarter.UseVisualStyleBackColor = false;
-            this.btn_SubtractStarter.Click += new System.EventHandler(this.btn_SubtractStarter_Click);
+            this.btn_SubtractStarterLunch.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_SubtractStarterLunch.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_SubtractStarterLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SubtractStarterLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SubtractStarterLunch.Location = new System.Drawing.Point(404, 145);
+            this.btn_SubtractStarterLunch.Name = "btn_SubtractStarterLunch";
+            this.btn_SubtractStarterLunch.Size = new System.Drawing.Size(33, 33);
+            this.btn_SubtractStarterLunch.TabIndex = 62;
+            this.btn_SubtractStarterLunch.Text = "-";
+            this.btn_SubtractStarterLunch.UseVisualStyleBackColor = false;
+            this.btn_SubtractStarterLunch.Click += new System.EventHandler(this.btn_SubtractStarter_Click);
             // 
             // btn_SubtractMainCourse
             // 
@@ -601,7 +601,7 @@
             this.pnl_Dinner.Controls.Add(this.lbl_StartersDinner);
             this.pnl_Dinner.Controls.Add(this.lbl_MainCoursesDinner);
             this.pnl_Dinner.Controls.Add(this.lbl_SideDishesDinner);
-            this.pnl_Dinner.Location = new System.Drawing.Point(1, -2);
+            this.pnl_Dinner.Location = new System.Drawing.Point(0, 1);
             this.pnl_Dinner.Name = "pnl_Dinner";
             this.pnl_Dinner.Size = new System.Drawing.Size(487, 579);
             this.pnl_Dinner.TabIndex = 94;
@@ -1050,7 +1050,7 @@
             this.pnl_Drinks.Controls.Add(this.lbl_WarmDrinks);
             this.pnl_Drinks.Controls.Add(this.lbl_Soda);
             this.pnl_Drinks.Controls.Add(this.lbl_Wine);
-            this.pnl_Drinks.Location = new System.Drawing.Point(1, 1);
+            this.pnl_Drinks.Location = new System.Drawing.Point(0, 0);
             this.pnl_Drinks.Name = "pnl_Drinks";
             this.pnl_Drinks.Size = new System.Drawing.Size(487, 576);
             this.pnl_Drinks.TabIndex = 111;
@@ -1153,7 +1153,7 @@
             this.lbl_DistilledDrinks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_DistilledDrinks.Location = new System.Drawing.Point(43, 742);
             this.lbl_DistilledDrinks.Name = "lbl_DistilledDrinks";
-            this.lbl_DistilledDrinks.Size = new System.Drawing.Size(411, 37);
+            this.lbl_DistilledDrinks.Size = new System.Drawing.Size(411, 10);
             this.lbl_DistilledDrinks.TabIndex = 111;
             this.lbl_DistilledDrinks.Text = "Sterke drank";
             this.lbl_DistilledDrinks.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1583,7 +1583,7 @@
             this.btn_DrinksPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DrinksPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DrinksPanel.ForeColor = System.Drawing.Color.White;
-            this.btn_DrinksPanel.Location = new System.Drawing.Point(99, 588);
+            this.btn_DrinksPanel.Location = new System.Drawing.Point(97, 588);
             this.btn_DrinksPanel.Name = "btn_DrinksPanel";
             this.btn_DrinksPanel.Size = new System.Drawing.Size(87, 38);
             this.btn_DrinksPanel.TabIndex = 112;
@@ -1599,7 +1599,7 @@
             this.btn_LunchPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LunchPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LunchPanel.ForeColor = System.Drawing.Color.White;
-            this.btn_LunchPanel.Location = new System.Drawing.Point(192, 588);
+            this.btn_LunchPanel.Location = new System.Drawing.Point(189, 588);
             this.btn_LunchPanel.Name = "btn_LunchPanel";
             this.btn_LunchPanel.Size = new System.Drawing.Size(87, 38);
             this.btn_LunchPanel.TabIndex = 113;
@@ -1615,7 +1615,7 @@
             this.btn_DinnerPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DinnerPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DinnerPanel.ForeColor = System.Drawing.Color.White;
-            this.btn_DinnerPanel.Location = new System.Drawing.Point(285, 588);
+            this.btn_DinnerPanel.Location = new System.Drawing.Point(282, 588);
             this.btn_DinnerPanel.Name = "btn_DinnerPanel";
             this.btn_DinnerPanel.Size = new System.Drawing.Size(87, 38);
             this.btn_DinnerPanel.TabIndex = 114;
@@ -1638,6 +1638,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.pnl_Drinks);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_OrderOverview);
             this.Controls.Add(this.btn_DinnerPanel);
@@ -1645,7 +1646,6 @@
             this.Controls.Add(this.btn_DrinksPanel);
             this.Controls.Add(this.lbl_DividerLine);
             this.Controls.Add(this.pnl_Dinner);
-            this.Controls.Add(this.pnl_Drinks);
             this.Controls.Add(this.pnl_Comment);
             this.Controls.Add(this.btn_AddCommentMainCourseLunch);
             this.Controls.Add(this.btn_AddCommentDessertLunch);
@@ -1656,10 +1656,10 @@
             this.Controls.Add(this.btn_AddDessert);
             this.Controls.Add(this.btn_SubtractMainCourse);
             this.Controls.Add(this.btn_AddMainCourse);
-            this.Controls.Add(this.btn_SubtractStarter);
+            this.Controls.Add(this.btn_SubtractStarterLunch);
             this.Controls.Add(this.btn_AddStarter);
             this.Controls.Add(this.listView_StartersLunch);
-            this.Controls.Add(this.lbl_StartersHeader);
+            this.Controls.Add(this.lbl_StartersLunch);
             this.Controls.Add(this.lbl_MainCourseHeader);
             this.Controls.Add(this.lbl_DessertLunch);
             this.Name = "OrderMenuUI";
@@ -1678,13 +1678,13 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Label lbl_DessertLunch;
         private System.Windows.Forms.Label lbl_MainCourseHeader;
-        private System.Windows.Forms.Label lbl_StartersHeader;
+        private System.Windows.Forms.Label lbl_StartersLunch;
         private System.Windows.Forms.Button btn_OrderOverview;
         private System.Windows.Forms.ListView listView_StartersLunch;
         private System.Windows.Forms.ColumnHeader starterLunchName;
         private System.Windows.Forms.ColumnHeader starterLunchQuantity;
         private System.Windows.Forms.Button btn_AddStarter;
-        private System.Windows.Forms.Button btn_SubtractStarter;
+        private System.Windows.Forms.Button btn_SubtractStarterLunch;
         private System.Windows.Forms.ColumnHeader starterLunchID;
         private System.Windows.Forms.Button btn_SubtractMainCourse;
         private System.Windows.Forms.Button btn_AddMainCourse;

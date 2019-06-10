@@ -15,8 +15,11 @@ namespace OrderSystemUI.MainUI {
     public partial class OrderHomeUI : Form {
         Table table;
         TableOverviewUI tableUI;
+
         TableLogic tableLogic = new TableLogic();
         OrderLogic orderLogic = new OrderLogic();
+        OrderItemLogic orderItemLogic = new OrderItemLogic();
+
         Order order = new Order();
 
         public OrderHomeUI(Employee employee, Table table, TableOverviewUI tableUI) {
@@ -31,7 +34,7 @@ namespace OrderSystemUI.MainUI {
 
             try
             {
-                order = orderLogic.GetTableOrder(table);
+                this.order = orderLogic.GetTableOrder(table);
             }
             catch
             {
@@ -135,6 +138,32 @@ namespace OrderSystemUI.MainUI {
             order = orderLogic.GetTableOrder(table);
             CheckoutOverviewOrderUI checkoutOverview = new CheckoutOverviewOrderUI(this.order, this);
             checkoutOverview.ShowDialog();
+        }
+
+        private void btn_RemoveOrder_Click(object sender, EventArgs e)
+        {
+            pnl_ConfirmRemoval.Show();
+        }
+
+        private void btn_ConfirmRemoval_Click(object sender, EventArgs e)
+        {
+            foreach (OrderItem orderItem in order.orderItems)
+            {
+                orderItemLogic.RemoveOrderItems(orderItem);
+            }
+
+            orderLogic.RemoveOrder(this.order);
+
+            this.Hide();
+            tableUI.tables = tableLogic.GetAllTables();
+            tableUI.SetTableColors();
+            tableUI.Show();
+            this.Close();
+        }
+
+        private void btn_CancelRemoval_Click(object sender, EventArgs e)
+        {
+            pnl_ConfirmRemoval.Hide();
         }
     }
 }

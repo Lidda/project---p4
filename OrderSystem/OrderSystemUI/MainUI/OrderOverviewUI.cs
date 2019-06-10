@@ -73,12 +73,12 @@ namespace OrderSystemUI.MainUI
             {
                 lbl_DisplayItemName.Text = listView_Overview.SelectedItems[0].SubItems[0].Text;
                 txt_Amount.Text = listView_Overview.SelectedItems[0].SubItems[1].Text;
-                txt_Comment.Text = listView_Overview.SelectedItems[0].SubItems[3].Text;
+                txt_Comment.Text = listView_Overview.SelectedItems[0].SubItems[5].Text;
                 pnl_EditItem.Show();
             }
             else
             {
-                MessageBox.Show("Error", "Selecteer eerst een product");
+                MessageBox.Show("Selecteer eerst een product");
             }
         }
 

@@ -34,6 +34,12 @@
             this.btn_DinnerMenu = new System.Windows.Forms.Button();
             this.tableNumber = new System.Windows.Forms.Label();
             this.btn_Checkout = new System.Windows.Forms.Button();
+            this.btn_RemoveOrder = new System.Windows.Forms.Button();
+            this.pnl_ConfirmRemoval = new System.Windows.Forms.Panel();
+            this.btn_CancelRemoval = new System.Windows.Forms.Button();
+            this.btn_ConfirmRemoval = new System.Windows.Forms.Button();
+            this.lbl_ConfirmRemoval = new System.Windows.Forms.Label();
+            this.pnl_ConfirmRemoval.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFree
@@ -202,7 +208,7 @@
             this.btn_Checkout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Checkout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Checkout.Image")));
             this.btn_Checkout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Checkout.Location = new System.Drawing.Point(155, 461);
+            this.btn_Checkout.Location = new System.Drawing.Point(70, 457);
             this.btn_Checkout.Name = "btn_Checkout";
             this.btn_Checkout.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.btn_Checkout.Size = new System.Drawing.Size(150, 150);
@@ -212,12 +218,86 @@
             this.btn_Checkout.UseVisualStyleBackColor = false;
             this.btn_Checkout.Click += new System.EventHandler(this.btn_Checkout_Click);
             // 
+            // btn_RemoveOrder
+            // 
+            this.btn_RemoveOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_RemoveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RemoveOrder.FlatAppearance.BorderSize = 0;
+            this.btn_RemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RemoveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RemoveOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_RemoveOrder.Image = ((System.Drawing.Image)(resources.GetObject("btn_RemoveOrder.Image")));
+            this.btn_RemoveOrder.Location = new System.Drawing.Point(240, 457);
+            this.btn_RemoveOrder.Name = "btn_RemoveOrder";
+            this.btn_RemoveOrder.Size = new System.Drawing.Size(150, 150);
+            this.btn_RemoveOrder.TabIndex = 15;
+            this.btn_RemoveOrder.Text = "Order verwijderen";
+            this.btn_RemoveOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_RemoveOrder.UseVisualStyleBackColor = false;
+            this.btn_RemoveOrder.Click += new System.EventHandler(this.btn_RemoveOrder_Click);
+            // 
+            // pnl_ConfirmRemoval
+            // 
+            this.pnl_ConfirmRemoval.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnl_ConfirmRemoval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_ConfirmRemoval.Controls.Add(this.btn_CancelRemoval);
+            this.pnl_ConfirmRemoval.Controls.Add(this.btn_ConfirmRemoval);
+            this.pnl_ConfirmRemoval.Controls.Add(this.lbl_ConfirmRemoval);
+            this.pnl_ConfirmRemoval.Location = new System.Drawing.Point(51, 236);
+            this.pnl_ConfirmRemoval.Name = "pnl_ConfirmRemoval";
+            this.pnl_ConfirmRemoval.Size = new System.Drawing.Size(359, 190);
+            this.pnl_ConfirmRemoval.TabIndex = 16;
+            this.pnl_ConfirmRemoval.Visible = false;
+            // 
+            // btn_CancelRemoval
+            // 
+            this.btn_CancelRemoval.BackColor = System.Drawing.Color.Red;
+            this.btn_CancelRemoval.FlatAppearance.BorderSize = 0;
+            this.btn_CancelRemoval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CancelRemoval.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CancelRemoval.ForeColor = System.Drawing.Color.White;
+            this.btn_CancelRemoval.Location = new System.Drawing.Point(209, 95);
+            this.btn_CancelRemoval.Name = "btn_CancelRemoval";
+            this.btn_CancelRemoval.Size = new System.Drawing.Size(125, 49);
+            this.btn_CancelRemoval.TabIndex = 2;
+            this.btn_CancelRemoval.Text = "Annuleer";
+            this.btn_CancelRemoval.UseVisualStyleBackColor = false;
+            this.btn_CancelRemoval.Click += new System.EventHandler(this.btn_CancelRemoval_Click);
+            // 
+            // btn_ConfirmRemoval
+            // 
+            this.btn_ConfirmRemoval.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_ConfirmRemoval.FlatAppearance.BorderSize = 0;
+            this.btn_ConfirmRemoval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConfirmRemoval.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConfirmRemoval.ForeColor = System.Drawing.Color.White;
+            this.btn_ConfirmRemoval.Location = new System.Drawing.Point(27, 95);
+            this.btn_ConfirmRemoval.Name = "btn_ConfirmRemoval";
+            this.btn_ConfirmRemoval.Size = new System.Drawing.Size(125, 49);
+            this.btn_ConfirmRemoval.TabIndex = 1;
+            this.btn_ConfirmRemoval.Text = "Bevestig";
+            this.btn_ConfirmRemoval.UseVisualStyleBackColor = false;
+            this.btn_ConfirmRemoval.Click += new System.EventHandler(this.btn_ConfirmRemoval_Click);
+            // 
+            // lbl_ConfirmRemoval
+            // 
+            this.lbl_ConfirmRemoval.AutoSize = true;
+            this.lbl_ConfirmRemoval.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ConfirmRemoval.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ConfirmRemoval.Location = new System.Drawing.Point(24, 33);
+            this.lbl_ConfirmRemoval.Name = "lbl_ConfirmRemoval";
+            this.lbl_ConfirmRemoval.Size = new System.Drawing.Size(312, 16);
+            this.lbl_ConfirmRemoval.TabIndex = 0;
+            this.lbl_ConfirmRemoval.Text = "Weet u zeker dat u dit order wil verwijderen?";
+            // 
             // OrderHomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(464, 681);
+            this.Controls.Add(this.pnl_ConfirmRemoval);
+            this.Controls.Add(this.btn_RemoveOrder);
             this.Controls.Add(this.btn_Checkout);
             this.Controls.Add(this.tableNumber);
             this.Controls.Add(this.btn_DinnerMenu);
@@ -232,6 +312,8 @@
             this.Name = "OrderHomeUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderUI";
+            this.pnl_ConfirmRemoval.ResumeLayout(false);
+            this.pnl_ConfirmRemoval.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +330,10 @@
         private System.Windows.Forms.Button btn_DinnerMenu;
         private System.Windows.Forms.Label tableNumber;
         private System.Windows.Forms.Button btn_Checkout;
+        private System.Windows.Forms.Button btn_RemoveOrder;
+        private System.Windows.Forms.Panel pnl_ConfirmRemoval;
+        private System.Windows.Forms.Button btn_CancelRemoval;
+        private System.Windows.Forms.Button btn_ConfirmRemoval;
+        private System.Windows.Forms.Label lbl_ConfirmRemoval;
     }
 }

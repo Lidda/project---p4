@@ -101,7 +101,7 @@
             // 
             // itemComment
             // 
-            this.itemComment.Text = "C";
+            this.itemComment.Text = "";
             this.itemComment.Width = 0;
             // 
             // btn_EditItem
@@ -145,7 +145,7 @@
             this.pnl_EditItem.Controls.Add(this.lbl_ItemComment);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemAmount);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemName);
-            this.pnl_EditItem.Location = new System.Drawing.Point(15, 12);
+            this.pnl_EditItem.Location = new System.Drawing.Point(14, 12);
             this.pnl_EditItem.Name = "pnl_EditItem";
             this.pnl_EditItem.Size = new System.Drawing.Size(437, 552);
             this.pnl_EditItem.TabIndex = 4;
