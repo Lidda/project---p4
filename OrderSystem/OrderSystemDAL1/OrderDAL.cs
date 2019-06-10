@@ -72,6 +72,7 @@ namespace OrderSystemDAL
 
         //begin kitchen and bar orders
 
+        //Gets orders for bar 
         public List<Order> GetOrdersBar(int tableID) {
             string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.course LIKE '%drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
 
@@ -79,6 +80,7 @@ namespace OrderSystemDAL
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //Gets orders for kitchen
         public List<Order> GetOrdersKitchen(int tableID)
         {
             string query = "SELECT O.OrderID, O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.foodtype LIKE '%Diner' AND o.DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)  OR i.foodtype LIKE '%Lunch' AND o.DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND status = 0 AND o.tableID =" + tableID;

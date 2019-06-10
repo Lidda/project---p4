@@ -21,6 +21,7 @@ namespace OrderSystemUI.MainUI
         {
             this.employee = employee;
             InitializeComponent();
+            //Hides buttons
             btn_markReady1.Hide();
             btn_markReady2.Hide();
             btn_markReady3.Hide();
@@ -31,6 +32,7 @@ namespace OrderSystemUI.MainUI
             btn_markReady8.Hide();
             btn_markReady9.Hide();
             btn_markReady10.Hide();
+            //Loads order methods
             Order1(orders);
             Order2(orders);
             Order3(orders);
@@ -45,17 +47,21 @@ namespace OrderSystemUI.MainUI
         }
         public void Order1(List<Order> orders)
         {
+            //Gets order for table 1 from database
             orders = orderLogic.GetOrderskitchen(1);
+            //clears listview before filling it again
             listView1.Items.Clear();
             foreach (Order o in orders)
             {
                 foreach (OrderItem order in o.orderItems)
                 {
+                    //fills listview with orderitems/items from database
                     ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
                     if (order.status == OrderItem.Status.ordered)
                     {
+                        //If there is an order with status ordered, change color of listview to red and show the button to mark ready
                         listView1.BackColor = Color.Tomato;
                         listView1.Items.Add(li);
                         btn_markReady1.Show();
@@ -296,6 +302,7 @@ namespace OrderSystemUI.MainUI
         }
         private void Refresh_btn_Click(object sender, EventArgs e)
         {
+            //Loads all orders again
             Order1(orders);
             Order2(orders);
             Order3(orders);
@@ -310,13 +317,16 @@ namespace OrderSystemUI.MainUI
         }
         private void timerTime_Tick(object sender, EventArgs e)
         {
+            //Shows time and refreshes every second
             this.TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
+            //Mark order from table 1 as ready
             orderLogic.ChangeOrderStatus(1, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView1.BackColor = Color.MediumSeaGreen;
+            //Hides button after clicking it
             btn_markReady1.Hide();
             Order1(orders);
         }
@@ -395,6 +405,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            //brings you back to login screen
             this.Hide();
             LoginUI loginUI = new LoginUI();
             loginUI.ShowDialog();
