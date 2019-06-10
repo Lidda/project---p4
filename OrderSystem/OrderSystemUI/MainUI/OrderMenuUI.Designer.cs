@@ -1625,7 +1625,8 @@
             // 
             // lbl_DividerLine
             // 
-            this.lbl_DividerLine.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_DividerLine.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.lbl_DividerLine.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_DividerLine.Location = new System.Drawing.Point(-15, 577);
             this.lbl_DividerLine.Name = "lbl_DividerLine";
             this.lbl_DividerLine.Size = new System.Drawing.Size(490, 121);
