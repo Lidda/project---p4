@@ -40,10 +40,6 @@ namespace OrderSystemDAL {
             return orderItems;
         }
 
-        public void ChangeOrderItemStatus() {
-
-        }
-
         //Adds items to orders
         public void AddItemsToOrder(Order order)
         {
@@ -53,13 +49,14 @@ namespace OrderSystemDAL {
                 
                     DateTime dateTime = DateTime.Now;
                     //Tries to insert new orderItem into database
-                    string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment) VALUES (@orderID, @itemID, @amount, @comment)";
+                    string queryAddToOrder = "INSERT INTO [ORDER_CONTAINS] (orderID, itemID, amount, comment, timeOfOrder) VALUES (@orderID, @itemID, @amount, @comment, @time)";
                     SqlParameter[] sqlParametersAddOrderItem = new SqlParameter[]
                     {
                         new SqlParameter("@orderID", order.orderID),
                         new SqlParameter("@itemID", orderItem.item.itemID),
                         new SqlParameter("@amount", orderItem.amount),
                         new SqlParameter("@comment", orderItem.comment),
+                        new SqlParameter("@time", dateTime)
                     };
                     ExecuteEditQuery(queryAddToOrder, sqlParametersAddOrderItem);
 

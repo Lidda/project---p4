@@ -304,7 +304,7 @@ namespace OrderSystemUI.MainUI
             else if (panelName == "")
             {
                 btn_DrinksPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
-                btn_LunchPanel.BackColor = Color.FromKnownColor(KnownColor.ForestGreen);
+                btn_LunchPanel.BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
                 btn_DinnerPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
 
                 pnl_Dinner.Hide();
@@ -314,7 +314,7 @@ namespace OrderSystemUI.MainUI
             {
                 btn_DrinksPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
                 btn_LunchPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
-                btn_DinnerPanel.BackColor = Color.FromKnownColor(KnownColor.ForestGreen);
+                btn_DinnerPanel.BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
 
                 pnl_Drinks.Hide();
 
@@ -322,7 +322,7 @@ namespace OrderSystemUI.MainUI
             }
             else if (panelName == "Drinks")
             {
-                btn_DrinksPanel.BackColor = Color.FromKnownColor(KnownColor.ForestGreen);
+                btn_DrinksPanel.BackColor = Color.FromKnownColor(KnownColor.MediumSeaGreen);
                 btn_LunchPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
                 btn_DinnerPanel.BackColor = Color.FromKnownColor(KnownColor.Highlight);
 

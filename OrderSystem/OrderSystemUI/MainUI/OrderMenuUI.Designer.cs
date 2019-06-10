@@ -699,7 +699,7 @@
             // 
             this.lbl_DessertsDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_DessertsDinner.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_DessertsDinner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_DessertsDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_DessertsDinner.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DessertsDinner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_DessertsDinner.Location = new System.Drawing.Point(43, 564);
@@ -851,6 +851,7 @@
             // 
             this.btn_SubtractSideDishDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractSideDishDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_SubtractSideDishDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractSideDishDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractSideDishDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractSideDishDinner.Location = new System.Drawing.Point(404, 494);
@@ -865,6 +866,7 @@
             // 
             this.btn_AddSideDishDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddSideDishDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_AddSideDishDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddSideDishDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddSideDishDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddSideDishDinner.Location = new System.Drawing.Point(404, 424);
@@ -879,6 +881,7 @@
             // 
             this.btn_SubtractMainCourseDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractMainCourseDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_SubtractMainCourseDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractMainCourseDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractMainCourseDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractMainCourseDinner.Location = new System.Drawing.Point(404, 319);
@@ -893,6 +896,7 @@
             // 
             this.btn_AddMainCourseDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddMainCourseDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_AddMainCourseDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddMainCourseDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddMainCourseDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddMainCourseDinner.Location = new System.Drawing.Point(404, 249);
@@ -907,6 +911,7 @@
             // 
             this.btn_SubtractStarterDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractStarterDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_SubtractStarterDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractStarterDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractStarterDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractStarterDinner.Location = new System.Drawing.Point(404, 144);
@@ -921,6 +926,7 @@
             // 
             this.btn_AddStarterDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddStarterDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_AddStarterDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddStarterDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddStarterDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddStarterDinner.Location = new System.Drawing.Point(404, 74);
@@ -981,7 +987,7 @@
             // 
             this.lbl_StartersDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_StartersDinner.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_StartersDinner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_StartersDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_StartersDinner.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_StartersDinner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_StartersDinner.Location = new System.Drawing.Point(43, 38);
@@ -996,7 +1002,7 @@
             // 
             this.lbl_MainCoursesDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_MainCoursesDinner.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_MainCoursesDinner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_MainCoursesDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_MainCoursesDinner.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MainCoursesDinner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_MainCoursesDinner.Location = new System.Drawing.Point(43, 213);
@@ -1011,7 +1017,7 @@
             // 
             this.lbl_SideDishesDinner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_SideDishesDinner.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_SideDishesDinner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_SideDishesDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_SideDishesDinner.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SideDishesDinner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_SideDishesDinner.Location = new System.Drawing.Point(43, 388);

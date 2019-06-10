@@ -20,8 +20,17 @@ namespace OrderSystemUI.MainUI
         public KitchenUI(Employee employee)
         {
             this.employee = employee;
-
             InitializeComponent();
+            btn_markReady1.Hide();
+            btn_markReady2.Hide();
+            btn_markReady3.Hide();
+            btn_markReady4.Hide();
+            btn_markReady5.Hide();
+            btn_markReady6.Hide();
+            btn_markReady7.Hide();
+            btn_markReady8.Hide();
+            btn_markReady9.Hide();
+            btn_markReady10.Hide();
             Order1(orders);
             Order2(orders);
             Order3(orders);
@@ -32,6 +41,7 @@ namespace OrderSystemUI.MainUI
             Order8(orders);
             Order9(orders);
             Order10(orders);
+           
         }
         public void Order1(List<Order> orders)
         {
@@ -48,10 +58,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView1.BackColor = Color.Tomato;
                         listView1.Items.Add(li);
+                        btn_markReady1.Show();
                     }
                     else
                     {
                         listView1.BackColor = Color.MediumSeaGreen;
+                        btn_markReady1.Hide();
                     }
                 }
             }
@@ -71,10 +83,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView2.BackColor = Color.Tomato;
                         listView2.Items.Add(li);
+                        btn_markReady2.Show();
                     }
                     else
                     {
                         listView2.BackColor = Color.MediumSeaGreen;
+                        btn_markReady2.Hide();
                     }
                 }
             }
@@ -94,10 +108,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView3.BackColor = Color.Tomato;
                         listView3.Items.Add(li);
+                        btn_markReady3.Show();
                     }
                     else
                     {
                         listView3.BackColor = Color.MediumSeaGreen;
+                        btn_markReady3.Hide();
                     }
                 }
             }
@@ -117,10 +133,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView4.BackColor = Color.Tomato;
                         listView4.Items.Add(li);
+                        btn_markReady4.Show();
                     }
                     else
                     {
                         listView4.BackColor = Color.MediumSeaGreen;
+                        btn_markReady4.Hide();
                     }
                 }
             }
@@ -140,10 +158,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView5.BackColor = Color.Tomato;
                         listView5.Items.Add(li);
+                        btn_markReady5.Show();
                     }
                     else
                     {
                         listView5.BackColor = Color.MediumSeaGreen;
+                        btn_markReady5.Hide();
                     }
                 }
             }
@@ -163,10 +183,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView6.BackColor = Color.Tomato;
                         listView6.Items.Add(li);
+                        btn_markReady6.Show();
                     }
                     else
                     {
                         listView6.BackColor = Color.MediumSeaGreen;
+                        btn_markReady6.Hide();
                     }
                 }
             }
@@ -186,10 +208,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView7.BackColor = Color.Tomato;
                         listView7.Items.Add(li);
+                        btn_markReady7.Show();
                     }
                     else
                     {
                         listView7.BackColor = Color.MediumSeaGreen;
+                        btn_markReady7.Hide();
                     }
                 }
             }
@@ -209,10 +233,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView8.BackColor = Color.Tomato;
                         listView8.Items.Add(li);
+                        btn_markReady8.Show();
                     }
                     else
                     {
                         listView8.BackColor = Color.MediumSeaGreen;
+                        btn_markReady8.Hide();
                     }
                 }
             }
@@ -232,10 +258,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView9.BackColor = Color.Tomato;
                         listView9.Items.Add(li);
+                        btn_markReady9.Show();
                     }
                     else
                     {
                         listView9.BackColor = Color.MediumSeaGreen;
+                        btn_markReady9.Hide();
                     }
                 }
             }
@@ -256,10 +284,12 @@ namespace OrderSystemUI.MainUI
                     {
                         listView10.BackColor = Color.Tomato;
                         listView10.Items.Add(li);
+                        btn_markReady10.Show();
                     }
                     else
                     {
                         listView10.BackColor = Color.MediumSeaGreen;
+                        btn_markReady10.Hide();
                     }
                 }
             }
@@ -286,71 +316,81 @@ namespace OrderSystemUI.MainUI
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(1, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order1(orders);
             listView1.BackColor = Color.MediumSeaGreen;
+            btn_markReady1.Hide();
+            Order1(orders);
         }
 
         private void btn_markReady2_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(2, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order2(orders);
             listView2.BackColor = Color.MediumSeaGreen;
+            btn_markReady2.Hide();
+            Order2(orders);
         }
 
         private void btn_markReady3_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(3, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order3(orders);
             listView3.BackColor = Color.MediumSeaGreen;
+            btn_markReady3.Hide();
+            Order3(orders);
         }
 
         private void btn_markReady4_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(4, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order4(orders);
             listView4.BackColor = Color.MediumSeaGreen;
+            btn_markReady4.Hide();
+            Order4(orders);
         }
 
         private void btn_markReady5_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(5, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order5(orders);
             listView5.BackColor = Color.MediumSeaGreen;
+            btn_markReady5.Hide();
+            Order5(orders);
         }
 
         private void btn_markReady6_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(6, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order6(orders);
             listView6.BackColor = Color.MediumSeaGreen;
+            btn_markReady6.Hide();
+            Order6(orders);
         }
 
         private void btn_markReady7_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(7, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order7(orders);
             listView7.BackColor = Color.MediumSeaGreen;
+            btn_markReady7.Hide();
+            Order7(orders);
         }
 
         private void btn_markReady8_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(8, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order8(orders);
             listView8.BackColor = Color.MediumSeaGreen;
+            btn_markReady8.Hide();
+            Order8(orders);
         }
 
         private void btn_markReady9_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(9, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order9(orders);
             listView9.BackColor = Color.MediumSeaGreen;
+            btn_markReady9.Hide();
+            Order9(orders);
         }
 
         private void btn_markReady10_Click(object sender, EventArgs e)
         {
             orderLogic.ChangeOrderStatus(10, OrderItem.Status.ordered, OrderItem.Status.ready);
-            Order10(orders);
             listView10.BackColor = Color.MediumSeaGreen;
+            btn_markReady10.Hide();
+            Order10(orders);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

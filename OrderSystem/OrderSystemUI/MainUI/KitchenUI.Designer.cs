@@ -813,6 +813,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1653, 970);
+            this.Controls.Add(this.btn_markReady2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listView10);
@@ -829,7 +830,6 @@
             this.Controls.Add(this.btn_markReady5);
             this.Controls.Add(this.btn_markReady4);
             this.Controls.Add(this.btn_markReady3);
-            this.Controls.Add(this.btn_markReady2);
             this.Controls.Add(this.Time9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
