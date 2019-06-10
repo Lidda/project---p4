@@ -60,6 +60,14 @@ namespace OrderSystemLogic
             }
         }
 
+        public List<Order> Get_Orders_By_Date(DateTime date) {
+            try {
+                return orderDAL.Db_Get_Orders_By_Date(date);
+            } catch {
+                throw new Exception("Could not get orders from database");
+            }
+        }
+
         public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
         {
             orderDAL.ChangeOrderStatus(tableID, status, statusChange);

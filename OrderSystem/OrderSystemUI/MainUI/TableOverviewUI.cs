@@ -198,7 +198,7 @@ namespace OrderSystemUI {
             //reload database data
             tables = tableLogic.GetAllTables();
             OrderLogic orderLogic = new OrderLogic();
-            orders = orderLogic.Get_All_Orders();
+            orders = orderLogic.Get_Orders_By_Date(DateTime.Today);
 
             //ESSENTIAL: excutes both methods on the main thread
             // methods update table colors + order status marks
@@ -243,46 +243,48 @@ namespace OrderSystemUI {
 
         //show the 'timer' marks and updates the label it with the timespan given to it
         private void ShowTimeMarks(Table table, TimeSpan date) {
+            string dateMins = ((int)date.TotalMinutes).ToString(); ;
+
             switch (table.ID) {
                 case 1:
                     TimeMark1.Visible = true;
-                    TimeMark1.Text = date.ToString((@"mm")) + " min" ;
+                    TimeMark1.Text = dateMins + " min" ;
                     break;
                 case 2:
                     TimeMark2.Visible = true;
-                    TimeMark2.Text = date.ToString((@"mm")) + " min";
+                    TimeMark2.Text = dateMins + " min";
                     break;
                 case 3:
                     TimeMark3.Visible = true;
-                    TimeMark3.Text = date.ToString((@"mm")) + " min";
+                    TimeMark3.Text = dateMins + " min";
                     break;
                 case 4:
                     TimeMark4.Visible = true;
-                    TimeMark4.Text = date.ToString((@"mm")) + " min";
+                    TimeMark4.Text = dateMins + " min";
                     break;
                 case 5:
                     TimeMark5.Visible = true;
-                    TimeMark5.Text = date.ToString((@"mm")) + " min";
+                    TimeMark5.Text = dateMins + " min";
                     break;
                 case 6:
                     TimeMark6.Visible = true;
-                    TimeMark6.Text = date.ToString((@"mm")) + " min";
+                    TimeMark6.Text = dateMins + " min";
                     break;
                 case 7:
                     TimeMark7.Visible = true;
-                    TimeMark7.Text = date.ToString((@"mm")) + " min";
+                    TimeMark7.Text = dateMins + " min";
                     break;
                 case 8:
                     TimeMark8.Visible = true;
-                    TimeMark8.Text = date.ToString((@"mm")) + " min";
+                    TimeMark8.Text = dateMins + " min";
                     break;
                 case 9:
                     TimeMark9.Visible = true;
-                    TimeMark9.Text = date.ToString((@"mm")) + " min";
+                    TimeMark9.Text = dateMins + " min";
                     break;
                 case 10:
                     TimeMark10.Visible = true;
-                    TimeMark10.Text = date.ToString((@"mm")) + "min";
+                    TimeMark10.Text = dateMins + "min";
                     break;
             }
         }
