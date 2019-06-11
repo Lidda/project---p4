@@ -72,6 +72,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady1.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order2(List<Order> orders)
@@ -97,6 +98,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady2.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order3(List<Order> orders)
@@ -122,6 +124,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady3.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order4(List<Order> orders)
@@ -147,6 +150,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady4.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order5(List<Order> orders)
@@ -172,6 +176,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady5.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order6(List<Order> orders)
@@ -197,6 +202,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady6.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order7(List<Order> orders)
@@ -222,6 +228,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady7.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order8(List<Order> orders)
@@ -247,6 +254,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady8.Hide();
                     }
                 }
+                break;
             }
         }
         public void Order9(List<Order> orders)
@@ -272,6 +280,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady9.Hide();
                     }
                 }
+                break;
             }
         }
 
@@ -298,6 +307,7 @@ namespace OrderSystemUI.MainUI
                         btn_markReady10.Hide();
                     }
                 }
+                break;
             }
         }
         private void Refresh_btn_Click(object sender, EventArgs e)
