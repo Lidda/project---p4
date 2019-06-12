@@ -26,14 +26,16 @@ namespace OrderSystemDAL
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        public List<Order> Db_Get_All_Orders() {
+        public List<Order> Db_Get_All_Orders()
+        {
             string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
         }
 
         //gets an order from a specific date: used to cut down on unnecessary database traffic
-        public List<Order> Db_Get_Orders_By_Date(DateTime date) {
+        public List<Order> Db_Get_Orders_By_Date(DateTime date)
+        {
             string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS] WHERE DateOrdered = @date";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
@@ -73,7 +75,8 @@ namespace OrderSystemDAL
         //begin kitchen and bar orders
 
         //Gets orders for bar 
-        public List<Order> GetOrdersBar(int tableID) {
+        public List<Order> GetOrdersBar(int tableID)
+        {
             string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE c.status = 0 AND o.tableID = " + tableID + " AND i.course LIKE '%drank' AND DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -96,7 +99,21 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-        
+
+        public void ChangeStatusBar(int tableId, OrderItem.Status status, OrderItem.Status statusChange)
+        {
+            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID INNER JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE ORDERS.TABLEID = " + tableId + " AND ITEMS.course LIKE '%Drank' AND ORDER_CONTAINS.status = " + (int)status;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+        public void ChangeStatusKitchen(int tableId, OrderItem.Status status, OrderItem.Status statusChange)
+        {
+            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID INNER JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE ORDERS.TABLEID = " + tableId + " AND ITEMS.course NOT LIKE '%Drank' AND ORDER_CONTAINS.status = " + (int)status;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+
         //end kitchen and bar orders
 
         //begin profits

@@ -43,7 +43,7 @@ namespace OrderSystemUI.MainUI
             Order8(orders);
             Order9(orders);
             Order10(orders);
-           
+
         }
         public void Order1(List<Order> orders)
         {
@@ -56,21 +56,18 @@ namespace OrderSystemUI.MainUI
                 foreach (OrderItem order in o.orderItems)
                 {
                     //fills listview with orderitems/items from database
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         //If there is an order with status ordered, change color of listview to red and show the button to mark ready
                         listView1.BackColor = Color.Tomato;
                         listView1.Items.Add(li);
                         btn_markReady1.Show();
                     }
-                    else
-                    {
-                        listView1.BackColor = Color.MediumSeaGreen;
-                        btn_markReady1.Hide();
-                    }
+                  
                 }
                 break;
             }
@@ -83,20 +80,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView2.BackColor = Color.Tomato;
                         listView2.Items.Add(li);
                         btn_markReady2.Show();
                     }
-                    else
-                    {
-                        listView2.BackColor = Color.MediumSeaGreen;
-                        btn_markReady2.Hide();
-                    }
+                    
                 }
                 break;
             }
@@ -109,20 +103,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView3.BackColor = Color.Tomato;
                         listView3.Items.Add(li);
                         btn_markReady3.Show();
                     }
-                    else
-                    {
-                        listView3.BackColor = Color.MediumSeaGreen;
-                        btn_markReady3.Hide();
-                    }
+                   
                 }
                 break;
             }
@@ -135,20 +126,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView4.BackColor = Color.Tomato;
                         listView4.Items.Add(li);
                         btn_markReady4.Show();
                     }
-                    else
-                    {
-                        listView4.BackColor = Color.MediumSeaGreen;
-                        btn_markReady4.Hide();
-                    }
+                    
                 }
                 break;
             }
@@ -161,20 +149,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView5.BackColor = Color.Tomato;
                         listView5.Items.Add(li);
                         btn_markReady5.Show();
                     }
-                    else
-                    {
-                        listView5.BackColor = Color.MediumSeaGreen;
-                        btn_markReady5.Hide();
-                    }
+                    
                 }
                 break;
             }
@@ -187,20 +172,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView6.BackColor = Color.Tomato;
                         listView6.Items.Add(li);
                         btn_markReady6.Show();
                     }
-                    else
-                    {
-                        listView6.BackColor = Color.MediumSeaGreen;
-                        btn_markReady6.Hide();
-                    }
+                   
                 }
                 break;
             }
@@ -213,20 +195,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView7.BackColor = Color.Tomato;
                         listView7.Items.Add(li);
                         btn_markReady7.Show();
                     }
-                    else
-                    {
-                        listView7.BackColor = Color.MediumSeaGreen;
-                        btn_markReady7.Hide();
-                    }
+                    
                 }
                 break;
             }
@@ -239,20 +218,17 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
                         listView8.BackColor = Color.Tomato;
                         listView8.Items.Add(li);
                         btn_markReady8.Show();
                     }
-                    else
-                    {
-                        listView8.BackColor = Color.MediumSeaGreen;
-                        btn_markReady8.Hide();
-                    }
+                   
                 }
                 break;
             }
@@ -265,19 +241,15 @@ namespace OrderSystemUI.MainUI
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
-                        listView9.BackColor = Color.Tomato;
                         listView9.Items.Add(li);
+                        listView9.BackColor = Color.Tomato;
                         btn_markReady9.Show();
-                    }
-                    else
-                    {
-                        listView9.BackColor = Color.MediumSeaGreen;
-                        btn_markReady9.Hide();
                     }
                 }
                 break;
@@ -288,23 +260,20 @@ namespace OrderSystemUI.MainUI
         {
             orders = orderLogic.GetOrderskitchen(10);
             listView10.Items.Clear();
+
             foreach (Order o in orders)
             {
                 foreach (OrderItem order in o.orderItems)
                 {
-                    ListViewItem li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
+                    ListViewItem li;
+                    li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.status == OrderItem.Status.ordered)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
                     {
-                        listView10.BackColor = Color.Tomato;
                         listView10.Items.Add(li);
+                        listView10.BackColor = Color.Tomato;
                         btn_markReady10.Show();
-                    }
-                    else
-                    {
-                        listView10.BackColor = Color.MediumSeaGreen;
-                        btn_markReady10.Hide();
                     }
                 }
                 break;
@@ -334,7 +303,7 @@ namespace OrderSystemUI.MainUI
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
             //Mark order from table 1 as ready
-            orderLogic.ChangeOrderStatus(1, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(1, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView1.BackColor = Color.MediumSeaGreen;
             //Hides button after clicking it
             btn_markReady1.Hide();
@@ -343,7 +312,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady2_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(2, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(2, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView2.BackColor = Color.MediumSeaGreen;
             btn_markReady2.Hide();
             Order2(orders);
@@ -351,7 +320,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady3_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(3, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(3, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView3.BackColor = Color.MediumSeaGreen;
             btn_markReady3.Hide();
             Order3(orders);
@@ -359,7 +328,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady4_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(4, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(4, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView4.BackColor = Color.MediumSeaGreen;
             btn_markReady4.Hide();
             Order4(orders);
@@ -367,7 +336,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady5_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(5, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(5, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView5.BackColor = Color.MediumSeaGreen;
             btn_markReady5.Hide();
             Order5(orders);
@@ -375,7 +344,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady6_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(6, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(6, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView6.BackColor = Color.MediumSeaGreen;
             btn_markReady6.Hide();
             Order6(orders);
@@ -383,7 +352,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady7_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(7, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(7, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView7.BackColor = Color.MediumSeaGreen;
             btn_markReady7.Hide();
             Order7(orders);
@@ -391,7 +360,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady8_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(8, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(8, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView8.BackColor = Color.MediumSeaGreen;
             btn_markReady8.Hide();
             Order8(orders);
@@ -399,7 +368,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady9_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(9, OrderItem.Status.ordered, OrderItem.Status.ready);
+           orderLogic.ChangeStatusKitchen(9, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView9.BackColor = Color.MediumSeaGreen;
             btn_markReady9.Hide();
             Order9(orders);
@@ -407,7 +376,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_markReady10_Click(object sender, EventArgs e)
         {
-            orderLogic.ChangeOrderStatus(10, OrderItem.Status.ordered, OrderItem.Status.ready);
+            orderLogic.ChangeStatusKitchen(10, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView10.BackColor = Color.MediumSeaGreen;
             btn_markReady10.Hide();
             Order10(orders);
