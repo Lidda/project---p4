@@ -66,10 +66,11 @@
             this.listView_Overview.GridLines = true;
             this.listView_Overview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_Overview.HideSelection = false;
-            this.listView_Overview.Location = new System.Drawing.Point(14, 12);
+            this.listView_Overview.Location = new System.Drawing.Point(19, 15);
+            this.listView_Overview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView_Overview.MultiSelect = false;
             this.listView_Overview.Name = "listView_Overview";
-            this.listView_Overview.Size = new System.Drawing.Size(437, 484);
+            this.listView_Overview.Size = new System.Drawing.Size(581, 595);
             this.listView_Overview.TabIndex = 1;
             this.listView_Overview.UseCompatibleStateImageBehavior = false;
             this.listView_Overview.View = System.Windows.Forms.View.Details;
@@ -110,9 +111,10 @@
             this.btn_EditItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_EditItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EditItem.ForeColor = System.Drawing.Color.White;
-            this.btn_EditItem.Location = new System.Drawing.Point(35, 513);
+            this.btn_EditItem.Location = new System.Drawing.Point(47, 631);
+            this.btn_EditItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_EditItem.Name = "btn_EditItem";
-            this.btn_EditItem.Size = new System.Drawing.Size(141, 51);
+            this.btn_EditItem.Size = new System.Drawing.Size(188, 63);
             this.btn_EditItem.TabIndex = 2;
             this.btn_EditItem.Text = "EDIT ITEM";
             this.btn_EditItem.UseVisualStyleBackColor = false;
@@ -124,9 +126,10 @@
             this.btn_DeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DeleteItem.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteItem.Location = new System.Drawing.Point(283, 513);
+            this.btn_DeleteItem.Location = new System.Drawing.Point(377, 631);
+            this.btn_DeleteItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_DeleteItem.Name = "btn_DeleteItem";
-            this.btn_DeleteItem.Size = new System.Drawing.Size(132, 51);
+            this.btn_DeleteItem.Size = new System.Drawing.Size(176, 63);
             this.btn_DeleteItem.TabIndex = 3;
             this.btn_DeleteItem.Text = "VERWIJDER ITEM";
             this.btn_DeleteItem.UseVisualStyleBackColor = false;
@@ -145,9 +148,10 @@
             this.pnl_EditItem.Controls.Add(this.lbl_ItemComment);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemAmount);
             this.pnl_EditItem.Controls.Add(this.lbl_ItemName);
-            this.pnl_EditItem.Location = new System.Drawing.Point(14, 12);
+            this.pnl_EditItem.Location = new System.Drawing.Point(19, 15);
+            this.pnl_EditItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_EditItem.Name = "pnl_EditItem";
-            this.pnl_EditItem.Size = new System.Drawing.Size(437, 552);
+            this.pnl_EditItem.Size = new System.Drawing.Size(583, 679);
             this.pnl_EditItem.TabIndex = 4;
             this.pnl_EditItem.Visible = false;
             // 
@@ -157,9 +161,10 @@
             this.btn_SubtractAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_SubtractAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SubtractAmount.Location = new System.Drawing.Point(189, 146);
+            this.btn_SubtractAmount.Location = new System.Drawing.Point(252, 180);
+            this.btn_SubtractAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_SubtractAmount.Name = "btn_SubtractAmount";
-            this.btn_SubtractAmount.Size = new System.Drawing.Size(33, 33);
+            this.btn_SubtractAmount.Size = new System.Drawing.Size(44, 41);
             this.btn_SubtractAmount.TabIndex = 33;
             this.btn_SubtractAmount.Text = "-";
             this.btn_SubtractAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -172,9 +177,10 @@
             this.btn_AddAmount.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btn_AddAmount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddAmount.Location = new System.Drawing.Point(150, 146);
+            this.btn_AddAmount.Location = new System.Drawing.Point(200, 180);
+            this.btn_AddAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_AddAmount.Name = "btn_AddAmount";
-            this.btn_AddAmount.Size = new System.Drawing.Size(33, 33);
+            this.btn_AddAmount.Size = new System.Drawing.Size(44, 41);
             this.btn_AddAmount.TabIndex = 32;
             this.btn_AddAmount.Text = "+";
             this.btn_AddAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,10 +194,10 @@
             this.btn_CancelEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CancelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CancelEdit.ForeColor = System.Drawing.Color.White;
-            this.btn_CancelEdit.Location = new System.Drawing.Point(243, 437);
-            this.btn_CancelEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CancelEdit.Location = new System.Drawing.Point(324, 538);
+            this.btn_CancelEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CancelEdit.Name = "btn_CancelEdit";
-            this.btn_CancelEdit.Size = new System.Drawing.Size(143, 59);
+            this.btn_CancelEdit.Size = new System.Drawing.Size(191, 73);
             this.btn_CancelEdit.TabIndex = 31;
             this.btn_CancelEdit.Text = "ANNULEER";
             this.btn_CancelEdit.UseVisualStyleBackColor = false;
@@ -205,10 +211,10 @@
             this.btn_ConfirmEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConfirmEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_ConfirmEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ConfirmEdit.Location = new System.Drawing.Point(52, 437);
-            this.btn_ConfirmEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ConfirmEdit.Location = new System.Drawing.Point(69, 538);
+            this.btn_ConfirmEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ConfirmEdit.Name = "btn_ConfirmEdit";
-            this.btn_ConfirmEdit.Size = new System.Drawing.Size(143, 59);
+            this.btn_ConfirmEdit.Size = new System.Drawing.Size(191, 73);
             this.btn_ConfirmEdit.TabIndex = 30;
             this.btn_ConfirmEdit.Text = "BEVESTIG";
             this.btn_ConfirmEdit.UseVisualStyleBackColor = false;
@@ -217,36 +223,40 @@
             // txt_Amount
             // 
             this.txt_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Amount.Location = new System.Drawing.Point(80, 148);
+            this.txt_Amount.Location = new System.Drawing.Point(107, 182);
+            this.txt_Amount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Amount.Name = "txt_Amount";
             this.txt_Amount.ReadOnly = true;
-            this.txt_Amount.Size = new System.Drawing.Size(44, 26);
+            this.txt_Amount.Size = new System.Drawing.Size(57, 30);
             this.txt_Amount.TabIndex = 5;
             // 
             // lbl_DisplayItemName
             // 
             this.lbl_DisplayItemName.AutoSize = true;
             this.lbl_DisplayItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DisplayItemName.Location = new System.Drawing.Point(105, 95);
+            this.lbl_DisplayItemName.Location = new System.Drawing.Point(140, 117);
+            this.lbl_DisplayItemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DisplayItemName.Name = "lbl_DisplayItemName";
-            this.lbl_DisplayItemName.Size = new System.Drawing.Size(0, 20);
+            this.lbl_DisplayItemName.Size = new System.Drawing.Size(0, 25);
             this.lbl_DisplayItemName.TabIndex = 4;
             // 
             // txt_Comment
             // 
-            this.txt_Comment.Location = new System.Drawing.Point(22, 236);
+            this.txt_Comment.Location = new System.Drawing.Point(29, 290);
+            this.txt_Comment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Comment.Multiline = true;
             this.txt_Comment.Name = "txt_Comment";
-            this.txt_Comment.Size = new System.Drawing.Size(395, 148);
+            this.txt_Comment.Size = new System.Drawing.Size(525, 181);
             this.txt_Comment.TabIndex = 3;
             // 
             // lbl_ItemComment
             // 
             this.lbl_ItemComment.AutoSize = true;
             this.lbl_ItemComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ItemComment.Location = new System.Drawing.Point(19, 213);
+            this.lbl_ItemComment.Location = new System.Drawing.Point(25, 262);
+            this.lbl_ItemComment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ItemComment.Name = "lbl_ItemComment";
-            this.lbl_ItemComment.Size = new System.Drawing.Size(105, 20);
+            this.lbl_ItemComment.Size = new System.Drawing.Size(131, 25);
             this.lbl_ItemComment.TabIndex = 2;
             this.lbl_ItemComment.Text = "Commentaar:";
             // 
@@ -254,9 +264,10 @@
             // 
             this.lbl_ItemAmount.AutoSize = true;
             this.lbl_ItemAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ItemAmount.Location = new System.Drawing.Point(18, 148);
+            this.lbl_ItemAmount.Location = new System.Drawing.Point(24, 182);
+            this.lbl_ItemAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ItemAmount.Name = "lbl_ItemAmount";
-            this.lbl_ItemAmount.Size = new System.Drawing.Size(59, 20);
+            this.lbl_ItemAmount.Size = new System.Drawing.Size(74, 25);
             this.lbl_ItemAmount.TabIndex = 1;
             this.lbl_ItemAmount.Text = "Aantal:";
             // 
@@ -264,9 +275,10 @@
             // 
             this.lbl_ItemName.AutoSize = true;
             this.lbl_ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ItemName.Location = new System.Drawing.Point(18, 95);
+            this.lbl_ItemName.Location = new System.Drawing.Point(24, 117);
+            this.lbl_ItemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ItemName.Name = "lbl_ItemName";
-            this.lbl_ItemName.Size = new System.Drawing.Size(71, 20);
+            this.lbl_ItemName.Size = new System.Drawing.Size(87, 25);
             this.lbl_ItemName.TabIndex = 0;
             this.lbl_ItemName.Text = "Gerecht:";
             // 
@@ -278,9 +290,10 @@
             this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Home.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Home.Location = new System.Drawing.Point(-4, 638);
+            this.btn_Home.Location = new System.Drawing.Point(-5, 785);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(107, 43);
+            this.btn_Home.Size = new System.Drawing.Size(143, 53);
             this.btn_Home.TabIndex = 5;
             this.btn_Home.Text = "Home";
             this.btn_Home.UseVisualStyleBackColor = false;
@@ -288,16 +301,18 @@
             // 
             // OrderOverviewUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(464, 681);
+            this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.btn_Home);
             this.Controls.Add(this.pnl_EditItem);
             this.Controls.Add(this.btn_DeleteItem);
             this.Controls.Add(this.btn_EditItem);
             this.Controls.Add(this.listView_Overview);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderOverviewUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderOverview";
             this.pnl_EditItem.ResumeLayout(false);
             this.pnl_EditItem.PerformLayout();

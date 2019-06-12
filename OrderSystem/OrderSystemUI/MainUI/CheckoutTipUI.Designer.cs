@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutTipUI));
             this.pnlTip = new System.Windows.Forms.Panel();
+            this.lblEuroSign3 = new System.Windows.Forms.Label();
+            this.lbleuroSign2 = new System.Windows.Forms.Label();
+            this.lblEuroSign1 = new System.Windows.Forms.Label();
             this.btnDeleteTip = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@
             this.lblTipHeader = new System.Windows.Forms.Label();
             this.btnConfirmTip = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblEuroSign1 = new System.Windows.Forms.Label();
-            this.lbleuroSign2 = new System.Windows.Forms.Label();
-            this.lblEuroSign3 = new System.Windows.Forms.Label();
             this.pnlTip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,12 +70,42 @@
             this.pnlTip.Controls.Add(this.lblTipHeader);
             this.pnlTip.Controls.Add(this.btnConfirmTip);
             this.pnlTip.Controls.Add(this.button2);
-            this.pnlTip.Location = new System.Drawing.Point(3, 4);
+            this.pnlTip.Location = new System.Drawing.Point(0, 4);
             this.pnlTip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTip.Name = "pnlTip";
-            this.pnlTip.Size = new System.Drawing.Size(613, 831);
+            this.pnlTip.Size = new System.Drawing.Size(621, 839);
             this.pnlTip.TabIndex = 32;
             this.pnlTip.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTip_Paint);
+            // 
+            // lblEuroSign3
+            // 
+            this.lblEuroSign3.AutoSize = true;
+            this.lblEuroSign3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblEuroSign3.Location = new System.Drawing.Point(416, 590);
+            this.lblEuroSign3.Name = "lblEuroSign3";
+            this.lblEuroSign3.Size = new System.Drawing.Size(29, 31);
+            this.lblEuroSign3.TabIndex = 73;
+            this.lblEuroSign3.Text = "€";
+            // 
+            // lbleuroSign2
+            // 
+            this.lbleuroSign2.AutoSize = true;
+            this.lbleuroSign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lbleuroSign2.Location = new System.Drawing.Point(416, 523);
+            this.lbleuroSign2.Name = "lbleuroSign2";
+            this.lbleuroSign2.Size = new System.Drawing.Size(29, 31);
+            this.lbleuroSign2.TabIndex = 72;
+            this.lbleuroSign2.Text = "€";
+            // 
+            // lblEuroSign1
+            // 
+            this.lblEuroSign1.AutoSize = true;
+            this.lblEuroSign1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblEuroSign1.Location = new System.Drawing.Point(416, 470);
+            this.lblEuroSign1.Name = "lblEuroSign1";
+            this.lblEuroSign1.Size = new System.Drawing.Size(29, 31);
+            this.lblEuroSign1.TabIndex = 71;
+            this.lblEuroSign1.Text = "€";
             // 
             // btnDeleteTip
             // 
@@ -231,43 +261,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 772);
+            this.button2.Location = new System.Drawing.Point(-11, 778);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 59);
+            this.button2.Size = new System.Drawing.Size(156, 59);
             this.button2.TabIndex = 23;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lblEuroSign1
-            // 
-            this.lblEuroSign1.AutoSize = true;
-            this.lblEuroSign1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign1.Location = new System.Drawing.Point(416, 470);
-            this.lblEuroSign1.Name = "lblEuroSign1";
-            this.lblEuroSign1.Size = new System.Drawing.Size(29, 31);
-            this.lblEuroSign1.TabIndex = 71;
-            this.lblEuroSign1.Text = "€";
-            // 
-            // lbleuroSign2
-            // 
-            this.lbleuroSign2.AutoSize = true;
-            this.lbleuroSign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lbleuroSign2.Location = new System.Drawing.Point(416, 523);
-            this.lbleuroSign2.Name = "lbleuroSign2";
-            this.lbleuroSign2.Size = new System.Drawing.Size(29, 31);
-            this.lbleuroSign2.TabIndex = 72;
-            this.lbleuroSign2.Text = "€";
-            // 
-            // lblEuroSign3
-            // 
-            this.lblEuroSign3.AutoSize = true;
-            this.lblEuroSign3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign3.Location = new System.Drawing.Point(416, 590);
-            this.lblEuroSign3.Name = "lblEuroSign3";
-            this.lblEuroSign3.Size = new System.Drawing.Size(29, 31);
-            this.lblEuroSign3.TabIndex = 73;
-            this.lblEuroSign3.Text = "€";
             // 
             // CheckoutTipUI
             // 
