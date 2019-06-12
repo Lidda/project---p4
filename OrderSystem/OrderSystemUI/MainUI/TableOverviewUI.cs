@@ -22,7 +22,6 @@ namespace OrderSystemUI {
         TableLogic tableLogic;
         OrderLogic orderLogic = new OrderLogic();
         private static System.Timers.Timer orderStatusTimer;
-        private static System.Timers.Timer timeTimer;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
@@ -46,7 +45,6 @@ namespace OrderSystemUI {
             SetTableColors();
 
             OrderStatusTimer();
-            TimeOfOrderTimer();
         }
 
         public void SetTableColors() {
@@ -116,7 +114,7 @@ namespace OrderSystemUI {
 
         private void mark2_Click_1(object sender, EventArgs e) {
             mark2.Hide();
-            orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            orderLogic.ChangeOrderStatus(tables[1].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
             TimeMark2.Visible = false;
         }
 
@@ -183,14 +181,6 @@ namespace OrderSystemUI {
             orderStatusTimer.Enabled = true;
         }
 
-        private void TimeOfOrderTimer() {
-            timeTimer = new System.Timers.Timer();
-            timeTimer.Interval = 1;
-            timeTimer.Elapsed += OnTimedEventTime;
-            timeTimer.AutoReset = true;
-            timeTimer.Enabled = true;
-        }
-
         private void OnTimedEventStatus(Object source, System.Timers.ElapsedEventArgs e) {
             //sets the interval to check the database every 15 seconds
             orderStatusTimer.Interval = 15000;
@@ -205,14 +195,13 @@ namespace OrderSystemUI {
             Invoke((MethodInvoker)delegate {
                 SetTableColors();
                 CheckOrdersStatusses(orders);
+
+                UpdateTimeStamp();
             });
         }
 
-        private void OnTimedEventTime(Object source, System.Timers.ElapsedEventArgs e) {
-            timeTimer.Interval = 5000;
-
-            //ESSENTIAL: excutes both methods on the main thread
-            Invoke((MethodInvoker)delegate {
+        //loops through each orderItem in each order --> checks if the status is 'ready' --> calculates time --> updates corresponding marks
+        private void UpdateTimeStamp() {
                 DateTime now = DateTime.Now;
                 TimeSpan time;
                 foreach (Order o in orders) {
@@ -223,8 +212,7 @@ namespace OrderSystemUI {
                             break;
                         }
                     }
-                }
-            });          
+                }     
         }
 
         //loops through orders: then loops through each orderItem IN orders and checks the status

@@ -39,9 +39,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.label2.Location = new System.Drawing.Point(143, 52);
+            this.label2.Location = new System.Drawing.Point(107, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 42);
+            this.label2.Size = new System.Drawing.Size(252, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Betaling geslaagd";
             // 
@@ -52,9 +53,10 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnOK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOK.Location = new System.Drawing.Point(133, 704);
+            this.btnOK.Location = new System.Drawing.Point(100, 572);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(342, 109);
+            this.btnOK.Size = new System.Drawing.Size(256, 89);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -63,24 +65,27 @@
             // pbConfirmation
             // 
             this.pbConfirmation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbConfirmation.BackgroundImage")));
-            this.pbConfirmation.Location = new System.Drawing.Point(2, 109);
-            this.pbConfirmation.MaximumSize = new System.Drawing.Size(600, 550);
+            this.pbConfirmation.Location = new System.Drawing.Point(2, 89);
+            this.pbConfirmation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbConfirmation.MaximumSize = new System.Drawing.Size(450, 447);
             this.pbConfirmation.Name = "pbConfirmation";
-            this.pbConfirmation.Size = new System.Drawing.Size(600, 550);
+            this.pbConfirmation.Size = new System.Drawing.Size(450, 447);
             this.pbConfirmation.TabIndex = 4;
             this.pbConfirmation.TabStop = false;
             // 
-            // CheckoutConfirmation
+            // CheckoutConfirmationUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(619, 838);
+            this.ClientSize = new System.Drawing.Size(464, 681);
             this.Controls.Add(this.pbConfirmation);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label2);
-            this.Name = "CheckoutConfirmation";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "CheckoutConfirmationUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bevestiging";
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmation)).EndInit();
             this.ResumeLayout(false);
