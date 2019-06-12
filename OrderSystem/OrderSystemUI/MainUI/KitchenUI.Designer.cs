@@ -798,14 +798,11 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(187, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(470, -260);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(554, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.Size = new System.Drawing.Size(717, 665);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 108;
             this.pictureBox2.TabStop = false;
             // 
@@ -813,9 +810,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 701);
+            this.ClientSize = new System.Drawing.Size(1664, 1036);
             this.Controls.Add(this.btn_markReady2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listView10);
             this.Controls.Add(this.listView9);
@@ -860,6 +856,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "KitchenUI";
             this.Text = "KitchenUI";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
