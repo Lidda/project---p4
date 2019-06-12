@@ -802,7 +802,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(556, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(187, 42);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(554, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -813,7 +813,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1653, 970);
+            this.ClientSize = new System.Drawing.Size(1284, 701);
             this.Controls.Add(this.btn_markReady2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
