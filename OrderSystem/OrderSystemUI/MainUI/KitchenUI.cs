@@ -60,7 +60,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         //If there is an order with status ordered, change color of listview to red and show the button to mark ready
                         listView1.BackColor = Color.Tomato;
@@ -84,7 +84,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView2.BackColor = Color.Tomato;
                         listView2.Items.Add(li);
@@ -107,7 +107,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView3.BackColor = Color.Tomato;
                         listView3.Items.Add(li);
@@ -130,7 +130,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView4.BackColor = Color.Tomato;
                         listView4.Items.Add(li);
@@ -153,7 +153,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView5.BackColor = Color.Tomato;
                         listView5.Items.Add(li);
@@ -176,7 +176,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView6.BackColor = Color.Tomato;
                         listView6.Items.Add(li);
@@ -199,7 +199,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView7.BackColor = Color.Tomato;
                         listView7.Items.Add(li);
@@ -222,7 +222,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView8.BackColor = Color.Tomato;
                         listView8.Items.Add(li);
@@ -245,7 +245,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView9.Items.Add(li);
                         listView9.BackColor = Color.Tomato;
@@ -269,7 +269,7 @@ namespace OrderSystemUI.MainUI
                     li = new ListViewItem(order.TimeOfOrder.ToString("HH:mm"));
                     li.SubItems.Add(order.item.name);
                     li.SubItems.Add(order.amount.ToString());
-                    if (order.item.course != "Drank" & li.SubItems.Count > 0)
+                    if (order.item.course != "Drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         listView10.Items.Add(li);
                         listView10.BackColor = Color.Tomato;
