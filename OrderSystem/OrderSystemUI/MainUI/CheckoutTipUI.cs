@@ -94,7 +94,7 @@ namespace OrderSystemUI.MainUI
 
         private void btnDeleteTip_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("weet je zeker dat je de fooi wilt verwijderen?",
+            var confirmResult = MessageBox.Show("Weet u zeker dat u de fooi wilt verwijderen?",
                                      "Bevestig verwijderen!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -103,11 +103,6 @@ namespace OrderSystemUI.MainUI
                 order.tip = 0;
                 InitTipFormLabels();
             }
-        }
-
-        private void pnlTip_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

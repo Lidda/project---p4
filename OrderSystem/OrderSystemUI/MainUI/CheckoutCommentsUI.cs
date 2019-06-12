@@ -34,7 +34,7 @@ namespace OrderSystemUI.MainUI
             pnlAddComment.BringToFront();
 
             //set title header
-            lblCommentHeader.Text = string.Format("Tafel {0} bestelling {1}: commentaar", order.Table.ID, order.orderID);
+            lblCommentHeader.Text = string.Format("Tafel {0}: commentaar", order.Table.ID);
             
             //empty textbox
             txtComment.Text = "";
@@ -76,7 +76,7 @@ namespace OrderSystemUI.MainUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //back
+            //back button
             this.Hide();
             CheckoutOverviewOrderUI coUI = new CheckoutOverviewOrderUI(order, orderHomeUI);
             coUI.ShowDialog();

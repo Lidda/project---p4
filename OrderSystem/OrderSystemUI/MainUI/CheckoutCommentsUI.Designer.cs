@@ -52,31 +52,30 @@
             this.pnlAddComment.Controls.Add(this.label5);
             this.pnlAddComment.Controls.Add(this.lblCommentHeader);
             this.pnlAddComment.Controls.Add(this.button1);
-            this.pnlAddComment.Location = new System.Drawing.Point(2, 2);
-            this.pnlAddComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAddComment.Location = new System.Drawing.Point(0, 2);
+            this.pnlAddComment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAddComment.Name = "pnlAddComment";
-            this.pnlAddComment.Size = new System.Drawing.Size(460, 678);
+            this.pnlAddComment.Size = new System.Drawing.Size(616, 839);
             this.pnlAddComment.TabIndex = 31;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label6.Location = new System.Drawing.Point(21, 163);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(28, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 26);
+            this.label6.Size = new System.Drawing.Size(287, 31);
             this.label6.TabIndex = 29;
             this.label6.Text = "Voeg commentaar toe:";
             // 
             // txtComment
             // 
             this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtComment.Location = new System.Drawing.Point(21, 210);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtComment.Location = new System.Drawing.Point(28, 258);
+            this.txtComment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(422, 244);
+            this.txtComment.Size = new System.Drawing.Size(561, 299);
             this.txtComment.TabIndex = 28;
             // 
             // btnDeleteComment
@@ -85,10 +84,10 @@
             this.btnDeleteComment.FlatAppearance.BorderSize = 0;
             this.btnDeleteComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteComment.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteComment.Image")));
-            this.btnDeleteComment.Location = new System.Drawing.Point(20, 526);
-            this.btnDeleteComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteComment.Location = new System.Drawing.Point(27, 647);
+            this.btnDeleteComment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteComment.Name = "btnDeleteComment";
-            this.btnDeleteComment.Size = new System.Drawing.Size(74, 59);
+            this.btnDeleteComment.Size = new System.Drawing.Size(99, 73);
             this.btnDeleteComment.TabIndex = 27;
             this.btnDeleteComment.UseVisualStyleBackColor = false;
             this.btnDeleteComment.Click += new System.EventHandler(this.btnDeleteComment_Click);
@@ -101,10 +100,10 @@
             this.btnAddCommentToOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnAddCommentToOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddCommentToOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCommentToOrder.Location = new System.Drawing.Point(105, 526);
-            this.btnAddCommentToOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCommentToOrder.Location = new System.Drawing.Point(140, 647);
+            this.btnAddCommentToOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCommentToOrder.Name = "btnAddCommentToOrder";
-            this.btnAddCommentToOrder.Size = new System.Drawing.Size(335, 59);
+            this.btnAddCommentToOrder.Size = new System.Drawing.Size(447, 73);
             this.btnAddCommentToOrder.TabIndex = 26;
             this.btnAddCommentToOrder.Text = "Voeg commentaar toe";
             this.btnAddCommentToOrder.UseVisualStyleBackColor = false;
@@ -114,11 +113,10 @@
             // 
             this.lblCurrentComment.AutoSize = true;
             this.lblCurrentComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Italic);
-            this.lblCurrentComment.Location = new System.Drawing.Point(21, 89);
-            this.lblCurrentComment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCurrentComment.MaximumSize = new System.Drawing.Size(375, 0);
+            this.lblCurrentComment.Location = new System.Drawing.Point(28, 110);
+            this.lblCurrentComment.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblCurrentComment.Name = "lblCurrentComment";
-            this.lblCurrentComment.Size = new System.Drawing.Size(170, 26);
+            this.lblCurrentComment.Size = new System.Drawing.Size(210, 31);
             this.lblCurrentComment.TabIndex = 25;
             this.lblCurrentComment.Text = "currentcomment";
             // 
@@ -126,10 +124,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.Location = new System.Drawing.Point(21, 55);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(28, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 26);
+            this.label5.Size = new System.Drawing.Size(256, 31);
             this.label5.TabIndex = 24;
             this.label5.Text = "Huidig commentaar:";
             // 
@@ -137,10 +134,9 @@
             // 
             this.lblCommentHeader.AutoSize = true;
             this.lblCommentHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblCommentHeader.Location = new System.Drawing.Point(20, 6);
-            this.lblCommentHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCommentHeader.Location = new System.Drawing.Point(121, 7);
             this.lblCommentHeader.Name = "lblCommentHeader";
-            this.lblCommentHeader.Size = new System.Drawing.Size(268, 31);
+            this.lblCommentHeader.Size = new System.Drawing.Size(335, 39);
             this.lblCommentHeader.TabIndex = 23;
             this.lblCommentHeader.Text = "Order x: commentaar";
             // 
@@ -150,21 +146,21 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 630);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(0, 788);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 48);
+            this.button1.Size = new System.Drawing.Size(135, 49);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CheckoutCommentsUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 681);
+            this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.pnlAddComment);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckoutCommentsUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Commentaar";

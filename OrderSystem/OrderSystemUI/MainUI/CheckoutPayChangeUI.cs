@@ -41,6 +41,7 @@ namespace OrderSystemUI.MainUI
             {
                 //set order to paid in the database
                 orderLogic.Set_Order_To_Paid(order);
+
                 CheckoutConfirmationUI checkoutconfUI = new CheckoutConfirmationUI(order);
                 this.Hide();
                 checkoutconfUI.ShowDialog();

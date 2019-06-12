@@ -28,7 +28,7 @@ namespace OrderSystemModel
 
         public double GetTotalAmount(string priceType)
         {
-            //get total amount,total taxes, prices without tax 
+            //get total amount, total taxes or prices without tax 
             double total = 0;
             foreach(OrderItem i in orderItems)
             {
