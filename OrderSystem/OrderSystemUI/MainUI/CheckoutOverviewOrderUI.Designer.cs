@@ -47,6 +47,7 @@
             this.lblCheckoutOverviewHeader = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlError = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.lblTipEuroSign = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTipAmount = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pnlError.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -228,10 +228,10 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(-1, 779);
+            this.btnBack.Location = new System.Drawing.Point(-1, 789);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(136, 59);
+            this.btnBack.Size = new System.Drawing.Size(136, 49);
             this.btnBack.TabIndex = 68;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -247,6 +247,17 @@
             this.pnlError.Name = "pnlError";
             this.pnlError.Size = new System.Drawing.Size(617, 837);
             this.pnlError.TabIndex = 69;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 180F);
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(218, 156);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(226, 340);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "!";
             // 
             // button1
             // 
@@ -324,17 +335,6 @@
             this.lblTipAmount.Size = new System.Drawing.Size(97, 31);
             this.lblTipAmount.TabIndex = 74;
             this.lblTipAmount.Text = "000,00";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 180F);
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(218, 156);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 340);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "!";
             // 
             // CheckoutOverviewOrderUI
             // 

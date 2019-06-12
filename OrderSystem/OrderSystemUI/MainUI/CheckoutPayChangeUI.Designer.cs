@@ -46,10 +46,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(92, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(123, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 31);
+            this.label1.Size = new System.Drawing.Size(353, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Wisselgeld berekenen";
             // 
@@ -57,10 +56,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(22, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(29, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 26);
+            this.label2.Size = new System.Drawing.Size(241, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Te betalen bedrag:";
             // 
@@ -68,31 +66,29 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTotalAmount.Location = new System.Drawing.Point(360, 69);
-            this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalAmount.Location = new System.Drawing.Point(480, 85);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(84, 26);
+            this.lblTotalAmount.Size = new System.Drawing.Size(104, 31);
             this.lblTotalAmount.TabIndex = 2;
             this.lblTotalAmount.Text = "€ 00,00";
             // 
             // txtChangeAmount
             // 
             this.txtChangeAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtChangeAmount.Location = new System.Drawing.Point(26, 152);
-            this.txtChangeAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChangeAmount.Location = new System.Drawing.Point(35, 187);
+            this.txtChangeAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChangeAmount.Multiline = true;
             this.txtChangeAmount.Name = "txtChangeAmount";
-            this.txtChangeAmount.Size = new System.Drawing.Size(413, 173);
+            this.txtChangeAmount.Size = new System.Drawing.Size(549, 212);
             this.txtChangeAmount.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(22, 124);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(29, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(266, 26);
+            this.label3.Size = new System.Drawing.Size(331, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Bedrag betaald door klant:";
             // 
@@ -100,10 +96,9 @@
             // 
             this.lblChangeText.AutoSize = true;
             this.lblChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChangeText.Location = new System.Drawing.Point(44, 450);
-            this.lblChangeText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChangeText.Location = new System.Drawing.Point(59, 554);
             this.lblChangeText.Name = "lblChangeText";
-            this.lblChangeText.Size = new System.Drawing.Size(124, 26);
+            this.lblChangeText.Size = new System.Drawing.Size(153, 31);
             this.lblChangeText.TabIndex = 5;
             this.lblChangeText.Text = "Wisselgeld:";
             // 
@@ -111,10 +106,9 @@
             // 
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChange.Location = new System.Drawing.Point(360, 450);
-            this.lblChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChange.Location = new System.Drawing.Point(480, 554);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(84, 26);
+            this.lblChange.Size = new System.Drawing.Size(104, 31);
             this.lblChange.TabIndex = 6;
             this.lblChange.Text = "€ 00,00";
             // 
@@ -125,10 +119,10 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnOK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOK.Location = new System.Drawing.Point(98, 556);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Location = new System.Drawing.Point(131, 684);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(267, 59);
+            this.btnOK.Size = new System.Drawing.Size(356, 73);
             this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -142,10 +136,10 @@
             this.btnCalculateChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCalculateChange.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCalculateChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateChange.Location = new System.Drawing.Point(26, 353);
-            this.btnCalculateChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalculateChange.Location = new System.Drawing.Point(35, 434);
+            this.btnCalculateChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalculateChange.Name = "btnCalculateChange";
-            this.btnCalculateChange.Size = new System.Drawing.Size(412, 47);
+            this.btnCalculateChange.Size = new System.Drawing.Size(549, 58);
             this.btnCalculateChange.TabIndex = 34;
             this.btnCalculateChange.Text = "Bereken wisselgeld";
             this.btnCalculateChange.UseVisualStyleBackColor = false;
@@ -156,10 +150,9 @@
             this.lblNotEnough.AutoSize = true;
             this.lblNotEnough.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNotEnough.ForeColor = System.Drawing.Color.Red;
-            this.lblNotEnough.Location = new System.Drawing.Point(26, 510);
-            this.lblNotEnough.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNotEnough.Location = new System.Drawing.Point(35, 628);
             this.lblNotEnough.Name = "lblNotEnough";
-            this.lblNotEnough.Size = new System.Drawing.Size(427, 29);
+            this.lblNotEnough.Size = new System.Drawing.Size(526, 36);
             this.lblNotEnough.TabIndex = 35;
             this.lblNotEnough.Text = "De klant heeft €bedrag te kort gegeven";
             // 
@@ -169,20 +162,20 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(0, 634);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(0, 789);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(102, 48);
+            this.btnBack.Size = new System.Drawing.Size(135, 49);
             this.btnBack.TabIndex = 36;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // CheckoutPayChangeUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(464, 681);
+            this.ClientSize = new System.Drawing.Size(619, 838);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblNotEnough);
             this.Controls.Add(this.btnCalculateChange);
@@ -194,8 +187,9 @@
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CheckoutPayChangeUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckoutPayChange";
             this.ResumeLayout(false);
             this.PerformLayout();
