@@ -104,10 +104,5 @@ namespace OrderSystemUI.MainUI
                 InitTipFormLabels();
             }
         }
-
-        private void pnlTip_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

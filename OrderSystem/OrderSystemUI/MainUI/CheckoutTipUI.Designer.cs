@@ -75,7 +75,6 @@
             this.pnlTip.Name = "pnlTip";
             this.pnlTip.Size = new System.Drawing.Size(621, 839);
             this.pnlTip.TabIndex = 32;
-            this.pnlTip.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTip_Paint);
             // 
             // lblEuroSign3
             // 

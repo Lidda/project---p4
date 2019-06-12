@@ -21,7 +21,7 @@ namespace OrderSystemModel
         {
             if (priceType == "Total")
             {
-                //get total price * amount
+                //get total price 
                 return item.price * amount;
             }
             else if (priceType == "Tax")
@@ -31,11 +31,12 @@ namespace OrderSystemModel
             }
             else if (priceType == "withoutTax")
             {
+                //get price without taxes
                 return item.price * amount / ((double)item.tax / 100 + 1);
             }
             else
             {
-                //if not matches > return 0
+                //if no matches > return 0
                 return 0;
             }
         }

@@ -134,7 +134,7 @@
             // 
             this.lblCommentHeader.AutoSize = true;
             this.lblCommentHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblCommentHeader.Location = new System.Drawing.Point(27, 7);
+            this.lblCommentHeader.Location = new System.Drawing.Point(121, 7);
             this.lblCommentHeader.Name = "lblCommentHeader";
             this.lblCommentHeader.Size = new System.Drawing.Size(335, 39);
             this.lblCommentHeader.TabIndex = 23;
@@ -146,7 +146,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 790);
+            this.button1.Location = new System.Drawing.Point(0, 788);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 49);
