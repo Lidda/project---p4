@@ -25,6 +25,7 @@ namespace OrderSystemUI.MainUI
             BTN_Daily.BackColor = Color.FromArgb(6, 69, 170);
         }
 
+        //Shows all order income per day
         private void LoadDailyProfit()
         {
             List<Profit> FinanceListView = orderLogic.DailyProfit();
@@ -39,6 +40,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Shows all order income per month
         private void LoadMonthlyProfit()
         {
             List<Profit> FinanceListView = orderLogic.MonthlyProfit();
@@ -53,6 +55,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Shows all order income per year
         private void LoadYearlyProfit()
         {
             List<Profit> FinanceListView = orderLogic.YearlyProfit();

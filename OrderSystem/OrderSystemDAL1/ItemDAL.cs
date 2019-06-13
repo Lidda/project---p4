@@ -10,12 +10,15 @@ using System.Data;
 namespace OrderSystemDAL
 {
     public class ItemDAL : Base {
+
+        //Gets all item from the datatbase
         public List<Item> Db_Get_All_Items() {
             string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        //Gets a single item from the database
         public Item Db_Get_Item(Item item) {
             string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS] WHERE itemID = @itemID";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -25,6 +28,7 @@ namespace OrderSystemDAL
             return ReadItems(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
+        //Puts the values gained from the database into an item object
         private List<Item> ReadItems(DataTable dataTable)
         {
             List<Item> items = new List<Item>();
@@ -47,6 +51,7 @@ namespace OrderSystemDAL
             return items;
         }
 
+        //Add item to databse
         public void AddItem(Item item)
         {
             string query = "INSERT INTO [ITEMS] (itemID, name, stock, price, TAX, course, foodtype, description) VALUES ((SELECT COALESCE(MAX(itemID)+1, 0) FROM [ITEMS]), @name, @stock, @price, @TAX, @course, @foodtype, @description)";
@@ -63,6 +68,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //Edit item in database
         public void EditItem(Item item)
         {
             string query = "UPDATE [ITEMS] SET name = @name, stock = @stock, price = @price, TAX = @TAX, course = @course, foodtype = @foodtype, description = @description WHERE itemID = @itemID";
@@ -80,6 +86,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //Delete item from database
         public void DeleteItem(Item item)
         {
             string query = "DELETE FROM [ITEMS] WHERE itemID = @itemID";

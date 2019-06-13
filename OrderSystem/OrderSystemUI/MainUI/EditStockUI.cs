@@ -25,6 +25,7 @@ namespace OrderSystemUI.MainUI
             this.loggedInEmployee = loggedInEmployee;
         }
 
+        //Shows the requested panel
         private void ShowPanel(string panelName)
         {
             if (panelName == "PNL_ManageStock")
@@ -76,12 +77,13 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
-
+        //Go to add item panel
         private void AddItem_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_AddItem");
         }
 
+        //go to edit item panel
         private void EditItem_Click(object sender, EventArgs e)
         {
             if (selectedItem.itemID != 0)                
@@ -160,6 +162,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Displays information from the selected field into the selected item object
         private void ListView_Stock_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             selectedItem.itemID  = int.Parse(e.Item.SubItems[0].Text);
@@ -179,11 +182,13 @@ namespace OrderSystemUI.MainUI
             managerUI.ShowDialog();
         }
 
+        //back button Add panel
         private void button1_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_ManageStock");
         }
 
+        //back button Edit panel
         private void button3_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_ManageStock");

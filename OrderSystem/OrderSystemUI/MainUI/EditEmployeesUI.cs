@@ -25,14 +25,10 @@ namespace OrderSystemUI
         {
             this.loggedInEmployee = loggedInEmployee;
             InitializeComponent();
-            UI_Load();          
-        }
-
-        private void UI_Load()
-        {
             ShowPanel("PNL_ManageEmployees");
         }
 
+        //Shows the requested panel
         private void ShowPanel(string panelName)
         {
             if (panelName == "PNL_ManageEmployees")
@@ -91,6 +87,7 @@ namespace OrderSystemUI
             }
         }
 
+        //go to manage empoyee panel
         private void EditEmployee_Click(object sender, EventArgs e)
         {
             if (selectedEmployee.ID != 0)
@@ -103,11 +100,13 @@ namespace OrderSystemUI
             }
         }
 
+        //go to add employee panel
         private void AddEmployee_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_AddEmployee");
         }
 
+        //places selected employee into the selectedEmployee object
         private void ListView_Employees_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
                 selectedEmployee.ID = int.Parse(e.Item.SubItems[0].Text);
@@ -116,6 +115,7 @@ namespace OrderSystemUI
                 selectedEmployee.password = e.Item.SubItems[3].Text;
                 selectedEmployee.type = (OrderSystemModel.employeeType)Enum.Parse(typeof(OrderSystemModel.employeeType), e.Item.SubItems[4].Text);          
         }
+
 
         private void BTN_EditEmployee_Click(object sender, EventArgs e)
         {
@@ -161,11 +161,13 @@ namespace OrderSystemUI
             managerUI.ShowDialog();
         }
 
+        //back button on Add panel
         private void button1_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_ManageEmployees");
         }
 
+        //back button on Edit panel
         private void button3_Click(object sender, EventArgs e)
         {
             ShowPanel("PNL_ManageEmployees");

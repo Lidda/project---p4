@@ -10,6 +10,8 @@ using System.Data;
 namespace OrderSystemDAL
 {
     public class EmployeeDAL : Base {
+
+        //Add an employee to the database
         public void AddEmployee(Employee employee) {
             string query = "INSERT INTO [EMPLOYEES] (employeeID, name, username, password, type) VALUES ((SELECT COALESCE(MAX(employeeID)+1, 0) FROM [EMPLOYEES]), @name, @username, @password, @type)";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -22,6 +24,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //Edit an employee in the database
         public void EditEmployee(Employee employee) {
             string query = "UPDATE [EMPLOYEES] SET name = @name, username = @username, password = @password, type = @type WHERE employeeID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]
@@ -35,6 +38,7 @@ namespace OrderSystemDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        //Delete an employee from the database
         public void DeleteEmployee(Employee employee) {
             string query = "DELETE FROM [EMPLOYEES] WHERE employeeID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]
