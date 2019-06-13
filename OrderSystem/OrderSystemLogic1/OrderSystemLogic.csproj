@@ -7,8 +7,8 @@
     <ProjectGuid>{517DE079-6634-4B1B-B6C6-D5D7F80B2B8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OrderSystemLogic1</RootNamespace>
-    <AssemblyName>OrderSystemLogic1</AssemblyName>
+    <RootNamespace>OrderSystemLogic</RootNamespace>
+    <AssemblyName>OrderSystemLogic</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

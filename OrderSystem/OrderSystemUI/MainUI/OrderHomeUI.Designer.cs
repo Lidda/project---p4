@@ -124,7 +124,7 @@
             this.Btn_BeverageMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.Btn_BeverageMenu.Size = new System.Drawing.Size(150, 150);
             this.Btn_BeverageMenu.TabIndex = 6;
-            this.Btn_BeverageMenu.Text = "Beverages";
+            this.Btn_BeverageMenu.Text = "Drankjes";
             this.Btn_BeverageMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_BeverageMenu.UseVisualStyleBackColor = false;
             this.Btn_BeverageMenu.Click += new System.EventHandler(this.Btn_BeverageMenu_Click);
@@ -182,7 +182,7 @@
             this.btn_DinnerMenu.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.btn_DinnerMenu.Size = new System.Drawing.Size(150, 150);
             this.btn_DinnerMenu.TabIndex = 9;
-            this.btn_DinnerMenu.Text = "Dinner";
+            this.btn_DinnerMenu.Text = "Diner";
             this.btn_DinnerMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DinnerMenu.UseVisualStyleBackColor = false;
             this.btn_DinnerMenu.Click += new System.EventHandler(this.btn_DinnerMenu_Click);
@@ -243,7 +243,7 @@
             this.pnl_ConfirmRemoval.Controls.Add(this.btn_CancelRemoval);
             this.pnl_ConfirmRemoval.Controls.Add(this.btn_ConfirmRemoval);
             this.pnl_ConfirmRemoval.Controls.Add(this.lbl_ConfirmRemoval);
-            this.pnl_ConfirmRemoval.Location = new System.Drawing.Point(51, 236);
+            this.pnl_ConfirmRemoval.Location = new System.Drawing.Point(53, 261);
             this.pnl_ConfirmRemoval.Name = "pnl_ConfirmRemoval";
             this.pnl_ConfirmRemoval.Size = new System.Drawing.Size(359, 190);
             this.pnl_ConfirmRemoval.TabIndex = 16;
