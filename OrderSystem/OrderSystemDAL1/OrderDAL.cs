@@ -98,14 +98,14 @@ namespace OrderSystemDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-
+        //change status for orders from bar
         public void ChangeStatusBar(int tableId, OrderItem.Status status, OrderItem.Status statusChange)
         {
             string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID INNER JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE ORDERS.TABLEID = " + tableId + " AND ITEMS.course LIKE '%Drank' AND ORDER_CONTAINS.status = " + (int)status;
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-
+        //change status for orders from kitchen
         public void ChangeStatusKitchen(int tableId, OrderItem.Status status, OrderItem.Status statusChange)
         {
             string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID INNER JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE ORDERS.TABLEID = " + tableId + " AND ITEMS.course NOT LIKE '%Drank' AND ORDER_CONTAINS.status = " + (int)status;
