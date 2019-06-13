@@ -21,6 +21,7 @@ namespace OrderSystemUI.MainUI
         public CheckoutOverviewOrderUI(Order order, OrderHomeUI orderHomeUI)
         {
             InitializeComponent();
+
             this.order = order;
             this.orderHomeUI = orderHomeUI;
 
@@ -62,6 +63,11 @@ namespace OrderSystemUI.MainUI
                 //show 'no orders found' panel
                 pnlError.Show();
                 pnlError.BringToFront();
+
+                //disable other buttons
+                btnAddComment.Enabled = false;
+                btnAddTip.Enabled = false;
+                btnPay.Enabled = false;
             }
             else if (panelName == "Back")
             {
@@ -82,10 +88,15 @@ namespace OrderSystemUI.MainUI
                 //hide other panel
                 pnlError.Hide();
 
+                //enable buttons
+                btnAddComment.Enabled = true;
+                btnAddTip.Enabled = true;
+                btnPay.Enabled = true;
+
                 //set title of header
                 lblCheckoutOverviewHeader.Text = string.Format("Overzicht bestelling tafel {0}", order.Table.ID);
 
-                //set labels
+                //set labels to visible
                 lblOrderPriceWithoutTax.Show();
                 lblTaxAmount.Show();
                 lblTotalAmount.Show();
@@ -112,6 +123,8 @@ namespace OrderSystemUI.MainUI
                 foreach(OrderItem item in order.orderItems)
                 {
                     ListViewItem li;
+
+                    //check if there's a comment 
                     if (string.IsNullOrWhiteSpace(item.comment))
                     {
                         li = new ListViewItem(item.item.name);
@@ -120,8 +133,10 @@ namespace OrderSystemUI.MainUI
                     {
                         li = new ListViewItem(string.Format("{0} ~ {1}", item.item.name, item.comment));
                     }
+
                     li.SubItems.Add(item.amount.ToString());
                     li.SubItems.Add(item.GetAmount("Total").ToString("0.00"));
+
                     listViewOrderItems.Items.Add(li);
                 }
             }

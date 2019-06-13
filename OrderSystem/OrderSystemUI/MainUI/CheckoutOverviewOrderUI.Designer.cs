@@ -238,24 +238,25 @@
             // 
             // pnlError
             // 
-            this.pnlError.BackColor = System.Drawing.Color.White;
+            this.pnlError.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlError.Controls.Add(this.label8);
             this.pnlError.Controls.Add(this.button1);
             this.pnlError.Controls.Add(this.label5);
-            this.pnlError.Location = new System.Drawing.Point(-1, 1);
+            this.pnlError.Location = new System.Drawing.Point(40, 241);
             this.pnlError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlError.Name = "pnlError";
-            this.pnlError.Size = new System.Drawing.Size(617, 837);
+            this.pnlError.Size = new System.Drawing.Size(538, 271);
             this.pnlError.TabIndex = 69;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 180F);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(218, 156);
+            this.label8.Location = new System.Drawing.Point(233, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 340);
+            this.label8.Size = new System.Drawing.Size(76, 113);
             this.label8.TabIndex = 2;
             this.label8.Text = "!";
             // 
@@ -266,10 +267,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(152, 602);
+            this.button1.Location = new System.Drawing.Point(105, 172);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(327, 113);
+            this.button1.Size = new System.Drawing.Size(323, 81);
             this.button1.TabIndex = 1;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
@@ -278,11 +279,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(22, 47);
+            this.label5.Location = new System.Drawing.Point(33, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(537, 46);
+            this.label5.Size = new System.Drawing.Size(460, 39);
             this.label5.TabIndex = 0;
             this.label5.Text = "Geen openstaande bestelling";
             // 
