@@ -483,9 +483,9 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Location = new System.Drawing.Point(18, 11);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(60, 23);
+            this.btnLogout.Size = new System.Drawing.Size(71, 23);
             this.btnLogout.TabIndex = 48;
-            this.btnLogout.Text = "Log uit";
+            this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 

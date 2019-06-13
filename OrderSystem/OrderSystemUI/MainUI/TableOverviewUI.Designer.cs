@@ -37,7 +37,7 @@
             this.btnTable10 = new System.Windows.Forms.Button();
             this.mark1 = new System.Windows.Forms.Button();
             this.mark2 = new System.Windows.Forms.Button();
-            this.orderMark3 = new System.Windows.Forms.Button();
+            this.mark3 = new System.Windows.Forms.Button();
             this.mark4 = new System.Windows.Forms.Button();
             this.mark5 = new System.Windows.Forms.Button();
             this.mark6 = new System.Windows.Forms.Button();
@@ -269,23 +269,23 @@
             this.mark2.Visible = false;
             this.mark2.Click += new System.EventHandler(this.mark2_Click_1);
             // 
-            // orderMark3
+            // mark3
             // 
-            this.orderMark3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.orderMark3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.orderMark3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.orderMark3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderMark3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderMark3.ForeColor = System.Drawing.Color.Crimson;
-            this.orderMark3.Location = new System.Drawing.Point(187, 190);
-            this.orderMark3.Name = "orderMark3";
-            this.orderMark3.Size = new System.Drawing.Size(53, 82);
-            this.orderMark3.TabIndex = 24;
-            this.orderMark3.Text = "!";
-            this.orderMark3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.orderMark3.UseVisualStyleBackColor = false;
-            this.orderMark3.Visible = false;
-            this.orderMark3.Click += new System.EventHandler(this.mark3_Click_1);
+            this.mark3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mark3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mark3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mark3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mark3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mark3.ForeColor = System.Drawing.Color.Crimson;
+            this.mark3.Location = new System.Drawing.Point(187, 190);
+            this.mark3.Name = "mark3";
+            this.mark3.Size = new System.Drawing.Size(53, 82);
+            this.mark3.TabIndex = 24;
+            this.mark3.Text = "!";
+            this.mark3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mark3.UseVisualStyleBackColor = false;
+            this.mark3.Visible = false;
+            this.mark3.Click += new System.EventHandler(this.mark3_Click_1);
             // 
             // mark4
             // 
@@ -436,7 +436,7 @@
             // hourglass3
             // 
             this.hourglass3.Image = ((System.Drawing.Image)(resources.GetObject("hourglass3.Image")));
-            this.hourglass3.Location = new System.Drawing.Point(187, 206);
+            this.hourglass3.Location = new System.Drawing.Point(190, 206);
             this.hourglass3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hourglass3.Name = "hourglass3";
             this.hourglass3.Size = new System.Drawing.Size(37, 53);
@@ -526,110 +526,100 @@
             // 
             // TimeMark1
             // 
-            this.TimeMark1.AutoSize = true;
             this.TimeMark1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark1.Location = new System.Drawing.Point(187, 147);
             this.TimeMark1.Name = "TimeMark1";
-            this.TimeMark1.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark1.Size = new System.Drawing.Size(60, 30);
             this.TimeMark1.TabIndex = 43;
             this.TimeMark1.Text = "10:05";
             this.TimeMark1.Visible = false;
             // 
             // TimeMark2
             // 
-            this.TimeMark2.AutoSize = true;
             this.TimeMark2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark2.Location = new System.Drawing.Point(388, 147);
             this.TimeMark2.Name = "TimeMark2";
-            this.TimeMark2.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark2.Size = new System.Drawing.Size(60, 30);
             this.TimeMark2.TabIndex = 44;
             this.TimeMark2.Text = "10:05";
             this.TimeMark2.Visible = false;
             // 
             // TimeMark3
             // 
-            this.TimeMark3.AutoSize = true;
             this.TimeMark3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark3.Location = new System.Drawing.Point(187, 259);
             this.TimeMark3.Name = "TimeMark3";
-            this.TimeMark3.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark3.Size = new System.Drawing.Size(60, 30);
             this.TimeMark3.TabIndex = 45;
             this.TimeMark3.Text = "10:05";
             this.TimeMark3.Visible = false;
             // 
             // TimeMark4
             // 
-            this.TimeMark4.AutoSize = true;
             this.TimeMark4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark4.Location = new System.Drawing.Point(387, 259);
             this.TimeMark4.Name = "TimeMark4";
-            this.TimeMark4.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark4.Size = new System.Drawing.Size(60, 30);
             this.TimeMark4.TabIndex = 46;
             this.TimeMark4.Text = "10:05";
             this.TimeMark4.Visible = false;
             // 
             // TimeMark5
             // 
-            this.TimeMark5.AutoSize = true;
             this.TimeMark5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark5.Location = new System.Drawing.Point(190, 376);
             this.TimeMark5.Name = "TimeMark5";
-            this.TimeMark5.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark5.Size = new System.Drawing.Size(60, 30);
             this.TimeMark5.TabIndex = 47;
             this.TimeMark5.Text = "10:05";
             this.TimeMark5.Visible = false;
             // 
             // TimeMark6
             // 
-            this.TimeMark6.AutoSize = true;
             this.TimeMark6.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark6.Location = new System.Drawing.Point(388, 374);
             this.TimeMark6.Name = "TimeMark6";
-            this.TimeMark6.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark6.Size = new System.Drawing.Size(60, 30);
             this.TimeMark6.TabIndex = 48;
             this.TimeMark6.Text = "10:05";
             this.TimeMark6.Visible = false;
             // 
             // TimeMark7
             // 
-            this.TimeMark7.AutoSize = true;
             this.TimeMark7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark7.Location = new System.Drawing.Point(188, 491);
             this.TimeMark7.Name = "TimeMark7";
-            this.TimeMark7.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark7.Size = new System.Drawing.Size(60, 30);
             this.TimeMark7.TabIndex = 49;
             this.TimeMark7.Text = "10:05";
             this.TimeMark7.Visible = false;
             // 
             // TimeMark8
             // 
-            this.TimeMark8.AutoSize = true;
             this.TimeMark8.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark8.Location = new System.Drawing.Point(388, 491);
             this.TimeMark8.Name = "TimeMark8";
-            this.TimeMark8.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark8.Size = new System.Drawing.Size(60, 30);
             this.TimeMark8.TabIndex = 50;
             this.TimeMark8.Text = "10:05";
             this.TimeMark8.Visible = false;
             // 
             // TimeMark9
             // 
-            this.TimeMark9.AutoSize = true;
             this.TimeMark9.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark9.Location = new System.Drawing.Point(188, 606);
             this.TimeMark9.Name = "TimeMark9";
-            this.TimeMark9.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark9.Size = new System.Drawing.Size(60, 30);
             this.TimeMark9.TabIndex = 51;
             this.TimeMark9.Text = "10:05";
             this.TimeMark9.Visible = false;
             // 
             // TimeMark10
             // 
-            this.TimeMark10.AutoSize = true;
             this.TimeMark10.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TimeMark10.Location = new System.Drawing.Point(388, 606);
             this.TimeMark10.Name = "TimeMark10";
-            this.TimeMark10.Size = new System.Drawing.Size(34, 13);
+            this.TimeMark10.Size = new System.Drawing.Size(60, 30);
             this.TimeMark10.TabIndex = 52;
             this.TimeMark10.Text = "10:05";
             this.TimeMark10.Visible = false;
@@ -668,7 +658,7 @@
             this.Controls.Add(this.mark6);
             this.Controls.Add(this.mark5);
             this.Controls.Add(this.mark4);
-            this.Controls.Add(this.orderMark3);
+            this.Controls.Add(this.mark3);
             this.Controls.Add(this.mark2);
             this.Controls.Add(this.mark1);
             this.Controls.Add(this.btnTable10);
@@ -707,7 +697,7 @@
         private System.Windows.Forms.Button btnTable10;
         private System.Windows.Forms.Button mark1;
         private System.Windows.Forms.Button mark2;
-        private System.Windows.Forms.Button orderMark3;
+        private System.Windows.Forms.Button mark3;
         private System.Windows.Forms.Button mark4;
         private System.Windows.Forms.Button mark5;
         private System.Windows.Forms.Button mark6;
