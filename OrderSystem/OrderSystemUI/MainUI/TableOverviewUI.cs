@@ -63,6 +63,7 @@ namespace OrderSystemUI {
             this.Hide();
             LoginUI loginUI = new LoginUI();
             loginUI.ShowDialog();
+            orderStatusTimer.Enabled = false;
             this.Close();
         }
 

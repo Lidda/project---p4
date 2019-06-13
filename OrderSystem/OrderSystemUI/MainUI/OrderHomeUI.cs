@@ -29,8 +29,8 @@ namespace OrderSystemUI.MainUI {
             this.order.Table = table;
             this.tableUI = tableUI;
             this.table = table;
-            this.Text = "table " + table.ID + "- Order Menu";
-            tableNumber.Text = "Table " + table.ID + ":";
+            this.Text = "Tafel " + table.ID + "- Order Menu";
+            tableNumber.Text = "Tafel " + table.ID + ":";
 
             try
             {
