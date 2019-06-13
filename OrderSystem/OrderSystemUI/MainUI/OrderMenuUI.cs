@@ -55,7 +55,7 @@ namespace OrderSystemUI.MainUI
             orderMenuUI.Hide();
         }
 
-        //Fills the listviews with all lunch items
+        //Checks which category an item is and sends it to the correct method
         private void AssignItemsToListViews()
         {
             items = itemLogic.GetAllItems();
@@ -81,6 +81,8 @@ namespace OrderSystemUI.MainUI
                 }
             }
         }
+
+        //Adds lunch items to the correct listview
         private void AssignItemToListViewLunch(Item item)
         {
             if (item.course == "Voorgerecht")
@@ -97,7 +99,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
-        //
+        //Adds dinner items to the correct listview
         private void AssignItemToListViewDinner(Item item)
         {
             if (item.course == "Voorgerecht")
@@ -118,7 +120,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
-        //Adds item to drinks
+        //Adds beverages to the correct listview
         private void AssignItemToListViewBeverages(Item item)
         {
             if (item.foodtype == "Frisdrank")
@@ -205,6 +207,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Add item to order.orderItems
         private void AddItemToOrder(int amount, Item item, string comment)
         {
             OrderItem orderItem = new OrderItem();
@@ -217,16 +220,8 @@ namespace OrderSystemUI.MainUI
             order.orderItems.Add(orderItem);
         }
 
-        private void ResetQuantity()
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                listView_StartersLunch.Items[i].SubItems[1].Text = "0";
-                listView_MainCoursesLunch.Items[i].SubItems[1].Text = "0";
-                listView_DessertsLunch.Items[i].SubItems[1].Text = "0";
-            }
-        }
 
+        //Adds order.orderItems to database and opens order overview
         private void btn_ConfirmOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -254,36 +249,8 @@ namespace OrderSystemUI.MainUI
             orderOverviewUI.ShowDialog();
         }
 
-        private void btn_AddDessert_Click(object sender, EventArgs e)
-        {
-            AddItem(listView_DessertsLunch);
-        }
-
-        private void btn_SubtractDessert_Click(object sender, EventArgs e)
-        {
-            SubtractItem(listView_DessertsLunch);
-        }
-
-        private void btn_AddStarter_Click(object sender, EventArgs e)
-        {
-            AddItem(listView_StartersLunch);
-        }
-
-        private void btn_SubtractStarter_Click(object sender, EventArgs e)
-        {
-            SubtractItem(listView_StartersLunch);
-        }
-
-        private void btn_AddMainCourse_Click(object sender, EventArgs e)
-        {
-            AddItem(listView_MainCoursesLunch);
-        }
-
-        private void btn_SubtractMainCourse_Click(object sender, EventArgs e)
-        {
-            SubtractItem(listView_MainCoursesLunch);
-        }
-
+        
+        //Clears all listview selections except the relevant listview
         private void ClearListViewSelection(ListView selectedListView)
         {
             foreach (ListView listView in listViews)
@@ -295,6 +262,8 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+
+        //Shows the correct panel
         private void ShowPanel(string panelName)
         {
             if(panelName == "Comment")
@@ -332,27 +301,15 @@ namespace OrderSystemUI.MainUI
             }
         }
 
-        private void btn_AddCommentStarter_Click(object sender, EventArgs e)
-        {
-
-            CheckSelection(listView_StartersLunch);
-        }
-
-        private void btn_AddCommentDessertLunch_Click(object sender, EventArgs e)
-        {
-            CheckSelection(listView_DessertsLunch);
-        }
-
-        private void btn_AddCommentMainCourseLunch_Click(object sender, EventArgs e)
-        {
-            CheckSelection(listView_MainCoursesLunch);
-        }
-
+        //Checks if listview has an item selected
         private void CheckSelection(ListView listView)
         {
             if (listView.SelectedItems.Count >= 1)
             {
                 ClearListViewSelection(listView);
+
+                txt_AddCommentToItem.Text = listView.SelectedItems[0].SubItems[4].Text;
+
                 pnl_Comment.BringToFront();
                 ShowPanel("Comment");
             }
@@ -362,6 +319,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Confirms comment and adds comment to listview
         private void btn_AddCommentToItem_Click(object sender, EventArgs e)
         {
             foreach (ListView listView in listViews)
@@ -376,12 +334,66 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        
         private void btn_CancelComment_Click(object sender, EventArgs e)
         {
             txt_AddCommentToItem.Clear();
             pnl_Comment.Hide();
         }
 
+        //Start lunch items buttons
+        private void btn_AddStarter_Click(object sender, EventArgs e)
+        {
+            AddItem(listView_StartersLunch);
+        }
+
+        private void btn_AddCommentStarter_Click(object sender, EventArgs e)
+        {
+
+            CheckSelection(listView_StartersLunch);
+        }
+
+        private void btn_SubtractStarter_Click(object sender, EventArgs e)
+        {
+            SubtractItem(listView_StartersLunch);
+        }
+
+        private void btn_AddMainCourse_Click(object sender, EventArgs e)
+        {
+            AddItem(listView_MainCoursesLunch);
+        }
+
+        private void btn_AddCommentMainCourseLunch_Click(object sender, EventArgs e)
+        {
+            CheckSelection(listView_MainCoursesLunch);
+        }
+
+        private void btn_SubtractMainCourse_Click(object sender, EventArgs e)
+        {
+            SubtractItem(listView_MainCoursesLunch);
+        }
+
+        private void btn_AddDessert_Click(object sender, EventArgs e)
+        {
+            AddItem(listView_DessertsLunch);
+        }
+        
+        private void btn_AddCommentDessertLunch_Click(object sender, EventArgs e)
+        {
+            CheckSelection(listView_DessertsLunch);
+        }
+
+        private void btn_SubtractDessert_Click(object sender, EventArgs e)
+        {
+            SubtractItem(listView_DessertsLunch);
+        }
+        
+
+        
+        //End lunch items buttons
+           
+
+        //Start dinner items buttons
         private void btn_AddStarterDinner_Click(object sender, EventArgs e)
         {
             AddItem(listView_StartersDinner);
@@ -411,7 +423,7 @@ namespace OrderSystemUI.MainUI
         {
             SubtractItem(listView_MainCoursesDinner);
         }
-
+        
         private void btn_AddSideDishDinner_Click(object sender, EventArgs e)
         {
             AddItem(listView_SideDishesDinner);
@@ -441,7 +453,9 @@ namespace OrderSystemUI.MainUI
         {
             SubtractItem(listView_DessertsDinner);
         }
+        //End dinner items buttons
 
+        //Start beverages buttons
         private void btn_AddHotDrink_Click(object sender, EventArgs e)
         {
             AddItem(listView_HotDrinks);
@@ -516,7 +530,9 @@ namespace OrderSystemUI.MainUI
         {
             SubtractItem(listView_DistilledDrinks);
         }
+        //End beverages buttons
 
+        
         private void btn_Drankjes_Click(object sender, EventArgs e)
         {
             ShowPanel("Drinks");
