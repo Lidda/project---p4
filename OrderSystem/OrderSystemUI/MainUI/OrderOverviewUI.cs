@@ -33,6 +33,7 @@ namespace OrderSystemUI.MainUI
             AddItemsToListView();
         }
 
+        //Adds all items to listview
         private void AddItemsToListView()
         {
             foreach (OrderItem orderItem in order.orderItems)
@@ -44,13 +45,13 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(price.ToString());
                 if (orderItem.status == OrderItem.Status.ordered)
                 {
-                    li.SubItems.Add("O");
+                    li.SubItems.Add("X");
                     li.SubItems[3].ForeColor = System.Drawing.Color.Red;
                 }
                 else if (orderItem.status == OrderItem.Status.ready)
                 {
                     
-                    li.SubItems.Add("✔");
+                    li.SubItems.Add("O");
                     li.SubItems[3].ForeColor = System.Drawing.Color.Orange;
                 }
                 else
@@ -67,6 +68,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Adds the relevant data to the edit panel & opens edit panel
         private void btn_EditItem_Click(object sender, EventArgs e)
         {
             if(listView_Overview.SelectedItems.Count >= 1)
@@ -74,6 +76,7 @@ namespace OrderSystemUI.MainUI
                 lbl_DisplayItemName.Text = listView_Overview.SelectedItems[0].SubItems[0].Text;
                 txt_Amount.Text = listView_Overview.SelectedItems[0].SubItems[1].Text;
                 txt_Comment.Text = listView_Overview.SelectedItems[0].SubItems[5].Text;
+
                 pnl_EditItem.Show();
             }
             else
@@ -81,7 +84,7 @@ namespace OrderSystemUI.MainUI
                 MessageBox.Show("Selecteer eerst een product");
             }
         }
-
+        
         private void btn_CancelEdit_Click(object sender, EventArgs e)
         {
             lbl_DisplayItemName.Text = "";
@@ -93,6 +96,7 @@ namespace OrderSystemUI.MainUI
             stockAmount = 0;
         }
 
+        //Confirms edited item
         private void btn_ConfirmEdit_Click(object sender, EventArgs e)
         {
             int amount = Convert.ToInt32(txt_Amount.Text);
@@ -121,6 +125,7 @@ namespace OrderSystemUI.MainUI
             pnl_EditItem.Hide();
         }
 
+        //Ups the amount of the item
         private void btn_AddAmount_Click(object sender, EventArgs e)
         {
             int amount = Convert.ToInt32(txt_Amount.Text);
@@ -130,6 +135,7 @@ namespace OrderSystemUI.MainUI
             txt_Amount.Text = amount.ToString();
         }
 
+        //Subtracts the amount
         private void btn_SubtractAmount_Click(object sender, EventArgs e)
         {
             int amount = Convert.ToInt32(txt_Amount.Text);
@@ -143,6 +149,7 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        //Goes back to the homescreen
         private void btn_Home_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -151,6 +158,7 @@ namespace OrderSystemUI.MainUI
             stockAmount = 0;
         }
 
+        //Deletes the item from the order
         private void btn_DeleteItem_Click(object sender, EventArgs e)
         {
             OrderItem orderItem = order.orderItems.Find(i => i.ID == Convert.ToInt32(listView_Overview.SelectedItems[0].SubItems[4].Text));
