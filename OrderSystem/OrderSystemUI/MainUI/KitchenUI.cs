@@ -51,6 +51,7 @@ namespace OrderSystemUI.MainUI
             orders = orderLogic.GetOrderskitchen(1);
             //clears listview before filling it again
             listView1.Items.Clear();
+            //Loops through orders and then loops through all orderitems in orders to get all orderitems from the database
             foreach (Order o in orders)
             {
                 foreach (OrderItem order in o.orderItems)
@@ -305,7 +306,7 @@ namespace OrderSystemUI.MainUI
             //Mark order from table 1 as ready
            orderLogic.ChangeStatusKitchen(1, OrderItem.Status.ordered, OrderItem.Status.ready);
             listView1.BackColor = Color.MediumSeaGreen;
-            //Hides button after clicking it
+            //Hides button after clicking it and loads order1 again
             btn_markReady1.Hide();
             Order1(orders);
         }
