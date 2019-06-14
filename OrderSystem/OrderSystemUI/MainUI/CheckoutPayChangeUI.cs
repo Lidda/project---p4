@@ -65,6 +65,9 @@ namespace OrderSystemUI.MainUI
                 lblChange.Show();
                 lblChangeText.Show();
                 change = change - order.GetTotalAmount("Total");
+                //check if textbox is empty or textboc contains a dot
+                if (string.IsNullOrWhiteSpace(txtChangeAmount.Text) || txtChangeAmount.Text.Contains('.'))
+                    throw new Exception();
 
                 //check if customer paid enough
                 if (change < 0)
@@ -80,7 +83,7 @@ namespace OrderSystemUI.MainUI
             }
             catch
             {
-                MessageBox.Show("Invoer moet een cijfer zijn en hoger dan het totaal bedrag zijn!");
+                MessageBox.Show("Invoer moet een geldig cijfer zijn en hoger dan het totaal bedrag zijn!");
             }
             finally
             {

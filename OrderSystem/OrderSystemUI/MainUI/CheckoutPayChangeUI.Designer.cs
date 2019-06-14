@@ -67,7 +67,7 @@
             // lblTotalAmount
             // 
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTotalAmount.Location = new System.Drawing.Point(421, 154);
+            this.lblTotalAmount.Location = new System.Drawing.Point(473, 154);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(104, 31);
             this.lblTotalAmount.TabIndex = 2;
@@ -77,17 +77,18 @@
             // txtChangeAmount
             // 
             this.txtChangeAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtChangeAmount.Location = new System.Drawing.Point(427, 220);
+            this.txtChangeAmount.Location = new System.Drawing.Point(427, 235);
             this.txtChangeAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChangeAmount.Name = "txtChangeAmount";
             this.txtChangeAmount.Size = new System.Drawing.Size(150, 38);
             this.txtChangeAmount.TabIndex = 3;
+            this.txtChangeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(35, 223);
+            this.label3.Location = new System.Drawing.Point(35, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(331, 31);
             this.label3.TabIndex = 4;
@@ -97,7 +98,7 @@
             // 
             this.lblChangeText.AutoSize = true;
             this.lblChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChangeText.Location = new System.Drawing.Point(35, 504);
+            this.lblChangeText.Location = new System.Drawing.Point(35, 523);
             this.lblChangeText.Name = "lblChangeText";
             this.lblChangeText.Size = new System.Drawing.Size(153, 31);
             this.lblChangeText.TabIndex = 5;
@@ -106,9 +107,9 @@
             // lblChange
             // 
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChange.Location = new System.Drawing.Point(421, 504);
+            this.lblChange.Location = new System.Drawing.Point(466, 523);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(104, 31);
+            this.lblChange.Size = new System.Drawing.Size(111, 31);
             this.lblChange.TabIndex = 6;
             this.lblChange.Text = "000,00";
             this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -151,7 +152,7 @@
             this.lblNotEnough.AutoSize = true;
             this.lblNotEnough.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNotEnough.ForeColor = System.Drawing.Color.Red;
-            this.lblNotEnough.Location = new System.Drawing.Point(35, 578);
+            this.lblNotEnough.Location = new System.Drawing.Point(35, 597);
             this.lblNotEnough.Name = "lblNotEnough";
             this.lblNotEnough.Size = new System.Drawing.Size(526, 36);
             this.lblNotEnough.TabIndex = 35;
@@ -177,7 +178,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label4.Location = new System.Drawing.Point(392, 223);
+            this.label4.Location = new System.Drawing.Point(392, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 31);
             this.label4.TabIndex = 37;
@@ -197,7 +198,7 @@
             // 
             this.lblEuroSign.AutoSize = true;
             this.lblEuroSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign.Location = new System.Drawing.Point(392, 504);
+            this.lblEuroSign.Location = new System.Drawing.Point(392, 523);
             this.lblEuroSign.Name = "lblEuroSign";
             this.lblEuroSign.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign.TabIndex = 39;

@@ -82,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(206, 172);
+            this.label1.Location = new System.Drawing.Point(441, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 31);
             this.label1.TabIndex = 74;
@@ -92,7 +92,7 @@
             // 
             this.lblEuroSign3.AutoSize = true;
             this.lblEuroSign3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign3.Location = new System.Drawing.Point(416, 545);
+            this.lblEuroSign3.Location = new System.Drawing.Point(441, 544);
             this.lblEuroSign3.Name = "lblEuroSign3";
             this.lblEuroSign3.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign3.TabIndex = 73;
@@ -102,7 +102,7 @@
             // 
             this.lbleuroSign2.AutoSize = true;
             this.lbleuroSign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lbleuroSign2.Location = new System.Drawing.Point(416, 478);
+            this.lbleuroSign2.Location = new System.Drawing.Point(441, 478);
             this.lbleuroSign2.Name = "lbleuroSign2";
             this.lbleuroSign2.Size = new System.Drawing.Size(29, 31);
             this.lbleuroSign2.TabIndex = 72;
@@ -112,7 +112,7 @@
             // 
             this.lblEuroSign1.AutoSize = true;
             this.lblEuroSign1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign1.Location = new System.Drawing.Point(416, 425);
+            this.lblEuroSign1.Location = new System.Drawing.Point(441, 425);
             this.lblEuroSign1.Name = "lblEuroSign1";
             this.lblEuroSign1.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign1.TabIndex = 71;
@@ -175,7 +175,7 @@
             // lblTipGrandTotal
             // 
             this.lblTipGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipGrandTotal.Location = new System.Drawing.Point(451, 545);
+            this.lblTipGrandTotal.Location = new System.Drawing.Point(476, 544);
             this.lblTipGrandTotal.Name = "lblTipGrandTotal";
             this.lblTipGrandTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipGrandTotal.TabIndex = 36;
@@ -185,21 +185,21 @@
             // lblTipTotal
             // 
             this.lblTipTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipTotal.Location = new System.Drawing.Point(451, 425);
+            this.lblTipTotal.Location = new System.Drawing.Point(476, 425);
             this.lblTipTotal.Name = "lblTipTotal";
             this.lblTipTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipTotal.TabIndex = 35;
-            this.lblTipTotal.Text = "000.00";
+            this.lblTipTotal.Text = "000,00";
             this.lblTipTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTipTip
             // 
             this.lblTipTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipTip.Location = new System.Drawing.Point(451, 478);
+            this.lblTipTip.Location = new System.Drawing.Point(476, 478);
             this.lblTipTip.Name = "lblTipTip";
             this.lblTipTip.Size = new System.Drawing.Size(108, 31);
             this.lblTipTip.TabIndex = 34;
-            this.lblTipTip.Text = "000.00";
+            this.lblTipTip.Text = "000,00";
             this.lblTipTip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnAddTipToOrder
@@ -222,11 +222,12 @@
             // txtTip
             // 
             this.txtTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtTip.Location = new System.Drawing.Point(241, 169);
+            this.txtTip.Location = new System.Drawing.Point(482, 169);
             this.txtTip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(344, 38);
+            this.txtTip.Size = new System.Drawing.Size(102, 38);
             this.txtTip.TabIndex = 32;
+            this.txtTip.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -234,9 +235,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label8.Location = new System.Drawing.Point(35, 169);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 31);
+            this.label8.Size = new System.Drawing.Size(212, 31);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Bedrag:";
+            this.label8.Text = "Bedrag aan fooi:";
             // 
             // lblTipHeader
             // 

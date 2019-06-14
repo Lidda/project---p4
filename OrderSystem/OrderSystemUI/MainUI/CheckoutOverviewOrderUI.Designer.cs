@@ -170,7 +170,7 @@
             // 
             this.Price.Text = "€";
             this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Price.Width = 78;
+            this.Price.Width = 85;
             // 
             // btnAddTip
             // 

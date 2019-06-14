@@ -45,7 +45,12 @@ namespace OrderSystemUI.MainUI
         {
             try
             {
-                //replace comma with a dot to make the program 'foolproof'
+                //check if tip contains a dot
+                if (txtTip.Text.Contains('.'))
+                {
+                    throw new Exception();
+                }
+
                 order.tip = double.Parse(txtTip.Text);
 
                 //check if the tip is greater or equal to zero
