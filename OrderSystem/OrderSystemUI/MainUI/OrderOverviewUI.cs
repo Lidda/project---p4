@@ -42,7 +42,7 @@ namespace OrderSystemUI.MainUI
 
                 ListViewItem li = new ListViewItem(orderItem.item.name);
                 li.SubItems.Add(orderItem.amount.ToString());
-                li.SubItems.Add(price.ToString());
+                li.SubItems.Add(price.ToString("F2"));
                 if (orderItem.status == OrderItem.Status.ordered)
                 {
                     li.SubItems.Add("X");

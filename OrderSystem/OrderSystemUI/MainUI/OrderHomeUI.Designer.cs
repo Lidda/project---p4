@@ -220,7 +220,7 @@
             // 
             // btn_RemoveOrder
             // 
-            this.btn_RemoveOrder.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_RemoveOrder.BackColor = System.Drawing.Color.Red;
             this.btn_RemoveOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RemoveOrder.FlatAppearance.BorderSize = 0;
             this.btn_RemoveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
