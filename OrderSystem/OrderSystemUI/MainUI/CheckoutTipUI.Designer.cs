@@ -47,12 +47,14 @@
             this.lblTipHeader = new System.Windows.Forms.Label();
             this.btnConfirmTip = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTip
             // 
             this.pnlTip.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlTip.Controls.Add(this.label1);
             this.pnlTip.Controls.Add(this.lblEuroSign3);
             this.pnlTip.Controls.Add(this.lbleuroSign2);
             this.pnlTip.Controls.Add(this.lblEuroSign1);
@@ -162,33 +164,33 @@
             // 
             // lblTipGrandTotal
             // 
-            this.lblTipGrandTotal.AutoSize = true;
             this.lblTipGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTipGrandTotal.Location = new System.Drawing.Point(451, 590);
             this.lblTipGrandTotal.Name = "lblTipGrandTotal";
-            this.lblTipGrandTotal.Size = new System.Drawing.Size(97, 31);
+            this.lblTipGrandTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipGrandTotal.TabIndex = 36;
             this.lblTipGrandTotal.Text = "000.00";
+            this.lblTipGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTipTotal
             // 
-            this.lblTipTotal.AutoSize = true;
             this.lblTipTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTipTotal.Location = new System.Drawing.Point(451, 470);
             this.lblTipTotal.Name = "lblTipTotal";
-            this.lblTipTotal.Size = new System.Drawing.Size(97, 31);
+            this.lblTipTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipTotal.TabIndex = 35;
             this.lblTipTotal.Text = "000.00";
+            this.lblTipTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTipTip
             // 
-            this.lblTipTip.AutoSize = true;
             this.lblTipTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblTipTip.Location = new System.Drawing.Point(451, 523);
             this.lblTipTip.Name = "lblTipTip";
-            this.lblTipTip.Size = new System.Drawing.Size(97, 31);
+            this.lblTipTip.Size = new System.Drawing.Size(108, 31);
             this.lblTipTip.TabIndex = 34;
             this.lblTipTip.Text = "000.00";
+            this.lblTipTip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnAddTipToOrder
             // 
@@ -198,7 +200,7 @@
             this.btnAddTipToOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnAddTipToOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddTipToOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddTipToOrder.Location = new System.Drawing.Point(35, 352);
+            this.btnAddTipToOrder.Location = new System.Drawing.Point(35, 267);
             this.btnAddTipToOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTipToOrder.Name = "btnAddTipToOrder";
             this.btnAddTipToOrder.Size = new System.Drawing.Size(549, 58);
@@ -210,18 +212,17 @@
             // txtTip
             // 
             this.txtTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtTip.Location = new System.Drawing.Point(35, 140);
+            this.txtTip.Location = new System.Drawing.Point(241, 169);
             this.txtTip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTip.Multiline = true;
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(551, 195);
+            this.txtTip.Size = new System.Drawing.Size(344, 38);
             this.txtTip.TabIndex = 32;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label8.Location = new System.Drawing.Point(28, 95);
+            this.label8.Location = new System.Drawing.Point(35, 169);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 31);
             this.label8.TabIndex = 31;
@@ -270,6 +271,16 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.Location = new System.Drawing.Point(206, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 31);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "€";
+            // 
             // CheckoutTipUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,5 +317,6 @@
         private System.Windows.Forms.Label lblEuroSign3;
         private System.Windows.Forms.Label lbleuroSign2;
         private System.Windows.Forms.Label lblEuroSign1;
+        private System.Windows.Forms.Label label1;
     }
 }

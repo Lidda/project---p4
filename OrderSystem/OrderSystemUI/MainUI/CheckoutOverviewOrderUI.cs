@@ -115,7 +115,6 @@ namespace OrderSystemUI.MainUI
                     lblTipEuroSign.Show();
                     lblTipAmount.Text = string.Format("{0:0.00}", order.tip);
                 }
-
                 //empty listview before filling it
                 listViewOrderItems.Items.Clear();
 

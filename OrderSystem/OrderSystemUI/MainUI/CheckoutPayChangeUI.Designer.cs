@@ -39,6 +39,9 @@
             this.btnCalculateChange = new System.Windows.Forms.Button();
             this.lblNotEnough = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblEuroSign = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(29, 85);
+            this.label2.Location = new System.Drawing.Point(35, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(241, 31);
             this.label2.TabIndex = 1;
@@ -63,29 +66,28 @@
             // 
             // lblTotalAmount
             // 
-            this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTotalAmount.Location = new System.Drawing.Point(480, 85);
+            this.lblTotalAmount.Location = new System.Drawing.Point(421, 154);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(104, 31);
             this.lblTotalAmount.TabIndex = 2;
-            this.lblTotalAmount.Text = "€ 00,00";
+            this.lblTotalAmount.Text = "000,00";
+            this.lblTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtChangeAmount
             // 
             this.txtChangeAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtChangeAmount.Location = new System.Drawing.Point(35, 187);
+            this.txtChangeAmount.Location = new System.Drawing.Point(427, 220);
             this.txtChangeAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtChangeAmount.Multiline = true;
             this.txtChangeAmount.Name = "txtChangeAmount";
-            this.txtChangeAmount.Size = new System.Drawing.Size(549, 212);
+            this.txtChangeAmount.Size = new System.Drawing.Size(150, 38);
             this.txtChangeAmount.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(29, 153);
+            this.label3.Location = new System.Drawing.Point(35, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(331, 31);
             this.label3.TabIndex = 4;
@@ -95,7 +97,7 @@
             // 
             this.lblChangeText.AutoSize = true;
             this.lblChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChangeText.Location = new System.Drawing.Point(59, 554);
+            this.lblChangeText.Location = new System.Drawing.Point(35, 516);
             this.lblChangeText.Name = "lblChangeText";
             this.lblChangeText.Size = new System.Drawing.Size(153, 31);
             this.lblChangeText.TabIndex = 5;
@@ -103,13 +105,13 @@
             // 
             // lblChange
             // 
-            this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChange.Location = new System.Drawing.Point(480, 554);
+            this.lblChange.Location = new System.Drawing.Point(421, 516);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(104, 31);
             this.lblChange.TabIndex = 6;
-            this.lblChange.Text = "€ 00,00";
+            this.lblChange.Text = "000,00";
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnOK
             // 
@@ -135,10 +137,10 @@
             this.btnCalculateChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnCalculateChange.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCalculateChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateChange.Location = new System.Drawing.Point(35, 434);
+            this.btnCalculateChange.Location = new System.Drawing.Point(41, 337);
             this.btnCalculateChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalculateChange.Name = "btnCalculateChange";
-            this.btnCalculateChange.Size = new System.Drawing.Size(549, 58);
+            this.btnCalculateChange.Size = new System.Drawing.Size(536, 82);
             this.btnCalculateChange.TabIndex = 34;
             this.btnCalculateChange.Text = "Bereken wisselgeld";
             this.btnCalculateChange.UseVisualStyleBackColor = false;
@@ -149,7 +151,7 @@
             this.lblNotEnough.AutoSize = true;
             this.lblNotEnough.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNotEnough.ForeColor = System.Drawing.Color.Red;
-            this.lblNotEnough.Location = new System.Drawing.Point(35, 628);
+            this.lblNotEnough.Location = new System.Drawing.Point(35, 590);
             this.lblNotEnough.Name = "lblNotEnough";
             this.lblNotEnough.Size = new System.Drawing.Size(526, 36);
             this.lblNotEnough.TabIndex = 35;
@@ -171,12 +173,45 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label4.Location = new System.Drawing.Point(392, 223);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 31);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "€";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label5.Location = new System.Drawing.Point(392, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 31);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "€";
+            // 
+            // lblEuroSign
+            // 
+            this.lblEuroSign.AutoSize = true;
+            this.lblEuroSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblEuroSign.Location = new System.Drawing.Point(392, 516);
+            this.lblEuroSign.Name = "lblEuroSign";
+            this.lblEuroSign.Size = new System.Drawing.Size(29, 31);
+            this.lblEuroSign.TabIndex = 39;
+            this.lblEuroSign.Text = "€";
+            // 
             // CheckoutPayChangeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 838);
+            this.Controls.Add(this.lblEuroSign);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblNotEnough);
             this.Controls.Add(this.btnCalculateChange);
@@ -210,5 +245,8 @@
         private System.Windows.Forms.Button btnCalculateChange;
         private System.Windows.Forms.Label lblNotEnough;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEuroSign;
     }
 }

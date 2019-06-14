@@ -29,9 +29,10 @@ namespace OrderSystemUI.MainUI
             lblChange.Hide();
             lblChangeText.Hide();
             lblNotEnough.Hide();
+            lblEuroSign.Hide();
 
             //set text
-            lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            lblTotalAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total"));
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -73,7 +74,8 @@ namespace OrderSystemUI.MainUI
                 }
                 
                 //show amount change
-                lblChange.Text = string.Format("€ {0:0.00}", change);
+                lblChange.Text = string.Format("{0:0.00}", change);
+                lblEuroSign.Show();
                 
             }
             catch
