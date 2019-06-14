@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutTipUI));
             this.pnlTip = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblEuroSign3 = new System.Windows.Forms.Label();
             this.lbleuroSign2 = new System.Windows.Forms.Label();
             this.lblEuroSign1 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.lblTipHeader = new System.Windows.Forms.Label();
             this.btnConfirmTip = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlTip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,11 +78,21 @@
             this.pnlTip.Size = new System.Drawing.Size(621, 839);
             this.pnlTip.TabIndex = 32;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.Location = new System.Drawing.Point(206, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 31);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "€";
+            // 
             // lblEuroSign3
             // 
             this.lblEuroSign3.AutoSize = true;
             this.lblEuroSign3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign3.Location = new System.Drawing.Point(416, 590);
+            this.lblEuroSign3.Location = new System.Drawing.Point(416, 545);
             this.lblEuroSign3.Name = "lblEuroSign3";
             this.lblEuroSign3.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign3.TabIndex = 73;
@@ -92,7 +102,7 @@
             // 
             this.lbleuroSign2.AutoSize = true;
             this.lbleuroSign2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lbleuroSign2.Location = new System.Drawing.Point(416, 523);
+            this.lbleuroSign2.Location = new System.Drawing.Point(416, 478);
             this.lbleuroSign2.Name = "lbleuroSign2";
             this.lbleuroSign2.Size = new System.Drawing.Size(29, 31);
             this.lbleuroSign2.TabIndex = 72;
@@ -102,7 +112,7 @@
             // 
             this.lblEuroSign1.AutoSize = true;
             this.lblEuroSign1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign1.Location = new System.Drawing.Point(416, 470);
+            this.lblEuroSign1.Location = new System.Drawing.Point(416, 425);
             this.lblEuroSign1.Name = "lblEuroSign1";
             this.lblEuroSign1.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign1.TabIndex = 71;
@@ -126,7 +136,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label12.Location = new System.Drawing.Point(28, 558);
+            this.label12.Location = new System.Drawing.Point(28, 513);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(569, 31);
             this.label12.TabIndex = 40;
@@ -136,7 +146,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label9.Location = new System.Drawing.Point(35, 590);
+            this.label9.Location = new System.Drawing.Point(35, 545);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 31);
             this.label9.TabIndex = 39;
@@ -146,7 +156,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label10.Location = new System.Drawing.Point(35, 470);
+            this.label10.Location = new System.Drawing.Point(35, 425);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 31);
             this.label10.TabIndex = 38;
@@ -156,7 +166,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label11.Location = new System.Drawing.Point(35, 523);
+            this.label11.Location = new System.Drawing.Point(35, 478);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 31);
             this.label11.TabIndex = 37;
@@ -165,7 +175,7 @@
             // lblTipGrandTotal
             // 
             this.lblTipGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipGrandTotal.Location = new System.Drawing.Point(451, 590);
+            this.lblTipGrandTotal.Location = new System.Drawing.Point(451, 545);
             this.lblTipGrandTotal.Name = "lblTipGrandTotal";
             this.lblTipGrandTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipGrandTotal.TabIndex = 36;
@@ -175,7 +185,7 @@
             // lblTipTotal
             // 
             this.lblTipTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipTotal.Location = new System.Drawing.Point(451, 470);
+            this.lblTipTotal.Location = new System.Drawing.Point(451, 425);
             this.lblTipTotal.Name = "lblTipTotal";
             this.lblTipTotal.Size = new System.Drawing.Size(108, 31);
             this.lblTipTotal.TabIndex = 35;
@@ -185,7 +195,7 @@
             // lblTipTip
             // 
             this.lblTipTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblTipTip.Location = new System.Drawing.Point(451, 523);
+            this.lblTipTip.Location = new System.Drawing.Point(451, 478);
             this.lblTipTip.Name = "lblTipTip";
             this.lblTipTip.Size = new System.Drawing.Size(108, 31);
             this.lblTipTip.TabIndex = 34;
@@ -232,7 +242,7 @@
             // 
             this.lblTipHeader.AutoSize = true;
             this.lblTipHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblTipHeader.Location = new System.Drawing.Point(205, 20);
+            this.lblTipHeader.Location = new System.Drawing.Point(205, 32);
             this.lblTipHeader.Name = "lblTipHeader";
             this.lblTipHeader.Size = new System.Drawing.Size(183, 39);
             this.lblTipHeader.TabIndex = 30;
@@ -270,16 +280,6 @@
             this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(206, 172);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 31);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "€";
             // 
             // CheckoutTipUI
             // 

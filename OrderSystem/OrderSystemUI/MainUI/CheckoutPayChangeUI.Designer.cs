@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(123, 9);
+            this.label1.Location = new System.Drawing.Point(124, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(353, 39);
             this.label1.TabIndex = 0;
@@ -97,7 +97,7 @@
             // 
             this.lblChangeText.AutoSize = true;
             this.lblChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChangeText.Location = new System.Drawing.Point(35, 516);
+            this.lblChangeText.Location = new System.Drawing.Point(35, 504);
             this.lblChangeText.Name = "lblChangeText";
             this.lblChangeText.Size = new System.Drawing.Size(153, 31);
             this.lblChangeText.TabIndex = 5;
@@ -106,7 +106,7 @@
             // lblChange
             // 
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblChange.Location = new System.Drawing.Point(421, 516);
+            this.lblChange.Location = new System.Drawing.Point(421, 504);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(104, 31);
             this.lblChange.TabIndex = 6;
@@ -151,7 +151,7 @@
             this.lblNotEnough.AutoSize = true;
             this.lblNotEnough.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblNotEnough.ForeColor = System.Drawing.Color.Red;
-            this.lblNotEnough.Location = new System.Drawing.Point(35, 590);
+            this.lblNotEnough.Location = new System.Drawing.Point(35, 578);
             this.lblNotEnough.Name = "lblNotEnough";
             this.lblNotEnough.Size = new System.Drawing.Size(526, 36);
             this.lblNotEnough.TabIndex = 35;
@@ -197,7 +197,7 @@
             // 
             this.lblEuroSign.AutoSize = true;
             this.lblEuroSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblEuroSign.Location = new System.Drawing.Point(392, 516);
+            this.lblEuroSign.Location = new System.Drawing.Point(392, 504);
             this.lblEuroSign.Name = "lblEuroSign";
             this.lblEuroSign.Size = new System.Drawing.Size(29, 31);
             this.lblEuroSign.TabIndex = 39;
