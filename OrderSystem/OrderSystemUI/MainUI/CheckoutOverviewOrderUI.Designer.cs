@@ -159,7 +159,7 @@
             // 
             // Item
             // 
-            this.Item.Text = "Item";
+            this.Item.Text = "Product";
             this.Item.Width = 275;
             // 
             // amount
@@ -218,9 +218,9 @@
             this.lblCheckoutOverviewHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblCheckoutOverviewHeader.Location = new System.Drawing.Point(92, 9);
             this.lblCheckoutOverviewHeader.Name = "lblCheckoutOverviewHeader";
-            this.lblCheckoutOverviewHeader.Size = new System.Drawing.Size(386, 39);
+            this.lblCheckoutOverviewHeader.Size = new System.Drawing.Size(387, 39);
             this.lblCheckoutOverviewHeader.TabIndex = 54;
-            this.lblCheckoutOverviewHeader.Text = "Overview bestelling tafel";
+            this.lblCheckoutOverviewHeader.Text = "Overzicht bestelling tafel";
             // 
             // btnBack
             // 
