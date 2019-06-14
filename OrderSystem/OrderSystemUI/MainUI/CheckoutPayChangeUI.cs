@@ -59,7 +59,7 @@ namespace OrderSystemUI.MainUI
                 //hide lable shortage
                 lblNotEnough.Hide();
 
-                change = double.Parse(txtChangeAmount.Text.Replace('.', ','));
+                change = double.Parse(txtChangeAmount.Text);
                 //show labels change
                 lblChange.Show();
                 lblChangeText.Show();

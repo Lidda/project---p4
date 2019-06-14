@@ -46,7 +46,7 @@ namespace OrderSystemUI.MainUI
             try
             {
                 //replace comma with a dot to make the program 'foolproof'
-                order.tip = double.Parse(txtTip.Text.Replace('.', ','));
+                order.tip = double.Parse(txtTip.Text);
 
                 //check if the tip is greater or equal to zero
                 if (order.tip < 0)
