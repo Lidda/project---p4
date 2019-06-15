@@ -24,8 +24,9 @@ namespace OrderSystemUI.MainUI
             this.employee = employee;
             InitializeComponent();
             //Loads order method
-            OrdersAll(orders);
             btn_markReady1.Hide();
+            OrdersAll(orders);
+
         }
 
 
@@ -58,7 +59,7 @@ namespace OrderSystemUI.MainUI
                 }
 
             }
-            
+
         }
         private void Refresh_btn_Click(object sender, EventArgs e)
         {
@@ -89,7 +90,7 @@ namespace OrderSystemUI.MainUI
         {
             //Mark order ready
             ChangeOrderStatus(listView1);
-            OrdersAll(orders);
+
 
         }
 
@@ -99,41 +100,22 @@ namespace OrderSystemUI.MainUI
             {
                 int orderItemID = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
                 orderLogic.ChangeStatusKitchen(orderItemID, OrderItem.Status.ready);
+                listView1.SelectedItems[0].SubItems[7].Text = "ready";
             }
         }
 
         private void btn_FilterNew_Click(object sender, EventArgs e)
         {
 
-            //clears listview before filling it again
-            listView1.Items.Clear();
-            //gets orders from database
-            orders = orderItemLogic.GetOrdersKitchen();
-            //loops through orders to get all orderitems from database
-            foreach (OrderItem order in orders)
-            {
-                //fills listview with orderitems/items from database
-                ListViewItem li;
-                li = new ListViewItem(order.ID.ToString());
-                li.SubItems.Add(order.order.orderDate.ToString("dd/MM/yyyy"));
-                li.SubItems.Add(order.TimeOfOrder.ToString("HH:mm"));
-                li.SubItems.Add(order.item.name);
-                li.SubItems.Add(order.amount.ToString());
-                li.SubItems.Add(order.order.Table.ID.ToString());
-                li.SubItems.Add(order.comment);
-                li.SubItems.Add(order.status.ToString());
-
-                if (li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
+            for (int i = listView1.Items.Count - 1; i >= 0; --i)
+                if (listView1.Items[i].SubItems[7].Text == "ready")
                 {
-                    //If there is an order with status ordered, change color of listview to red and show the button to mark ready
-                    listView1.BackColor = Color.Tomato;
-                    listView1.Items.Add(li);
-                    btn_markReady1.Show();
+                    listView1.Items[i].Remove();
                 }
-
+            if (listView1.Items.Count == 0)
+            {
+                listView1.BackColor = Color.MediumSeaGreen;
             }
-
-
         }
 
     }
