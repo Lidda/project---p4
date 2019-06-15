@@ -24,9 +24,7 @@ namespace OrderSystemLogic
             }
         }
 
-
-     
-
+        
         public List<Order> GetOrdersKitchenOpen()
         {
             try
@@ -38,18 +36,19 @@ namespace OrderSystemLogic
                 throw new Exception("Could not get orders from database");
             }
         }
-
-        public List<Order> GetOrdersBar(int tableID)
+        public List<Order> GetOrdersBarOpen()
         {
             try
             {
-                return orderDAL.GetOrdersBar(tableID);
+                return orderDAL.GetOrdersBarOpen();
             }
             catch
             {
                 throw new Exception("Could not get orders from database");
             }
         }
+
+
         public List<Order> Get_All_Orders()
         {
             try

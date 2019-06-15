@@ -92,6 +92,7 @@
             this.btn_FilterNew.TabIndex = 127;
             this.btn_FilterNew.Text = "Filter nieuwe orders";
             this.btn_FilterNew.UseVisualStyleBackColor = false;
+            this.btn_FilterNew.Click += new System.EventHandler(this.btn_FilterNew_Click);
             // 
             // pictureBox1
             // 
@@ -198,6 +199,7 @@
             this.btn_markReady1.TabIndex = 114;
             this.btn_markReady1.Text = "Meld gereed";
             this.btn_markReady1.UseVisualStyleBackColor = false;
+            this.btn_markReady1.Click += new System.EventHandler(this.btn_markReady1_Click);
             // 
             // Refresh_btn
             // 
@@ -212,6 +214,7 @@
             this.Refresh_btn.TabIndex = 113;
             this.Refresh_btn.Text = "Refresh";
             this.Refresh_btn.UseVisualStyleBackColor = false;
+            this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
             // 
             // columnHeader6
             // 
@@ -245,12 +248,13 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(3, 12);
+            this.btnLogout.Location = new System.Drawing.Point(12, 8);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(71, 23);
             this.btnLogout.TabIndex = 110;
             this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pictureBox2
             // 
@@ -266,6 +270,7 @@
             // 
             this.timerTime.Enabled = true;
             this.timerTime.Interval = 1000;
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
             // columnHeader7
             // 

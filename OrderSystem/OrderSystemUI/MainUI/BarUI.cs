@@ -31,7 +31,7 @@ namespace OrderSystemUI.MainUI
             //clears listview before filling it again
             listView1.Items.Clear();
             //Loops through orders and then loops through all orderitems in orders to get all orderitems from the database
-            orders = orderLogic.GetOrdersKitchenOpen();
+            orders = orderLogic.GetOrdersBarOpen();
             foreach (Order o in orders)
             {
                 orderlist = o;
@@ -48,7 +48,7 @@ namespace OrderSystemUI.MainUI
                     li.SubItems.Add(order.comment);
                     li.SubItems.Add(order.status.ToString());
 
-                    if (li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
+                    if (order.item.course == "drank" & li.SubItems.Count > 0 )
                     {
                         //If there is an order with status ordered, change color of listview to red and show the button to mark ready
                         listView1.BackColor = Color.Tomato;
@@ -108,7 +108,7 @@ namespace OrderSystemUI.MainUI
             //clears listview before filling it again
             listView1.Items.Clear();
             //Loops through orders and then loops through all orderitems in orders to get all orderitems from the database
-            orders = orderLogic.GetOrdersKitchenOpen();
+            orders = orderLogic.GetOrdersBarOpen();
             foreach (Order o in orders)
             {
                 orderlist = o;
@@ -125,7 +125,7 @@ namespace OrderSystemUI.MainUI
                     li.SubItems.Add(order.comment);
                     li.SubItems.Add(order.status.ToString());
 
-                    if (li.SubItems.Count > 0)
+                    if (order.item.course == "drank" & li.SubItems.Count > 0 & order.status == OrderItem.Status.ordered)
                     {
                         //If there is an order with status ordered, change color of listview to red and show the button to mark ready
                         listView1.BackColor = Color.Tomato;
