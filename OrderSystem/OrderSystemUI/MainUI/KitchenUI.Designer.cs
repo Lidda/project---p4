@@ -210,7 +210,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Dag";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 120;
             // 
             // columnHeader6
             // 
@@ -306,6 +306,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 681);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_FilterNew);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -320,7 +321,6 @@
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.btn_markReady1);
             this.Controls.Add(this.Refresh_btn);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pictureBox2);

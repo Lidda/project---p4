@@ -71,24 +71,7 @@ namespace OrderSystemDAL
             return orders;
         }
 
-        //begin kitchen and bar orders
-
-        //Gets orders for bar 
-        public List<Order> GetOrdersBarOpen()
-        {
-            string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE o.orderID >= 1 AND o.tableID >= 1  AND i.course LIKE '%drank' ORDER BY c.status asc, o.DateOrdered desc, c.timeOfOrder desc";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        //Gets orders for kitchen
-
-        public List<Order> GetOrdersKitchenOpen()
-        {
-            string query = "SELECT O.OrderID,  O.comment, O.employeeID, O.tableID, O.paymentStatus, O.DateOrdered, O.TotalAmount FROM [ORDERS] AS O JOIN ORDER_CONTAINS AS C ON o.orderID = c.orderID JOIN ITEMS AS I ON C.itemID = I.itemID WHERE o.orderID >= 1  AND o.tableID >= 1AND i.course NOT LIKE '%drank' ORDER BY c.status asc, o.DateOrdered desc, c.timeOfOrder desc";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
+      //Kitchen and bar status
 
         //Query to update status of order
         public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)

@@ -10,6 +10,7 @@ using System.Data;
 namespace OrderSystemDAL {
     public class OrderItemDAL : Base {
         ItemDAL itemDAL = new ItemDAL();
+       
 
         public List<OrderItem> Db_Get_All_OrderItems(int orderID) {
             string query = "SELECT itemID, orderItemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID ORDER BY orderitemID ASC";
@@ -19,7 +20,51 @@ namespace OrderSystemDAL {
             };
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
+        //Get orders for bar en kitchen
+        public List<OrderItem> Db_Get_OrdersKitchen()
+        {
+            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course NOT LIKE '%drank' ORDER BY o.status asc, o.timeOfOrder desc";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
+        }
 
+
+        public List<OrderItem> Db_Get_OrdersBar()
+        {
+            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course LIKE '%drank'ORDER BY o.status asc, o.timeOfOrder desc";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+
+        private List<OrderItem> ReadOrderItem(DataTable dataTable)
+        {
+            OrderDAL orderDAL = new OrderDAL();
+            List<OrderItem> orderItems = new List<OrderItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem orderItem = new OrderItem();
+                orderItem.item = itemDAL.Db_Get_Item(new Item { itemID = (int)dr["itemID"] });
+                orderItem.order = orderDAL.Db_Get_Order(new Order { orderID = (int)dr["orderID"] });
+                orderItem.ID = (int)dr["orderItemID"];
+                orderItem.amount = (int)dr["amount"];
+                orderItem.status = (OrderItem.Status)dr["status"];
+                if (dr["comment"] == DBNull.Value)
+                {
+                    orderItem.comment = "";
+                }
+                else
+                {
+                    orderItem.comment = (string)dr["comment"];
+                }
+                orderItem.TimeOfOrder = (DateTime)dr["timeOfOrder"];
+                orderItems.Add(orderItem);
+            }
+            return orderItems;
+        }
+
+        //end orders bar and kitchen
         private List<OrderItem> ReadOrderItems(DataTable dataTable) {
             List<OrderItem> orderItems = new List<OrderItem>();
 

@@ -24,7 +24,28 @@ namespace OrderSystemLogic
             }
         }
 
-
+        public List<OrderItem> GetOrdersKitchen()
+        {
+            try
+            {
+                return orderItem_db.Db_Get_OrdersKitchen();
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
+        public List<OrderItem> GetOrdersBar()
+        {
+            try
+            {
+                return orderItem_db.Db_Get_OrdersBar();
+            }
+            catch
+            {
+                throw new Exception("Could not get orders from database");
+            }
+        }
 
         public void UpdateOrderItems(OrderItem orderItems, int stockAmount)
         {

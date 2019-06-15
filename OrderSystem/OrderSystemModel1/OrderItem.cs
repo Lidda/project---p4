@@ -14,6 +14,7 @@ namespace OrderSystemModel
         public Status status { get; set; } 
         public int amount { get; set; }
         public Item item { get; set; }
+        public Order order { get; set; }
         public DateTime TimeOfOrder { get; set; }
         public string comment { get; set; }
 

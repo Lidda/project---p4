@@ -16,7 +16,6 @@ namespace OrderSystemModel
         public Employee Employee { get; set; }
         public Table Table { get; set; }
         public bool PaymentStatus { get; set; }
-        public OrderItem orderItem { get; set; }
 
         //list of ordered items
         public List<OrderItem> orderItems { get; set; }

@@ -224,7 +224,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Dag";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 120;
             // 
             // columnHeader1
             // 
