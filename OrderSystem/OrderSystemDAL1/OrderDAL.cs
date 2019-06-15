@@ -25,7 +25,7 @@ namespace OrderSystemDAL
             };
             return ReadOrders(ExecuteSelectQuery(query, sqlParameters))[0];
         }
-
+        
         public List<Order> Db_Get_All_Orders()
         {
             string query = "SELECT OrderID, comment, employeeID, tableID, paymentStatus, DateOrdered, TotalAmount FROM [ORDERS]";

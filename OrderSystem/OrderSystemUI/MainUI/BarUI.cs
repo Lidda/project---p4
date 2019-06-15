@@ -29,7 +29,6 @@ namespace OrderSystemUI.MainUI
             
         }
 
-
         public void OrdersAll(List<OrderItem> orders)
         {
             //clears listview before filling it again
@@ -120,6 +119,7 @@ namespace OrderSystemUI.MainUI
             if(listView1.Items.Count == 0)
             {
                 listView1.BackColor = Color.MediumSeaGreen;
+                btn_markReady1.Hide();
             }
 
         }

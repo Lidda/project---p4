@@ -23,7 +23,7 @@ namespace OrderSystemLogic
                 throw new Exception("Could not get order from database");
             }
         }
-        
+       
         public List<Order> Get_All_Orders()
         {
             try

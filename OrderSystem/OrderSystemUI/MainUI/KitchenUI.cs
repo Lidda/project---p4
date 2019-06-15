@@ -26,10 +26,8 @@ namespace OrderSystemUI.MainUI
             //Loads order method
             btn_markReady1.Hide();
             OrdersAll(orders);
-
         }
-
-
+        
         public void OrdersAll(List<OrderItem> orders)
         {
             //clears listview before filling it again
@@ -106,7 +104,6 @@ namespace OrderSystemUI.MainUI
 
         private void btn_FilterNew_Click(object sender, EventArgs e)
         {
-
             for (int i = listView1.Items.Count - 1; i >= 0; --i)
                 if (listView1.Items[i].SubItems[7].Text == "ready")
                 {
@@ -115,6 +112,7 @@ namespace OrderSystemUI.MainUI
             if (listView1.Items.Count == 0)
             {
                 listView1.BackColor = Color.MediumSeaGreen;
+                btn_markReady1.Hide();
             }
         }
 

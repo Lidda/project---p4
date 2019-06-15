@@ -23,7 +23,7 @@ namespace OrderSystemDAL {
         //Get orders for bar en kitchen
         public List<OrderItem> Db_Get_OrdersKitchen()
         {
-            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course NOT LIKE '%drank' ORDER BY o.status asc, o.timeOfOrder desc";
+            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID INNER JOIN ORDERS AS C ON o.orderID = c.orderID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND c.DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120)  AND i.course NOT LIKE '%drank' ORDER BY o.status asc, o.timeOfOrder desc";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,12 +31,12 @@ namespace OrderSystemDAL {
 
         public List<OrderItem> Db_Get_OrdersBar()
         {
-            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course LIKE '%drank'ORDER BY o.status asc, o.timeOfOrder desc";
+            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID INNER JOIN ORDERS AS C on o.orderID = c.orderID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND c.DateOrdered >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course LIKE '%drank'ORDER BY o.status asc, o.timeOfOrder desc";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
-
+        //end bar and kitchen
         private List<OrderItem> ReadOrderItem(DataTable dataTable)
         {
             OrderDAL orderDAL = new OrderDAL();
