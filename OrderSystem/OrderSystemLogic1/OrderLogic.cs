@@ -25,11 +25,13 @@ namespace OrderSystemLogic
         }
 
 
-        public List<Order> GetOrderskitchen(int tableID)
+     
+
+        public List<Order> GetOrdersKitchenOpen()
         {
             try
             {
-                return orderDAL.GetOrdersKitchen(tableID);
+                return orderDAL.GetOrdersKitchenOpen();
             }
             catch
             {
@@ -76,9 +78,9 @@ namespace OrderSystemLogic
         {
             orderDAL.ChangeStatusBar(tableID, status, statusChange);
         }
-        public void ChangeStatusKitchen(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
+        public void ChangeStatusKitchen(int orderItemID, OrderItem.Status statusChange)
         {
-            orderDAL.ChangeStatusKitchen(tableID, status, statusChange);
+            orderDAL.ChangeStatusKitchen(orderItemID, statusChange);
         }
 
         public List<Profit> DailyProfit()
