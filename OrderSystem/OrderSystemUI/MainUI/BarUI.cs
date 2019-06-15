@@ -94,7 +94,6 @@ namespace OrderSystemUI.MainUI
         {
             //Mark order ready
             ChangeOrderStatus(listView1);
-            OrdersAll(orders);
 
         }
 
