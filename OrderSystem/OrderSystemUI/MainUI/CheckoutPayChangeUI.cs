@@ -29,9 +29,10 @@ namespace OrderSystemUI.MainUI
             lblChange.Hide();
             lblChangeText.Hide();
             lblNotEnough.Hide();
+            lblEuroSign.Hide();
 
             //set text
-            lblTotalAmount.Text = string.Format("€ {0:0.00}", order.GetTotalAmount("Total"));
+            lblTotalAmount.Text = string.Format("{0:0.00}", order.GetTotalAmount("Total"));
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -64,6 +65,9 @@ namespace OrderSystemUI.MainUI
                 lblChange.Show();
                 lblChangeText.Show();
                 change = change - order.GetTotalAmount("Total");
+                //check if textbox is empty or textboc contains a dot
+                if (string.IsNullOrWhiteSpace(txtChangeAmount.Text) || txtChangeAmount.Text.Contains('.'))
+                    throw new Exception();
 
                 //check if customer paid enough
                 if (change < 0)
@@ -73,12 +77,13 @@ namespace OrderSystemUI.MainUI
                 }
                 
                 //show amount change
-                lblChange.Text = string.Format("€ {0:0.00}", change);
+                lblChange.Text = string.Format("{0:0.00}", change);
+                lblEuroSign.Show();
                 
             }
             catch
             {
-                MessageBox.Show("Invoer moet een cijfer zijn en hoger dan het totaal bedrag zijn!");
+                MessageBox.Show("Invoer moet een geldig cijfer zijn en hoger dan het totaal bedrag zijn!");
             }
             finally
             {

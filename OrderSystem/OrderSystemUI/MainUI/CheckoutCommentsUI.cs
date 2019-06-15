@@ -55,14 +55,21 @@ namespace OrderSystemUI.MainUI
         private void btnAddCommentToOrder_Click(object sender, EventArgs e)
         {
             //add comment/alter comment
-            order.comment = txtComment.Text;
-            orderLogic.Edit_Order_Comment(order);
-            InitComments();
+            if (!string.IsNullOrWhiteSpace(txtComment.Text))
+            {
+                order.comment = txtComment.Text;
+                orderLogic.Edit_Order_Comment(order);
+                InitComments();
+            }
+            else
+            {
+                MessageBox.Show("Vul eerst een opmerking in!");
+            }
         }
 
         private void btnDeleteComment_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("weet je zeker dat je deze opmerking wilt verwijderen?",
+            var confirmResult = MessageBox.Show("Weet u zeker dat u deze opmerking wilt verwijderen?",
                                      "Bevestig verwijderen!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)

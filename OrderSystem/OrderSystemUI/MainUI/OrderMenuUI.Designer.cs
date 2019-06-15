@@ -242,7 +242,7 @@
             this.btn_OrderOverview.Name = "btn_OrderOverview";
             this.btn_OrderOverview.Size = new System.Drawing.Size(95, 37);
             this.btn_OrderOverview.TabIndex = 50;
-            this.btn_OrderOverview.Text = "CONFIRM";
+            this.btn_OrderOverview.Text = "Bevestig";
             this.btn_OrderOverview.UseVisualStyleBackColor = false;
             this.btn_OrderOverview.Click += new System.EventHandler(this.btn_ConfirmOrder_Click);
             // 
@@ -851,7 +851,6 @@
             // 
             this.btn_SubtractSideDishDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractSideDishDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_SubtractSideDishDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractSideDishDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractSideDishDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractSideDishDinner.Location = new System.Drawing.Point(404, 494);
@@ -866,7 +865,6 @@
             // 
             this.btn_AddSideDishDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddSideDishDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_AddSideDishDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddSideDishDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddSideDishDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddSideDishDinner.Location = new System.Drawing.Point(404, 424);
@@ -881,7 +879,6 @@
             // 
             this.btn_SubtractMainCourseDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractMainCourseDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_SubtractMainCourseDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractMainCourseDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractMainCourseDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractMainCourseDinner.Location = new System.Drawing.Point(404, 319);
@@ -896,7 +893,6 @@
             // 
             this.btn_AddMainCourseDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddMainCourseDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_AddMainCourseDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddMainCourseDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddMainCourseDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddMainCourseDinner.Location = new System.Drawing.Point(404, 249);
@@ -911,7 +907,6 @@
             // 
             this.btn_SubtractStarterDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_SubtractStarterDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_SubtractStarterDinner.FlatAppearance.BorderSize = 0;
             this.btn_SubtractStarterDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SubtractStarterDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SubtractStarterDinner.Location = new System.Drawing.Point(404, 144);
@@ -926,7 +921,6 @@
             // 
             this.btn_AddStarterDinner.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_AddStarterDinner.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_AddStarterDinner.FlatAppearance.BorderSize = 0;
             this.btn_AddStarterDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddStarterDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddStarterDinner.Location = new System.Drawing.Point(404, 74);
@@ -1056,7 +1050,7 @@
             this.pnl_Drinks.Controls.Add(this.lbl_WarmDrinks);
             this.pnl_Drinks.Controls.Add(this.lbl_Soda);
             this.pnl_Drinks.Controls.Add(this.lbl_Wine);
-            this.pnl_Drinks.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Drinks.Location = new System.Drawing.Point(0, 1);
             this.pnl_Drinks.Name = "pnl_Drinks";
             this.pnl_Drinks.Size = new System.Drawing.Size(487, 576);
             this.pnl_Drinks.TabIndex = 111;
