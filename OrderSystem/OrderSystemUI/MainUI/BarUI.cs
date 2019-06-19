@@ -61,25 +61,20 @@ namespace OrderSystemUI.MainUI
                     listView1.BackColor = Color.MediumSeaGreen;
                     btn_markReady1.Hide();
                 }
-
             }
-
         }
         private void Refresh_btn_Click(object sender, EventArgs e)
         {
             //Loads all orders again
             OrdersAll(orders);
-
-
         }
+
         private void timerTime_Tick(object sender, EventArgs e)
         {
             //Shows time and refreshes every second
             this.TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-
-
-
+        
         private void btnLogout_Click(object sender, EventArgs e)
         {
             //brings you back to login screen
