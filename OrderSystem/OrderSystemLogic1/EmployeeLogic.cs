@@ -16,7 +16,7 @@ namespace OrderSystemLogic
             try {
                 employee_db.AddEmployee(employee);
             } catch {
-                throw new Exception("Yikes, dat is niet best");
+                throw new Exception("Something went wrong.");
             }
         }
 
@@ -24,7 +24,7 @@ namespace OrderSystemLogic
             try {
                 return employee_db.Db_Get_All_Employees();
             } catch {
-                throw new Exception("Yikes, dat is ook niet best");
+                throw new Exception("Something went wrong.");
             }
         }
 
@@ -32,17 +32,18 @@ namespace OrderSystemLogic
             try {
                 employee_db.EditEmployee(employee);
             } catch {
-                throw new Exception("Yikes, dat is  al helemaal niet best");
+                throw new Exception("Something went wrong.");
             }
         }
 
         public void DeleteEmployee(Employee employee) {
-            try {
+            try
+            {
                 employee_db.DeleteEmployee(employee);
-            } catch {
-                throw new Exception("Yikes, dat is  al helemaaaaaal niet best");
-            }
-        }
+        } catch {
+                throw new Exception("Something went wrong.");
+    }
+}
 
         public bool CheckForUser(Employee employee) {
             try {

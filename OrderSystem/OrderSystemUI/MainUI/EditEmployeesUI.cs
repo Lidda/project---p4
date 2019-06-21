@@ -138,11 +138,11 @@ namespace OrderSystemUI
 
         private void DeleteEmployee_Click(object sender, EventArgs e)
         {
-            if (selectedEmployee.ID != 0)
+            if (selectedEmployee.ID >= 0)
             {
                 if (MessageBox.Show("Weet u zeker dat u deze medewerker wilt verwijderen?", "Deleten...", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    employeeLogic.DeleteEmployee(new Employee { ID = selectedEmployee.ID });
+                    employeeLogic.DeleteEmployee(selectedEmployee);
                     selectedEmployee = new Employee();
                     MessageBox.Show("Medewerker is succesvol gedeletet");
                     ShowPanel("PNL_ManageEmployees");

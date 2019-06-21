@@ -40,10 +40,10 @@ namespace OrderSystemDAL
 
         //Delete an employee from the database
         public void DeleteEmployee(Employee employee) {
-            string query = "DELETE FROM [EMPLOYEES] WHERE employeeID = @id";
+            string query = "DELETE FROM [EMPLOYEES] WHERE employeeID = @employeeID";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
-                new SqlParameter("@id", employee.ID)
+                new SqlParameter("@employeeID", employee.ID)
             };
             ExecuteEditQuery(query, sqlParameters);
         }
