@@ -52,7 +52,7 @@ namespace OrderSystemLogic
         {
             orderDAL.ChangeStatusBar(tableID, status, statusChange);
         }
-        public void ChangeStatusKitchen(int orderItemID, OrderItem.Status statusChange)
+        public void ChangeStatusOrder(int orderItemID, OrderItem.Status statusChange)
         {
             orderDAL.ChangeStatusKitchen(orderItemID, statusChange);
         }
