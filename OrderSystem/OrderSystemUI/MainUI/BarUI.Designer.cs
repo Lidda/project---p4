@@ -99,7 +99,7 @@
             this.btn_FilterNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FilterNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FilterNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_FilterNew.Location = new System.Drawing.Point(1068, 90);
+            this.btn_FilterNew.Location = new System.Drawing.Point(1090, 90);
             this.btn_FilterNew.Name = "btn_FilterNew";
             this.btn_FilterNew.Size = new System.Drawing.Size(133, 42);
             this.btn_FilterNew.TabIndex = 127;
@@ -292,7 +292,7 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Naam";
-            this.columnHeader7.Width = 200;
+            this.columnHeader7.Width = 220;
             // 
             // listView1
             // 
@@ -312,7 +312,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(92, 138);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1109, 435);
+            this.listView1.Size = new System.Drawing.Size(1131, 435);
             this.listView1.TabIndex = 112;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -364,9 +364,9 @@
             this.listView2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(92, 138);
+            this.listView2.Location = new System.Drawing.Point(92, 139);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1109, 435);
+            this.listView2.Size = new System.Drawing.Size(1131, 435);
             this.listView2.TabIndex = 130;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -389,7 +389,7 @@
             // columnHeader12
             // 
             this.columnHeader12.Text = "Naam";
-            this.columnHeader12.Width = 200;
+            this.columnHeader12.Width = 220;
             // 
             // columnHeader13
             // 
