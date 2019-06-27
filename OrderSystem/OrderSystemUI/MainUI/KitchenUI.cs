@@ -137,18 +137,20 @@ namespace OrderSystemUI.MainUI
         private void btn_OrderHistory_Click(object sender, EventArgs e)
         {
             listView1.Hide();
-            listView2.Show();
             btn_markReady1.Hide();
+            btn_FilterNew.Hide();
             btn_OrderHistory.Hide();
+            listView2.Show();
             btn_OrderOverview.Show();
         }
 
         private void btn_OrderOverview_Click(object sender, EventArgs e)
         {
-            listView1.Show();
             listView2.Hide();
-            btn_OrderHistory.Show();
             btn_OrderOverview.Hide();
+            btn_OrderHistory.Show();
+            btn_FilterNew.Show();
+            listView1.Show();
             if (listView1.Items.Count > 0)
             {
                 btn_markReady1.Show();
