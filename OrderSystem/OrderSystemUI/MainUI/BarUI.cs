@@ -24,6 +24,8 @@ namespace OrderSystemUI.MainUI
             InitializeComponent();
             //Loads orders and hides mark ready button
             btn_markReady1.Hide();
+            btn_OrderOverview.Hide();
+            listView2.Hide();
             OrdersAll();
         }
 
@@ -59,6 +61,10 @@ namespace OrderSystemUI.MainUI
                     btn_markReady1.Show();
                 }
 
+                if (order.status == OrderItem.Status.delivered)
+                {
+                    listView2.Items.Add(li);
+                }
             }
 
         }
@@ -100,7 +106,7 @@ namespace OrderSystemUI.MainUI
                 int orderItemID = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
                 //Change status on orderItemID to ready
                 orderLogic.ChangeOrderStatus(orderItemID, OrderItem.Status.ready);
-                //Change status column to ready manually and changes color of that row to green
+                //Change status column to ready manually
                 listView1.SelectedItems[0].SubItems[7].Text = "ready";
                 listView1.SelectedItems[0].BackColor = Color.MediumSeaGreen;
             }
@@ -128,6 +134,26 @@ namespace OrderSystemUI.MainUI
             }
         }
 
+        private void btn_OrderHistory_Click(object sender, EventArgs e)
+        {
+            listView1.Hide();
+            listView2.Show();
+            btn_markReady1.Hide();
+            btn_OrderHistory.Hide();
+            btn_OrderOverview.Show();
+        }
+
+        private void btn_OrderOverview_Click(object sender, EventArgs e)
+        {
+            listView1.Show();
+            listView2.Hide();
+            btn_OrderHistory.Show();
+            btn_OrderOverview.Hide();
+            if (listView1.Items.Count > 0)
+            {
+                btn_markReady1.Show();
+            }
+        }
     }
 }
 

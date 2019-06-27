@@ -57,6 +57,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_FilterNew = new System.Windows.Forms.Button();
+            this.btn_OrderHistory = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_OrderOverview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -307,11 +318,107 @@
             this.btn_FilterNew.UseVisualStyleBackColor = false;
             this.btn_FilterNew.Click += new System.EventHandler(this.btn_FilterNew_Click);
             // 
+            // btn_OrderHistory
+            // 
+            this.btn_OrderHistory.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_OrderHistory.FlatAppearance.BorderSize = 0;
+            this.btn_OrderHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OrderHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OrderHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_OrderHistory.Location = new System.Drawing.Point(108, 89);
+            this.btn_OrderHistory.Name = "btn_OrderHistory";
+            this.btn_OrderHistory.Size = new System.Drawing.Size(133, 42);
+            this.btn_OrderHistory.TabIndex = 110;
+            this.btn_OrderHistory.Text = "Geschiedenis";
+            this.btn_OrderHistory.UseVisualStyleBackColor = false;
+            this.btn_OrderHistory.Click += new System.EventHandler(this.btn_OrderHistory_Click);
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(108, 137);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1109, 435);
+            this.listView2.TabIndex = 111;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.VirtualListSize = 5;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ID";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Dag";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tijd";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Naam";
+            this.columnHeader12.Width = 200;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Aantal";
+            this.columnHeader13.Width = 80;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Tafel";
+            this.columnHeader14.Width = 74;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Comment";
+            this.columnHeader15.Width = 350;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Status";
+            this.columnHeader16.Width = 120;
+            // 
+            // btn_OrderOverview
+            // 
+            this.btn_OrderOverview.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_OrderOverview.FlatAppearance.BorderSize = 0;
+            this.btn_OrderOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OrderOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OrderOverview.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_OrderOverview.Location = new System.Drawing.Point(108, 89);
+            this.btn_OrderOverview.Name = "btn_OrderOverview";
+            this.btn_OrderOverview.Size = new System.Drawing.Size(133, 42);
+            this.btn_OrderOverview.TabIndex = 112;
+            this.btn_OrderOverview.Text = "Overzicht";
+            this.btn_OrderOverview.UseVisualStyleBackColor = false;
+            this.btn_OrderOverview.Click += new System.EventHandler(this.btn_OrderOverview_Click);
+            // 
             // KitchenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 681);
+            this.Controls.Add(this.btn_OrderOverview);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.btn_OrderHistory);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_FilterNew);
             this.Controls.Add(this.pictureBox1);
@@ -367,5 +474,16 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btn_FilterNew;
+        private System.Windows.Forms.Button btn_OrderHistory;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Button btn_OrderOverview;
     }
 }
