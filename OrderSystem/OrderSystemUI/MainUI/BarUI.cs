@@ -99,7 +99,7 @@ namespace OrderSystemUI.MainUI
                 //Gets orderID from first column and sets orderItemID to that value
                 int orderItemID = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
                 //Change status on orderItemID to ready
-                orderLogic.ChangeStatusOrder(orderItemID, OrderItem.Status.ready);
+                orderLogic.ChangeOrderStatus(orderItemID, OrderItem.Status.ready);
                 //Change status column to ready manually
                 listView1.SelectedItems[0].SubItems[7].Text = "ready";
             }

@@ -44,17 +44,9 @@ namespace OrderSystemLogic
             }
         }
 
-        public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
+        public void ChangeOrderStatus(int orderItemID, OrderItem.Status statusChange)
         {
-            orderDAL.ChangeOrderStatus(tableID, status, statusChange);
-        }
-        public void ChangeStatusBar(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
-        {
-            orderDAL.ChangeStatusBar(tableID, status, statusChange);
-        }
-        public void ChangeStatusOrder(int orderItemID, OrderItem.Status statusChange)
-        {
-            orderDAL.ChangeStatusKitchen(orderItemID, statusChange);
+            orderDAL.ChangeOrderStatus(orderItemID, statusChange);
         }
 
         public List<Profit> DailyProfit()

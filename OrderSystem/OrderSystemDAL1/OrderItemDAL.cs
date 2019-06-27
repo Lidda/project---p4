@@ -13,7 +13,7 @@ namespace OrderSystemDAL {
        
 
         public List<OrderItem> Db_Get_All_OrderItems(int orderID) {
-            string query = "SELECT itemID, orderItemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE OrderID = @OrderID ORDER BY orderitemID ASC";
+            string query = "SELECT itemID, orderItemID, [status], amount, comment, timeOfOrder FROM [ORDER_CONTAINS] WHERE orderID = @OrderID ORDER BY orderItemID ASC";
             SqlParameter[] sqlParameters = new SqlParameter[]
             {
                 new SqlParameter("@OrderID", orderID)
@@ -28,10 +28,9 @@ namespace OrderSystemDAL {
             return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
-
         public List<OrderItem> Db_Get_OrdersBar()
         {
-            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID INNER JOIN ORDERS AS C on o.orderID = c.orderID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course LIKE '%drank'ORDER BY o.status asc, o.timeOfOrder asc";
+            string query = "SELECT o.itemID, o.orderID, o.orderItemID, o.[status], o.amount, o.comment, o.timeOfOrder FROM [ORDER_CONTAINS] AS O INNER JOIN ITEMS AS I ON o.itemID = i.itemID INNER JOIN ORDERS AS C on o.orderID = c.orderID WHERE o.timeOfOrder >= CONVERT(datetime, convert(varchar(10), GETDATE(), 120), 120) AND i.course LIKE '%drank' ORDER BY o.status asc, o.timeOfOrder asc";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }

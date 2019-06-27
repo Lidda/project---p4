@@ -19,13 +19,12 @@ namespace OrderSystemUI {
         List<Button> buttons = new List<Button>();
         List<Order> orders = new List<Order>();
         Employee employee;
-        TableLogic tableLogic;
+        TableLogic tableLogic = new TableLogic();
         OrderLogic orderLogic = new OrderLogic();
         private static System.Timers.Timer orderStatusTimer;
 
         public TableOverviewUI(Employee employee) {
             this.employee = employee;
-            tableLogic = new TableLogic();
             InitializeComponent();
 
             buttons.Add(btnTable1);
@@ -41,7 +40,6 @@ namespace OrderSystemUI {
 
             //initialize tables by getting them from the database
             tables = tableLogic.GetAllTables();
-            //SetTableColors();
             SetTableColors();
 
             OrderStatusTimer();
@@ -109,61 +107,61 @@ namespace OrderSystemUI {
 
         private void mark1_Click_1(object sender, EventArgs e) {
             mark1.Hide();
-            orderLogic.ChangeOrderStatus(tables[0].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[0]);
             TimeMark1.Visible = false;
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
             mark2.Hide();
-            orderLogic.ChangeOrderStatus(tables[1].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[1]);
             TimeMark2.Visible = false;
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
             mark3.Hide();
-            orderLogic.ChangeOrderStatus(tables[2].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[2]);
             TimeMark3.Visible = false;
         }
 
         private void mark4_Click_1(object sender, EventArgs e) {
             mark4.Hide();
-            orderLogic.ChangeOrderStatus(tables[3].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[3]);
             TimeMark4.Visible = false;
         }
 
         private void mark5_Click_1(object sender, EventArgs e) {
             mark5.Hide();
-            orderLogic.ChangeOrderStatus(tables[4].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[4]);
             TimeMark5.Visible = false;
         }
 
         private void mark6_Click_1(object sender, EventArgs e) {
             mark6.Hide();
-            orderLogic.ChangeOrderStatus(tables[5].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[5]);
             TimeMark6.Visible = false;
         }
 
         private void mark7_Click_1(object sender, EventArgs e) {
             mark7.Hide();
-            orderLogic.ChangeOrderStatus(tables[6].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[6]);
             TimeMark7.Visible = false;
         }
 
         private void mark8_Click_1(object sender, EventArgs e) {
             mark8.Hide();
-            orderLogic.ChangeOrderStatus(tables[7].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[7]);
             TimeMark8.Visible = false;
         }
 
         private void mark9_Click_1(object sender, EventArgs e) {
             mark9.Hide();
-            orderLogic.ChangeOrderStatus(tables[8].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[8]);
             TimeMark9.Visible = false;
         }
 
         private void mark10_Click_1(object sender, EventArgs e) {
             mark10.Hide();
-            orderLogic.ChangeOrderStatus(tables[9].ID, OrderItem.Status.ready, OrderItem.Status.delivered);
+            ChangeOrderItemStatusses(tables[9]);
             TimeMark10.Visible = false;
         }
 
@@ -236,6 +234,27 @@ namespace OrderSystemUI {
                         }
                     }
                 }
+            }
+        }
+
+        private void ChangeOrderItemStatusses(Table table) {
+            List<OrderItem> readyOrderItems = new List<OrderItem>();
+
+            foreach (Order o in orders) {
+
+                if (o.Table.ID == table.ID) {
+
+                    // loops through all the orderItems & checks if food and/or drinks are READY
+                    foreach (OrderItem i in o.orderItems) {
+                        if (i.status == OrderItem.Status.ready) {
+                            readyOrderItems.Add(i);
+                        }
+                    }
+                }
+            }
+
+            foreach (OrderItem i in readyOrderItems) {
+                orderLogic.ChangeOrderStatus(i.ID, OrderItem.Status.delivered);
             }
         }
 

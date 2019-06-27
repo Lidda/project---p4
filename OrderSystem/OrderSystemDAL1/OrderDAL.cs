@@ -71,32 +71,14 @@ namespace OrderSystemDAL
             return orders;
         }
 
-      //Kitchen and bar status
-
         //Query to update status of order
-        public void ChangeOrderStatus(int tableID, OrderItem.Status status, OrderItem.Status statusChange)
-        {
-            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.[status] = " + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ORDERS ON ORDER_CONTAINS.orderID = ORDERS.orderID WHERE ORDERS.TABLEID = " + tableID + " AND ORDER_CONTAINS.[status] = " + (int)status + "";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteEditQuery(query, sqlParameters);
-        }
-        //change status for orders from bar
-        public void ChangeStatusBar(int orderItemID, OrderItem.Status status, OrderItem.Status statusChange)
-        {
-            string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS INNER JOIN ITEMS ON ITEMS.itemID = ORDER_CONTAINS.itemID WHERE ORDER_CONTAINS.orderItemID = " + orderItemID + " AND ITEMS.course LIKE '%Drank' AND ORDER_CONTAINS.status = " + (int)status;
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteEditQuery(query, sqlParameters);
-        }
-        //change status for orders from kitchen
-        public void ChangeStatusKitchen(int orderItemID, OrderItem.Status statusChange)
+        public void ChangeOrderStatus(int orderItemID, OrderItem.Status statusChange)
         {
             string query = "UPDATE ORDER_CONTAINS SET ORDER_CONTAINS.status =" + (int)statusChange + " FROM ORDER_CONTAINS WHERE ORDER_CONTAINS.orderItemID = " + orderItemID + "";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
         
-        //end kitchen and bar orders
-
         //begin profits
         public List<Profit> GetDailyProfits()
         {

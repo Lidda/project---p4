@@ -69,7 +69,7 @@
             // columnHeader10
             // 
             this.columnHeader10.Text = "Comment";
-            this.columnHeader10.Width = 200;
+            this.columnHeader10.Width = 350;
             // 
             // columnHeader11
             // 
@@ -84,9 +84,11 @@
             // btn_FilterNew
             // 
             this.btn_FilterNew.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_FilterNew.FlatAppearance.BorderSize = 0;
+            this.btn_FilterNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FilterNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FilterNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_FilterNew.Location = new System.Drawing.Point(1015, 90);
+            this.btn_FilterNew.Location = new System.Drawing.Point(1068, 90);
             this.btn_FilterNew.Name = "btn_FilterNew";
             this.btn_FilterNew.Size = new System.Drawing.Size(133, 42);
             this.btn_FilterNew.TabIndex = 127;
@@ -191,6 +193,8 @@
             // btn_markReady1
             // 
             this.btn_markReady1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_markReady1.FlatAppearance.BorderSize = 0;
+            this.btn_markReady1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_markReady1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_markReady1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_markReady1.Location = new System.Drawing.Point(599, 596);
@@ -205,6 +209,7 @@
             // 
             this.Refresh_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Refresh_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Refresh_btn.FlatAppearance.BorderSize = 0;
             this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Refresh_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Refresh_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -245,6 +250,7 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -293,9 +299,9 @@
             this.listView1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(190, 139);
+            this.listView1.Location = new System.Drawing.Point(92, 138);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(969, 435);
+            this.listView1.Size = new System.Drawing.Size(1109, 435);
             this.listView1.TabIndex = 112;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
