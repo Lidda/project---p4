@@ -79,7 +79,7 @@
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Comment";
+            this.columnHeader10.Text = "Opmerking";
             this.columnHeader10.Width = 350;
             // 
             // columnHeader11
@@ -103,7 +103,7 @@
             this.btn_FilterNew.Name = "btn_FilterNew";
             this.btn_FilterNew.Size = new System.Drawing.Size(133, 42);
             this.btn_FilterNew.TabIndex = 127;
-            this.btn_FilterNew.Text = "Filter nieuwe orders";
+            this.btn_FilterNew.Text = "Filter nieuwe bestellingen";
             this.btn_FilterNew.UseVisualStyleBackColor = false;
             this.btn_FilterNew.Click += new System.EventHandler(this.btn_FilterNew_Click);
             // 
@@ -403,7 +403,7 @@
             // 
             // columnHeader15
             // 
-            this.columnHeader15.Text = "Comment";
+            this.columnHeader15.Text = "Opmerking";
             this.columnHeader15.Width = 350;
             // 
             // columnHeader16
