@@ -22,10 +22,9 @@ namespace OrderSystemUI.MainUI
         {
             this.employee = employee;
             InitializeComponent();
-            //Loads orders and hides mark ready button 
+            //Loads orders and hides mark ready button
             btn_markReady1.Hide();
             OrdersAll();
-
         }
 
         public void OrdersAll()
@@ -48,26 +47,28 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(order.comment);
                 li.SubItems.Add(order.status.ToString());
 
-                if (li.SubItems.Count > 0)
+                if (li.SubItems.Count > 0 & order.status != OrderItem.Status.delivered)
                 {
-                    //If there are orders in the listview, change color and show button
-                    listView1.BackColor = Color.Tomato;
+                    //If there is an order with status ordered, change color  and show the button to mark ready
+
+                    if (order.status == OrderItem.Status.ordered)
+                    {
+                        li.BackColor = Color.Tomato;
+                    }
                     listView1.Items.Add(li);
                     btn_markReady1.Show();
                 }
-                if (li.SubItems.Count == 0)
-                {
-                    listView1.BackColor = Color.MediumSeaGreen;
-                    btn_markReady1.Hide();
-                }
+
             }
+
         }
         private void Refresh_btn_Click(object sender, EventArgs e)
         {
             //Loads all orders again
             OrdersAll();
-        }
 
+
+        }
         private void timerTime_Tick(object sender, EventArgs e)
         {
             //Shows time and refreshes every second
@@ -88,7 +89,6 @@ namespace OrderSystemUI.MainUI
         {
             //Mark order ready
             ChangeOrderStatus();
-
         }
 
         private void ChangeOrderStatus()
@@ -100,12 +100,18 @@ namespace OrderSystemUI.MainUI
                 int orderItemID = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
                 //Change status on orderItemID to ready
                 orderLogic.ChangeOrderStatus(orderItemID, OrderItem.Status.ready);
-                //Change status column to ready manually
+                //Change status column to ready manually and changes color of that row to green
                 listView1.SelectedItems[0].SubItems[7].Text = "ready";
+                listView1.SelectedItems[0].BackColor = Color.MediumSeaGreen;
             }
         }
 
         private void btn_FilterNew_Click(object sender, EventArgs e)
+        {
+            FilterOrdersNew();
+        }
+
+        private void FilterOrdersNew()
         {
             //Loops through listview to check columns with value ready
             for (int i = listView1.Items.Count - 1; i >= 0; --i)
@@ -117,7 +123,6 @@ namespace OrderSystemUI.MainUI
             //If there are no listview items in listview, change color and hide mark ready button
             if (listView1.Items.Count == 0)
             {
-
                 listView1.BackColor = Color.MediumSeaGreen;
                 btn_markReady1.Hide();
             }

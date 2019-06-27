@@ -47,10 +47,14 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(order.comment);
                 li.SubItems.Add(order.status.ToString());
 
-                if (li.SubItems.Count > 0)
+                if (li.SubItems.Count > 0 & order.status != OrderItem.Status.delivered)
                 {
                     //If there is an order with status ordered, change color  and show the button to mark ready
-                    listView1.BackColor = Color.Tomato;
+
+                    if (order.status == OrderItem.Status.ordered)
+                    {
+                        li.BackColor = Color.Tomato;
+                    }
                     listView1.Items.Add(li);
                     btn_markReady1.Show();
                 }
@@ -98,6 +102,7 @@ namespace OrderSystemUI.MainUI
                 orderLogic.ChangeOrderStatus(orderItemID, OrderItem.Status.ready);
                 //Change status column to ready manually
                 listView1.SelectedItems[0].SubItems[7].Text = "ready";
+                listView1.SelectedItems[0].BackColor = Color.MediumSeaGreen;
             }
         }
 
