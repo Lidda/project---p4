@@ -43,7 +43,7 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.btn_markReady1 = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.LvOverview = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,7 +58,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_FilterNew = new System.Windows.Forms.Button();
             this.btn_OrderHistory = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.LvHistory = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -193,10 +193,10 @@
             this.Refresh_btn.UseVisualStyleBackColor = false;
             this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
             // 
-            // listView1
+            // LvOverview
             // 
-            this.listView1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LvOverview.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LvOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader5,
             this.columnHeader6,
@@ -205,17 +205,17 @@
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(108, 137);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1131, 435);
-            this.listView1.TabIndex = 50;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.VirtualListSize = 5;
+            this.LvOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LvOverview.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LvOverview.FullRowSelect = true;
+            this.LvOverview.GridLines = true;
+            this.LvOverview.Location = new System.Drawing.Point(108, 137);
+            this.LvOverview.Name = "LvOverview";
+            this.LvOverview.Size = new System.Drawing.Size(1131, 435);
+            this.LvOverview.TabIndex = 50;
+            this.LvOverview.UseCompatibleStateImageBehavior = false;
+            this.LvOverview.View = System.Windows.Forms.View.Details;
+            this.LvOverview.VirtualListSize = 5;
             // 
             // columnHeader1
             // 
@@ -333,10 +333,10 @@
             this.btn_OrderHistory.UseVisualStyleBackColor = false;
             this.btn_OrderHistory.Click += new System.EventHandler(this.btn_OrderHistory_Click);
             // 
-            // listView2
+            // LvHistory
             // 
-            this.listView2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LvHistory.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LvHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
@@ -345,17 +345,17 @@
             this.columnHeader14,
             this.columnHeader15,
             this.columnHeader16});
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(108, 138);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1131, 435);
-            this.listView2.TabIndex = 111;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.VirtualListSize = 5;
+            this.LvHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LvHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LvHistory.FullRowSelect = true;
+            this.LvHistory.GridLines = true;
+            this.LvHistory.Location = new System.Drawing.Point(108, 138);
+            this.LvHistory.Name = "LvHistory";
+            this.LvHistory.Size = new System.Drawing.Size(1131, 435);
+            this.LvHistory.TabIndex = 111;
+            this.LvHistory.UseCompatibleStateImageBehavior = false;
+            this.LvHistory.View = System.Windows.Forms.View.Details;
+            this.LvHistory.VirtualListSize = 5;
             // 
             // columnHeader2
             // 
@@ -416,10 +416,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 681);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.LvHistory);
             this.Controls.Add(this.btn_OrderOverview);
             this.Controls.Add(this.btn_OrderHistory);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.LvOverview);
             this.Controls.Add(this.btn_FilterNew);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -460,7 +460,7 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Button btn_markReady1;
         private System.Windows.Forms.Button Refresh_btn;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView LvOverview;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -475,7 +475,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btn_FilterNew;
         private System.Windows.Forms.Button btn_OrderHistory;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView LvHistory;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;

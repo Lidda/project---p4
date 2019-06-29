@@ -25,14 +25,14 @@ namespace OrderSystemUI.MainUI
             //Loads orders and hides mark ready button
             btn_markReady1.Hide();
             btn_OrderOverview.Hide();
-            listView2.Hide();
+            LvHistory.Hide();
             OrdersAll();
         }
 
         public void OrdersAll()
         {
             //clears listview before filling it again
-            listView1.Items.Clear();
+            LvOverview.Items.Clear();
             //gets all orders from database
             orders = orderItemLogic.GetOrdersBar();
             //Loops through orders to get all orderitems from the database
@@ -57,13 +57,13 @@ namespace OrderSystemUI.MainUI
                     {
                         li.BackColor = Color.Tomato;
                     }
-                    listView1.Items.Add(li);
+                    LvOverview.Items.Add(li);
                     btn_markReady1.Show();
                 }
 
                 if (order.status == OrderItem.Status.delivered)
                 {
-                    listView2.Items.Add(li);
+                    LvHistory.Items.Add(li);
                 }
             }
 
@@ -100,15 +100,15 @@ namespace OrderSystemUI.MainUI
         private void ChangeOrderStatus()
         {
             //If a listview item is selected, execute code
-            if (listView1.SelectedItems.Count > 0)
+            if (LvOverview.SelectedItems.Count > 0)
             {
                 //Gets orderID from first column and sets orderItemID to that value
-                int orderItemID = Convert.ToInt32(listView1.SelectedItems[0].SubItems[0].Text);
+                int orderItemID = Convert.ToInt32(LvOverview.SelectedItems[0].SubItems[0].Text);
                 //Change status on orderItemID to ready
                 orderLogic.ChangeOrderStatus(orderItemID, OrderItem.Status.ready);
                 //Change status column to ready manually
-                listView1.SelectedItems[0].SubItems[7].Text = "ready";
-                listView1.SelectedItems[0].BackColor = Color.MediumSeaGreen;
+                LvOverview.SelectedItems[0].SubItems[7].Text = "ready";
+                LvOverview.SelectedItems[0].BackColor = Color.MediumSeaGreen;
             }
         }
 
@@ -120,40 +120,40 @@ namespace OrderSystemUI.MainUI
         private void FilterOrdersNew()
         {
             //Loops through listview to check columns with value ready
-            for (int i = listView1.Items.Count - 1; i >= 0; --i)
-                if (listView1.Items[i].SubItems[7].Text == "ready")
+            for (int i = LvOverview.Items.Count - 1; i >= 0; --i)
+                if (LvOverview.Items[i].SubItems[7].Text == "ready")
                 {
                     //removes rows with value ready
-                    listView1.Items[i].Remove();
+                    LvOverview.Items[i].Remove();
                 }
             //If there are no listview items in listview, change color and hide mark ready button
-            if (listView1.Items.Count == 0)
+            if (LvOverview.Items.Count == 0)
             {
-                listView1.BackColor = Color.MediumSeaGreen;
+                LvOverview.BackColor = Color.MediumSeaGreen;
                 btn_markReady1.Hide();
             }
         }
 
         private void btn_OrderHistory_Click(object sender, EventArgs e)
         {
-            listView1.Hide();
+            LvOverview.Hide();
             btn_markReady1.Hide();
             btn_OrderHistory.Hide();
             btn_FilterNew.Hide();
             btn_OrderOverview.Show();
-            listView2.Show();
+            LvHistory.Show();
         }
 
         private void btn_OrderOverview_Click(object sender, EventArgs e)
         {
 
             btn_OrderOverview.Hide();
-            listView2.Hide();
-            listView1.Show();
+            LvHistory.Hide();
+            LvOverview.Show();
             btn_OrderHistory.Show();
             btn_FilterNew.Show();
 
-            if (listView1.Items.Count > 0)
+            if (LvOverview.Items.Count > 0)
             {
                 btn_markReady1.Show();
             }
