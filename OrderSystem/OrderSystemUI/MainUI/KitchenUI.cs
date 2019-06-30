@@ -127,7 +127,6 @@ namespace OrderSystemUI.MainUI
             //If there are no listview items in listview, change color and hide mark ready button
             if (LvOverview.Items.Count == 0)
             {
-                LvOverview.BackColor = Color.MediumSeaGreen;
                 btn_markReady1.Hide();
             }
         }
