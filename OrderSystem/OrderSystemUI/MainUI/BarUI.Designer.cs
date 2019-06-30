@@ -296,7 +296,7 @@
             // 
             // LvOverview
             // 
-            this.LvOverview.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LvOverview.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LvOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader5,

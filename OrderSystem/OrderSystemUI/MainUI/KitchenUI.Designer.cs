@@ -195,7 +195,7 @@
             // 
             // LvOverview
             // 
-            this.LvOverview.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.LvOverview.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LvOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader5,
@@ -349,7 +349,7 @@
             this.LvHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LvHistory.FullRowSelect = true;
             this.LvHistory.GridLines = true;
-            this.LvHistory.Location = new System.Drawing.Point(108, 138);
+            this.LvHistory.Location = new System.Drawing.Point(108, 137);
             this.LvHistory.Name = "LvHistory";
             this.LvHistory.Size = new System.Drawing.Size(1131, 435);
             this.LvHistory.TabIndex = 111;
