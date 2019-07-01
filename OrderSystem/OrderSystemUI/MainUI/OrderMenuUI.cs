@@ -58,7 +58,14 @@ namespace OrderSystemUI.MainUI
         //Checks which category an item is and sends it to the correct method
         private void AssignItemsToListViews()
         {
-            items = itemLogic.GetAllItems();
+            try
+            {
+                items = itemLogic.GetAllItems();
+            }
+            catch
+            {
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
 
             foreach (ListView listView in listViews)
             {
@@ -242,7 +249,15 @@ namespace OrderSystemUI.MainUI
                     }
                 }
             }
-            orderItemLogic.AddItemsToOrder(order);
+            try
+            {
+                orderItemLogic.AddItemsToOrder(order);
+            }
+            catch
+            {
+                order.orderItems.Clear();
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
 
             order.orderItems.Clear();
             orderOverviewUI = new OrderOverviewUI(order, orderMenuUI);
