@@ -110,63 +110,43 @@ namespace OrderSystemUI {
         }
 
         private void mark1_Click_1(object sender, EventArgs e) {
-            mark1.Hide();
             ChangeOrderItemStatusses(tables[0]);
-            TimeMark1.Visible = false;
         }
 
         private void mark2_Click_1(object sender, EventArgs e) {
-            mark2.Hide();
             ChangeOrderItemStatusses(tables[1]);
-            TimeMark2.Visible = false;
         }
 
         private void mark3_Click_1(object sender, EventArgs e) {
-            mark3.Hide();
             ChangeOrderItemStatusses(tables[2]);
-            TimeMark3.Visible = false;
         }
 
         private void mark4_Click_1(object sender, EventArgs e) {
-            mark4.Hide();
             ChangeOrderItemStatusses(tables[3]);
-            TimeMark4.Visible = false;
         }
 
         private void mark5_Click_1(object sender, EventArgs e) {
-            mark5.Hide();
             ChangeOrderItemStatusses(tables[4]);
-            TimeMark5.Visible = false;
         }
 
         private void mark6_Click_1(object sender, EventArgs e) {
-            mark6.Hide();
             ChangeOrderItemStatusses(tables[5]);
-            TimeMark6.Visible = false;
         }
 
         private void mark7_Click_1(object sender, EventArgs e) {
-            mark7.Hide();
             ChangeOrderItemStatusses(tables[6]);
-            TimeMark7.Visible = false;
         }
 
         private void mark8_Click_1(object sender, EventArgs e) {
-            mark8.Hide();
             ChangeOrderItemStatusses(tables[7]);
-            TimeMark8.Visible = false;
         }
 
         private void mark9_Click_1(object sender, EventArgs e) {
-            mark9.Hide();
             ChangeOrderItemStatusses(tables[8]);
-            TimeMark9.Visible = false;
         }
 
         private void mark10_Click_1(object sender, EventArgs e) {
-            mark10.Hide();
             ChangeOrderItemStatusses(tables[9]);
-            TimeMark10.Visible = false;
         }
 
         private void InitOrderUI(Table table) {
