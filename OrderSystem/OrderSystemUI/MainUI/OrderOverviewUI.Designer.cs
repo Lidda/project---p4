@@ -49,7 +49,6 @@
             this.lbl_ItemAmount = new System.Windows.Forms.Label();
             this.lbl_ItemName = new System.Windows.Forms.Label();
             this.btn_Home = new System.Windows.Forms.Button();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.pnl_EditItem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,29 +286,12 @@
             this.btn_Home.UseVisualStyleBackColor = false;
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Refresh.FlatAppearance.BorderSize = 0;
-            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Refresh.Location = new System.Drawing.Point(357, 638);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(107, 43);
-            this.btn_Refresh.TabIndex = 6;
-            this.btn_Refresh.Text = "Ververs";
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
             // OrderOverviewUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(464, 681);
-            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_Home);
             this.Controls.Add(this.pnl_EditItem);
             this.Controls.Add(this.btn_DeleteItem);
@@ -347,6 +329,5 @@
         private System.Windows.Forms.Button btn_SubtractAmount;
         private System.Windows.Forms.ColumnHeader itemID;
         private System.Windows.Forms.ColumnHeader itemComment;
-        private System.Windows.Forms.Button btn_Refresh;
     }
 }

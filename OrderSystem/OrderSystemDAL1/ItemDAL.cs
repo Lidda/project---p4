@@ -13,7 +13,7 @@ namespace OrderSystemDAL
 
         //Gets all item from the datatbase
         public List<Item> Db_Get_All_Items() {
-            string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS]";
+            string query = "SELECT itemID, name, stock, price, course, description, TAX, foodtype FROM [ITEMS] WHERE on_menu = 1";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadItems(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -89,12 +89,24 @@ namespace OrderSystemDAL
         //Delete item from database
         public void DeleteItem(Item item)
         {
-            string query = "DELETE FROM [ITEMS] WHERE itemID = @itemID";
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            try
             {
+                string query = "DELETE FROM [ITEMS] WHERE itemID = @itemID";
+                SqlParameter[] sqlParameters = new SqlParameter[]
+                {
                 new SqlParameter("@itemID", item.itemID)
-            };
-            ExecuteEditQuery(query, sqlParameters);
+                };
+                ExecuteEditQuery(query, sqlParameters);
+            }
+            catch
+            {
+                string query = "UPDATE [ITEMS] SET on_menu = 0 WHERE itemID = @itemID";
+                SqlParameter[] sqlParameters = new SqlParameter[]
+                {
+                new SqlParameter("@itemID", item.itemID)
+                };
+                ExecuteEditQuery(query, sqlParameters);
+            }
         }
     }
 }
