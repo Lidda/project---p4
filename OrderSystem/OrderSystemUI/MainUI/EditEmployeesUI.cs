@@ -138,7 +138,7 @@ namespace OrderSystemUI
 
         private void DeleteEmployee_Click(object sender, EventArgs e)
         {
-            if (selectedEmployee.ID >= 0)
+            if (selectedEmployee.ID > 0)
             {
                 if (MessageBox.Show("Weet u zeker dat u deze medewerker wilt verwijderen?", "Deleten...", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

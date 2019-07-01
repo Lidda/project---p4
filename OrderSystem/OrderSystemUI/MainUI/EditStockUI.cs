@@ -146,7 +146,7 @@ namespace OrderSystemUI.MainUI
 
         private void DeleteItem_Click(object sender, EventArgs e)
         {
-            if (selectedItem.itemID != 0)
+            if (selectedItem.itemID > 0)
             {
                 if (MessageBox.Show("Are you sure you want to delete this item?", "Deleting...", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
