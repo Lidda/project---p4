@@ -49,16 +49,17 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(order.comment);
                 li.SubItems.Add(order.status.ToString());
 
-                if (li.SubItems.Count > 0 & order.status != OrderItem.Status.delivered)
+                if (order.status != OrderItem.Status.delivered)
                 {
-                    //If there is an order with status ordered, change color  and show the button to mark ready
+                    //If there is an order with status ordered, change color and show the button to mark ready
 
                     if (order.status == OrderItem.Status.ordered)
                     {
                         li.BackColor = Color.Tomato;
+                        btn_markReady1.Show();
                     }
                     LvOverview.Items.Add(li);
-                    btn_markReady1.Show();
+                    
                 }
 
                 if (order.status == OrderItem.Status.delivered)
@@ -81,15 +82,7 @@ namespace OrderSystemUI.MainUI
             this.TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            //brings you back to login screen
-            this.Hide();
-            LoginUI loginUI = new LoginUI();
-            loginUI.ShowDialog();
-            this.Close();
-
-        }
+       
 
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
@@ -126,7 +119,7 @@ namespace OrderSystemUI.MainUI
                     //removes rows with value ready
                     LvOverview.Items[i].Remove();
                 }
-            //If there are no listview items in listview, change color and hide mark ready button
+            //If there are no listview items in listview hide mark ready button
             if (LvOverview.Items.Count == 0)
             {
                 btn_markReady1.Hide();
@@ -135,6 +128,7 @@ namespace OrderSystemUI.MainUI
 
         private void btn_OrderHistory_Click(object sender, EventArgs e)
         {
+            //Hides and shows all relevant buttons and listviews
             LvOverview.Hide();
             btn_markReady1.Hide();
             btn_OrderHistory.Hide();
@@ -145,17 +139,27 @@ namespace OrderSystemUI.MainUI
 
         private void btn_OrderOverview_Click(object sender, EventArgs e)
         {
-
+            //Hides and shows all relevant buttons and listviews
             btn_OrderOverview.Hide();
             LvHistory.Hide();
             LvOverview.Show();
             btn_OrderHistory.Show();
             btn_FilterNew.Show();
-
+            //Only show button if overview listview has items
             if (LvOverview.Items.Count > 0)
             {
                 btn_markReady1.Show();
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            //brings you back to login screen
+            this.Hide();
+            LoginUI loginUI = new LoginUI();
+            loginUI.ShowDialog();
+            this.Close();
+
         }
     }
 }
