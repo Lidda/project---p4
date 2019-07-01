@@ -27,17 +27,10 @@ namespace OrderSystemUI.MainUI
         {
             InitializeComponent();
 
-            try
-            {
-                this.order = orderLogic.get_Order(order);
-                AddItemsToListView();
-            }
-            catch
-            {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
-            }
-
+            this.order = orderLogic.get_Order(order);
             this.orderUI = orderMenuUI;
+
+            AddItemsToListView();
         }
 
         //Adds all items to listview
@@ -117,21 +110,14 @@ namespace OrderSystemUI.MainUI
 
             OrderItem orderItem = order.orderItems.Find(i => i.ID == Convert.ToInt32(listView_Overview.SelectedItems[0].SubItems[4].Text));
 
-            try
+            if (amount >= 1)
             {
-                if (amount >= 1)
-                {
-                    orderItemLogic.UpdateOrderItems(orderItem, stockAmount);
-                }
-                else
-                {
-                    orderItemLogic.RemoveOrderItems(orderItem);
-                    listView_Overview.SelectedItems[0].Remove();
-                }
+                orderItemLogic.UpdateOrderItems(orderItem, stockAmount);
             }
-            catch
+            else
             {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                orderItemLogic.RemoveOrderItems(orderItem);
+                listView_Overview.SelectedItems[0].Remove();
             }
 
             stockAmount = 0;
@@ -179,20 +165,6 @@ namespace OrderSystemUI.MainUI
 
             orderItemLogic.RemoveOrderItems(orderItem);
             listView_Overview.SelectedItems[0].Remove();
-        }
-
-        private void btn_Refresh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                listView_Overview.Clear();
-                this.order = orderLogic.get_Order(order);
-                AddItemsToListView();
-            }
-            catch
-            {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
-            }
         }
     }
 }

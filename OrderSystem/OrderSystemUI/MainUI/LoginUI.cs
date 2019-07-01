@@ -63,7 +63,7 @@ namespace OrderSystemUI.MainUI
                     passwordInput.Clear();
                 }
             } catch {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                MessageBox.Show("Problem loading database. Please try again.");
             }
         }
     }

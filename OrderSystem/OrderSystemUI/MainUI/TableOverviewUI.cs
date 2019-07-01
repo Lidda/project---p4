@@ -192,14 +192,14 @@ namespace OrderSystemUI {
             try {
                 tables = tableLogic.GetAllTables();
             } catch {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                MessageBox.Show("Problem loading tables from database. Please try again.");
             }
 
             try {
                 OrderLogic orderLogic = new OrderLogic();
                 orders = orderLogic.Get_Orders_By_Date(DateTime.Today);
             } catch {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                MessageBox.Show("Problem loading orders from database. Please try again.");
             }
 
             //ESSENTIAL: excutes both methods on the main thread
@@ -270,7 +270,7 @@ namespace OrderSystemUI {
                 try {
                     orderLogic.ChangeOrderStatus(i.ID, OrderItem.Status.delivered);
                 } catch {
-                    MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                    MessageBox.Show("Problem writing order to database. Please try again.");
                 }               
             }
         }
