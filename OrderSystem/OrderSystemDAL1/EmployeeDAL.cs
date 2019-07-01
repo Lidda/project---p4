@@ -50,7 +50,7 @@ namespace OrderSystemDAL
 
         //get a list with all employees
         public List<Employee> Db_Get_All_Employees() {
-            string query = "SELECT employeeID, name, username, password, type FROM [EMPLOYEES]";
+            string query = "SELECT employeeID, name, username, password, type FROM [EMPLOYEES] WHERE employeeID != 0";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadEmployees(ExecuteSelectQuery(query, sqlParameters));
         }
