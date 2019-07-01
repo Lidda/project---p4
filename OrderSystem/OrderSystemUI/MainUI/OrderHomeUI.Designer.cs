@@ -135,7 +135,7 @@
             this.btn_OrderOverview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_OrderOverview.FlatAppearance.BorderSize = 0;
             this.btn_OrderOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_OrderOverview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OrderOverview.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OrderOverview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_OrderOverview.Image = ((System.Drawing.Image)(resources.GetObject("btn_OrderOverview.Image")));
             this.btn_OrderOverview.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -144,7 +144,7 @@
             this.btn_OrderOverview.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.btn_OrderOverview.Size = new System.Drawing.Size(150, 150);
             this.btn_OrderOverview.TabIndex = 7;
-            this.btn_OrderOverview.Text = "Order overview";
+            this.btn_OrderOverview.Text = "Bestelling Overzicht";
             this.btn_OrderOverview.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_OrderOverview.UseVisualStyleBackColor = false;
             this.btn_OrderOverview.Click += new System.EventHandler(this.btn_OrderOverview_Click);

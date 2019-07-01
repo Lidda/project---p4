@@ -37,38 +37,33 @@ namespace OrderSystemUI.MainUI
             }
             employee.password = passwordInput.Text;
 
-            if (employeeLogic.CheckForUser(employee))
-            {
-                this.Hide();
 
-                //opens th form corresponding with user
-                if (employee.type == OrderSystemModel.employeeType.Barman)
-                {
-                    BarUI barUI = new BarUI(employee);
-                    barUI.ShowDialog();
+            try {
+                if (employeeLogic.CheckForUser(employee)) {
+                    this.Hide();
+
+                    //opens th form corresponding with user
+                    if (employee.type == OrderSystemModel.employeeType.Barman) {
+                        BarUI barUI = new BarUI(employee);
+                        barUI.ShowDialog();
+                    } else if (employee.type == OrderSystemModel.employeeType.Serveerder) {
+                        TableOverviewUI waiterUI = new TableOverviewUI(employee);
+                        waiterUI.ShowDialog();
+                    } else if (employee.type == OrderSystemModel.employeeType.Kok) {
+                        KitchenUI kitchenUI = new KitchenUI(employee);
+                        kitchenUI.ShowDialog();
+                    } else if (employee.type == OrderSystemModel.employeeType.Manager) {
+                        ManagerUI managerUI = new ManagerUI(employee);
+                        managerUI.ShowDialog();
+                    }
+                    this.Close();
+                } else {
+                    MessageBox.Show("Invalid username or password.");
+                    usernameInput.Clear();
+                    passwordInput.Clear();
                 }
-                else if (employee.type == OrderSystemModel.employeeType.Serveerder)
-                {
-                    TableOverviewUI waiterUI = new TableOverviewUI(employee);
-                    waiterUI.ShowDialog();
-                }
-                else if (employee.type == OrderSystemModel.employeeType.Kok)
-                {
-                    KitchenUI kitchenUI = new KitchenUI(employee);
-                    kitchenUI.ShowDialog();
-                }
-                else if (employee.type == OrderSystemModel.employeeType.Manager)
-                {
-                    ManagerUI managerUI = new ManagerUI(employee);
-                    managerUI.ShowDialog();
-                }
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
-                usernameInput.Clear();
-                passwordInput.Clear();
+            } catch {
+                MessageBox.Show("Problem loading database. Please try again.");
             }
         }
     }
