@@ -20,10 +20,23 @@ namespace OrderSystemUI.MainUI {
         OrderLogic orderLogic = new OrderLogic();
         OrderItemLogic orderItemLogic = new OrderItemLogic();
 
+        List<Button> buttons;
         Order order = new Order();
 
         public OrderHomeUI(Employee employee, Table table, TableOverviewUI tableUI) {
             InitializeComponent();
+
+            this.buttons = new List<Button>();
+            buttons.Add(btnBack);
+            buttons.Add(btnFree);
+            buttons.Add(btnReserved);
+            buttons.Add(btnTaken);
+            buttons.Add(Btn_BeverageMenu);
+            buttons.Add(btn_Checkout);
+            buttons.Add(btn_DinnerMenu);
+            buttons.Add(btn_LunchMenu);
+            buttons.Add(btn_OrderOverview);
+            buttons.Add(btn_RemoveOrder);
 
             this.order.Employee = employee;
             this.order.Table = table;
@@ -34,26 +47,47 @@ namespace OrderSystemUI.MainUI {
 
             try
             {
-                this.order = orderLogic.GetTableOrder(table);
+                try
+                {
+                    this.order = orderLogic.GetTableOrder(table);
+                }
+                catch
+                {
+                    orderLogic.AddNewOrder(order);
+                    this.order = orderLogic.GetLatestOrder();
+                }
             }
             catch
             {
-                orderLogic.AddNewOrder(order);
-                this.order = orderLogic.GetLatestOrder();
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
             }
-            
 
-            InitTableStatusColors();
-            tableLogic.AssignEmployeeToTable(employee, table);
-            tableUI.Hide();
+            try
+            {
+                InitTableStatusColors();
+                tableLogic.AssignEmployeeToTable(employee, table);
+                tableUI.Hide();
+            }
+            catch
+            {
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e) {
-            this.Hide();
-            tableUI.tables = tableLogic.GetAllTables();
-            tableUI.SetTableColors();
-            tableUI.Show();
-            this.Close();
+
+            try
+            {
+                this.Hide();
+                tableUI.tables = tableLogic.GetAllTables();
+                tableUI.SetTableColors();
+                tableUI.Show();
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
         }
 
         private void btnTaken_Click(object sender, EventArgs e) {
@@ -134,36 +168,65 @@ namespace OrderSystemUI.MainUI {
 
         private void btn_Checkout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            order = orderLogic.GetTableOrder(table);
-            CheckoutOverviewOrderUI checkoutOverview = new CheckoutOverviewOrderUI(this.order, this);
-            checkoutOverview.ShowDialog();
+            try
+            {
+                this.Hide();
+                order = orderLogic.GetTableOrder(table);
+                CheckoutOverviewOrderUI checkoutOverview = new CheckoutOverviewOrderUI(this.order, this);
+                checkoutOverview.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
         }
 
         private void btn_RemoveOrder_Click(object sender, EventArgs e)
         {
             pnl_ConfirmRemoval.Show();
+
+            foreach  (Button button in buttons)
+            {
+                button.Enabled = false;
+            }
         }
 
         private void btn_ConfirmRemoval_Click(object sender, EventArgs e)
         {
-            foreach (OrderItem orderItem in order.orderItems)
+            try
             {
-                orderItemLogic.RemoveOrderItems(orderItem);
+                foreach (OrderItem orderItem in order.orderItems)
+                {
+                    orderItemLogic.RemoveOrderItems(orderItem);
+                }
+
+                orderLogic.RemoveOrder(this.order);
+
+                foreach (Button button in buttons)
+                {
+                    button.Enabled = true;
+                }
+
+                this.Hide();
+                tableUI.tables = tableLogic.GetAllTables();
+                tableUI.SetTableColors();
+                tableUI.Show();
+                this.Close();
             }
-
-            orderLogic.RemoveOrder(this.order);
-
-            this.Hide();
-            tableUI.tables = tableLogic.GetAllTables();
-            tableUI.SetTableColors();
-            tableUI.Show();
-            this.Close();
+            catch
+            {
+                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+            }
         }
 
         private void btn_CancelRemoval_Click(object sender, EventArgs e)
         {
             pnl_ConfirmRemoval.Hide();
+
+            foreach (Button button in buttons)
+            {
+                button.Enabled = true;
+            }
         }
     }
 }
