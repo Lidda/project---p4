@@ -31,8 +31,9 @@ namespace OrderSystemUI.MainUI
 
         public void OrdersAll()
         {
-            //clears listview before filling it again
+            //clears listviews before filling it again
             LvOverview.Items.Clear();
+            LvHistory.Items.Clear();
             //gets all orders from database
             orders = orderItemLogic.GetOrdersBar();
             //Loops through orders to get all orderitems from the database
