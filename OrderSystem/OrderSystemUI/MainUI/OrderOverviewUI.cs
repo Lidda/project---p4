@@ -35,6 +35,8 @@ namespace OrderSystemUI.MainUI
             catch
             {
                 MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
+                this.Hide();
+                orderUI.Show();
             }
 
             this.orderUI = orderMenuUI;
@@ -179,20 +181,6 @@ namespace OrderSystemUI.MainUI
 
             orderItemLogic.RemoveOrderItems(orderItem);
             listView_Overview.SelectedItems[0].Remove();
-        }
-
-        private void btn_Refresh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                listView_Overview.Clear();
-                this.order = orderLogic.get_Order(order);
-                AddItemsToListView();
-            }
-            catch
-            {
-                MessageBox.Show("Probleem met het laden van de database. Probeer opnieuw.");
-            }
         }
     }
 }
