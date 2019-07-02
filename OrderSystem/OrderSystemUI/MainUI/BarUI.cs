@@ -59,6 +59,12 @@ namespace OrderSystemUI.MainUI
                         li.BackColor = Color.Tomato;
                         btn_markReady1.Show();
                     }
+
+                    if (order.status == OrderItem.Status.ready)
+                    {
+                        li.BackColor = Color.MediumSeaGreen;
+
+                    }
                     LvOverview.Items.Add(li);
                     
                 }
