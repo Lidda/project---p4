@@ -49,21 +49,19 @@ namespace OrderSystemUI.MainUI
                 li.SubItems.Add(order.order.Table.ID.ToString());
                 li.SubItems.Add(order.comment);
                 li.SubItems.Add(order.status.ToString());
-                //If there is an order that is not yet delivered, add to listview
-                if (order.status != OrderItem.Status.delivered)
+              
+                //If there is an order with status ordered add to listview, change color of that subitem in listview and show the button to mark ready
+                if (order.status == OrderItem.Status.ordered)
                 {
-                    //If there is an order with status ordered, change color of that subitem in listview and show the button to mark ready
-                    if (order.status == OrderItem.Status.ordered)
-                    {
-                        li.BackColor = Color.Tomato;
-                        btn_markReady1.Show();
-                    }
-                    if (order.status == OrderItem.Status.ready)
-                    {
-                        li.BackColor = Color.MediumSeaGreen;
-                       
-                    }
+                    li.BackColor = Color.Tomato;
+                    btn_markReady1.Show();
                     LvOverview.Items.Add(li);
+                }
+                if (order.status == OrderItem.Status.ready)
+                {
+                    li.BackColor = Color.MediumSeaGreen;
+                    LvOverview.Items.Add(li);
+
                 }
 
                 if (order.status == OrderItem.Status.delivered)
@@ -83,7 +81,7 @@ namespace OrderSystemUI.MainUI
             //Shows time and refreshes every second
             this.TimeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-        
+
         private void btn_markReady1_Click(object sender, EventArgs e)
         {
             //Mark order ready
